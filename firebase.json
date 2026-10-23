@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "airport-drupal-junaid",
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "airport-drupal",
+          "region": "europe-west2"
+        }
+      }
+    ]
+  }
+}

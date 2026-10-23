@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion item
+status: stable
+group: Meridian · Inner pages
+description: One ruled details element with a question and an HTML answer.
+props:
+  type: object
+  required: [summary, body]
+  properties:
+    summary:
+      type: string
+      title: Question, the line you click
+      examples: ["How early should I get to the airport?"]
+    body:
+      type: string
+      title: Answer
+      contentMediaType: text/html
+      examples: ['<p>Be at the terminal 2 hours before your flight. Bag drop closes 45 minutes before departure, and gates close 20 minutes before.</p>']

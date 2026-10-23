@@ -1,0 +1,21 @@
+uuid: b0bc1f79-e931-4e4f-9341-39231c31802c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - meridian
+active_version: 95702e45488525d1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'Row links, one per row.'
+label: 'Ruled list'
+id: sdc.meridian.ruled-list
+provider: meridian
+source: sdc
+source_local_id: 'meridian:ruled-list'

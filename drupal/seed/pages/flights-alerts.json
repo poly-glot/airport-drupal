@@ -1,0 +1,341 @@
+{
+ "uuid": "df9ad228-dd32-48b2-b816-8977518a8266",
+ "title": "Flight alerts — Meridian Airport",
+ "description": "Free alerts for gate changes, delays and boarding calls by text or WhatsApp. Set them up in a minute with your flight number and date.",
+ "status": true,
+ "path": "/flights/alerts",
+ "front": false,
+ "pageVariant": "meridian_nav_flights_section",
+ "components": [
+  {
+   "uuid": "6dfef1af-f21a-44b4-830d-df311031857d",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "Flight alerts",
+    "intro": "Gate changes, delays and boarding calls by text or WhatsApp, the moment they happen.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "a7aab7af-4dcc-4ec8-ba47-f63cde6f9f33",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "6dfef1af-f21a-44b4-830d-df311031857d",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "678835c3-1284-47fa-9df7-d29a1a0795cc",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "a7aab7af-4dcc-4ec8-ba47-f63cde6f9f33",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "a6a39afe-ec84-440b-91e3-a711055c9f9d",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "a7aab7af-4dcc-4ec8-ba47-f63cde6f9f33",
+   "slot": "items",
+   "inputs": {
+    "label": "Flights",
+    "href": "/flights"
+   }
+  },
+  {
+   "uuid": "f824aeb5-6e33-4316-9efe-9a93dacc7dd1",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "a7aab7af-4dcc-4ec8-ba47-f63cde6f9f33",
+   "slot": "items",
+   "inputs": {
+    "label": "Flight alerts",
+    "current": true
+   }
+  },
+  {
+   "uuid": "1908dd73-3d06-41bd-b648-a4dde0593e82",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "how-alerts-work",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "how-alerts-work-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "2e40edb1-9add-44c7-ab09-b8909d9c7186",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "1908dd73-3d06-41bd-b648-a4dde0593e82",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "ecf16a9f-249e-4882-b738-de71bb1f2bc8",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "2e40edb1-9add-44c7-ab09-b8909d9c7186",
+   "slot": "parts",
+   "inputs": {
+    "text": "How alerts work",
+    "level": "h2",
+    "id": "how-alerts-work-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "ff74b55c-9199-41bc-971e-23c37bbae5fd",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "2e40edb1-9add-44c7-ab09-b8909d9c7186",
+   "slot": "parts",
+   "inputs": {
+    "body": "<ol>\n<li>Enter your flight number and date.</li>\n<li>Choose text message or WhatsApp, and the alerts you want.</li>\n<li>We send a short test message to confirm.</li>\n<li>You get an alert each time something changes, until 2 hours after your flight leaves or lands.</li>\n</ol>\n<p>Alerts are free. We only use your number for alerts about the flight you choose, and we delete it 2 hours after the flight.</p>"
+   }
+  },
+  {
+   "uuid": "02ad5cd4-af3c-4281-a4fd-0eba8260d899",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "alert-types",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "alert-types-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "6a524981-94f8-4767-9529-dbef2bf2d8bd",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "02ad5cd4-af3c-4281-a4fd-0eba8260d899",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "a2ea05e5-4291-49c3-9302-74f42e98dbf5",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "6a524981-94f8-4767-9529-dbef2bf2d8bd",
+   "slot": "parts",
+   "inputs": {
+    "text": "What you can get alerts for",
+    "level": "h2",
+    "id": "alert-types-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "98dcaf7a-a696-4eb5-a8b7-1728d68a83ad",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "6a524981-94f8-4767-9529-dbef2bf2d8bd",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-2"
+   }
+  },
+  {
+   "uuid": "75f88106-412a-43c2-a016-81e346ae753e",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "98dcaf7a-a696-4eb5-a8b7-1728d68a83ad",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Gate changes",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "a8212d37-8b91-4831-89ee-4ac3dcdaa6f9",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "75f88106-412a-43c2-a016-81e346ae753e",
+   "slot": "parts",
+   "inputs": {
+    "body": "The moment your gate is announced or changes, with the walking time from security.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "e9eb5c08-c295-405b-9959-e8f463e1127f",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "98dcaf7a-a696-4eb5-a8b7-1728d68a83ad",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Delays and cancellations",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "c75b704a-7a98-4bb0-8f17-5b4e90870430",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "e9eb5c08-c295-405b-9959-e8f463e1127f",
+   "slot": "parts",
+   "inputs": {
+    "body": "A new departure or arrival time as soon as your airline confirms it. If a flight is cancelled, we tell you straight away and point you to your airline.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "8e6392fe-409a-4c0b-a1d2-50ab0372c248",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "98dcaf7a-a696-4eb5-a8b7-1728d68a83ad",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Boarding calls",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "9b7a9fad-720b-4717-9105-b366a8e9f23a",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "8e6392fe-409a-4c0b-a1d2-50ab0372c248",
+   "slot": "parts",
+   "inputs": {
+    "body": "When boarding starts, and a final call 10 minutes before the gate closes.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "017d03eb-f4ab-44e9-9a39-cbd22b4ff559",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "98dcaf7a-a696-4eb5-a8b7-1728d68a83ad",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Bags on the belt",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "5cacc01c-05d0-44d1-8603-b411e26a0fd8",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "017d03eb-f4ab-44e9-9a39-cbd22b4ff559",
+   "slot": "parts",
+   "inputs": {
+    "body": "For arrivals only. A message when the first bags from your flight reach the belt, and which belt it is. Useful if you are meeting someone, too.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "ff75ca37-bb92-4ba6-b475-4f5fdb1337ef",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "set-up-alerts-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "98097426-d0f3-4fe8-b344-9918c75de616",
+   "component_id": "sdc.meridian.form",
+   "parent_uuid": "ff75ca37-bb92-4ba6-b475-4f5fdb1337ef",
+   "slot": "parts",
+   "inputs": {
+    "kind": "alerts"
+   }
+  },
+  {
+   "uuid": "78a004d2-d831-411f-a58c-066d0729d5be",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "stop-alerts",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "stop-alerts-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "69928a12-70e5-4035-86e4-491e141e0b53",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "78a004d2-d831-411f-a58c-066d0729d5be",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "50ad0e0d-4c6b-4266-8a61-e015bf9b84a0",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "69928a12-70e5-4035-86e4-491e141e0b53",
+   "slot": "parts",
+   "inputs": {
+    "text": "Stop alerts",
+    "level": "h2",
+    "id": "stop-alerts-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "5b3f1956-0426-4f69-aebf-387f2969c4c0",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "69928a12-70e5-4035-86e4-491e141e0b53",
+   "slot": "parts",
+   "inputs": {
+    "body": "Reply STOP to any text or WhatsApp message and we will stop straight away. You will not get any more messages about that flight.",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "bf3f2772-961c-454b-92ee-6f3cd72042da",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "questions",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "questions-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "ad96dcd3-1691-4ad6-bfbc-e2241f28609d",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "bf3f2772-961c-454b-92ee-6f3cd72042da",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "82608ad9-2ccc-42ec-9343-56df8d69da6f",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "ad96dcd3-1691-4ad6-bfbc-e2241f28609d",
+   "slot": "parts",
+   "inputs": {
+    "text": "Questions about your flight",
+    "level": "h2",
+    "id": "questions-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "08ea67d9-7a8b-48dc-89d8-6247e0e7675d",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "ad96dcd3-1691-4ad6-bfbc-e2241f28609d",
+   "slot": "parts",
+   "inputs": {
+    "body": "Alerts tell you what is happening. To change or cancel a booking, contact your airline. For anything else, call us on <a href=\"tel:+441214960123\">0121 496 0123</a>, every day 05:00–23:00.",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "177846b5-061b-451e-b652-c6e9e670c2ad",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "ad96dcd3-1691-4ad6-bfbc-e2241f28609d",
+   "slot": "parts",
+   "inputs": {
+    "body": "<a class=\"text-link\" href=\"/flights/airlines\">All airlines<svg class=\"text-link__icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+    "variant": "plain"
+   }
+  }
+ ]
+}

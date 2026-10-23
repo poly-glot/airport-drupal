@@ -1,0 +1,498 @@
+{
+ "uuid": "6e201d4d-cd0f-4aa2-a7f9-35dd5c067fce",
+ "title": "At the airport — Meridian Airport",
+ "description": "Security, food, shops, lounges and terminal maps for Meridian Airport. Everything between the door and the gate, in both terminals.",
+ "status": true,
+ "path": "/at-the-airport",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "8397a4b9-1708-4e29-a813-f74d431ca948",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "At the airport",
+    "intro": "Everything between the door and the gate.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "d06a891e-7ba7-49d1-9013-124f7af041f6",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "8397a4b9-1708-4e29-a813-f74d431ca948",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "befd3584-1c04-49f9-8c6c-4f6b976beb9d",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "d06a891e-7ba7-49d1-9013-124f7af041f6",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "ab3ed5af-0a30-460e-9b76-e7cd62287e02",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "d06a891e-7ba7-49d1-9013-124f7af041f6",
+   "slot": "items",
+   "inputs": {
+    "label": "At the airport",
+    "current": true
+   }
+  },
+  {
+   "uuid": "0618617d-08af-49af-9994-7392841d036d",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "before-you-fly-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "d8357117-4c2b-4fff-a988-a5674691ee3f",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0618617d-08af-49af-9994-7392841d036d",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "be03d864-cf0f-4fc6-b37e-e56a8b51508a",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "d8357117-4c2b-4fff-a988-a5674691ee3f",
+   "slot": "parts",
+   "inputs": {
+    "text": "Before you fly",
+    "level": "h2",
+    "id": "before-you-fly-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "d14b2eca-e1f0-4fde-a345-2726dfaac40c",
+   "component_id": "sdc.meridian.help-list",
+   "parent_uuid": "d8357117-4c2b-4fff-a988-a5674691ee3f",
+   "slot": "parts",
+   "inputs": {
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "5990df50-9a6c-4237-a290-ba42006fc6b6",
+   "component_id": "sdc.meridian.help-item",
+   "parent_uuid": "d14b2eca-e1f0-4fde-a345-2726dfaac40c",
+   "slot": "items",
+   "inputs": {
+    "icon": "security",
+    "title": "Security and customs",
+    "body": "What to pack, what to take out, and how early to arrive.",
+    "href": "/at-the-airport/security"
+   }
+  },
+  {
+   "uuid": "9370f986-3d9f-4b95-8395-beb82773abbb",
+   "component_id": "sdc.meridian.help-item",
+   "parent_uuid": "d14b2eca-e1f0-4fde-a345-2726dfaac40c",
+   "slot": "items",
+   "inputs": {
+    "icon": "eat-and-drink",
+    "title": "Eat and drink",
+    "body": "Cafés, restaurants and bars before and after security.",
+    "href": "/at-the-airport/eat-and-drink"
+   }
+  },
+  {
+   "uuid": "ee319207-526c-4ac1-9d1d-e8ea21703a03",
+   "component_id": "sdc.meridian.help-item",
+   "parent_uuid": "d14b2eca-e1f0-4fde-a345-2726dfaac40c",
+   "slot": "items",
+   "inputs": {
+    "icon": "shopping",
+    "title": "Shopping",
+    "body": "Reserve duty free online and collect it on the way to the gate.",
+    "href": "/at-the-airport/shopping"
+   }
+  },
+  {
+   "uuid": "854df90a-acb0-41e4-b3fb-44f3c3c2fedd",
+   "component_id": "sdc.meridian.help-item",
+   "parent_uuid": "d14b2eca-e1f0-4fde-a345-2726dfaac40c",
+   "slot": "items",
+   "inputs": {
+    "icon": "lounges",
+    "title": "Lounges and rest",
+    "body": "Quiet space, showers and work desks, by the hour.",
+    "href": "/at-the-airport/lounges"
+   }
+  },
+  {
+   "uuid": "737dbb27-228d-4914-a419-939193111d5d",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "maps",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "terminal-maps-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f6021a8f-4c84-4650-82f6-970841baa38f",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "737dbb27-228d-4914-a419-939193111d5d",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "27f5b80c-d0e7-4594-9f10-957853273b99",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f6021a8f-4c84-4650-82f6-970841baa38f",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "8109ebe7-96e9-46b4-a781-554f6be20c86",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "27f5b80c-d0e7-4594-9f10-957853273b99",
+   "slot": "parts",
+   "inputs": {
+    "text": "Terminal maps",
+    "level": "h2",
+    "id": "terminal-maps-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "16302a39-d647-4671-b6f3-144ab2aab3c3",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "27f5b80c-d0e7-4594-9f10-957853273b99",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Meridian Airport has two terminals, linked by a covered walkway. It takes about 5 minutes to walk between them, step-free all the way. Each terminal has its own check-in, security and gates, so check which one your airline uses.</p>"
+   }
+  },
+  {
+   "uuid": "32539a8f-12c9-4860-8ba6-a2c5a6e507b5",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f6021a8f-4c84-4650-82f6-970841baa38f",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "f6fe2d94-cfff-4848-a54f-23e5a25b5a70",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "32539a8f-12c9-4860-8ba6-a2c5a6e507b5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>Terminal 1</h3>\n<p>Meridian Air flies from Terminal 1.</p>"
+   }
+  },
+  {
+   "uuid": "099a0487-3cda-4aef-8ab3-14c1216ba580",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "32539a8f-12c9-4860-8ba6-a2c5a6e507b5",
+   "slot": "parts",
+   "inputs": {
+    "layout": "split-main-aside"
+   }
+  },
+  {
+   "uuid": "288cb1b0-83c8-43a7-96eb-2d6f607eb9d7",
+   "component_id": "sdc.meridian.terminal-map",
+   "parent_uuid": "099a0487-3cda-4aef-8ab3-14c1216ba580",
+   "slot": "parts",
+   "inputs": {
+    "terminal": "terminal-1"
+   }
+  },
+  {
+   "uuid": "1650ed42-e183-4833-b25b-79ca53eacefa",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "099a0487-3cda-4aef-8ab3-14c1216ba580",
+   "slot": "parts",
+   "inputs": {
+    "body": "<ul><li>The railway station is one level below check-in. Lifts and escalators come up next to zone A.</li><li>Zone C is for special assistance, oversized bags and anyone who needs more time.</li><li>After security, gates 1 to 10 are a 4-minute walk and gates 11 to 19 are up to 10 minutes.</li><li>The lost property office is in the arrivals hall, next to the taxi rank.</li></ul>"
+   }
+  },
+  {
+   "uuid": "0de17483-9b4f-4de7-841e-31f43cc331cd",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f6021a8f-4c84-4650-82f6-970841baa38f",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "25590d7e-1b04-4bed-a0f6-83588093354e",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "0de17483-9b4f-4de7-841e-31f43cc331cd",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>Terminal 2</h3>\n<p>Nordvik, Azur Express and Kestrel fly from Terminal 2.</p>"
+   }
+  },
+  {
+   "uuid": "2d607a46-f6ac-4d32-b9a9-da9992ff62dc",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0de17483-9b4f-4de7-841e-31f43cc331cd",
+   "slot": "parts",
+   "inputs": {
+    "layout": "split-main-aside"
+   }
+  },
+  {
+   "uuid": "ef6dbc2a-8fdb-4115-a2a6-7fc6d1ab3feb",
+   "component_id": "sdc.meridian.terminal-map",
+   "parent_uuid": "2d607a46-f6ac-4d32-b9a9-da9992ff62dc",
+   "slot": "parts",
+   "inputs": {
+    "terminal": "terminal-2"
+   }
+  },
+  {
+   "uuid": "fc2dbcc5-0782-4fa2-a6ea-e80de6224caa",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "2d607a46-f6ac-4d32-b9a9-da9992ff62dc",
+   "slot": "parts",
+   "inputs": {
+    "body": "<ul><li>Zone D is Nordvik, zone E is Azur Express and zone F is Kestrel. Special assistance is at zone D.</li><li>After security, gates 20 to 29 are a 5-minute walk. Gates 30 to 38 can take up to 15 minutes.</li><li>The coach station is outside the arrivals hall, at the far end from the walkway.</li></ul>"
+   }
+  },
+  {
+   "uuid": "8ae98e2d-39dc-4741-97b0-65028a5e92ca",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "facilities-in-both-terminals-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "809c5ad8-d39b-4c19-a66d-00dd5278b6a3",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "8ae98e2d-39dc-4741-97b0-65028a5e92ca",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "74858253-462b-46c0-a55a-a15218b509bb",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "809c5ad8-d39b-4c19-a66d-00dd5278b6a3",
+   "slot": "parts",
+   "inputs": {
+    "text": "Facilities in both terminals",
+    "level": "h2",
+    "id": "facilities-in-both-terminals-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "809c5ad8-d39b-4c19-a66d-00dd5278b6a3",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "c213ebf5-dd08-4d32-a63a-ceda6cccc879",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Free wifi",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "11d953e1-2f55-47ff-9f95-19172b1f22be",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "c213ebf5-dd08-4d32-a63a-ceda6cccc879",
+   "slot": "parts",
+   "inputs": {
+    "body": "Join \"Meridian Free Wifi\". No sign-up and no time limit.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "69ad16a9-cf65-4f50-b138-e280d8d49d64",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Water and charging",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "c780bcd5-1f4b-4ff5-abce-f7eda1d916d8",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "69ad16a9-cf65-4f50-b138-e280d8d49d64",
+   "slot": "parts",
+   "inputs": {
+    "body": "Free water refill points are after security, near every toilet block. Charging points are built into the seating at every gate.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "4c767a75-5c4c-433d-bbfe-3ded2e1404fd",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Toilets and changing",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "389c5daf-f73b-4627-879e-05e76ab055d6",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "4c767a75-5c4c-433d-bbfe-3ded2e1404fd",
+   "slot": "parts",
+   "inputs": {
+    "body": "Toilets are before and after security in both terminals. There are Changing Places toilets, with a hoist and adult-sized bench, in the departure lounge of each terminal, and baby changing in every toilet block.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "d8be9256-fcb3-4cdb-a902-318382012d7b",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Prayer and quiet rooms",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "7023416f-2cfb-48cf-ab87-00416dc6f8d4",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "d8be9256-fcb3-4cdb-a902-318382012d7b",
+   "slot": "parts",
+   "inputs": {
+    "body": "A multi-faith prayer room is open 24 hours after security in each terminal. Free Quiet Rooms are near gate 4 in Terminal 1 and gate 24 in Terminal 2.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "424ae0d7-2918-4e49-bbee-9f552da132a6",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Money",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "815e4eef-3fe6-4f6d-a3e6-b39749b881bd",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "424ae0d7-2918-4e49-bbee-9f552da132a6",
+   "slot": "parts",
+   "inputs": {
+    "body": "Cash machines are in both arrivals halls and departure lounges. You can change money at the currency desks after security in both terminals, and order currency online to collect on the day.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "7f320220-f71f-4290-825b-7b8bea361f04",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "a8bb95f7-aff9-41b4-933b-d4f94d65059b",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Medical help",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "48e54414-fea9-4465-95ca-da207ba669fb",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "7f320220-f71f-4290-825b-7b8bea361f04",
+   "slot": "parts",
+   "inputs": {
+    "body": "Speak to any member of staff, or call 0121 496 0123. First aid teams are on duty 24 hours. Fernhill Pharmacy, before security in Terminal 1, has a pharmacist on site from 05:00 to 21:00.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "037d395f-c59f-4f3a-be75-5208d6969532",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "need-help-on-the-day-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "fd05754f-7c54-487b-9911-ffe8d8714400",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "037d395f-c59f-4f3a-be75-5208d6969532",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "46260b46-5f12-4845-9699-5faa2c9335ab",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "fd05754f-7c54-487b-9911-ffe8d8714400",
+   "slot": "parts",
+   "inputs": {
+    "text": "Need help on the day?",
+    "level": "h2",
+    "id": "need-help-on-the-day-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "0331d643-e44d-4890-a796-453d2fcfab21",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "fd05754f-7c54-487b-9911-ffe8d8714400",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Information desks are in both check-in halls and both departure lounges, open from the first flight to the last.</p>"
+   }
+  },
+  {
+   "uuid": "d164bf74-28dd-4d27-80fa-43cbddabf66c",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "fd05754f-7c54-487b-9911-ffe8d8714400",
+   "slot": "parts",
+   "inputs": {
+    "body": "<a class=\"text-link text-link--underline\" href=\"/help\">Help and contact<svg class=\"text-link__icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+    "variant": "plain"
+   }
+  }
+ ]
+}

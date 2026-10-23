@@ -1,0 +1,20 @@
+<form{{ attributes.addClass('card', 'card--padded', 'form', 'narrow') }} id="feedback" action="/help#feedback" method="get" aria-labelledby="feedback-title">
+<div class="card__head">
+<h2 class="card__title" id="feedback-title">Send us feedback</h2>
+<p class="card__text">Tell us what went well and what did not. We read every message and use them to decide what to fix first. If you would like a reply, leave your email address.</p>
+</div>
+<p class="form__note">This is a demonstration form for a fictional airport. Please do not enter real personal details. Nothing you type is sent anywhere.</p>
+<div class="field"><label class="field__label" for="fb-name">Your name <span class="field__marker">(optional)</span></label><input class="field__input" id="fb-name" name="fb-name" type="text" autocomplete="name"></div>
+<div class="field"><label class="field__label" for="fb-email">Email address <span class="field__marker">(optional)</span></label><p class="field__hint" id="fb-email-hint">Only if you would like a reply</p><input class="field__input" id="fb-email" name="fb-email" type="email" autocomplete="email" aria-describedby="fb-email-hint"></div>
+<div class="field"><label class="field__label" for="fb-topic">What is it about?</label><select class="field__input" id="fb-topic" name="fb-topic" required><option value="">Choose a topic</option><option value="security">Security</option><option value="parking">Parking</option><option value="shops-and-restaurants">Shops and restaurants</option><option value="cleanliness">Cleanliness</option><option value="special-assistance">Special assistance</option><option value="getting-here">Getting here</option><option value="something-else">Something else</option></select></div>
+<fieldset class="fieldset fieldset--inline">
+<legend class="fieldset__legend">Which terminal?</legend>
+
+<label class="check"><input class="check__input" type="radio" name="fb-terminal" value="terminal-1" required>Terminal 1</label><label class="check"><input class="check__input" type="radio" name="fb-terminal" value="terminal-2" required>Terminal 2</label><label class="check"><input class="check__input" type="radio" name="fb-terminal" value="both" required>Both</label><label class="check"><input class="check__input" type="radio" name="fb-terminal" value="not-sure" required>Not sure</label>
+</fieldset>
+<div class="field"><label class="field__label" for="fb-date">Date of your visit <span class="field__marker">(optional)</span></label><input class="field__input" id="fb-date" name="fb-date" type="date"></div>
+<div class="field"><label class="field__label" for="fb-message">Your feedback</label><p class="field__hint" id="fb-message-hint">Tell us what happened and what we could do better</p><textarea class="field__input field__input--multiline" id="fb-message" name="fb-message" rows="5" aria-describedby="fb-message-hint" required></textarea></div>
+<div class="form__actions">
+<button class="button button--lg" type="submit">Send feedback</button>
+</div>
+</form>

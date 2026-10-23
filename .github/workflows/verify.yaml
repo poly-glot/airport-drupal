@@ -1,0 +1,22 @@
+name: Verify
+
+on:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+      - run: pip install pyyaml beautifulsoup4
+      - run: python3 scripts/sync_static.py --check
+      - run: python3 scripts/design_battery.py
+      - run: find drupal/web/modules/custom drupal/web/themes/custom -name '*.php' -print0 | xargs -0 -n1 php -l
+      - run: python3 scripts/build_seed.py --target canvas --write
+      - run: git diff --exit-code -- drupal/seed

@@ -1,0 +1,45 @@
+uuid: 212de6fa-5f67-4a2a-a415-6f0163c29311
+langcode: en
+status: true
+dependencies:
+  theme:
+    - meridian
+active_version: b96dcb9935cd6eb6
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        updated:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '09:42'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        road_status:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Running normally'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        chips:
+          title: Chips
+          description: 'Wait chip leaves, one per terminal.'
+label: 'Wait panel'
+id: sdc.meridian.wait-panel
+provider: meridian
+source: sdc
+source_local_id: 'meridian:wait-panel'

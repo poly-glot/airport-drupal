@@ -1,0 +1,14 @@
+{
+	frankenphp
+	order php_server before file_server
+}
+
+:8080 {
+	root * /app/web
+	encode zstd gzip
+
+	@private path /sites/*/private/* /sites/*/files/php/*
+	respond @private 403
+
+	php_server
+}

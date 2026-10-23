@@ -1,0 +1,131 @@
+.button {
+    align-items: center;
+    background: var(--brand);
+    border: 1px solid var(--brand);
+    border-radius: var(--radius-button);
+    color: var(--white);
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--white);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.button--lg {
+    border-radius: var(--radius-input);
+    font-size: 15px;
+    font-weight: 700;
+    min-height: 52px;
+    padding: 0 26px;
+}
+
+.button--block {
+    width: 100%;
+}
+
+.button--secondary {
+    background: var(--white);
+    border-color: var(--line-input);
+    color: var(--ink);
+}
+
+.button--secondary:hover {
+    background: var(--panel);
+    border-color: var(--line-input);
+    color: var(--ink);
+}
+
+.button--ghost {
+    background: transparent;
+    border-color: var(--on-dark-ghost);
+    color: var(--white);
+}
+
+.button--ghost:hover {
+    background: var(--white-wash);
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.icon-button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-button);
+    color: var(--ink);
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+}
+
+.icon-button:hover {
+    background: var(--panel);
+    color: var(--ink);
+}
+
+.text-link {
+    align-items: center;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 8px;
+    min-height: 44px;
+    text-decoration: none;
+    text-underline-offset: 4px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.text-link--underline {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.text-link--underline:hover {
+    text-decoration-thickness: 2px;
+}
+
+.text-link--on-dark,
+.text-link--on-dark:hover {
+    color: var(--white);
+}
+
+.text-link--sm {
+    font-size: 14px;
+    min-height: 24px;
+}
+
+.text-link__icon {
+    flex-shrink: 0;
+}
+
+@media (width <= 900px) {
+    .text-link {
+        font-size: 15px;
+    }
+}

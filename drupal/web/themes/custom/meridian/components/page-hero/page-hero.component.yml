@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Page hero
+status: stable
+group: Meridian · Inner pages
+description: Inner page hero with eyebrow, serif title, intro and an optional photograph, as on the help and careers pages.
+props:
+  type: object
+  required: [title]
+  properties:
+    eyebrow:
+      type: string
+      title: Small text above the heading
+      examples: [Assistance]
+    title:
+      type: string
+      title: Page heading
+      examples: [Help and contact]
+    intro:
+      type: string
+      title: Line under the heading
+      examples: ['Answers to common questions, and how to reach us if you cannot find what you need.']
+    variant:
+      type: string
+      title: Variant
+      enum: [sky, art]
+      examples: [sky]
+    image_src:
+      type: string
+      title: Image stem
+      description: Image path including the width suffix and no extension.
+      examples: ['/assets/img/about/careers-960']
+    image_alt:
+      type: string
+      title: Image alt text
+      examples: ['Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.']
+    image_width:
+      type: integer
+      title: Image width
+      examples: [1440]
+    image_height:
+      type: integer
+      title: Image height
+      examples: [960]
+    sizes:
+      type: string
+      title: Image sizes
+      description: Sizes attribute for the art picture.
+      examples: [720px]
+    widths:
+      type: string
+      title: Extra srcset widths
+      examples: ['960,1440']
+slots:
+  breadcrumb:
+    title: Breadcrumb
+    description: The breadcrumb nav, rendered above the hero content.

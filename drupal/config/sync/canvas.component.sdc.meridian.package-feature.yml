@@ -1,0 +1,30 @@
+uuid: b88ccf74-aaa2-4c5b-984b-aa7bfac586b5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - meridian
+active_version: 7d8cfab45d5bcd9a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Blue Badge bays nearest the doors'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Package feature'
+id: sdc.meridian.package-feature
+provider: meridian
+source: sdc
+source_local_id: 'meridian:package-feature'

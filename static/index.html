@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flights, parking and travel information — Meridian Airport</title>
+    <meta name="description" content="Live flights, security wait times and parking at Meridian Airport, Birmingham. Check everything before you leave the house.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&amp;family=Source+Serif+4:opsz,wght@8..60,600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<section class="notice-bar on-dark" aria-label="Travel notices">
+    <div class="notice-bar__container container">
+        <ol class="notice-bar__list">
+            <li class="notice-bar__item" id="notice-1">
+                <div class="notice-bar__controls">
+                    <a class="notice-bar__step notice-bar__step--prev" href="#notice-3" aria-label="Previous notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+                    <span class="notice-bar__count">1 of 3</span>
+                    <a class="notice-bar__step notice-bar__step--next" href="#notice-2" aria-label="Next notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+                </div>
+                <p class="notice-bar__text"><strong class="notice-bar__kind">Travel disruption</strong><span class="notice-bar__separator"> · </span>Fog is delaying some morning departures by up to 40 minutes. <span class="notice-bar__action">What to do: check your flight below before setting off and allow extra time at security.</span></p>
+                <a class="notice-bar__link" href="/flights/index.html">Check my flight</a>
+            </li>
+            <li class="notice-bar__item" id="notice-2">
+                <div class="notice-bar__controls">
+                    <a class="notice-bar__step notice-bar__step--prev" href="#notice-1" aria-label="Previous notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+                    <span class="notice-bar__count">2 of 3</span>
+                    <a class="notice-bar__step notice-bar__step--next" href="#notice-3" aria-label="Next notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+                </div>
+                <p class="notice-bar__text"><strong class="notice-bar__kind">Roadworks</strong><span class="notice-bar__separator"> · </span>Lane closures on the A45 approach until 12 October. <span class="notice-bar__action">What to do: allow an extra 15 minutes if you are driving to Terminal 2, or take the train.</span></p>
+                <a class="notice-bar__link" href="/flights/index.html">Check my flight</a>
+            </li>
+            <li class="notice-bar__item" id="notice-3">
+                <div class="notice-bar__controls">
+                    <a class="notice-bar__step notice-bar__step--prev" href="#notice-2" aria-label="Previous notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+                    <span class="notice-bar__count">3 of 3</span>
+                    <a class="notice-bar__step notice-bar__step--next" href="#notice-1" aria-label="Next notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+                </div>
+                <p class="notice-bar__text"><strong class="notice-bar__kind">Security</strong><span class="notice-bar__separator"> · </span>New scanners in Terminal 1. <span class="notice-bar__action">What to do: nothing — liquids and laptops can now stay in your bag.</span></p>
+                <a class="notice-bar__link" href="/flights/index.html">Check my flight</a>
+            </li>
+        </ol>
+    </div>
+</section>
+<header class="header">
+    <div class="header__inner container">
+        <a class="header__brand" href="/index.html" aria-current="page">
+            <svg class="header__logo" width="34" height="34" viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="2.5"></circle><path d="M6 20c6-6 18-6 24 0" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path><path d="M18 4v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path><circle cx="18" cy="18" r="2.5" fill="currentColor"></circle></svg>
+            <span class="header__name">Meridian Airport</span><span class="visually-hidden"> home</span>
+        </a>
+        <nav class="header__nav" id="site-menu" aria-label="Main">
+            <ul class="header__list">
+                <li><a class="header__link" href="/flights/index.html">Flights</a></li>
+                <li><a class="header__link" href="/at-the-airport/shopping.html">Shop</a></li>
+                <li><a class="header__link" href="/parking/index.html">Parking</a></li>
+                <li><a class="header__link" href="/at-the-airport/lounges.html">Lounges</a></li>
+                <li><a class="header__link" href="/getting-here/index.html">Getting here</a></li>
+                <li><a class="header__link" href="/help/index.html">Assistance</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <span class="header__lang"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"></path></svg><span aria-hidden="true">EN</span><span class="visually-hidden">Language: English</span></span>
+            <a class="icon-button" href="/sitemap.html" aria-label="Find a page on the site map"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></a>
+            <a class="icon-button" href="/at-the-airport/shopping.html" aria-label="Basket, 0 items"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg></a>
+            <a class="button header__cta" href="/parking/index.html">Book parking</a>
+            <a class="icon-button header__menu-toggle" href="#site-menu" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+        </div>
+    </div>
+</header>
+<main id="main" tabindex="-1">
+    <section class="hero on-dark" aria-labelledby="hero-title" data-weather="rainy">
+        <picture class="hero__media"><source type="image/avif" srcset="/assets/img/home/hero/morning-rainy-1440.avif 1440w" sizes="100vw"><source type="image/webp" srcset="/assets/img/home/hero/morning-rainy-1440.webp 1440w" sizes="100vw"><img class="hero__img" src="/assets/img/home/hero/morning-rainy-1440.jpg" srcset="/assets/img/home/hero/morning-rainy-1440.jpg 1440w" sizes="100vw" width="1440" height="810" alt="" loading="eager" fetchpriority="high" decoding="async"></picture>
+        <div class="hero__inner container">
+            <div class="hero__content">
+                <p class="hero__weather"><svg class="hero__weather-icon hero__weather-icon--day" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8" r="3.2"></circle><path d="M8.5 2v1.4M2.5 8h1.4M4.3 3.8l1 1M12.7 3.8l-1 1"></path><path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path><path class="hero__weather-drops" d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"></path></svg><svg class="hero__weather-icon hero__weather-icon--evening" hidden width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 9.5a4 4 0 0 1 8 0"></path><path d="M2 9.5h13M8.5 3v1.4M3.8 5.3l1 1M13.2 5.3l-1 1"></path><path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path><path class="hero__weather-drops" d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"></path></svg><svg class="hero__weather-icon hero__weather-icon--night" hidden width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 3.5a4.5 4.5 0 0 0 5.6 6 4.6 4.6 0 1 1-5.6-6z"></path><path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path><path class="hero__weather-drops" d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"></path></svg><span class="hero__weather-text"><span class="hero__temp"><span class="hero__temp-value">12°C</span> <span class="hero__condition">light rain</span></span><span class="hero__date">Saturday 3 October · 09:42 local</span></span></p>
+                <h1 class="hero__title" id="hero-title">Welcome to Meridian Airport</h1>
+                <p class="hero__lede">Your gateway to 112 destinations. Check your flight, pre-book parking and reserve duty free to collect at the gate.</p>
+                <ul class="hero__signs">
+                    <li class="hero__signs-item"><a class="sign" href="/at-the-airport/shopping.html"><svg class="sign__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 13H5z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span class="sign__text"><span class="sign__title">Reserve duty free</span><span class="sign__sub">Collect at your gate</span></span></a></li>
+                    <li class="hero__signs-item"><a class="sign" href="/parking/index.html"><svg class="sign__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M9 17V7h4.5a3 3 0 0 1 0 6H9"></path></svg><span class="sign__text"><span class="sign__title">Book parking</span><span class="sign__sub">From £8.50 a day</span></span></a></li>
+                    <li class="hero__signs-item"><a class="sign" href="/at-the-airport/lounges.html"><svg class="sign__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h11M10 7l5 5-5 5"></path><path d="M17 5v14M21 5v14"></path></svg><span class="sign__text"><span class="sign__title">Fast Track</span><span class="sign__sub">£7 · skip the queue</span></span></a></li>
+                </ul>
+            </div>
+            <form class="search-card on-light" action="/flights/index.html" method="get" aria-label="Flight tracking">
+                <div class="search-card__tabs">
+                    <span class="search-card__tab search-card__tab--current">Flight tracking</span>
+                    <a class="search-card__tab" href="/at-the-airport/lounges.html">Fast Track</a>
+                    <a class="search-card__tab" href="/at-the-airport/lounges.html">Lounges</a>
+                </div>
+                <fieldset class="fieldset fieldset--inline">
+                    <legend class="visually-hidden">Direction</legend>
+                    <label class="check"><input class="check__input" type="radio" name="direction" value="departures" checked>Departures</label>
+                    <label class="check"><input class="check__input" type="radio" name="direction" value="arrivals">Arrivals</label>
+                </fieldset>
+                <div class="field">
+                    <label class="field__label" for="flight-day">When</label>
+                    <select class="field__input field__input--soft" id="flight-day" name="day"><option value="2026-10-03">Today, 3 October</option><option value="2026-10-04">Tomorrow, 4 October</option><option value="2026-10-05">Monday, 5 October</option></select>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="flight-search">Flight number, airline or city</label>
+                    <div class="field__control">
+                        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+                        <input class="field__input field__input--soft field__input--with-icon" id="flight-search" name="q" type="search" placeholder="e.g. MA 204 or Lisbon">
+                    </div>
+                </div>
+                <button class="button button--lg search-card__submit" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 15l16-5-3-5-5 2-5-4-2 1 3 5-4 1-2-2-2 1z"></path></svg>Search flights</button>
+                <a class="text-link text-link--sm" href="/flights/index.html#arrivals">Meeting someone? Go to live arrivals<svg class="text-link__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+            </form>
+        </div>
+        <div class="hero__wait container">
+            <section class="wait-panel on-light" aria-labelledby="wait-title">
+                <div class="wait-panel__head"><span class="wait-panel__dot"></span><h2 class="wait-panel__title" id="wait-title">Security wait times</h2><span class="wait-panel__updated">· updated 09:42</span></div>
+                <dl class="wait-panel__list">
+                    <div class="wait-panel__item"><dt class="wait-panel__label">Terminal 1</dt><dd class="wait-chip wait-chip--ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>8 min</dd></div>
+                    <div class="wait-panel__item"><dt class="wait-panel__label">Terminal 2</dt><dd class="wait-chip wait-chip--warn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>22 min</dd></div>
+                    <div class="wait-panel__item wait-panel__item--divided"><dt class="wait-panel__label">Roads and rail</dt><dd class="wait-panel__value">Running normally</dd></div>
+                </dl>
+            </section>
+        </div>
+    </section>
+
+    <section class="board board--overlapped tabs on-dark" id="live-flights" aria-labelledby="live-flights-title">
+        <div class="board__head container">
+            <div class="board__titles">
+                <h2 class="board__title" id="live-flights-title">Live flights</h2>
+                <p class="board__meta"><span class="board__dot"></span><span>Updated <span class="board__updated">09:42</span> · refreshes every minute · gates shown from 60 min before departure</span></p>
+            </div>
+            <p class="board__clock"><span class="board__clock-time" data-flap="5">09:42</span><span class="board__clock-label">Local time</span></p>
+        </div>
+        <div class="board__tabbar">
+            <div class="tabs__list container" data-tabs-label="Flight board">
+                <a class="tabs__tab" href="#departures"><svg class="tabs__tab-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 15l16-5-3-5-5 2-5-4-2 1 3 5-4 1-2-2-2 1z"></path></svg>Departures</a>
+                <a class="tabs__tab" href="#arrivals"><svg class="tabs__tab-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 11l16 5 1-5-5-2-3-6-2-1v6l-4-1-1-3-2 1z"></path></svg>Arrivals</a>
+            </div>
+        </div>
+        <div>
+            <div class="tabs__panel board__panel" id="departures" tabindex="-1">
+                <div class="board__body container">
+                    <div class="board__search">
+                        <label class="visually-hidden" for="departures-search">Search departures by flight or city</label>
+                        <div class="field__control">
+                            <svg class="field__icon board__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+                            <input class="field__input field__input--with-icon field__input--dark" id="departures-search" type="search" placeholder="Search departures by flight or city" autocomplete="off">
+                        </div>
+                    </div>
+                    <section class="board__scroll" aria-label="Departures board" tabindex="0">
+                        <table class="board__table">
+                            <caption class="visually-hidden">Departures</caption>
+                            <thead>
+                                <tr><th scope="col">Time</th><th scope="col">To</th><th scope="col">Flight</th><th scope="col">Terminal</th><th scope="col">Gate</th><th scope="col">Status</th><th scope="col">Info</th></tr>
+                            </thead>
+                            <tbody>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--info" aria-hidden="true"></span><span data-flap="5">10:05</span></td><td class="board__place" data-flap="9">Lisbon</td><td class="board__flight" data-flap="7">MA 204</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2">12</td><td class="board__status"><span class="board__state board__state--info" data-flap="9">Boarding</span></td><td class="board__info">Closes 10:20</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--warn" aria-hidden="true"></span><span data-flap="5">10:20</span></td><td class="board__place" data-flap="9">Reykjavík</td><td class="board__flight" data-flap="7">NV 118</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2">24</td><td class="board__status"><span class="board__state board__state--warn" data-flap="9">Delayed</span></td><td class="board__info">New time 10:58 · fog</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--info" aria-hidden="true"></span><span data-flap="5">10:35</span></td><td class="board__place" data-flap="9">Amsterdam</td><td class="board__flight" data-flap="7">MA 310</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2">7</td><td class="board__status"><span class="board__state board__state--info" data-flap="9">Gate open</span></td><td class="board__info"></td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--ok" aria-hidden="true"></span><span data-flap="5">10:50</span></td><td class="board__place" data-flap="9">Marrakech</td><td class="board__flight" data-flap="7">ZX 762</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2">31</td><td class="board__status"><span class="board__state board__state--ok" data-flap="9">On time</span></td><td class="board__info"></td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--ok" aria-hidden="true"></span><span data-flap="5">11:10</span></td><td class="board__place" data-flap="9">Dublin</td><td class="board__flight" data-flap="7">MA 522</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--ok" data-flap="9">On time</span></td><td class="board__info">Gate at 10:10</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--bad" aria-hidden="true"></span><span data-flap="5">11:25</span></td><td class="board__place" data-flap="9">Geneva</td><td class="board__flight" data-flap="7">KW 1430</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--bad" data-flap="9">Cancelled</span></td><td class="board__info">Rebook at desk 14 or in app</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <div class="board__foot">
+                        <ul class="board__legend">
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--ok"></span>On time / landed</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--info"></span>Boarding / gate open</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--warn"></span>Delayed</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--bad"></span>Cancelled</li>
+                            </ul>
+                        <a class="button button--ghost" href="/flights/index.html#departures">All departures<svg class="text-link__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel board__panel" id="arrivals" tabindex="-1">
+                <div class="board__body container">
+                    <div class="board__search">
+                        <label class="visually-hidden" for="arrivals-search">Search arrivals by flight or city</label>
+                        <div class="field__control">
+                            <svg class="field__icon board__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+                            <input class="field__input field__input--with-icon field__input--dark" id="arrivals-search" type="search" placeholder="Search arrivals by flight or city" autocomplete="off">
+                        </div>
+                    </div>
+                    <section class="board__scroll" aria-label="Arrivals board" tabindex="0">
+                        <table class="board__table">
+                            <caption class="visually-hidden">Arrivals</caption>
+                            <thead>
+                                <tr><th scope="col">Time</th><th scope="col">From</th><th scope="col">Flight</th><th scope="col">Terminal</th><th scope="col">Belt</th><th scope="col">Status</th><th scope="col">Info</th></tr>
+                            </thead>
+                            <tbody>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--ok" aria-hidden="true"></span><span data-flap="5">09:48</span></td><td class="board__place" data-flap="9">Lisbon</td><td class="board__flight" data-flap="7">MA 205</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2">3</td><td class="board__status"><span class="board__state board__state--ok" data-flap="9">Landed</span></td><td class="board__info">Exit: Arrivals A</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--ok" aria-hidden="true"></span><span data-flap="5">09:55</span></td><td class="board__place" data-flap="9">Marrakech</td><td class="board__flight" data-flap="7">ZX 761</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2">6</td><td class="board__status"><span class="board__state board__state--ok" data-flap="9">Landed</span></td><td class="board__info">Exit: Arrivals B</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--warn" aria-hidden="true"></span><span data-flap="5">10:10</span></td><td class="board__place" data-flap="9">Reykjavík</td><td class="board__flight" data-flap="7">NV 117</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--warn" data-flap="9">Delayed</span></td><td class="board__info">Expected 10:40</td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--neutral" aria-hidden="true"></span><span data-flap="5">10:30</span></td><td class="board__place" data-flap="9">Amsterdam</td><td class="board__flight" data-flap="7">MA 311</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--neutral" data-flap="9">Expected</span></td><td class="board__info"></td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--neutral" aria-hidden="true"></span><span data-flap="5">10:45</span></td><td class="board__place" data-flap="9">Geneva</td><td class="board__flight" data-flap="7">KW 1429</td><td class="board__terminal" data-flap="2">T2</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--neutral" data-flap="9">Expected</span></td><td class="board__info"></td></tr>
+                                    <tr class="board__row"><td class="board__time"><span class="flap-lamp flap-lamp--neutral" aria-hidden="true"></span><span data-flap="5">11:00</span></td><td class="board__place" data-flap="9">Dublin</td><td class="board__flight" data-flap="7">MA 523</td><td class="board__terminal" data-flap="2">T1</td><td class="board__gate" data-flap="2" data-flap-label="Not shown yet">—</td><td class="board__status"><span class="board__state board__state--neutral" data-flap="9">Expected</span></td><td class="board__info"></td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <div class="board__foot">
+                        <ul class="board__legend">
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--ok"></span>On time / landed</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--info"></span>Boarding / gate open</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--warn"></span>Delayed</li>
+                                <li class="board__legend-item"><span class="board__swatch board__swatch--bad"></span>Cancelled</li>
+                            </ul>
+                        <a class="button button--ghost" href="/flights/index.html#arrivals">All arrivals<svg class="text-link__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <p class="visually-hidden" role="status" data-flap-announcer></p>
+    </section>
+
+    <section class="photo-band on-dark" id="parking" aria-labelledby="parking-title">
+        <picture class="photo-band__media"><source type="image/avif" srcset="/assets/img/home/parking-1440.avif 1440w" sizes="100vw"><source type="image/webp" srcset="/assets/img/home/parking-1440.webp 1440w" sizes="100vw"><img class="photo-band__img" src="/assets/img/home/parking-1440.jpg" srcset="/assets/img/home/parking-1440.jpg 1440w" sizes="100vw" width="1440" height="810" alt="" loading="lazy" decoding="async"></picture>
+        <div class="photo-band__inner container">
+            <div class="photo-band__content">
+                <h2 class="section-title section-title--md photo-band__title" id="parking-title">Park at the terminal from £8.50 a day</h2>
+                <p class="photo-band__lede">Three car parks, all step-free to check-in. Pre-booked rates are up to 40% below drive-up, with free cancellation until 24 hours before you arrive.</p>
+                <dl class="stats">
+                    <div class="stats__item"><dt class="stats__label">Closest walk</dt><dd class="stats__value">2 min</dd></div>
+                    <div class="stats__item"><dt class="stats__label">Pick-up wait</dt><dd class="stats__value">10 min free</dd></div>
+                    <div class="stats__item"><dt class="stats__label">Drop-off</dt><dd class="stats__value">£3</dd></div>
+                </dl>
+                <a class="text-link text-link--underline text-link--on-dark" href="/parking/index.html#compare">Compare all car parks and the map<svg class="text-link__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+            </div>
+            <form class="card card--padded form photo-band__form on-light" action="/parking/index.html#quote" method="get" aria-labelledby="book-parking-title">
+                <div class="card__head">
+                    <h3 class="card__title" id="book-parking-title">Book parking</h3>
+                    <p class="card__text">Choose a car park, then your dates.</p>
+                </div>
+                <fieldset class="fieldset">
+                    <legend class="fieldset__legend">Car park</legend>
+                    <label class="choice"><input class="check__input" type="radio" name="carpark" value="p1"><span class="choice__text"><span class="choice__title">P1 Short-stay</span><span class="choice__meta">2 min walk · pick-up and drop-off</span></span><span class="choice__price">from £4 / hr</span></label>
+                    <label class="choice"><input class="check__input" type="radio" name="carpark" value="p2" checked><span class="choice__text"><span class="choice__title">P2 Long-stay</span><span class="choice__meta">5 min walk · covered</span></span><span class="choice__price">from £8.50 / day</span></label>
+                    <label class="choice"><input class="check__input" type="radio" name="carpark" value="mid-stay"><span class="choice__text"><span class="choice__title">Mid-Stay</span><span class="choice__meta">8 min shuttle · 10 min free wait</span></span><span class="choice__price">from £12 / day</span></label>
+                </fieldset>
+                <div class="field-grid form__rule">
+                    <div class="field"><label class="field__label field__label--caps" for="park-in">Arrive</label><input class="field__input" id="park-in" name="arrive" type="date"></div>
+                    <div class="field"><label class="field__label field__label--caps" for="park-out">Return</label><input class="field__input" id="park-out" name="return" type="date"></div>
+                </div>
+                <button class="button button--lg button--block" type="submit">Check prices and availability</button>
+                <p class="form__small">No payment until you confirm. Free cancellation up to 24 hours before arrival.</p>
+            </form>
+        </div>
+    </section>
+
+    <section class="band city-rail" id="explore" aria-labelledby="explore-title">
+        <div class="city-rail__head container">
+            <div class="city-rail__titles">
+                <h2 class="section-title section-title--brand" id="explore-title">Where we fly<span class="section-title__sub">Find your next holiday</span></h2>
+                <a class="text-link text-link--underline" href="/flights/airlines.html#destinations">View all 112 destinations<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </div>
+            <div class="city-rail__nav">
+                <p class="city-rail__count">1 – 3 / 4</p>
+                <button class="city-rail__button city-rail__button--prev" type="button" aria-label="Previous destinations" aria-controls="city-rail-track"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+                <button class="city-rail__button city-rail__button--next" type="button" aria-label="Next destinations" aria-controls="city-rail-track"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+            </div>
+        </div>
+        <ul class="city-rail__track" id="city-rail-track">
+            <li class="city-rail__item">
+                <a class="city-card" href="/destinations/index.html">
+                    <picture class="city-card__media"><source type="image/avif" srcset="/assets/img/cities/cairo-714.avif 714w" sizes="(max-width: 900px) 260px, 357px"><source type="image/webp" srcset="/assets/img/cities/cairo-714.webp 714w" sizes="(max-width: 900px) 260px, 357px"><img class="city-card__img" src="/assets/img/cities/cairo-714.jpg" srcset="/assets/img/cities/cairo-714.jpg 714w" sizes="(max-width: 900px) 260px, 357px" width="714" height="1040" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="city-card__text"><h3 class="city-card__name">Cairo</h3><p class="city-card__meta">from £189 · 5h 10m · daily</p></div>
+                </a>
+            </li>
+            <li class="city-rail__item">
+                <a class="city-card" href="/destinations/index.html">
+                    <picture class="city-card__media"><source type="image/avif" srcset="/assets/img/cities/new-york-714.avif 714w" sizes="(max-width: 900px) 260px, 357px"><source type="image/webp" srcset="/assets/img/cities/new-york-714.webp 714w" sizes="(max-width: 900px) 260px, 357px"><img class="city-card__img" src="/assets/img/cities/new-york-714.jpg" srcset="/assets/img/cities/new-york-714.jpg 714w" sizes="(max-width: 900px) 260px, 357px" width="714" height="1040" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="city-card__text"><h3 class="city-card__name">New York</h3><p class="city-card__meta">from £329 · 8h 05m · twice daily</p></div>
+                </a>
+            </li>
+            <li class="city-rail__item">
+                <a class="city-card" href="/destinations/index.html">
+                    <picture class="city-card__media"><source type="image/avif" srcset="/assets/img/cities/beijing-714.avif 714w" sizes="(max-width: 900px) 260px, 357px"><source type="image/webp" srcset="/assets/img/cities/beijing-714.webp 714w" sizes="(max-width: 900px) 260px, 357px"><img class="city-card__img" src="/assets/img/cities/beijing-714.jpg" srcset="/assets/img/cities/beijing-714.jpg 714w" sizes="(max-width: 900px) 260px, 357px" width="714" height="1040" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="city-card__text"><h3 class="city-card__name">Beijing</h3><p class="city-card__meta">from £449 · 10h 30m · 4 a week</p></div>
+                </a>
+            </li>
+            <li class="city-rail__item">
+                <a class="city-card" href="/destinations/index.html">
+                    <picture class="city-card__media"><source type="image/avif" srcset="/assets/img/cities/singapore-714.avif 714w" sizes="(max-width: 900px) 260px, 357px"><source type="image/webp" srcset="/assets/img/cities/singapore-714.webp 714w" sizes="(max-width: 900px) 260px, 357px"><img class="city-card__img" src="/assets/img/cities/singapore-714.jpg" srcset="/assets/img/cities/singapore-714.jpg 714w" sizes="(max-width: 900px) 260px, 357px" width="714" height="1040" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="city-card__text"><h3 class="city-card__name">Singapore</h3><p class="city-card__meta">from £479 · 13h 15m · daily</p></div>
+                </a>
+            </li>
+        </ul>
+        <div class="city-rail__progress container" aria-hidden="true"><span class="city-rail__bar"><span class="city-rail__fill"></span></span></div>
+    </section>
+
+    <section class="band band--panel" id="help" aria-labelledby="help-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title" id="help-title">Help for the day you fly</h2>
+                <a class="text-link" href="/help/index.html">All passenger services<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </div>
+            <ul class="help-list">
+                <li class="help-list__item">
+                    <a class="help-item" href="/help/special-assistance.html">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M10 8v6h6l3 6"></path><path d="M10 11h5"></path><path d="M6.5 13a5 5 0 1 0 7 6.5"></path></svg><h3 class="help-item__title">Special assistance</h3></div>
+                        <p class="help-item__body">Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.</p>
+                    </a>
+                </li>
+                <li class="help-list__item">
+                    <a class="help-item" href="/help/travelling-with-children.html">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="6" r="2.5"></circle><circle cx="16" cy="8" r="2"></circle><path d="M5 21v-6a4 4 0 0 1 8 0v6"></path><path d="M13 21v-5a3 3 0 0 1 6 0v5"></path></svg><h3 class="help-item__title">Travelling with children</h3></div>
+                        <p class="help-item__body">Family security lane, prams to the aircraft door, baby-change in every zone and play areas by gates 12 and 30.</p>
+                    </a>
+                </li>
+                <li class="help-list__item">
+                    <a class="help-item" href="/help/first-time-flying.html">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="M8 10h8M8 14h5"></path><circle cx="18" cy="18" r="3"></circle><path d="M17 18l1 1 2-2"></path></svg><h3 class="help-item__title">First time flying?</h3></div>
+                        <p class="help-item__body">Check-in, bag drop, security, gate: a five-step walkthrough with how long each takes today.</p>
+                    </a>
+                </li>
+                <li class="help-list__item">
+                    <a class="help-item" href="/flights/alerts.html">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg><h3 class="help-item__title">Flight alerts</h3></div>
+                        <p class="help-item__body">Gate changes, delays and boarding calls by text or WhatsApp the moment they happen. Free.</p>
+                    </a>
+                </li>
+                <li class="help-list__item">
+                    <a class="help-item" href="/help/baggage-and-lost-property.html#lost-property">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"></rect><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"></path><path d="M12 12v3M12 17h.01"></path></svg><h3 class="help-item__title">Lost property</h3></div>
+                        <p class="help-item__body">Report a lost item in two minutes and track it. Most bags are reunited the same day.</p>
+                    </a>
+                </li>
+                <li class="help-list__item">
+                    <a class="help-item" href="/help/index.html">
+                        <div class="help-item__head"><svg class="help-item__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg><h3 class="help-item__title">Info and contacts</h3></div>
+                        <p class="help-item__body">Passenger enquiries 05:00–23:00 on 0121 496 0123, live chat in the app, and help desks in both terminals.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="band" id="at-the-airport" aria-labelledby="airport-title">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-head__titles">
+                    <h2 class="section-title" id="airport-title">At the airport</h2>
+                    <p class="section-head__intro">Everything between the door and the gate.</p>
+                </div>
+                <a class="text-link" href="/at-the-airport/index.html#maps">Terminal maps<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </div>
+            <div class="towers">
+                <a class="tower" href="/at-the-airport/security.html">
+                    <picture class="tower__media"><source type="image/avif" srcset="/assets/img/airport/tower-security-560.avif 560w, /assets/img/airport/tower-security-840.avif 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><source type="image/webp" srcset="/assets/img/airport/tower-security-560.webp 560w, /assets/img/airport/tower-security-840.webp 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><img class="tower__img" src="/assets/img/airport/tower-security-560.jpg" srcset="/assets/img/airport/tower-security-560.jpg 560w, /assets/img/airport/tower-security-840.jpg 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px" width="560" height="840" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="tower__top"><svg class="tower__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span class="tower__number" aria-hidden="true">01</span></div>
+                    <div class="tower__bottom">
+                        <h3 class="tower__title">Security and customs</h3>
+                        <p class="tower__body">New scanners in Terminal 1: liquids and laptops stay in your bag. Arrive two hours before short-haul, three for long-haul.</p>
+                        <span class="tower__cta">What to expect<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                    </div>
+                </a>
+                <a class="tower" href="/at-the-airport/eat-and-drink.html">
+                    <picture class="tower__media"><source type="image/avif" srcset="/assets/img/airport/tower-eat-and-drink-560.avif 560w, /assets/img/airport/tower-eat-and-drink-840.avif 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><source type="image/webp" srcset="/assets/img/airport/tower-eat-and-drink-560.webp 560w, /assets/img/airport/tower-eat-and-drink-840.webp 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><img class="tower__img" src="/assets/img/airport/tower-eat-and-drink-560.jpg" srcset="/assets/img/airport/tower-eat-and-drink-560.jpg 560w, /assets/img/airport/tower-eat-and-drink-840.jpg 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px" width="560" height="840" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="tower__top"><svg class="tower__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 11h2a2 2 0 0 1 0 4h-2"></path><path d="M8 3v3M11 3v3M14 3v3"></path></svg><span class="tower__number" aria-hidden="true">02</span></div>
+                    <div class="tower__bottom">
+                        <h3 class="tower__title">Eat and drink</h3>
+                        <p class="tower__body">24 cafés, restaurants and bars across both terminals. Order ahead and your coffee is waiting after security.</p>
+                        <span class="tower__cta">Order ahead<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                    </div>
+                </a>
+                <a class="tower" href="/help/baggage-and-lost-property.html">
+                    <picture class="tower__media"><source type="image/avif" srcset="/assets/img/airport/tower-baggage-560.avif 560w, /assets/img/airport/tower-baggage-840.avif 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><source type="image/webp" srcset="/assets/img/airport/tower-baggage-560.webp 560w, /assets/img/airport/tower-baggage-840.webp 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><img class="tower__img" src="/assets/img/airport/tower-baggage-560.jpg" srcset="/assets/img/airport/tower-baggage-560.jpg 560w, /assets/img/airport/tower-baggage-840.jpg 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px" width="560" height="840" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="tower__top"><svg class="tower__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="1"></rect><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"></path><path d="M8 12v4M16 12v4"></path></svg><span class="tower__number" aria-hidden="true">03</span></div>
+                    <div class="tower__bottom">
+                        <h3 class="tower__title">Baggage and lost property</h3>
+                        <p class="tower__body">Allowances by airline, what you can carry, and how to report and track a lost item. Most bags are reunited the same day.</p>
+                        <span class="tower__cta">Read more<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                    </div>
+                </a>
+                <a class="tower" href="/at-the-airport/index.html#maps">
+                    <picture class="tower__media"><source type="image/avif" srcset="/assets/img/airport/tower-maps-560.avif 560w, /assets/img/airport/tower-maps-840.avif 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><source type="image/webp" srcset="/assets/img/airport/tower-maps-560.webp 560w, /assets/img/airport/tower-maps-840.webp 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px"><img class="tower__img" src="/assets/img/airport/tower-maps-560.jpg" srcset="/assets/img/airport/tower-maps-560.jpg 560w, /assets/img/airport/tower-maps-840.jpg 840w" sizes="(max-width: 900px) calc(50vw - 22px), 265px" width="560" height="840" alt="" loading="lazy" decoding="async"></picture>
+                    <div class="tower__top"><svg class="tower__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3z"></path><path d="M9 4v13M15 7v13"></path></svg><span class="tower__number" aria-hidden="true">04</span></div>
+                    <div class="tower__bottom">
+                        <h3 class="tower__title">Terminal maps</h3>
+                        <p class="tower__body">Shops, lounges, lifts, baby-change and every gate on an interactive map of both terminals.</p>
+                        <span class="tower__cta">Open the map<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="getting-here" id="getting-here" aria-labelledby="getting-here-title">
+        <div class="getting-here__inner container">
+            <div class="getting-here__copy">
+                <h2 class="section-title section-title--md" id="getting-here-title">Getting here</h2>
+                <p class="getting-here__intro">Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.</p>
+                <ul class="row-links">
+                    <li>
+                        <a class="row-link" href="/getting-here/index.html#train">
+                            <svg class="row-link__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"></rect><path d="M5 11h14M9 17l-2 4M15 17l2 4"></path><circle cx="9" cy="14" r="1"></circle><circle cx="15" cy="14" r="1"></circle></svg>
+                            <span class="row-link__text"><span class="row-link__title">By train</span><span class="row-link__meta">18 min from Central · lifts from platform to check-in</span></span>
+                            <svg class="row-link__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="row-link" href="/getting-here/index.html#car">
+                            <svg class="row-link__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16l2-6h11l3 3h2v3h-2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle><path d="M9 17h6"></path></svg>
+                            <span class="row-link__text"><span class="row-link__title">By car or taxi</span><span class="row-link__meta">Drop-off £3 at the door, or free for 10 min at Mid-Stay</span></span>
+                            <svg class="row-link__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="row-link" href="/getting-here/index.html#bus">
+                            <svg class="row-link__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="14" rx="3"></rect><path d="M4 10h16M8 18l-1 3M16 18l1 3"></path></svg>
+                            <span class="row-link__text"><span class="row-link__title">By bus or coach</span><span class="row-link__meta">Routes, timetables and the coach station</span></span>
+                            <svg class="row-link__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="getting-here__note"><svg class="getting-here__note-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M10 8v6h6l3 6"></path><path d="M10 11h5"></path><path d="M6.5 13a5 5 0 1 0 7 6.5"></path></svg><span><strong class="getting-here__note-lead">Step-free throughout.</strong> Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.</span></p>
+            </div>
+        </div>
+        <div class="map-pane">
+            <svg class="map map--fill" viewBox="0 0 760 680" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Map of Meridian Airport: the terminals, rail station, car parks and approach roads">
+                <rect class="map__ground" width="760" height="680"></rect>
+                <path class="map__river" d="M0 0 H760 V120 C 640 150, 560 130, 470 160 C 390 185, 320 150, 240 170 C 160 190, 80 160, 0 190 Z"></path>
+                <path class="map__green" d="M0 540 C 90 520, 150 560, 230 545 C 300 532, 330 575, 400 560 L 400 680 L 0 680 Z"></path>
+                <rect class="map__green" x="560" y="420" width="200" height="140"></rect>
+                <g class="map__block"><rect x="30" y="230" width="60" height="38"></rect><rect x="100" y="236" width="44" height="30"></rect><rect x="40" y="300" width="36" height="26"></rect><rect x="640" y="250" width="70" height="40"></rect><rect x="690" y="330" width="46" height="34"></rect><rect x="600" y="600" width="80" height="44"></rect><rect x="470" y="620" width="60" height="30"></rect></g>
+                <path class="map__runway" d="M120 290 L 600 220" stroke-width="26"></path>
+                <path class="map__dash" d="M120 290 L 600 220" stroke-width="3" stroke-dasharray="14 12"></path>
+                <path class="map__road" d="M-20 660 C 120 600, 160 480, 300 470 C 420 462, 470 520, 560 500 C 640 482, 700 420, 790 410" stroke-width="22"></path>
+                <path class="map__road-core" d="M-20 660 C 120 600, 160 480, 300 470 C 420 462, 470 520, 560 500 C 640 482, 700 420, 790 410" stroke-width="14"></path>
+                <path class="map__road" d="M300 470 C 330 430, 360 400, 380 380" stroke-width="16"></path>
+                <path class="map__lane" d="M300 470 C 330 430, 360 400, 380 380" stroke-width="10"></path>
+                <path class="map__road" d="M380 380 C 420 350, 470 350, 520 372 C 560 390, 540 440, 500 436 C 460 432, 440 400, 470 390" stroke-width="16"></path>
+                <path class="map__lane" d="M380 380 C 420 350, 470 350, 520 372 C 560 390, 540 440, 500 436 C 460 432, 440 400, 470 390" stroke-width="10"></path>
+                <path class="map__road" d="M80 560 L 80 680 M 650 300 L 760 290 M 200 340 L 90 360" stroke-width="12"></path>
+                <path class="map__lane" d="M80 560 L 80 680 M 650 300 L 760 290 M 200 340 L 90 360" stroke-width="7"></path>
+                <path class="map__rail" d="M-20 420 C 100 420, 200 400, 330 400" stroke-width="4"></path>
+                <path class="map__dash" d="M-20 420 C 100 420, 200 400, 330 400" stroke-width="2" stroke-dasharray="8 8"></path>
+                <rect class="map__terminal" x="330" y="326" width="136" height="66" rx="6"></rect>
+                <rect class="map__terminal map__terminal--alt" x="480" y="336" width="104" height="58" rx="6"></rect>
+                <path class="map__link" d="M466 361 H480" stroke-width="10"></path>
+                <text class="map__block-title" x="342" y="352" font-size="14">Terminal 1</text>
+                <text class="map__block-sub" x="342" y="372" font-size="12">Rail station below</text>
+                <text class="map__block-title" x="490" y="360" font-size="14">Terminal 2</text>
+                <text class="map__block-sub" x="490" y="380" font-size="12">Gates 20–38</text>
+                <g><rect class="map__chip" x="226" y="450" width="74" height="42" rx="5"></rect><text class="map__chip-title" x="234" y="468" font-size="13">P1</text><text class="map__chip-sub" x="234" y="484" font-size="12">2 min walk</text></g>
+                <g><rect class="map__chip" x="306" y="450" width="74" height="42" rx="5"></rect><text class="map__chip-title" x="314" y="468" font-size="13">P2</text><text class="map__chip-sub" x="314" y="484" font-size="12">5 min walk</text></g>
+                <g><rect class="map__chip" x="556" y="514" width="96" height="42" rx="5"></rect><text class="map__chip-title" x="564" y="532" font-size="13">Mid-Stay</text><text class="map__chip-sub" x="564" y="548" font-size="12">8 min shuttle</text></g>
+                <circle class="map__station" cx="330" cy="400" r="7" stroke-width="3"></circle>
+                <text class="map__station-label" x="342" y="416" font-size="12">Meridian Airport station</text>
+                <g><rect class="map__a45" x="174" y="592" width="48" height="22" rx="3"></rect><text class="map__a45-text" x="184" y="608" font-size="12">A45</text></g>
+                <g><rect class="map__a45" x="638" y="442" width="48" height="22" rx="3"></rect><text class="map__a45-text" x="648" y="458" font-size="12">A45</text></g>
+                <text class="map__label map__label--river" x="40" y="100" font-size="14">River Meridian</text>
+                <text class="map__label" x="586" y="586" font-size="12">Meridian Country Park</text>
+                <text class="map__label" x="126" y="258" font-size="12">Marston End</text>
+                <text class="map__label" x="636" y="270" font-size="12">Hollin Rise</text>
+                <text class="map__label map__label--caps" x="452" y="250" font-size="12" letter-spacing="2">RUNWAY 09/27</text>
+                <g transform="translate(395 300)"><path class="map__pin" d="M0 0 c-8 0 -14 -6 -14 -14 c0 -11 14 -24 14 -24 s14 13 14 24 c0 8 -6 14 -14 14z"></path><circle class="map__pin-dot" cx="0" cy="-14" r="5"></circle></g>
+            </svg>
+            <div class="map-pane__card">
+                <p class="map-pane__place"><span class="map-pane__name">Meridian Airport</span><span class="map-pane__address">Terminal 1, Birmingham B99 1MA</span></p>
+                <p class="map-pane__actions"><a class="button" href="/getting-here/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 9-9 9-9-9z"></path><path d="M9 12h6M13 10l2 2-2 2"></path></svg>Directions</a><a class="button button--secondary" href="/at-the-airport/index.html#maps">Larger map</a></p>
+            </div>
+            <p class="map-pane__credit">Map data · <a class="map-pane__credit-link" href="/terms.html">Terms</a></p>
+        </div>
+    </section>
+</main>
+<footer class="footer on-dark">
+    <div class="footer__main container">
+        <div class="footer__about">
+            <p class="footer__brand"><svg class="footer__logo" width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="2.5"></circle><path d="M6 20c6-6 18-6 24 0" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path><path d="M18 4v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path><circle cx="18" cy="18" r="2.5" fill="currentColor"></circle></svg><span class="footer__name">Meridian Airport</span></p>
+            <p class="footer__contact">Open 24 hours. Passenger enquiries <a class="footer__phone" href="tel:+441214960123">0121&nbsp;496&nbsp;0123</a>, every day 05:00–23:00. Live chat in the app.</p>
+            <ul class="footer__social">
+                <li><a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram (external site)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg></a></li>
+                <li><a class="footer__social-link" href="https://x.com/" aria-label="X (external site)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"></path></svg></a></li>
+                <li><a class="footer__social-link" href="https://www.youtube.com/" aria-label="YouTube (external site)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"></rect><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"></path></svg></a></li>
+                <li><a class="footer__social-link" href="https://www.linkedin.com/" aria-label="LinkedIn (external site)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 10v8M6 6h.01M10 18v-5a2.5 2.5 0 0 1 5 0v5M15 13a2.5 2.5 0 0 1 3 2.5V18"></path></svg></a></li>
+            </ul>
+        </div>
+        <nav class="footer__col" aria-labelledby="footer-flights">
+            <h2 class="footer__heading" id="footer-flights">Flights</h2>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="/flights/index.html#departures">Live departures</a></li>
+                <li><a class="footer__link" href="/flights/index.html#arrivals">Live arrivals</a></li>
+                <li><a class="footer__link" href="/destinations/index.html">Destinations</a></li>
+                <li><a class="footer__link" href="/flights/alerts.html">Flight alerts</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-shop">
+            <h2 class="footer__heading" id="footer-shop">Shop &amp; relax</h2>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="/at-the-airport/shopping.html">Reserve &amp; collect</a></li>
+                <li><a class="footer__link" href="/at-the-airport/shopping.html#offers">Offers this week</a></li>
+                <li><a class="footer__link" href="/at-the-airport/lounges.html">Lounges &amp; Fast Track</a></li>
+                <li><a class="footer__link" href="/at-the-airport/eat-and-drink.html">Order-ahead food</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-plan">
+            <h2 class="footer__heading" id="footer-plan">Plan</h2>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="/parking/index.html">Parking</a></li>
+                <li><a class="footer__link" href="/getting-here/index.html">Getting here</a></li>
+                <li><a class="footer__link" href="/help/special-assistance.html">Special assistance</a></li>
+                <li><a class="footer__link" href="/help/travelling-with-children.html">Travelling with children</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__heading" id="footer-company">Company</h2>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="/help/index.html">Contact us</a></li>
+                <li><a class="footer__link" href="/about/careers.html">Careers</a></li>
+                <li><a class="footer__link" href="/about/media-centre.html">Media centre</a></li>
+                <li><a class="footer__link" href="/about/sustainability.html">Sustainability</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer__legal">
+        <div class="footer__legal-inner container">
+            <p>© 2026 Meridian Airport Ltd. A fictional airport.</p>
+            <ul class="footer__legal-links">
+                <li><a class="footer__link" href="/accessibility.html">Accessibility</a></li>
+                <li><a class="footer__link" href="/privacy.html">Privacy</a></li>
+                <li><a class="footer__link" href="/cookies.html">Cookies</a></li>
+                <li><a class="footer__link" href="/terms.html">Terms</a></li>
+                <li><a class="footer__link" href="/sitemap.html">Site map</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

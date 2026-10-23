@@ -1,0 +1,47 @@
+uuid: 45e6669a-5a9b-426a-8848-e4892f03dd02
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.meridian.breadcrumb-item
+    - canvas.component.sdc.meridian.button
+    - canvas.component.sdc.meridian.city-card
+    - canvas.component.sdc.meridian.fact
+    - canvas.component.sdc.meridian.flight-row
+    - canvas.component.sdc.meridian.footer-link
+    - canvas.component.sdc.meridian.heading
+    - canvas.component.sdc.meridian.hero-sign
+    - canvas.component.sdc.meridian.map-pane
+    - canvas.component.sdc.meridian.nav-link
+    - canvas.component.sdc.meridian.notice
+    - canvas.component.sdc.meridian.package-feature
+    - canvas.component.sdc.meridian.paragraph
+    - canvas.component.sdc.meridian.picture
+    - canvas.component.sdc.meridian.section-head
+    - canvas.component.sdc.meridian.stat
+    - canvas.component.sdc.meridian.status
+    - canvas.component.sdc.meridian.tower
+    - canvas.component.sdc.meridian.wait-chip
+name: 'Meridian · Parts'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.meridian.breadcrumb-item
+  - sdc.meridian.button
+  - sdc.meridian.city-card
+  - sdc.meridian.fact
+  - sdc.meridian.flight-row
+  - sdc.meridian.footer-link
+  - sdc.meridian.heading
+  - sdc.meridian.hero-sign
+  - sdc.meridian.map-pane
+  - sdc.meridian.nav-link
+  - sdc.meridian.notice
+  - sdc.meridian.package-feature
+  - sdc.meridian.paragraph
+  - sdc.meridian.picture
+  - sdc.meridian.section-head
+  - sdc.meridian.stat
+  - sdc.meridian.status
+  - sdc.meridian.tower
+  - sdc.meridian.wait-chip

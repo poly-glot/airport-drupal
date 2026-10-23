@@ -1,0 +1,336 @@
+{
+ "uuid": "7c6bb8fb-2ac0-48aa-857f-b7783b975e6f",
+ "title": "About Meridian — Meridian Airport",
+ "description": "Meridian Airport is a fictional airport in Birmingham with two terminals, four airlines and 20 destinations. Who we are and what we are working on.",
+ "status": true,
+ "path": "/about",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "5420919e-92ad-4210-8b61-8495c72d565a",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "eyebrow": "About Meridian",
+    "title": "About Meridian",
+    "intro": "A two-terminal airport in Birmingham, built around a railway station and run for the people who use it.",
+    "variant": "art",
+    "widths": "960,1440",
+    "sizes": "720px",
+    "image_src": "/assets/img/about/terminal-960",
+    "image_alt": "A glass airport terminal glows at blue hour beside a control tower.",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "6a71867e-e80e-4b9c-9842-462d33d06996",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "div",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "628f7a30-fa15-4ba5-b562-4d352c093d41",
+   "component_id": "sdc.meridian.callout",
+   "parent_uuid": "6a71867e-e80e-4b9c-9842-462d33d06996",
+   "slot": "parts",
+   "inputs": {
+    "title": "Demonstration note",
+    "body": "<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>"
+   }
+  },
+  {
+   "uuid": "9ef7fa44-85d0-479f-b7e0-121a3805115c",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "numbers",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "numbers-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "86553558-a34f-429f-9cd5-8c7763904d82",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "9ef7fa44-85d0-479f-b7e0-121a3805115c",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "05044ea0-5ecb-484d-9952-99fab8adb646",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "86553558-a34f-429f-9cd5-8c7763904d82",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"numbers-title\">Meridian in numbers</h2>"
+   }
+  },
+  {
+   "uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "86553558-a34f-429f-9cd5-8c7763904d82",
+   "slot": "parts",
+   "inputs": {
+    "variant": "default"
+   }
+  },
+  {
+   "uuid": "c4225e41-b5d2-4769-9497-99a8a1d6139b",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "passengers in 2025",
+    "value": "6.4 million"
+   }
+  },
+  {
+   "uuid": "12a20689-7daa-422b-a4fc-b693efc17825",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "terminals, linked by a covered walkway",
+    "value": "2"
+   }
+  },
+  {
+   "uuid": "12455c27-8b7a-412e-b796-d0e89b17a82b",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "airlines",
+    "value": "4"
+   }
+  },
+  {
+   "uuid": "90acfbbc-6bb8-45b9-a4e8-ba754cd090ab",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "destinations",
+    "value": "20"
+   }
+  },
+  {
+   "uuid": "a84d3f43-30bd-4a90-b5b3-b063c4439505",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "people working across the airport",
+    "value": "3,100"
+   }
+  },
+  {
+   "uuid": "19e2f3bb-d49b-40b4-8d13-f82c83ba2733",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "57290610-6950-423e-b527-2ce236cb4ff5",
+   "slot": "items",
+   "inputs": {
+    "term": "by train from Birmingham Central",
+    "value": "18 minutes"
+   }
+  },
+  {
+   "uuid": "9639ba00-d4ab-43c7-9e2d-d62a5373d4a1",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "who-we-are",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "who-we-are-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "d3785873-4a28-4944-8db9-44e574c1d654",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "9639ba00-d4ab-43c7-9e2d-d62a5373d4a1",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"who-we-are-title\">Who we are</h2>\n<p>Meridian Airport opened in 1971 as a single terminal beside a new railway line. Terminal 2 followed in 2009. Today we handle around 6.4 million passengers a year, most of them on short flights to Europe and North Africa.</p>\n<p>Meridian Airport Ltd owns and runs the airport. We look after the runway, the terminals, security, the car parks and the shops and restaurants. Airlines run their own flights, check-in and baggage handling.</p>"
+   }
+  },
+  {
+   "uuid": "2d9537ec-50cf-4016-aeba-789a6945bd13",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "what-we-are-working-on",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "what-we-are-working-on-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "09212eac-b718-4ce7-9b15-9607e369f1b5",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "2d9537ec-50cf-4016-aeba-789a6945bd13",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"what-we-are-working-on-title\">What we are working on</h2>\n<h3>Shorter queues at security</h3>\n<p>New scanners opened in all six Terminal 1 lanes on 1 October 2026. Average waits fell from 14 minutes to 8 in the first week. Terminal 2's lanes will be replaced by spring 2027.</p>\n<h3>Easier journeys by rail</h3>\n<p>Half of our passengers already arrive by public transport. We are working with the rail industry on later trains, so that passengers on the last arrivals of the night can get home without a car.</p>\n<h3>A quieter, cleaner airport</h3>\n<p>We have run on renewable electricity since 2024 and have a plan to reach net zero for our own operations by 2035.</p>\n<p><a href=\"/about/sustainability\">Sustainability</a></p>"
+   }
+  },
+  {
+   "uuid": "1c9d9410-37bd-42f6-b6c8-e1db6e77aad5",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "how-we-are-run",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "how-we-are-run-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "948e832c-dcff-4537-8eb6-79ba9cd12c20",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "1c9d9410-37bd-42f6-b6c8-e1db6e77aad5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"how-we-are-run-title\">How we are run</h2>\n<p>Meridian Airport Ltd is a private company with a board of seven directors, including two independent members. A Passenger Advisory Panel of 12 regular travellers, including disabled passengers and parents of young children, meets four times a year and reviews every major change to the terminals before it is built.</p>"
+   }
+  },
+  {
+   "uuid": "b78d1ac3-375f-4568-b4e7-bcf4100376e2",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "what-passengers-say",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "what-passengers-say-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "e8384247-b7ff-4d6b-a5b0-4f49ce37f56f",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "b78d1ac3-375f-4568-b4e7-bcf4100376e2",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "eeae1753-fbf6-43bb-919b-8ff92bb2db5b",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "e8384247-b7ff-4d6b-a5b0-4f49ce37f56f",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"what-passengers-say-title\">What passengers say</h2>"
+   }
+  },
+  {
+   "uuid": "3b44a0a3-49bf-408e-b9b7-457d2aa75fc8",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "e8384247-b7ff-4d6b-a5b0-4f49ce37f56f",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "43c4368f-fe78-4695-b2f4-bbfba38b8b68",
+   "component_id": "sdc.meridian.testimonial",
+   "parent_uuid": "3b44a0a3-49bf-408e-b9b7-457d2aa75fc8",
+   "slot": "parts",
+   "inputs": {
+    "quote": "<p>Eight minutes through security with a pram, and the family lane staff talked to my daughter, not over her.</p>",
+    "name": "Priya N.",
+    "meta": "Flew to Lisbon, October 2026"
+   }
+  },
+  {
+   "uuid": "f3b9c1e4-636c-43af-80ae-73f30a1cefe9",
+   "component_id": "sdc.meridian.testimonial",
+   "parent_uuid": "3b44a0a3-49bf-408e-b9b7-457d2aa75fc8",
+   "slot": "parts",
+   "inputs": {
+    "quote": "<p>The train drops you under the terminal. I left the office at five and was at the gate before six.</p>",
+    "name": "Tom A.",
+    "meta": "Flies to Amsterdam most months"
+   }
+  },
+  {
+   "uuid": "ccaafceb-858b-4931-9a3d-b28ba33ab145",
+   "component_id": "sdc.meridian.testimonial",
+   "parent_uuid": "3b44a0a3-49bf-408e-b9b7-457d2aa75fc8",
+   "slot": "parts",
+   "inputs": {
+    "quote": "<p>I booked assistance the night before. Someone met me at the kerb and stayed until I was in my seat.</p>",
+    "name": "Margaret O.",
+    "meta": "Flew to Reykjavik, September 2026"
+   }
+  },
+  {
+   "uuid": "ad1dfd25-2a4d-42e3-af1e-64892e583dc8",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "our-neighbours",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "our-neighbours-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "ae59a7cf-b289-47d7-acd2-fce6e036987a",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "ad1dfd25-2a4d-42e3-af1e-64892e583dc8",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"our-neighbours-title\">Our neighbours</h2>\n<p>Around 40,000 people live within 5 kilometres of the runway. We run a noise insulation scheme for homes under the flight path, publish noise reports every month, and fund local projects through the Meridian Community Fund, which gave £420,000 to 63 groups in 2025.</p>"
+   }
+  },
+  {
+   "uuid": "b54685ba-516d-4ab9-9cd1-82a9e99950b0",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "work-with-us",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "work-with-us-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "66362d86-1f46-4a55-a181-7edb02700b1a",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "b54685ba-516d-4ab9-9cd1-82a9e99950b0",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"work-with-us-title\">Work with us</h2>\n<p><a href=\"/about/careers\">Careers</a></p>\n<p><a href=\"/about/media-centre\">Media centre</a></p>"
+   }
+  },
+  {
+   "uuid": "fdac39fa-6062-4d05-b191-cabadadac31f",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "contact",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "contact-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "6dc5eacb-d2f6-46fa-b823-ebb066347570",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "fdac39fa-6062-4d05-b191-cabadadac31f",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"contact-title\">Contact</h2>\n<p>Meridian Airport, Skyline Way, Birmingham B99 1MA</p>\n<p><a href=\"tel:+441214960123\">0121 496 0123</a></p>\n<p><a href=\"mailto:hello@meridianairport.example\">hello@meridianairport.example</a></p>"
+   }
+  }
+ ]
+}

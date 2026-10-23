@@ -1,0 +1,321 @@
+{
+ "id": "meridian_nav_flights_page",
+ "label": "meridian nav flights page",
+ "description": null,
+ "status": true,
+ "component_tree": [
+  {
+   "uuid": "2af9b8fd-e11d-4487-a80e-9bc44d07d945",
+   "component_id": "theme_page_template.meridian",
+   "inputs": {}
+  },
+  {
+   "uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "component_id": "sdc.meridian.site-header",
+   "parent_uuid": "2af9b8fd-e11d-4487-a80e-9bc44d07d945",
+   "slot": "header",
+   "inputs": {
+    "cta_label": "Book parking",
+    "cta_href": "/parking",
+    "basket_href": "/at-the-airport/shopping",
+    "basket_label": "Basket, 0 items"
+   }
+  },
+  {
+   "uuid": "46f7943e-8e79-4e57-a1cc-5cf2fabe078a",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Flights",
+    "href": "/flights",
+    "current": "page"
+   }
+  },
+  {
+   "uuid": "ea6e852f-040b-466f-93c8-a5c11c694044",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Shop",
+    "href": "/at-the-airport/shopping",
+    "current": "none"
+   }
+  },
+  {
+   "uuid": "04409b73-70bd-407d-870c-8e448eef3f57",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Parking",
+    "href": "/parking",
+    "current": "none"
+   }
+  },
+  {
+   "uuid": "61f7a479-0e06-4563-a0f5-d9c79503b327",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Lounges",
+    "href": "/at-the-airport/lounges",
+    "current": "none"
+   }
+  },
+  {
+   "uuid": "2ae5e94f-9895-4782-9ac6-3031eb02c63b",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Getting here",
+    "href": "/getting-here",
+    "current": "none"
+   }
+  },
+  {
+   "uuid": "9d7321b1-b27d-4ed7-bf62-ba17c129ae5d",
+   "component_id": "sdc.meridian.nav-link",
+   "parent_uuid": "d4745203-b45f-4ea2-8a51-36c3594208e4",
+   "slot": "nav",
+   "inputs": {
+    "label": "Assistance",
+    "href": "/help",
+    "current": "none"
+   }
+  },
+  {
+   "uuid": "23e9eabe-c35e-4ab8-9eab-25fbddfaab85",
+   "component_id": "marker.page_content",
+   "parent_uuid": "2af9b8fd-e11d-4487-a80e-9bc44d07d945",
+   "slot": "content",
+   "inputs": {}
+  },
+  {
+   "uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "component_id": "sdc.meridian.site-footer",
+   "parent_uuid": "2af9b8fd-e11d-4487-a80e-9bc44d07d945",
+   "slot": "footer",
+   "inputs": {
+    "enquiries": "Open 24 hours. Passenger enquiries",
+    "phone": "0121 496 0123",
+    "phone_href": "tel:+441214960123",
+    "enquiries_suffix": ", every day 05:00–23:00. Live chat in the app.",
+    "legal_line": "© 2026 Meridian Airport Ltd. A fictional airport."
+   }
+  },
+  {
+   "uuid": "eb33d6de-64cd-4d63-970d-d530bd550eb4",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_flights",
+   "inputs": {
+    "label": "Live departures",
+    "href": "/flights#departures"
+   }
+  },
+  {
+   "uuid": "371cbac6-8831-419e-8969-c1af378a0145",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_flights",
+   "inputs": {
+    "label": "Live arrivals",
+    "href": "/flights#arrivals"
+   }
+  },
+  {
+   "uuid": "918f6244-27ab-4c68-81dc-0c2b467db66b",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_flights",
+   "inputs": {
+    "label": "Destinations",
+    "href": "/destinations"
+   }
+  },
+  {
+   "uuid": "0ca29b6f-8dcc-41db-b128-4c5f2ea47261",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_flights",
+   "inputs": {
+    "label": "Flight alerts",
+    "href": "/flights/alerts"
+   }
+  },
+  {
+   "uuid": "247fac79-d243-482c-8ffb-f15693f09209",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_shop",
+   "inputs": {
+    "label": "Reserve & collect",
+    "href": "/at-the-airport/shopping"
+   }
+  },
+  {
+   "uuid": "9006b5c4-3b9a-419f-a1b3-04841e4c71c3",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_shop",
+   "inputs": {
+    "label": "Offers this week",
+    "href": "/at-the-airport/shopping#offers"
+   }
+  },
+  {
+   "uuid": "8f3256b6-3e45-4598-b7bd-2f5518358413",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_shop",
+   "inputs": {
+    "label": "Lounges & Fast Track",
+    "href": "/at-the-airport/lounges"
+   }
+  },
+  {
+   "uuid": "9c2e8419-6d2e-4fef-bf52-18b7da834e18",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_shop",
+   "inputs": {
+    "label": "Order-ahead food",
+    "href": "/at-the-airport/eat-and-drink"
+   }
+  },
+  {
+   "uuid": "d132e65f-f2c2-474b-b873-3cb1105d73b7",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_plan",
+   "inputs": {
+    "label": "Parking",
+    "href": "/parking"
+   }
+  },
+  {
+   "uuid": "ba8b0dec-cdf6-4116-9894-b3ce9842fbff",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_plan",
+   "inputs": {
+    "label": "Getting here",
+    "href": "/getting-here"
+   }
+  },
+  {
+   "uuid": "70d871cd-9beb-433f-b84b-a2c1474e7cb7",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_plan",
+   "inputs": {
+    "label": "Special assistance",
+    "href": "/help/special-assistance"
+   }
+  },
+  {
+   "uuid": "77571c3e-97c5-4fec-b1aa-e3f999421f91",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_plan",
+   "inputs": {
+    "label": "Travelling with children",
+    "href": "/help/travelling-with-children"
+   }
+  },
+  {
+   "uuid": "55feae00-d877-4de4-9182-496b7a446344",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_company",
+   "inputs": {
+    "label": "Contact us",
+    "href": "/help"
+   }
+  },
+  {
+   "uuid": "9872a4a2-cbe4-4d47-9cf9-c6da3ee746fc",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_company",
+   "inputs": {
+    "label": "Careers",
+    "href": "/about/careers"
+   }
+  },
+  {
+   "uuid": "f7476a77-6126-44e3-be68-820c6d0d43aa",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_company",
+   "inputs": {
+    "label": "Media centre",
+    "href": "/about/media-centre"
+   }
+  },
+  {
+   "uuid": "89d08285-e88e-4146-9cbd-b9549a1d31ad",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "col_company",
+   "inputs": {
+    "label": "Sustainability",
+    "href": "/about/sustainability"
+   }
+  },
+  {
+   "uuid": "bc47f5ed-537d-4429-9a62-ab97554c3daa",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "legal",
+   "inputs": {
+    "label": "Accessibility",
+    "href": "/accessibility"
+   }
+  },
+  {
+   "uuid": "d58fadf8-4c56-48d5-8cf3-20547277a87f",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "legal",
+   "inputs": {
+    "label": "Privacy",
+    "href": "/privacy"
+   }
+  },
+  {
+   "uuid": "8e3ad5d4-b99d-4dd6-9aff-653fafaf9899",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "legal",
+   "inputs": {
+    "label": "Cookies",
+    "href": "/cookies"
+   }
+  },
+  {
+   "uuid": "48bed52d-c6d4-4907-91b8-656aff5cb5a6",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "legal",
+   "inputs": {
+    "label": "Terms",
+    "href": "/terms"
+   }
+  },
+  {
+   "uuid": "784fd55f-b355-4913-98fe-f70f8a2e69c5",
+   "component_id": "sdc.meridian.footer-link",
+   "parent_uuid": "5b844c22-c6a8-4b83-8bdf-6c2924359fe4",
+   "slot": "legal",
+   "inputs": {
+    "label": "Site map",
+    "href": "/sitemap"
+   }
+  }
+ ]
+}

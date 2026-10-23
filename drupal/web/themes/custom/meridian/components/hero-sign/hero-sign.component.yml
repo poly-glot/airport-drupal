@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero sign
+status: stable
+group: Meridian · Parts
+description: One quick link under the hero intro, with icon, title and a short meta line.
+props:
+  type: object
+  required: [icon, title, href]
+  properties:
+    icon:
+      type: string
+      title: Icon
+      enum: [shop, parking, fast-track]
+      examples: [shop]
+    title:
+      type: string
+      title: Sign heading
+      examples: [Reserve duty free]
+    meta:
+      type: string
+      title: Line under the sign heading
+      examples: [Collect at your gate]
+    href:
+      type: string
+      format: uri-reference
+      title: Link
+      examples: [/at-the-airport/shopping]

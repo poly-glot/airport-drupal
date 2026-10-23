@@ -1,0 +1,21 @@
+uuid: 0942e7c5-078b-458e-bde4-1ad7988d877d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - meridian
+active_version: 95702e45488525d1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'Accordion items, one per question.'
+label: Accordion
+id: sdc.meridian.accordion
+provider: meridian
+source: sdc
+source_local_id: 'meridian:accordion'

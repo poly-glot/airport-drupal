@@ -1,0 +1,253 @@
+{
+ "uuid": "f23706f7-94f3-4f96-b9dc-8080816df6fa",
+ "title": "Destination guides — Meridian Airport",
+ "description": "Short, practical guides to Lisbon, Reykjavík and Marrakech: how to get there from Meridian, where to eat, what to see and what to pack.",
+ "status": true,
+ "path": "/destinations",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "b72b4271-b6d2-4e19-9ace-68263a49dab2",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "Destination guides",
+    "intro": "Three places you can reach from here before lunch.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "7550f4ac-6c2b-4b42-9647-d6df3d92f354",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "b72b4271-b6d2-4e19-9ace-68263a49dab2",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "fefa5732-0aa5-4f18-a820-bc02c19339f0",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "7550f4ac-6c2b-4b42-9647-d6df3d92f354",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "cd396b12-d80a-43e4-ac0e-b1408f556a11",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "7550f4ac-6c2b-4b42-9647-d6df3d92f354",
+   "slot": "items",
+   "inputs": {
+    "label": "Destination guides",
+    "current": true
+   }
+  },
+  {
+   "uuid": "3c0b85e0-0c31-4d30-8b0f-210d15f91363",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "our-guides-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "3f5ca8cd-a717-426f-aab1-3be544f90ddc",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "3c0b85e0-0c31-4d30-8b0f-210d15f91363",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "b58911b8-f1a7-4022-9f6c-5927c5e46486",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "3f5ca8cd-a717-426f-aab1-3be544f90ddc",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "6fcb82e7-7d60-4145-9676-295ab9e4589e",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "b58911b8-f1a7-4022-9f6c-5927c5e46486",
+   "slot": "parts",
+   "inputs": {
+    "text": "Our guides",
+    "level": "h2",
+    "id": "our-guides-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "623e20a5-c448-4787-ac3f-092d3c02b855",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "b58911b8-f1a7-4022-9f6c-5927c5e46486",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Each guide covers the flight from Meridian, getting into the city, where to eat, what to see and a few practical tips. They are written for a first visit of three or four days.</p>"
+   }
+  },
+  {
+   "uuid": "0b16965c-fc9a-4b7b-8d62-fa4632ea4c62",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "3f5ca8cd-a717-426f-aab1-3be544f90ddc",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "f0a94179-ffb1-4135-979d-56ed384b55f9",
+   "component_id": "sdc.meridian.city-card",
+   "parent_uuid": "0b16965c-fc9a-4b7b-8d62-fa4632ea4c62",
+   "slot": "parts",
+   "inputs": {
+    "city": "Lisbon in a long weekend",
+    "meta": "Lisbon · from 2h 45m",
+    "body": "Where to eat, which hills to climb and the tram worth queueing for.",
+    "href": "/destinations/lisbon",
+    "variant": "guide",
+    "image_src": "/assets/img/destinations/lisbon-hero-960",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "36a01d06-06fd-4c8e-9d2f-e0f00ba89920",
+   "component_id": "sdc.meridian.city-card",
+   "parent_uuid": "0b16965c-fc9a-4b7b-8d62-fa4632ea4c62",
+   "slot": "parts",
+   "inputs": {
+    "city": "Chasing the northern lights",
+    "meta": "Reykjavík · from 3h 10m",
+    "body": "When to go, what to pack and how far from the city you really need to be.",
+    "href": "/destinations/reykjavik",
+    "variant": "guide",
+    "image_src": "/assets/img/destinations/reykjavik-hero-960",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "24c0357e-e232-47a8-bb51-3dbf94cc2d42",
+   "component_id": "sdc.meridian.city-card",
+   "parent_uuid": "0b16965c-fc9a-4b7b-8d62-fa4632ea4c62",
+   "slot": "parts",
+   "inputs": {
+    "city": "Marrakech for first-timers",
+    "meta": "Marrakech · from 3h 40m",
+    "body": "Riads, rooftops and how to find your way around the souks.",
+    "href": "/destinations/marrakech",
+    "variant": "guide",
+    "image_src": "/assets/img/destinations/marrakech-hero-960",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "0a324846-fdca-450a-aaca-e3cc813aa203",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "more-places-to-go-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "fdbbf892-34c8-4ce4-b114-565a771ac20a",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0a324846-fdca-450a-aaca-e3cc813aa203",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "232ce59d-7fde-4bcb-bc15-d0b543ba0007",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "fdbbf892-34c8-4ce4-b114-565a771ac20a",
+   "slot": "parts",
+   "inputs": {
+    "text": "More places to go",
+    "level": "h2",
+    "id": "more-places-to-go-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "be7bbc9d-988e-448d-971e-ea1803f6db6f",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "fdbbf892-34c8-4ce4-b114-565a771ac20a",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Our four airlines fly to 20 destinations, from Dublin in just over an hour to Agadir in under four.</p>"
+   }
+  },
+  {
+   "uuid": "f2707ff2-f3b2-44d0-9f0e-f624630aca36",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "fdbbf892-34c8-4ce4-b114-565a771ac20a",
+   "slot": "parts",
+   "inputs": {
+    "body": "<a class=\"text-link text-link--underline\" href=\"/flights/airlines\">All airlines and destinations<svg class=\"text-link__icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "efaf44c4-1dbe-4876-ab28-dfdfbf963ab7",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "before-you-go-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "9a29c04f-c7fb-4ba5-8d8a-01c315c660af",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "efaf44c4-1dbe-4876-ab28-dfdfbf963ab7",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "d2660dc9-aa0f-403c-9f85-fd22b05e0c51",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "9a29c04f-c7fb-4ba5-8d8a-01c315c660af",
+   "slot": "parts",
+   "inputs": {
+    "text": "Before you go",
+    "level": "h2",
+    "id": "before-you-go-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "faa5aba2-bf57-4477-825f-25a9cbe17d3a",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "9a29c04f-c7fb-4ba5-8d8a-01c315c660af",
+   "slot": "parts",
+   "inputs": {
+    "body": "<ul><li>Check the entry rules for your destination and that your passport is valid for the whole trip.</li><li>Get travel insurance as soon as you book.</li><li>Set up flight alerts so you hear about gate changes and delays straight away.</li></ul>\n<p><a href=\"/flights/alerts\">Set up flight alerts</a></p>"
+   }
+  },
+  {
+   "uuid": "415ef304-a711-426a-9be1-ac87ab4f3fc0",
+   "component_id": "sdc.meridian.callout",
+   "parent_uuid": "9a29c04f-c7fb-4ba5-8d8a-01c315c660af",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Our guides are written by the Meridian Airport team. We do not take payment from any business mentioned, and we do not name individual businesses.</p>"
+   }
+  }
+ ]
+}

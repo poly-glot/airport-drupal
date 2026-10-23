@@ -1,0 +1,20 @@
+{% set heading_id = title_id|default('city-rail-title') %}
+<section{{ attributes.addClass('band', 'city-rail') }}{% if anchor %} id="{{ anchor }}"{% endif %} aria-labelledby="{{ heading_id }}">
+    <div class="city-rail__head container">
+        <div class="city-rail__titles">
+            <h2 class="section-title section-title--brand" id="{{ heading_id }}">{{ title }}{% if subtitle %}<span class="section-title__sub">{{ subtitle }}</span>{% endif %}</h2>
+            {% if link_label and link_href %}
+            <a class="text-link text-link--underline" href="{{ link_href }}">{{ link_label }}<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            {% endif %}
+        </div>
+        <div class="city-rail__nav">
+            <p class="city-rail__count">1 – 3 / 4</p>
+            <button class="city-rail__button city-rail__button--prev" type="button" aria-label="Previous destinations" aria-controls="city-rail-track"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <button class="city-rail__button city-rail__button--next" type="button" aria-label="Next destinations" aria-controls="city-rail-track"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+    </div>
+    <ul class="city-rail__track" id="city-rail-track">
+        {% block cards %}{% endblock %}
+    </ul>
+    <div class="city-rail__progress container" aria-hidden="true"><span class="city-rail__bar"><span class="city-rail__fill"></span></span></div>
+</section>

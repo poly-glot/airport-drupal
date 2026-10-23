@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Help list
+status: stable
+group: Meridian · Bands
+description: Ruled grid of help items; the homepage panel band, or a bare list on inner pages.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Section heading
+      examples: ["Help for the day you fly"]
+    link_label:
+      type: string
+      title: Link text on the right
+      examples: ["All passenger services"]
+    link_href:
+      type: string
+      title: Link
+      format: uri-reference
+      examples: ["/help"]
+    variant:
+      type: string
+      title: Variant
+      enum: [band, plain]
+      examples: ["band"]
+    anchor:
+      type: string
+      title: Anchor id
+      examples: ["help"]
+    title_id:
+      type: string
+      title: Heading id
+      examples: ["help-title"]
+slots:
+  items:
+    title: Items
+    description: Help items, one per row. Only help-item components belong here.
+    expected:
+      - meridian:help-item
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--section-head

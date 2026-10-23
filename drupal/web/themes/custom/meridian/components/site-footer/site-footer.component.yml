@@ -1,0 +1,46 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site footer
+status: stable
+group: Meridian · Chrome
+description: Brand navy footer with enquiries line, social links, four link columns and the legal bar.
+props:
+  type: object
+  required: [enquiries, phone, phone_href, legal_line]
+  properties:
+    enquiries:
+      type: string
+      title: Enquiries text before the phone number
+      examples: [Open 24 hours. Passenger enquiries]
+    phone:
+      type: string
+      title: Phone number
+      examples: [0121 496 0123]
+    phone_href:
+      type: string
+      format: uri-reference
+      title: Phone link
+      examples: ['tel:+441214960123']
+    enquiries_suffix:
+      type: string
+      title: Enquiries text after the phone number
+      examples: [', every day 05:00–23:00. Live chat in the app.']
+    legal_line:
+      type: string
+      title: Legal line
+      examples: [© 2026 Meridian Airport Ltd. A fictional airport.]
+slots:
+  col_flights:
+    title: Flights column
+    description: Footer link leaves.
+  col_shop:
+    title: Shop and relax column
+    description: Footer link leaves.
+  col_plan:
+    title: Plan column
+    description: Footer link leaves.
+  col_company:
+    title: Company column
+    description: Footer link leaves.
+  legal:
+    title: Legal links
+    description: Footer link leaves for the legal bar.

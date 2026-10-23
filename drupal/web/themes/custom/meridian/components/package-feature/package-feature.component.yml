@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Package feature
+status: stable
+group: Meridian · Parts
+description: One tick-list line inside a package card.
+props:
+  type: object
+  required: [text]
+  properties:
+    text:
+      type: string
+      title: Feature line
+      examples: [Blue Badge bays nearest the doors]

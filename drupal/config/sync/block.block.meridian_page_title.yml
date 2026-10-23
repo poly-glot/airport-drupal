@@ -1,0 +1,20 @@
+uuid: d1d5fb21-8933-44e7-9548-60c049b719f5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - meridian
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: meridian_page_title
+theme: meridian
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

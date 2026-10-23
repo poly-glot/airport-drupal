@@ -1,0 +1,7 @@
+<section{{ attributes.addClass('wait-panel', 'on-light') }} aria-labelledby="wait-title">
+    <div class="wait-panel__head"><span class="wait-panel__dot"></span><h2 class="wait-panel__title" id="wait-title">Security wait times</h2><span class="wait-panel__updated">· updated {{ updated }}</span></div>
+    <dl class="wait-panel__list">
+        {% block chips %}{% endblock %}
+        <div class="wait-panel__item wait-panel__item--divided"><dt class="wait-panel__label">Roads and rail</dt><dd class="wait-panel__value">{{ road_status }}</dd></div>
+    </dl>
+</section>

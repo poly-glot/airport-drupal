@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Form
+status: stable
+group: Meridian · Inner pages
+description: Code-owned GET forms chosen by kind. Functionality, not editable content.
+props:
+  type: object
+  required: [kind]
+  properties:
+    kind:
+      type: string
+      title: Kind
+      enum: [flight-search, parking, alerts, assistance, feedback, lost-property]
+      examples: [alerts]
+    compact:
+      type: boolean
+      title: Compact (homepage variant, parking only)
+      examples: [false]
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--button
+    - core/components.meridian--card

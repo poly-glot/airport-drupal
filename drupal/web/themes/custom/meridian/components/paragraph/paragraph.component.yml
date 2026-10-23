@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Paragraph
+status: stable
+group: Meridian · Parts
+description: A loose paragraph, plain or with a package note or small form text class.
+props:
+  type: object
+  required: [body]
+  properties:
+    body:
+      type: string
+      title: Paragraph text
+      contentMediaType: text/html
+      examples: [Prices are per vehicle per day.]
+    variant:
+      type: string
+      title: Variant
+      enum: [plain, package-note, form-small, card-text, card-text-tabular]
+      examples: [plain]
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--card
+    - core/components.meridian--form
+    - core/components.meridian--package

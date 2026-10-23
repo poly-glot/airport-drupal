@@ -1,0 +1,3 @@
+hooks:
+  post-start:
+    - exec: grep -q settings.meridian.php web/sites/default/settings.php || printf "\nrequire __DIR__ . '/settings.meridian.php';\n" >> web/sites/default/settings.php

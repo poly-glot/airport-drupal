@@ -1,0 +1,132 @@
+.towers {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tower {
+    background-color: var(--brand);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    min-height: 520px;
+    overflow: hidden;
+    padding: 28px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.tower:hover {
+    background-color: var(--tower-hover);
+    color: var(--white);
+}
+
+.tower__media {
+    display: block;
+    inset: 0;
+    position: absolute;
+}
+
+.tower__media::after {
+    background: var(--gradient-tower);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.tower:hover .tower__media::after {
+    background: var(--gradient-tower-hover);
+}
+
+.tower__img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tower__top {
+    align-items: flex-start;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tower__number {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.tower__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+}
+
+.tower__title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+}
+
+.tower__body {
+    color: var(--board-text-2);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.tower__cta {
+    align-items: center;
+    border-top: 1px solid var(--on-dark-rule);
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 8px;
+    margin-top: 8px;
+    padding-top: 16px;
+}
+
+.tower:hover .tower__cta {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media (900px < width <= 1100px) {
+    .towers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (width <= 900px) {
+    .towers {
+        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tower {
+        min-height: 300px;
+        padding: 18px;
+    }
+
+    .tower__icon {
+        height: 32px;
+        width: 32px;
+    }
+
+    .tower__title {
+        font-size: 22px;
+    }
+
+    .tower__body {
+        display: none;
+    }
+}

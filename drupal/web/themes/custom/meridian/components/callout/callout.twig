@@ -1,0 +1,4 @@
+<div{{ attributes.addClass('callout') }}>
+{% if title|default(false) %}<p class="callout__title">{{ title }}</p>{% endif %}
+{{ body|raw }}
+</div>

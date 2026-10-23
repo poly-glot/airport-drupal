@@ -1,0 +1,37 @@
+uuid: c63226fe-b41c-4507-ac30-5690fad8612d
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_page_template_component
+active_version: dcc1fdacde5eba0c
+versioned_properties:
+  active:
+    settings: {  }
+    fallback_metadata:
+      slot_definitions:
+        notice:
+          title: 'Travel notice bar'
+          description: 'The Travel notice bar region.'
+          examples:
+            - ''
+        header:
+          title: Header
+          description: 'The Header region.'
+          examples:
+            - ''
+        content:
+          title: Content
+          description: 'The Content region.'
+          examples:
+            - ''
+        footer:
+          title: Footer
+          description: 'The Footer region.'
+          examples:
+            - ''
+label: 'Meridian page template'
+id: theme_page_template.meridian
+provider: canvas_page_template_component
+source: theme_page_template
+source_local_id: meridian

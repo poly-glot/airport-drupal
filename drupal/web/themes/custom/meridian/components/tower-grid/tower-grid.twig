@@ -1,0 +1,9 @@
+{% set heading_id = title_id|default('tower-grid-title') %}
+<section{{ attributes.addClass('band') }}{% if anchor %} id="{{ anchor }}"{% endif %} aria-labelledby="{{ heading_id }}">
+    <div class="container">
+        {{ include('meridian:section-head', { title: title, intro: intro, title_id: heading_id, link_label: link_label, link_href: link_href }, with_context = false) }}
+        <div class="towers">
+            {% block towers %}{% endblock %}
+        </div>
+    </div>
+</section>

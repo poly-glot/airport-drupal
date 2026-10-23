@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Section
+status: stable
+group: Meridian · Inner pages
+description: Inner page section wrapper, a full-width container with an optional heading, used for every section below the page hero.
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Section heading
+      examples: [Our airlines]
+    heading_level:
+      type: string
+      title: Heading level
+      enum: [h2, h3]
+      examples: [h2]
+    anchor:
+      type: string
+      title: Anchor
+      examples: [airlines]
+    tone:
+      type: string
+      title: Tone
+      enum: [light, panel]
+      examples: [light]
+    labelled_by:
+      type: string
+      title: Labelled by
+      description: Id of the heading that names this section when that heading sits inside the section content rather than in the heading prop.
+      examples: [careers-note-title]
+    tag:
+      type: string
+      title: Element
+      enum: [section, div]
+      examples: [section]
+    last:
+      type: boolean
+      title: Last section
+      examples: [false]
+slots:
+  parts:
+    title: Parts
+    description: The section content, a group, prose, table or other leaves.
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--section-head

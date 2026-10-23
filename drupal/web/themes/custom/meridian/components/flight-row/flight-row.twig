@@ -1,0 +1,20 @@
+{% set words = {
+  'on-time': 'On time',
+  'boarding': 'Boarding',
+  'gate-open': 'Gate open',
+  'delayed': 'Delayed',
+  'cancelled': 'Cancelled',
+  'landed': 'Landed',
+  'expected': 'Expected',
+} %}
+{% set tones = {
+  'on-time': 'ok',
+  'boarding': 'info',
+  'gate-open': 'info',
+  'delayed': 'warn',
+  'cancelled': 'bad',
+  'landed': 'ok',
+  'expected': 'neutral',
+} %}
+{%- set tone = tones[status] -%}
+<tr{{ attributes.addClass('board__row') }}><td class="board__time"><span class="flap-lamp flap-lamp--{{ tone }}" aria-hidden="true"></span><span data-flap="5">{{ time }}</span></td><td class="board__place" data-flap="9">{{ place }}</td><td class="board__flight" data-flap="7">{{ flight }}</td><td class="board__terminal" data-flap="2">{{ terminal }}</td><td class="board__gate" data-flap="2"{% if gate_label %} data-flap-label="{{ gate_label }}"{% endif %}>{{ gate }}</td><td class="board__status"><span class="board__state board__state--{{ tone }}"{% if tip %} tabindex="0" data-tip="{{ tip }}" aria-describedby="{{ tip_id }}"{% endif %} data-flap="9">{{ words[status] }}</span></td><td class="board__info">{{ note }}</td></tr>

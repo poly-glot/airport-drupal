@@ -1,0 +1,35 @@
+name: Parity
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Deploy]
+    types: [completed]
+
+jobs:
+  parity:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      DRUPAL_URL: https://airport-drupal-junaid.web.app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+      - run: sudo apt-get install -y --no-install-recommends imagemagick
+      - run: pip install beautifulsoup4
+      - run: npm ci
+      - run: python3 -m http.server 8765 -d static &
+      - run: PORT_BASE_URL="$DRUPAL_URL" python3 scripts/compare_port.py
+      - run: CHROME_PATH="${{ steps.chrome.outputs.chrome-path }}" python3 scripts/visual_diff.py http://127.0.0.1:8765 "$DRUPAL_URL" "$RUNNER_TEMP/shots"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diff
+          path: ${{ runner.temp }}/shots/diff

@@ -1,0 +1,15 @@
+uuid: ea3cacbc-7a98-4c7e-89ef-bf89fa41993b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.meridian.notice-bar
+    - canvas.component.sdc.meridian.site-footer
+    - canvas.component.sdc.meridian.site-header
+name: 'Meridian · Chrome'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.meridian.notice-bar
+  - sdc.meridian.site-footer
+  - sdc.meridian.site-header

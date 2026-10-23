@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Wait chip
+status: stable
+group: Meridian · Parts
+description: One terminal row of the wait panel, label plus a coloured minutes chip.
+props:
+  type: object
+  required: [label, minutes]
+  properties:
+    label:
+      type: string
+      title: Label before the chip
+      examples: [Terminal 1]
+    minutes:
+      type: integer
+      title: Minutes
+      examples: [8]
+    tone:
+      type: string
+      title: Tone
+      enum: [ok, warn]
+      default: ok
+      examples: [ok]

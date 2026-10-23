@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ddev:*)",
+      "Bash(python3 scripts/*)",
+      "Bash(.venv/bin/python scripts/*)",
+      "Bash(PORT_BASE_URL=* .venv/bin/python scripts/*)",
+      "Bash(PORT_BASE_URL=* python3 scripts/*)",
+      "Bash(node scripts/screens.mjs:*)",
+      "Bash(npx canvas:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(sed -n:*)",
+      "Bash(curl -s:*)",
+      "Bash(python3 -m http.server 8788 -d static)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}

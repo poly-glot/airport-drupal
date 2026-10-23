@@ -1,0 +1,302 @@
+uuid: 6f0cda64-4062-40e9-a6a5-7f7da9fc5983
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.meridian.footer-link
+    - canvas.component.sdc.meridian.nav-link
+    - canvas.component.sdc.meridian.site-footer
+    - canvas.component.sdc.meridian.site-header
+    - canvas.component.theme_page_template.meridian
+  module:
+    - link
+    - options
+id: meridian_nav_flights_section
+label: 'meridian nav flights section'
+description: null
+component_tree:
+  d4fa05b9-e422-48bd-a0fd-486c92e092d8:
+    uuid: d4fa05b9-e422-48bd-a0fd-486c92e092d8
+    component_id: theme_page_template.meridian
+    component_version: dcc1fdacde5eba0c
+    inputs: {  }
+  dfcaf406-39cf-4a4c-93ea-5148b46afe94:
+    parent_uuid: d4fa05b9-e422-48bd-a0fd-486c92e092d8
+    slot: header
+    uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    component_id: sdc.meridian.site-header
+    component_version: d5826a80a431eee9
+    inputs:
+      cta_label: 'Book parking'
+      cta_href: /parking
+      basket_href: /at-the-airport/shopping
+      basket_label: 'Basket, 0 items'
+  dcee8a5a-f5fd-4681-bc32-df81e0e6a4b3:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: dcee8a5a-f5fd-4681-bc32-df81e0e6a4b3
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: Flights
+      href: /flights
+      current: section
+  b13bdc0b-f5dd-4323-9781-68806da5c76b:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: b13bdc0b-f5dd-4323-9781-68806da5c76b
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: Shop
+      href: /at-the-airport/shopping
+      current: none
+  d38c1d7d-cbc2-479b-b732-712efdf2d0af:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: d38c1d7d-cbc2-479b-b732-712efdf2d0af
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: Parking
+      href: /parking
+      current: none
+  13c64799-b8ab-431a-8706-f023d04a931f:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: 13c64799-b8ab-431a-8706-f023d04a931f
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: Lounges
+      href: /at-the-airport/lounges
+      current: none
+  c3a363f9-e22d-4904-8baf-4a613e95c4a4:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: c3a363f9-e22d-4904-8baf-4a613e95c4a4
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: 'Getting here'
+      href: /getting-here
+      current: none
+  22959651-5179-42a2-8065-1c4eb4dee7fe:
+    parent_uuid: dfcaf406-39cf-4a4c-93ea-5148b46afe94
+    slot: nav
+    uuid: 22959651-5179-42a2-8065-1c4eb4dee7fe
+    component_id: sdc.meridian.nav-link
+    component_version: 27ee872e67ee0f34
+    inputs:
+      label: Assistance
+      href: /help
+      current: none
+  a7e49fd3-60d2-45cb-9a78-e7c3254d7830:
+    parent_uuid: d4fa05b9-e422-48bd-a0fd-486c92e092d8
+    slot: content
+    uuid: a7e49fd3-60d2-45cb-9a78-e7c3254d7830
+    component_id: marker.page_content
+    component_version: 3b12c0b99a6caecc
+    inputs: {  }
+  fcc905d3-35b4-48c5-8365-3e473c19cde9:
+    parent_uuid: d4fa05b9-e422-48bd-a0fd-486c92e092d8
+    slot: footer
+    uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    component_id: sdc.meridian.site-footer
+    component_version: 4ad7d21254a444dc
+    inputs:
+      enquiries: 'Open 24 hours. Passenger enquiries'
+      phone: "0121\_496\_0123"
+      phone_href: 'tel:+441214960123'
+      enquiries_suffix: ', every day 05:00–23:00. Live chat in the app.'
+      legal_line: '© 2026 Meridian Airport Ltd. A fictional airport.'
+  970c43a6-21d5-45bc-b6d2-2e2c44a3a2be:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_flights
+    uuid: 970c43a6-21d5-45bc-b6d2-2e2c44a3a2be
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Live departures'
+      href: '/flights#departures'
+  40810a3b-a5ac-4a7b-a04b-e04247b50449:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_flights
+    uuid: 40810a3b-a5ac-4a7b-a04b-e04247b50449
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Live arrivals'
+      href: '/flights#arrivals'
+  b4d78bd7-6939-485c-a844-9c57db7df5a0:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_flights
+    uuid: b4d78bd7-6939-485c-a844-9c57db7df5a0
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Destinations
+      href: /destinations
+  360b2e4a-181b-4cba-9136-ff3e2a8eaffe:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_flights
+    uuid: 360b2e4a-181b-4cba-9136-ff3e2a8eaffe
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Flight alerts'
+      href: /flights/alerts
+  ae2a7537-3c97-414b-a794-6e96f9861507:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_shop
+    uuid: ae2a7537-3c97-414b-a794-6e96f9861507
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Reserve & collect'
+      href: /at-the-airport/shopping
+  08f1cf65-c986-4317-a25c-a55f615e654e:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_shop
+    uuid: 08f1cf65-c986-4317-a25c-a55f615e654e
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Offers this week'
+      href: '/at-the-airport/shopping#offers'
+  b0c141c8-2323-47f2-834e-3a6640f5bb99:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_shop
+    uuid: b0c141c8-2323-47f2-834e-3a6640f5bb99
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Lounges & Fast Track'
+      href: /at-the-airport/lounges
+  725e80f0-b8d2-466e-94ac-dd98c5f49f6e:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_shop
+    uuid: 725e80f0-b8d2-466e-94ac-dd98c5f49f6e
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Order-ahead food'
+      href: /at-the-airport/eat-and-drink
+  6401e053-3ce9-4efa-89f9-25a2b19b02da:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_plan
+    uuid: 6401e053-3ce9-4efa-89f9-25a2b19b02da
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Parking
+      href: /parking
+  63eff92f-1f7d-438e-b6fc-32acedc65149:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_plan
+    uuid: 63eff92f-1f7d-438e-b6fc-32acedc65149
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Getting here'
+      href: /getting-here
+  2c637e16-8546-4034-bf18-bb7e7799995a:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_plan
+    uuid: 2c637e16-8546-4034-bf18-bb7e7799995a
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Special assistance'
+      href: /help/special-assistance
+  319e9c75-87d7-491a-b9f9-82c7938ccedc:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_plan
+    uuid: 319e9c75-87d7-491a-b9f9-82c7938ccedc
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Travelling with children'
+      href: /help/travelling-with-children
+  41962d2c-7b4a-4629-bc29-4882fc7584ea:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_company
+    uuid: 41962d2c-7b4a-4629-bc29-4882fc7584ea
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Contact us'
+      href: /help
+  9b914012-9c1d-481b-9330-064cd9a70ca4:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_company
+    uuid: 9b914012-9c1d-481b-9330-064cd9a70ca4
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Careers
+      href: /about/careers
+  7b56d710-999b-4310-bd03-10dbb3b8e945:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_company
+    uuid: 7b56d710-999b-4310-bd03-10dbb3b8e945
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Media centre'
+      href: /about/media-centre
+  fa6ea48c-d902-49bf-b688-a692a0ae5381:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: col_company
+    uuid: fa6ea48c-d902-49bf-b688-a692a0ae5381
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Sustainability
+      href: /about/sustainability
+  7fe77426-dd80-4228-81fa-6763efe448d6:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: legal
+    uuid: 7fe77426-dd80-4228-81fa-6763efe448d6
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Accessibility
+      href: /accessibility
+  9f0b4edf-16cc-4484-86cc-d7ff6e9bd59b:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: legal
+    uuid: 9f0b4edf-16cc-4484-86cc-d7ff6e9bd59b
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Privacy
+      href: /privacy
+  bac6e7f7-c987-4975-80d7-008b59c1f6dc:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: legal
+    uuid: bac6e7f7-c987-4975-80d7-008b59c1f6dc
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Cookies
+      href: /cookies
+  b6798cb1-5dac-4939-bb4a-b5c7fd31ff7b:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: legal
+    uuid: b6798cb1-5dac-4939-bb4a-b5c7fd31ff7b
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: Terms
+      href: /terms
+  e16beecc-ef5e-4d74-b687-f432574d3234:
+    parent_uuid: fcc905d3-35b4-48c5-8365-3e473c19cde9
+    slot: legal
+    uuid: e16beecc-ef5e-4d74-b687-f432574d3234
+    component_id: sdc.meridian.footer-link
+    component_version: aaf4fa5237eb0a9d
+    inputs:
+      label: 'Site map'
+      href: /sitemap

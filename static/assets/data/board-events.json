@@ -1,0 +1,38 @@
+{
+  "events": [
+    {
+      "announce": "MA 310 to Amsterdam is now boarding at gate 7.",
+      "board": "departures",
+      "flight": "MA 310",
+      "note": "Closes 10:20",
+      "state": "boarding"
+    },
+    {
+      "announce": "MA 311 from Amsterdam is delayed, expected 10:50.",
+      "board": "arrivals",
+      "flight": "MA 311",
+      "note": "Expected 10:50",
+      "state": "delayed-arrival"
+    },
+    {
+      "announce": "NV 118 to Reykjavík has changed to gate 26.",
+      "board": "departures",
+      "flight": "NV 118",
+      "gate": "26",
+      "note": "Gate change · new time 10:58"
+    },
+    {
+      "announce": "ZX 762 to Marrakech: gate 31 is open.",
+      "board": "departures",
+      "flight": "ZX 762",
+      "state": "gate-open"
+    },
+    {
+      "announce": "KW 1512 to Salzburg is delayed, new time 13:20.",
+      "board": "departures",
+      "flight": "KW 1512",
+      "note": "New time 13:20 · crew",
+      "state": "delayed-departure"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+uuid: 1bd25459-c542-4f99-8c15-87b17d873466
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - meridian
+active_version: 8bd3dad29de8c4a9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        time:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '10:05'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        place:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Lisbon
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        flight:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'MA 204'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        terminal:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: T1
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        gate:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '12'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        gate_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Not shown yet'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        status:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: boarding
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Closes 10:20'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        tip:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Go to the gate now.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        tip_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: status-boarding
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Flight row'
+id: sdc.meridian.flight-row
+provider: meridian
+source: sdc
+source_local_id: 'meridian:flight-row'

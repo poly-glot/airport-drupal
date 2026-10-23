@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Map pane
+status: stable
+group: Meridian · Parts
+description: Schematic airport map with place card, directions and larger-map buttons.
+props:
+  type: object
+  required: [name, address, directions_href, larger_href]
+  properties:
+    name:
+      type: string
+      title: Place name
+      examples: ["Meridian Airport"]
+    address:
+      type: string
+      title: Address
+      examples: ["Terminal 1, Birmingham B99 1MA"]
+    directions_href:
+      type: string
+      title: Directions link
+      format: uri-reference
+      examples: ["/getting-here"]
+    larger_href:
+      type: string
+      title: Larger map link
+      format: uri-reference
+      examples: ["/at-the-airport#maps"]
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--button

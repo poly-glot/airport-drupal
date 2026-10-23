@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Callout
+status: stable
+group: Meridian · Inner pages
+description: Sand block with an optional uppercase title and a formatted body, for notes and demonstration remarks.
+props:
+  type: object
+  required: [body]
+  properties:
+    title:
+      type: string
+      title: Callout heading
+      examples: [Please note]
+    body:
+      type: string
+      title: Callout text
+      contentMediaType: text/html
+      examples: ['<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>']

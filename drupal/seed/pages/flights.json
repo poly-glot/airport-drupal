@@ -1,0 +1,938 @@
+{
+ "uuid": "c2d97939-267a-481b-bd74-840bb391afbf",
+ "title": "Live flights — Meridian Airport",
+ "description": "Today's departures and arrivals at Meridian Airport, with terminal, gate, bags belt and status for every flight. Search by flight number or city.",
+ "status": true,
+ "path": "/flights",
+ "front": false,
+ "pageVariant": "meridian_nav_flights_page",
+ "components": [
+  {
+   "uuid": "cac0acb5-92d0-41e5-a033-1c6c37d7957c",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "Live flights",
+    "intro": "Today's departures and arrivals, with the terminal, gate and latest status for every flight.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "c14fff8b-adf2-401a-bdb1-2ffc69b750b8",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "cac0acb5-92d0-41e5-a033-1c6c37d7957c",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "bcebf1b2-3c67-4dea-8a0d-87752b53ccae",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "c14fff8b-adf2-401a-bdb1-2ffc69b750b8",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "87e3f446-563b-4a16-a4de-fa49d354029b",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "c14fff8b-adf2-401a-bdb1-2ffc69b750b8",
+   "slot": "items",
+   "inputs": {
+    "label": "Live flights",
+    "current": true
+   }
+  },
+  {
+   "uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "component_id": "sdc.meridian.flight-board",
+   "inputs": {
+    "title": "Departures and arrivals",
+    "title_id": "board-title",
+    "meta": "refreshes every minute · gates shown from 60 min before departure",
+    "clock_time": "09:42",
+    "show_search": true,
+    "departures_search_label": "Search the board by flight number or city",
+    "arrivals_search_label": "Search the board by flight number or city",
+    "departures_caption": "Departures from Meridian Airport today",
+    "arrivals_caption": "Arrivals at Meridian Airport today"
+   }
+  },
+  {
+   "uuid": "67543451-ab46-4e54-800a-d593ef18111b",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "10:05",
+    "place": "Lisbon",
+    "flight": "MA 204",
+    "terminal": "T1",
+    "gate": "12",
+    "status": "boarding",
+    "note": "Closes 10:20",
+    "tip": "Go to the gate now.",
+    "tip_id": "status-boarding"
+   }
+  },
+  {
+   "uuid": "22046272-ca7e-4b82-a996-20df6cfc7f65",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "10:20",
+    "place": "Reykjavík",
+    "flight": "NV 118",
+    "terminal": "T2",
+    "gate": "24",
+    "status": "delayed",
+    "note": "New time 10:58 · fog",
+    "tip": "The new time will appear here as soon as your airline confirms it. Stay close to a screen.",
+    "tip_id": "status-delayed-departure"
+   }
+  },
+  {
+   "uuid": "a5986991-3139-44e0-bdf2-c85ecd021ac9",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "10:35",
+    "place": "Amsterdam",
+    "flight": "MA 310",
+    "terminal": "T1",
+    "gate": "7",
+    "status": "gate-open",
+    "note": "",
+    "tip": "Make your way to the gate. It can take up to 15 minutes to walk to the furthest gates in Terminal 2.",
+    "tip_id": "status-gate-open"
+   }
+  },
+  {
+   "uuid": "1c7799ae-19ea-4b13-b95d-adb05a4b5903",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "10:50",
+    "place": "Marrakech",
+    "flight": "ZX 762",
+    "terminal": "T2",
+    "gate": "31",
+    "status": "on-time",
+    "note": "",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "58d00071-c597-4568-bd6e-7ce9f484a682",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "11:10",
+    "place": "Dublin",
+    "flight": "MA 522",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 10:10",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "296486b9-568e-4f65-a8a5-dd06831ca8cc",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "11:25",
+    "place": "Geneva",
+    "flight": "KW 1430",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "cancelled",
+    "note": "Rebook at desk 14 or in app",
+    "tip": "Your airline will contact you about a new flight or a refund. Do not go through security.",
+    "tip_id": "status-cancelled"
+   }
+  },
+  {
+   "uuid": "c7e58931-15d5-46a5-beb3-259c2959d724",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "11:40",
+    "place": "Malaga",
+    "flight": "ZX 410",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 10:40",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "e3f3fcf4-5713-434b-88ae-7604a97cdf2d",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "11:55",
+    "place": "Paris",
+    "flight": "MA 118",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 10:55",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "92ec4e2a-7685-4a18-aa50-841811f6d78f",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "12:15",
+    "place": "Oslo",
+    "flight": "NV 204",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "delayed",
+    "note": "New time 12:45 · late aircraft",
+    "tip": "The new time will appear here as soon as your airline confirms it. Stay close to a screen.",
+    "tip_id": "status-delayed-departure"
+   }
+  },
+  {
+   "uuid": "8d21a084-68f6-4f5e-8fa4-d767396a9e68",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "12:30",
+    "place": "Barcelona",
+    "flight": "MA 640",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 11:30",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "ec0dde8e-c147-43ca-a308-3c93ce9910e3",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "12:50",
+    "place": "Salzburg",
+    "flight": "KW 1512",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 11:50",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "267682e6-f048-4d58-bb71-487a2de87ffb",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "departures",
+   "inputs": {
+    "time": "13:05",
+    "place": "Faro",
+    "flight": "MA 702",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "on-time",
+    "note": "Gate at 12:05",
+    "tip": "Leaving at the time shown.",
+    "tip_id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "3fcbc633-140f-4425-b8d6-12ffec6e748f",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "09:48",
+    "place": "Lisbon",
+    "flight": "MA 205",
+    "terminal": "T1",
+    "gate": "3",
+    "status": "landed",
+    "note": "Exit: Arrivals A",
+    "tip": "On the ground. Allow about 30 minutes for passengers to clear passport control and collect bags.",
+    "tip_id": "status-landed"
+   }
+  },
+  {
+   "uuid": "a1b29eff-9380-4017-9de1-2d293688813b",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "09:55",
+    "place": "Marrakech",
+    "flight": "ZX 761",
+    "terminal": "T2",
+    "gate": "6",
+    "status": "landed",
+    "note": "Exit: Arrivals B",
+    "tip": "On the ground. Allow about 30 minutes for passengers to clear passport control and collect bags.",
+    "tip_id": "status-landed"
+   }
+  },
+  {
+   "uuid": "d5a0c921-274e-4ddb-a59d-6507f05a18db",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "10:10",
+    "place": "Reykjavík",
+    "flight": "NV 117",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "delayed",
+    "note": "Expected 10:40",
+    "tip": "We update the time as soon as the airline tells us.",
+    "tip_id": "status-delayed-arrival"
+   }
+  },
+  {
+   "uuid": "7d4d35ee-0eaf-43e8-b0c6-7853d0969a0f",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "10:30",
+    "place": "Amsterdam",
+    "flight": "MA 311",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "c5e86f72-755b-4ef4-965c-2cd160b750ac",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "10:45",
+    "place": "Geneva",
+    "flight": "KW 1429",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "42656ce5-a7ee-440e-a44a-540fed5a02ca",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "11:00",
+    "place": "Dublin",
+    "flight": "MA 523",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "2511b13a-82ff-48f3-81fd-03983ea3c103",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "11:15",
+    "place": "Malaga",
+    "flight": "ZX 409",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "b9fd021f-18e5-4262-8e62-09f6ca680e4d",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "11:35",
+    "place": "Paris",
+    "flight": "MA 117",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "5ef9abe5-0c99-4a24-9b7a-009d3ba24b5b",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "11:50",
+    "place": "Oslo",
+    "flight": "NV 203",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "delayed",
+    "note": "Expected 12:20",
+    "tip": "We update the time as soon as the airline tells us.",
+    "tip_id": "status-delayed-arrival"
+   }
+  },
+  {
+   "uuid": "ca77106f-d05d-4ab8-b24f-c700fab75908",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "12:10",
+    "place": "Barcelona",
+    "flight": "MA 641",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "76f37049-1c84-48c4-85fe-7ba60ccb088b",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "12:25",
+    "place": "Salzburg",
+    "flight": "KW 1511",
+    "terminal": "T2",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "81bc0161-9ae9-442d-a23b-a005b3405efa",
+   "component_id": "sdc.meridian.flight-row",
+   "parent_uuid": "c17d4937-2acc-4b35-9428-3876737cc6c5",
+   "slot": "arrivals",
+   "inputs": {
+    "time": "12:40",
+    "place": "Faro",
+    "flight": "MA 703",
+    "terminal": "T1",
+    "gate": "—",
+    "gate_label": "Not shown yet",
+    "status": "expected",
+    "note": "",
+    "tip": "Due at the time shown.",
+    "tip_id": "status-expected"
+   }
+  },
+  {
+   "uuid": "771ca6f5-b503-46ba-a83d-4d53d2222c2d",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "reading-the-board",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "reading-the-board-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "2d1849f2-ceae-4c20-a7c7-9bd92b6acc86",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "771ca6f5-b503-46ba-a83d-4d53d2222c2d",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "4107f157-39a4-4641-90b0-55f8fd6a76f4",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "2d1849f2-ceae-4c20-a7c7-9bd92b6acc86",
+   "slot": "parts",
+   "inputs": {
+    "text": "Reading the board",
+    "level": "h2",
+    "id": "reading-the-board-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "4ba79092-fd2e-40bc-991e-0a255ea00805",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "2d1849f2-ceae-4c20-a7c7-9bd92b6acc86",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "cd8087dc-4107-4419-9191-e1b873beef67",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "4ba79092-fd2e-40bc-991e-0a255ea00805",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Gate",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "4eeabc0d-15bf-4570-b390-17be39f00ba4",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "cd8087dc-4107-4419-9191-e1b873beef67",
+   "slot": "parts",
+   "inputs": {
+    "body": "Your gate number appears 60 minutes before departure. Until then the gate tiles are blank, and the Info column tells you when to look again, for example \"Gate at 10:10\". Gates 1 to 19 are in Terminal 1 and gates 20 to 38 are in Terminal 2.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "aaf861a8-3b5a-4bb2-b18b-ae2f42dedf76",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "4ba79092-fd2e-40bc-991e-0a255ea00805",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Belt",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "bbdec675-2209-408e-9f0b-165e1baadfea",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "aaf861a8-3b5a-4bb2-b18b-ae2f42dedf76",
+   "slot": "parts",
+   "inputs": {
+    "body": "Once a flight has landed, the Belt column shows the reclaim belt for its bags, for example 3. Belts 1 to 4 are in Terminal 1 and belts 5 to 8 are in Terminal 2. The Info column tells you which arrivals exit to wait at: Arrivals A in Terminal 1, Arrivals B in Terminal 2.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "5dad9ebc-a1dd-4713-a5a7-b7042a1d5f9f",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "4ba79092-fd2e-40bc-991e-0a255ea00805",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Info",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "b9f6bcdd-2eb5-4b4b-b5c0-f516920b1969",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "5dad9ebc-a1dd-4713-a5a7-b7042a1d5f9f",
+   "slot": "parts",
+   "inputs": {
+    "body": "The Info column tells you what to do next. For example:",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "5d49b658-923a-4696-998f-edbed8bb0e87",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "5dad9ebc-a1dd-4713-a5a7-b7042a1d5f9f",
+   "slot": "parts",
+   "inputs": {
+    "body": "<ul>\n<li>Closes 10:20: the gate closes at this time. Be there before it.</li>\n<li>New time 10:58 · fog: the flight is delayed to the new time, and why.</li>\n<li>Gate at 10:10: the gate will show at this time.</li>\n<li>Rebook at desk 14 or in app: the flight is cancelled. Your airline will rebook you at that desk or in its app.</li>\n<li>Exit: Arrivals A: meet your passenger at this exit.</li>\n<li>Expected 10:40: the delayed flight is now due at this time.</li>\n</ul>"
+   }
+  },
+  {
+   "uuid": "26f81e95-3edd-4bae-be4a-b42115a1ba4e",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "status-meaning",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "status-meaning-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "88b2c098-1ce0-49a0-9b23-db60cf22e9e2",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "26f81e95-3edd-4bae-be4a-b42115a1ba4e",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "2d932a04-32e7-4aa6-8394-f8b43607b6af",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "88b2c098-1ce0-49a0-9b23-db60cf22e9e2",
+   "slot": "parts",
+   "inputs": {
+    "text": "What the status means",
+    "level": "h2",
+    "id": "status-meaning-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "0539091f-cb62-4da9-883f-e107c6b996c5",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "88b2c098-1ce0-49a0-9b23-db60cf22e9e2",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "60a19c6a-9d47-4827-a1f3-82cef26c5ef8",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0539091f-cb62-4da9-883f-e107c6b996c5",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "40130f5f-dc5d-4154-a8f6-4d9dbe454de7",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "60a19c6a-9d47-4827-a1f3-82cef26c5ef8",
+   "slot": "parts",
+   "inputs": {
+    "text": "Departures",
+    "level": "h3",
+    "size": "card"
+   }
+  },
+  {
+   "uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "60a19c6a-9d47-4827-a1f3-82cef26c5ef8",
+   "slot": "parts",
+   "inputs": {
+    "variant": "legend"
+   }
+  },
+  {
+   "uuid": "d6749085-3370-4b98-8e44-42ede13b4a1c",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status\"><span class=\"status__dot\"></span>On time</span>",
+    "value": "Leaving at the time shown.",
+    "id": "status-on-time"
+   }
+  },
+  {
+   "uuid": "04e65b55-9291-499f-bcfb-219afdd61b02",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--info\"><span class=\"status__dot\"></span>Gate open</span>",
+    "value": "Make your way to the gate. It can take up to 15 minutes to walk to the furthest gates in Terminal 2.",
+    "id": "status-gate-open"
+   }
+  },
+  {
+   "uuid": "521c51d6-e928-460d-a11f-6639de66c35c",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--info\"><span class=\"status__dot\"></span>Boarding</span>",
+    "value": "Go to the gate now.",
+    "id": "status-boarding"
+   }
+  },
+  {
+   "uuid": "2fd99402-5a8e-4149-8afd-b9afde80453f",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--warn\"><span class=\"status__dot\"></span>Delayed</span>",
+    "value": "The new time will appear here as soon as your airline confirms it. Stay close to a screen.",
+    "id": "status-delayed-departure"
+   }
+  },
+  {
+   "uuid": "4499193a-9676-4976-8870-f7a5e43fe1bf",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "91ec8396-b758-486d-aa8a-5433219b1b88",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--bad\"><span class=\"status__dot\"></span>Cancelled</span>",
+    "value": "Your airline will contact you about a new flight or a refund. Do not go through security.",
+    "id": "status-cancelled"
+   }
+  },
+  {
+   "uuid": "daf46466-df75-46d1-b378-6f1960da5864",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0539091f-cb62-4da9-883f-e107c6b996c5",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "2ce9cbd4-37c5-4941-bc69-06b69a1a4e4c",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "daf46466-df75-46d1-b378-6f1960da5864",
+   "slot": "parts",
+   "inputs": {
+    "text": "Arrivals",
+    "level": "h3",
+    "size": "card"
+   }
+  },
+  {
+   "uuid": "5d184bf0-741e-4609-a10e-75ecbe68db1a",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "daf46466-df75-46d1-b378-6f1960da5864",
+   "slot": "parts",
+   "inputs": {
+    "variant": "legend"
+   }
+  },
+  {
+   "uuid": "a086088b-8dd1-4413-973b-95f221a15cb7",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "5d184bf0-741e-4609-a10e-75ecbe68db1a",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--neutral\"><span class=\"status__dot\"></span>Expected</span>",
+    "value": "Due at the time shown.",
+    "id": "status-expected"
+   }
+  },
+  {
+   "uuid": "46f406f1-aed1-4151-9626-5ba20dc5cb21",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "5d184bf0-741e-4609-a10e-75ecbe68db1a",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status\"><span class=\"status__dot\"></span>Landed</span>",
+    "value": "On the ground. Allow about 30 minutes for passengers to clear passport control and collect bags.",
+    "id": "status-landed"
+   }
+  },
+  {
+   "uuid": "d14c769b-0a96-4bfb-a930-d2011b133a98",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "5d184bf0-741e-4609-a10e-75ecbe68db1a",
+   "slot": "items",
+   "inputs": {
+    "term": "<span class=\"status status--warn\"><span class=\"status__dot\"></span>Delayed</span>",
+    "value": "We update the time as soon as the airline tells us.",
+    "id": "status-delayed-arrival"
+   }
+  },
+  {
+   "uuid": "bfd0d137-77be-4e4e-9480-74ab511496f4",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "meeting-someone",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "meeting-someone-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "4f4949a0-1574-47fc-b4aa-b812db5646d9",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "bfd0d137-77be-4e4e-9480-74ab511496f4",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "838182e5-d1e5-46a5-b189-b01ff1d4e2dc",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "4f4949a0-1574-47fc-b4aa-b812db5646d9",
+   "slot": "parts",
+   "inputs": {
+    "text": "Meeting someone off a flight",
+    "level": "h2",
+    "id": "meeting-someone-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "fede5c4a-ee13-4b7e-b77d-81dde8979dd3",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "4f4949a0-1574-47fc-b4aa-b812db5646d9",
+   "slot": "parts",
+   "inputs": {
+    "body": "Arrivals halls are on the ground floor of both terminals. The Copper Kettle in Terminal 1 and Northlight Coffee in Terminal 2 both look out over the arrivals doors. P1 Short-stay is the closest car park for a quick pick-up, or use the free 10-minute zone at Mid-Stay and meet your passenger off the shuttle.",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "91a8e124-4585-47cc-a2e2-2a0485877d42",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "4f4949a0-1574-47fc-b4aa-b812db5646d9",
+   "slot": "parts",
+   "inputs": {
+    "body": "<a class=\"text-link\" href=\"/parking\">Parking and pick-up<svg class=\"text-link__icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "84817160-2ee7-42cf-8006-d8dd50c64f88",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "phone-updates",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "phone-updates-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "827779c4-c1b0-44ee-a11e-9b59f5db8e50",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "84817160-2ee7-42cf-8006-d8dd50c64f88",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "cacf1fe4-09e7-4218-81a7-70f25909de20",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "827779c4-c1b0-44ee-a11e-9b59f5db8e50",
+   "slot": "parts",
+   "inputs": {
+    "text": "Get updates on your phone",
+    "level": "h2",
+    "id": "phone-updates-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "db1800db-1893-41bd-a507-76b5343a5b7c",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "827779c4-c1b0-44ee-a11e-9b59f5db8e50",
+   "slot": "parts",
+   "inputs": {
+    "body": "Set up free alerts for gate changes, delays and boarding calls by text or WhatsApp.",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "f4cefd78-f081-4b3e-990c-eead3c2248d3",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "827779c4-c1b0-44ee-a11e-9b59f5db8e50",
+   "slot": "parts",
+   "inputs": {
+    "body": "<a class=\"text-link\" href=\"/flights/alerts\">Set up alerts<svg class=\"text-link__icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+    "variant": "plain"
+   }
+  },
+  {
+   "uuid": "0a48412a-78b6-4c1e-952e-de40a85b28c1",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "about-board",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "about-board-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7d809c0f-5a22-4c16-a782-454c932faa13",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "0a48412a-78b6-4c1e-952e-de40a85b28c1",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "7fdbbe99-c83b-40a5-978d-ba4bb13666f6",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "7d809c0f-5a22-4c16-a782-454c932faa13",
+   "slot": "parts",
+   "inputs": {
+    "text": "About this board",
+    "level": "h2",
+    "id": "about-board-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "14f9e109-e0fc-40e2-992b-e4fe1c5b12d2",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "7d809c0f-5a22-4c16-a782-454c932faa13",
+   "slot": "parts",
+   "inputs": {
+    "body": "Flight times and statuses come from the airlines. If your airline tells you something different, follow your airline. This is a demonstration site, so the board plays a short, scripted set of changes when the page opens and does not show real flights.",
+    "variant": "plain"
+   }
+  }
+ ]
+}

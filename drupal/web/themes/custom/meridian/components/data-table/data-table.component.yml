@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Data table
+status: stable
+group: Meridian · Inner pages
+description: Flat table with a serif caption and a 2px brand rule under the header row.
+props:
+  type: object
+  required: [body]
+  properties:
+    caption:
+      type: string
+      title: Table caption
+      examples: [Car parks at a glance]
+    caption_hidden:
+      type: boolean
+      title: Caption hidden
+      examples: [false]
+    body:
+      type: string
+      title: Table rows
+      contentMediaType: text/html
+      examples: ['<thead><tr><th scope="col">Car park</th><th scope="col">To the terminal</th><th scope="col">From</th><th scope="col">Covered</th><th scope="col">Electric charging</th></tr></thead><tbody><tr><th scope="row">P1 Short-stay</th><td>2 min walk</td><td class="table__num">£4 per hour</td><td>Walkway only</td><td>6 bays</td></tr><tr><th scope="row">P2 Long-stay</th><td>5 min walk</td><td class="table__num">£8.50 per day</td><td>Yes</td><td>40 bays</td></tr></tbody>']

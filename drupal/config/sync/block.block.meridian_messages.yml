@@ -1,0 +1,22 @@
+uuid: 456c682b-2e62-42b7-8859-037c9143c657
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - meridian
+_core:
+  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
+id: meridian_messages
+theme: meridian
+region: notice
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

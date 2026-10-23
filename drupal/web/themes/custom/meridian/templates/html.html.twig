@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html{{ html_attributes.setAttribute("lang", "en-GB").removeAttribute("dir") }}>
+<head>
+  <head-placeholder token="{{ placeholder_token }}">
+  <title>{{ head_title.title }}</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <css-placeholder token="{{ placeholder_token }}">
+  <js-placeholder token="{{ placeholder_token }}">
+</head>
+<body{{ attributes.removeClass("canvas-page") }}>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  {{ page_top }}
+  {{ page }}
+  {{ page_bottom }}
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+</body>
+</html>

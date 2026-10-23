@@ -1,0 +1,4 @@
+warning:
+  css:
+    component:
+      css/slot-warning.css: {}

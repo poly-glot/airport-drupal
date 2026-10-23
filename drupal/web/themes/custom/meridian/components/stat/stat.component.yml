@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Stat
+status: stable
+group: Meridian · Parts
+description: One label and value pair inside the photo band stats list.
+props:
+  type: object
+  required: [label, value]
+  properties:
+    label:
+      type: string
+      title: Small label above the value
+      examples: [Closest walk]
+    value:
+      type: string
+      title: Large value
+      examples: [2 min]

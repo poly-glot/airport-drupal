@@ -1,0 +1,448 @@
+{
+ "uuid": "76f5715c-2395-4d60-8866-24c6eb2c071a",
+ "title": "Eat and drink — Meridian Airport",
+ "description": "Cafés, restaurants and bars before and after security in Terminals 1 and 2. Opening times, what they serve, and where to meet arriving passengers.",
+ "status": true,
+ "path": "/at-the-airport/eat-and-drink",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "ee314010-84af-4ee3-b4e8-b478faa9e226",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "eyebrow": "At the airport",
+    "title": "Eat and drink",
+    "intro": "Cafés, restaurants and bars before and after security.",
+    "variant": "art",
+    "widths": "960,1440",
+    "sizes": "491px",
+    "image_src": "/assets/img/airport/eat-and-drink-hero-960",
+    "image_alt": "A coffee machine and a case of pastries on a cafe counter beside tall terminal windows.",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "e39256c2-dd6e-4fe8-a7a8-68a818be6139",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "ee314010-84af-4ee3-b4e8-b478faa9e226",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "adf21fb0-314e-47ec-84e2-6b40f4bfeb01",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "e39256c2-dd6e-4fe8-a7a8-68a818be6139",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "682ece93-95cd-48c1-93a0-7dd1c801ba72",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "e39256c2-dd6e-4fe8-a7a8-68a818be6139",
+   "slot": "items",
+   "inputs": {
+    "label": "At the airport",
+    "href": "/at-the-airport"
+   }
+  },
+  {
+   "uuid": "b1b6186e-5ffd-4338-a4bf-74a8ed738a06",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "e39256c2-dd6e-4fe8-a7a8-68a818be6139",
+   "slot": "items",
+   "inputs": {
+    "label": "Eat and drink",
+    "current": true
+   }
+  },
+  {
+   "uuid": "366f9fbb-2f02-4a3f-aba5-6cec7421f9e4",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "before-you-start-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "df67d05b-d2e6-4abf-9cbb-0b1239e28978",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "366f9fbb-2f02-4a3f-aba5-6cec7421f9e4",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "1397363b-673b-4423-b397-f4f4de883afc",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "df67d05b-d2e6-4abf-9cbb-0b1239e28978",
+   "slot": "parts",
+   "inputs": {
+    "text": "Before you start",
+    "level": "h2",
+    "id": "before-you-start-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "30ab6391-b3aa-4b24-ab1e-cbf4411054c9",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "df67d05b-d2e6-4abf-9cbb-0b1239e28978",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Most places open by 04:30 for the first flights. After security, venues stay open until the last departure or the time shown. Every venue has gluten-free and vegan choices, and staff can tell you about allergens.</p>"
+   }
+  },
+  {
+   "uuid": "f24af75e-5e6f-4aca-86b4-0479655b8d5c",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "terminal-1-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f24af75e-5e6f-4aca-86b4-0479655b8d5c",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "68ac04ac-2d38-472b-b55c-6c7a63ae84ae",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "slot": "parts",
+   "inputs": {
+    "text": "Terminal 1",
+    "level": "h2",
+    "id": "terminal-1-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "963d119d-8eea-4dbc-98e4-abd870ef3ad4",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>Before security</h3>"
+   }
+  },
+  {
+   "uuid": "c7c0de05-e86e-413d-8e6c-3b72434043f3",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 1, before security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">The Copper Kettle</th><td>04:00–22:00</td><td>Tea, coffee and bacon rolls by the arrivals doors. A good place to meet people off a flight.</td></tr>\n<tr><th scope=\"row\">Platform Seven Bakery</th><td>05:00–20:00</td><td>Fresh bread, pastries and sandwiches at the top of the station escalators.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "814a4b85-8463-4902-a222-0f5e39de904a",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>After security</h3>"
+   }
+  },
+  {
+   "uuid": "b5d092ea-6e8a-4a6e-bf1d-0f61a4546fea",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "a3706de4-8d2b-4b99-b2a0-a0aed65844d8",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 1, after security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Skyline Kitchen</th><td>04:30–21:00</td><td>Full breakfasts until 11:30, then hot plates and salads. Table service with views of the runway.</td></tr>\n<tr><th scope=\"row\">Runway Noodle Bar</th><td>10:00–21:30</td><td>Ramen, rice bowls and dumplings, cooked to order in about 8 minutes.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "6f620445-486f-4d1e-b648-2303eff31af0",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "terminal-2-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "6f620445-486f-4d1e-b648-2303eff31af0",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "3264f5cb-6a28-4131-a455-777173b8be38",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "slot": "parts",
+   "inputs": {
+    "text": "Terminal 2",
+    "level": "h2",
+    "id": "terminal-2-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "663a3731-72f3-4eeb-936c-621858d4f6a6",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>Before security</h3>"
+   }
+  },
+  {
+   "uuid": "cf30d81b-0908-4a73-bb24-6e6a39fac841",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 2, before security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Northlight Coffee</th><td>04:00–22:00</td><td>Coffee, porridge and toasties next to check-in zone D.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "63b00035-3d86-42d4-b9a8-bbc2afa01701",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>After security</h3>"
+   }
+  },
+  {
+   "uuid": "3587c0fe-2220-441c-a32c-4d63032bdb0a",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "ddc08b8d-5b8d-49df-9587-56927ccf3f27",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 2, after security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">The Wayfarer</th><td>04:30–last departure</td><td>Bar and grill with a full menu all day and a children's menu.</td></tr>\n<tr><th scope=\"row\">Little Orchard</th><td>04:30–20:30</td><td>Salads, wraps, fruit pots and juices to take on board.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "c231c12d-cc1c-46d3-a07a-c5a523e047fe",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "order-ahead",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "order-ahead-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "752ea51a-51a8-4efc-9f19-e4b4f018a023",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "c231c12d-cc1c-46d3-a07a-c5a523e047fe",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "251f5291-61cd-4f99-aacc-011c91a4beb6",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "752ea51a-51a8-4efc-9f19-e4b4f018a023",
+   "slot": "parts",
+   "inputs": {
+    "text": "Order ahead",
+    "level": "h2",
+    "id": "order-ahead-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "c1d1cd63-e231-4657-a60a-cef996d34b14",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "752ea51a-51a8-4efc-9f19-e4b4f018a023",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Order from any venue after security in the Meridian Airport app, up to 2 hours before your flight. Pay in the app, and your food or coffee is waiting on the Order ahead shelf by the time you are through security.</p>"
+   }
+  },
+  {
+   "uuid": "f76af84b-f59d-41f8-974b-f19eaec40482",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "food-for-the-flight-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "147437ca-921b-410b-8c23-ce62f24173ed",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f76af84b-f59d-41f8-974b-f19eaec40482",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "73d7e6a8-77c2-479a-be8b-bd83adcbc6db",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "147437ca-921b-410b-8c23-ce62f24173ed",
+   "slot": "parts",
+   "inputs": {
+    "text": "Food for the flight",
+    "level": "h2",
+    "id": "food-for-the-flight-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "565e9143-faf9-4ba6-aded-1e11908ef0b6",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "147437ca-921b-410b-8c23-ce62f24173ed",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>You can take food bought after security on board. Little Orchard and Platform Seven Bakery pack everything to travel. Drinks bought after security can go on board too, but check with your airline whether you can drink them during the flight.</p>"
+   }
+  },
+  {
+   "uuid": "6767c7e6-e535-40f2-b7fd-2464afad8983",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "water-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c86b260a-73cb-4b1a-8a6b-c15331116e41",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "6767c7e6-e535-40f2-b7fd-2464afad8983",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "19ec41ae-b90d-42e0-a569-d07825c98e52",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "c86b260a-73cb-4b1a-8a6b-c15331116e41",
+   "slot": "parts",
+   "inputs": {
+    "text": "Water",
+    "level": "h2",
+    "id": "water-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "b4dea0ef-915c-4414-bc9f-2171992500c8",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "c86b260a-73cb-4b1a-8a6b-c15331116e41",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Free water refill points are after security, near every toilet block in both terminals. Bring an empty bottle through security and fill it up on the other side.</p>"
+   }
+  },
+  {
+   "uuid": "28de0195-05b7-476c-aee7-1846eec63e3e",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "alcohol-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c3a5bfca-eda7-4af5-92c0-40d82d7aec7f",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "28de0195-05b7-476c-aee7-1846eec63e3e",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "28ae26ee-694f-4b28-b9e1-65e9702543a7",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "c3a5bfca-eda7-4af5-92c0-40d82d7aec7f",
+   "slot": "parts",
+   "inputs": {
+    "text": "Alcohol",
+    "level": "h2",
+    "id": "alcohol-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "7b9bff66-1226-4732-8699-063be22c03e8",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "c3a5bfca-eda7-4af5-92c0-40d82d7aec7f",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Bars serve alcohol from 04:30. Staff will not serve anyone who appears drunk, and airlines can refuse to fly passengers who are. You cannot drink alcohol bought in duty free on board.</p>"
+   }
+  },
+  {
+   "uuid": "c1512d14-5cca-4504-b582-6669b63c0664",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "families-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "88322d25-9230-4bc0-891b-66e9c2fec9b0",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "c1512d14-5cca-4504-b582-6669b63c0664",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "5bb6e467-858e-48ae-b70b-f0a9fedbc4e2",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "88322d25-9230-4bc0-891b-66e9c2fec9b0",
+   "slot": "parts",
+   "inputs": {
+    "text": "Families",
+    "level": "h2",
+    "id": "families-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "acba7785-14a1-4566-8c3f-225b07a020f8",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "88322d25-9230-4bc0-891b-66e9c2fec9b0",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>The Wayfarer and Skyline Kitchen have high chairs and children's menus. Every venue will warm baby milk or food if you ask.</p>"
+   }
+  }
+ ]
+}

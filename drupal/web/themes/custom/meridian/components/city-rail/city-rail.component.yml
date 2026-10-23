@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: City rail
+status: stable
+group: Meridian · Bands
+description: Horizontally scrolling rail of destination cards with count, prev/next and progress bar added by script.
+props:
+  type: object
+  required: [title]
+  properties:
+    title:
+      type: string
+      title: Section heading
+      examples: ["Where we fly"]
+    subtitle:
+      type: string
+      title: Second line of the heading
+      examples: ["Find your next holiday"]
+    link_label:
+      type: string
+      title: Link text on the right
+      examples: ["View all 112 destinations"]
+    link_href:
+      type: string
+      title: Link
+      format: uri-reference
+      examples: ["/flights/airlines#destinations"]
+    anchor:
+      type: string
+      title: Anchor id
+      examples: ["explore"]
+    title_id:
+      type: string
+      title: Heading id
+      examples: ["explore-title"]
+slots:
+  cards:
+    title: Cards
+    description: City cards, one per rail item.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/components.meridian--section-head
+  js:
+    city-rail.js:
+      attributes:
+        defer: true

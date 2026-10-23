@@ -1,0 +1,532 @@
+{
+ "uuid": "9f8b7a1b-528a-4cfb-a700-39ab1a1f4d5e",
+ "title": "Shopping — Meridian Airport",
+ "description": "Duty free, travel essentials, books and a pharmacy in Terminals 1 and 2. Reserve duty free online and collect it on the way to your gate.",
+ "status": true,
+ "path": "/at-the-airport/shopping",
+ "front": false,
+ "pageVariant": "meridian_nav_at_the_airport_shopping_page",
+ "components": [
+  {
+   "uuid": "14d304ff-8d1c-4e24-aa2c-a53c13271398",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "eyebrow": "At the airport",
+    "title": "Shopping",
+    "intro": "Reserve duty free online and collect it on the way to the gate.",
+    "variant": "art",
+    "widths": "960,1440",
+    "sizes": "491px",
+    "image_src": "/assets/img/airport/shopping-hero-960",
+    "image_alt": "Travellers with wheeled bags walk along a bright airside shopping concourse.",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "c1dabe26-592e-442a-a860-3949daa9cdd7",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "14d304ff-8d1c-4e24-aa2c-a53c13271398",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "d84d7a6f-0369-4542-8f4c-e5ce68e9f416",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "c1dabe26-592e-442a-a860-3949daa9cdd7",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "f3dba93a-a60d-40fc-b227-dea48c0b28e5",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "c1dabe26-592e-442a-a860-3949daa9cdd7",
+   "slot": "items",
+   "inputs": {
+    "label": "At the airport",
+    "href": "/at-the-airport"
+   }
+  },
+  {
+   "uuid": "6e46ea62-d37e-4ed6-8bc1-150901900520",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "c1dabe26-592e-442a-a860-3949daa9cdd7",
+   "slot": "items",
+   "inputs": {
+    "label": "Shopping",
+    "current": true
+   }
+  },
+  {
+   "uuid": "83c80c83-be29-4c8e-96e2-d4dd6d08f605",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "reserve-and-collect-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "5a6c932d-96e6-428a-b733-06d6534c28bb",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "83c80c83-be29-4c8e-96e2-d4dd6d08f605",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "3e514cfb-322f-4d93-9485-f44f61b4dda4",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "5a6c932d-96e6-428a-b733-06d6534c28bb",
+   "slot": "parts",
+   "inputs": {
+    "text": "Reserve and collect",
+    "level": "h2",
+    "id": "reserve-and-collect-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "4533b7c0-161a-4368-b37d-9bc893fcc933",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "5a6c932d-96e6-428a-b733-06d6534c28bb",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>You can order from 30 days before you fly until 3 hours before your flight. There is no charge to reserve. You pay when you collect.</p>\n<h3>How it works</h3>\n<ol><li>Choose your items and enter your flight number and date.</li><li>We set your order aside, packed and labelled.</li><li>After security, show your boarding pass at the Reserve and Collect desk inside Meridian Duty Free.</li><li>Pay and take your bag to the gate.</li></ol>\n<p>If your plans change, do nothing. We put unclaimed orders back on the shelves after 24 hours.</p>\n<h3>What you can reserve</h3>\n<p>Perfume, beauty, spirits, wine, chocolate and sunglasses. You cannot reserve tobacco.</p>\n<p><button class=\"button button--secondary\" type=\"button\" disabled=\"\">Reserve duty free<span class=\"visually-hidden\"> (not available in this demonstration)</span></button></p>"
+   }
+  },
+  {
+   "uuid": "571892a9-6f82-417c-858e-c29245f1bcb7",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "offers",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "offers-this-week-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7f6d0b21-54b7-45d4-a98e-c5e6089aeddf",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "571892a9-6f82-417c-858e-c29245f1bcb7",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "941f9051-b356-48b6-903f-d57b80659dbb",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "7f6d0b21-54b7-45d4-a98e-c5e6089aeddf",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "d5c8c846-e208-4bda-add5-624cca00a052",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "941f9051-b356-48b6-903f-d57b80659dbb",
+   "slot": "parts",
+   "inputs": {
+    "text": "Offers this week",
+    "level": "h2",
+    "id": "offers-this-week-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "49bdecec-39fd-4a68-81cb-cfac940faba3",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "941f9051-b356-48b6-903f-d57b80659dbb",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Three offers, valid until Friday 9 October.</p>"
+   }
+  },
+  {
+   "uuid": "cd36f5d3-7b68-406d-b175-98acafbe4c58",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "7f6d0b21-54b7-45d4-a98e-c5e6089aeddf",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "893086bd-32bc-46ee-8aba-681b1496f305",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "cd36f5d3-7b68-406d-b175-98acafbe4c58",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "20% off Meridian Reserve fragrances",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "a9c51b70-405a-4e92-ae88-ca0b005ac813",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "893086bd-32bc-46ee-8aba-681b1496f305",
+   "slot": "parts",
+   "inputs": {
+    "body": "<strong>Meridian Duty Free · Terminals 1 and 2</strong>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "8b199189-acaf-4e3a-b9cb-1c602df8fc0d",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "893086bd-32bc-46ee-8aba-681b1496f305",
+   "slot": "parts",
+   "inputs": {
+    "body": "Our own-label eau de parfum and aftershave, 20% off when you reserve online and collect at the gate.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "41e5a89a-1687-412c-b5d8-d5381173c8de",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "893086bd-32bc-46ee-8aba-681b1496f305",
+   "slot": "parts",
+   "inputs": {
+    "body": "Ends Friday 9 October.",
+    "variant": "card-text-tabular"
+   }
+  },
+  {
+   "uuid": "01e4278b-dc03-4d99-b569-1d79565a467c",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "cd36f5d3-7b68-406d-b175-98acafbe4c58",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Three for two on travel-size toiletries",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "feba3090-b25a-4816-9e9a-c41720c31f8e",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "01e4278b-dc03-4d99-b569-1d79565a467c",
+   "slot": "parts",
+   "inputs": {
+    "body": "<strong>Fernhill Pharmacy · Terminal 1</strong>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "10c81f29-90ad-4255-a638-1c74b739c2a6",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "01e4278b-dc03-4d99-b569-1d79565a467c",
+   "slot": "parts",
+   "inputs": {
+    "body": "Mix and match sun cream, toothpaste, shampoo and more, all in containers of 100 ml or less.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "f48d7084-914b-4015-b89c-9536af951fd9",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "01e4278b-dc03-4d99-b569-1d79565a467c",
+   "slot": "parts",
+   "inputs": {
+    "body": "Ends Friday 9 October.",
+    "variant": "card-text-tabular"
+   }
+  },
+  {
+   "uuid": "2758c09b-9cbb-4eaf-94a7-b32c078e03e6",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "cd36f5d3-7b68-406d-b175-98acafbe4c58",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "15% off when you order ahead",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "8ed23c80-60d1-43cc-bc57-1a2d7ba8746a",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "2758c09b-9cbb-4eaf-94a7-b32c078e03e6",
+   "slot": "parts",
+   "inputs": {
+    "body": "<strong>Little Orchard · Terminal 2</strong>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "3e63a785-6963-40bd-91f5-dd84461059a2",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "2758c09b-9cbb-4eaf-94a7-b32c078e03e6",
+   "slot": "parts",
+   "inputs": {
+    "body": "Order salads, wraps and juices in the app before security and pick them up from the Order ahead shelf, 15% off.",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "8994c5a0-a957-4af0-bb66-852360cce0ec",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "2758c09b-9cbb-4eaf-94a7-b32c078e03e6",
+   "slot": "parts",
+   "inputs": {
+    "body": "Ends Friday 9 October.",
+    "variant": "card-text-tabular"
+   }
+  },
+  {
+   "uuid": "adcaf1fc-49c4-4325-86e4-d8adc9ce1805",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "terminal-1-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "adcaf1fc-49c4-4325-86e4-d8adc9ce1805",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "7c1d6e00-0319-4e16-b337-aee3bb97cb37",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "slot": "parts",
+   "inputs": {
+    "text": "Terminal 1",
+    "level": "h2",
+    "id": "terminal-1-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "1ac5d94f-2577-47bc-82df-9a5b5f7273c3",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>Before security</h3>"
+   }
+  },
+  {
+   "uuid": "20b63a69-e370-4814-88bd-6fbf61728b2f",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 1, before security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Fernhill Pharmacy</th><td>05:00–21:00</td><td>Pharmacist on site, travel sickness remedies, sun cream and toiletries in travel sizes.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "ade5b457-2e4d-4757-9682-220ea1c6f4b8",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>After security</h3>"
+   }
+  },
+  {
+   "uuid": "09383f4f-9175-4e4b-98b7-4c2435be1ac6",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "c80bcaa7-fef3-49b4-ad55-db712fb08fe5",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 1, after security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Meridian Duty Free</th><td>04:00–last departure</td><td>Perfume, beauty, spirits and chocolate. Reserve and collect available.</td></tr>\n<tr><th scope=\"row\">Pocket and Plug</th><td>05:00–21:00</td><td>Chargers, adaptors, headphones and travel pillows.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "f15ff94d-7db9-44c5-a547-ebdd60e5aa63",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "terminal-2-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "9c7b05a5-6036-41d8-9b35-9de9d5e08918",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "f15ff94d-7db9-44c5-a547-ebdd60e5aa63",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "76071253-64e3-4b54-bac3-9f2c06c85e17",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "9c7b05a5-6036-41d8-9b35-9de9d5e08918",
+   "slot": "parts",
+   "inputs": {
+    "text": "Terminal 2",
+    "level": "h2",
+    "id": "terminal-2-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "ae9bc490-ed0c-4913-85ab-9326cf6b4628",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "9c7b05a5-6036-41d8-9b35-9de9d5e08918",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h3>After security</h3>"
+   }
+  },
+  {
+   "uuid": "ce65b9d9-d34a-4f03-853e-7ad58d39c195",
+   "component_id": "sdc.meridian.data-table",
+   "parent_uuid": "9c7b05a5-6036-41d8-9b35-9de9d5e08918",
+   "slot": "parts",
+   "inputs": {
+    "caption": "Terminal 2, after security",
+    "caption_hidden": true,
+    "body": "<thead><tr><th scope=\"col\">Venue</th><th scope=\"col\">Open</th><th scope=\"col\">What it serves</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Meridian Duty Free</th><td>04:00–last departure</td><td>The full duty free range. Reserve and collect available.</td></tr>\n<tr><th scope=\"row\">Pages and Passports</th><td>04:30–last departure</td><td>Books, magazines, sweets and puzzle books for the flight.</td></tr>\n<tr><th scope=\"row\">Kit and Caboodle</th><td>06:00–20:00</td><td>Toys, colouring sets and small games for children.</td></tr>\n</tbody>"
+   }
+  },
+  {
+   "uuid": "ec60dd19-abe8-441a-8b32-21317f28d9de",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "duty-free-allowances-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7d3b906d-5036-438d-98e2-0acad0aa383a",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "ec60dd19-abe8-441a-8b32-21317f28d9de",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "bd90921e-14fc-473b-be9d-98224766c0dd",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "7d3b906d-5036-438d-98e2-0acad0aa383a",
+   "slot": "parts",
+   "inputs": {
+    "text": "Duty free allowances",
+    "level": "h2",
+    "id": "duty-free-allowances-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "08175f17-173e-47f8-9214-e8882c9e5503",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "7d3b906d-5036-438d-98e2-0acad0aa383a",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>What you can buy without paying tax depends on where you are flying. Staff will check your boarding pass at the till and tell you what applies. If you are flying to the European Union, liquids bought in duty free are sealed in a security bag. Do not open it until you reach your destination.</p>"
+   }
+  },
+  {
+   "uuid": "8157b748-c72f-445e-8e05-ae2d065bf0d4",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "liquids-from-duty-free-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "4904edb2-add0-413f-94c6-25f4875fa485",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "8157b748-c72f-445e-8e05-ae2d065bf0d4",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "e4746321-8bd0-4027-9c98-1eade262744c",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "4904edb2-add0-413f-94c6-25f4875fa485",
+   "slot": "parts",
+   "inputs": {
+    "text": "Liquids from duty free",
+    "level": "h2",
+    "id": "liquids-from-duty-free-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "5bc7002f-3fed-4d8d-9c31-fd5d1acce1df",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "4904edb2-add0-413f-94c6-25f4875fa485",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Liquids bought after security can go in your hand luggage, whatever the size. If you have a connecting flight, keep them in the sealed bag with the receipt inside, or they may be taken at your next security check.</p>"
+   }
+  },
+  {
+   "uuid": "99182055-bb56-4d72-8359-8856402fc2e5",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "returns-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c2e0c7e1-c791-4463-af15-db935a363a28",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "99182055-bb56-4d72-8359-8856402fc2e5",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack"
+   }
+  },
+  {
+   "uuid": "1ad8eb0d-b48a-4c2d-acc7-53d7cee6c08b",
+   "component_id": "sdc.meridian.heading",
+   "parent_uuid": "c2e0c7e1-c791-4463-af15-db935a363a28",
+   "slot": "parts",
+   "inputs": {
+    "text": "Returns",
+    "level": "h2",
+    "id": "returns-title",
+    "size": "sm"
+   }
+  },
+  {
+   "uuid": "f4733c76-1610-4b26-b8ee-f1f0910a05a9",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "c2e0c7e1-c791-4463-af15-db935a363a28",
+   "slot": "parts",
+   "inputs": {
+    "body": "<p>Keep your receipt. You can return unopened items within 28 days by post. Call 0121 496 0123 or email hello@meridianairport.example and we will send you a returns label.</p>"
+   }
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "uuid": "b92325d8-1dd9-43bf-9a87-bd177d48d4b9",
+ "title": "Terms of use — Meridian Airport",
+ "description": "Terms of use for the Meridian Airport demonstration website: what the site is for, how accurate the information is, and your use of its content.",
+ "status": true,
+ "path": "/terms",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "6bfce4b4-5373-436e-a649-2946999f1738",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "Terms of use",
+    "intro": "The rules for using this website. Please read them before you rely on anything here.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "b556c0d3-9d16-46d2-bb50-fa5491b20aa8",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "6bfce4b4-5373-436e-a649-2946999f1738",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "aefc9d6b-4a15-4567-9995-9d6f358ce23e",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "b556c0d3-9d16-46d2-bb50-fa5491b20aa8",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "4524e30e-b6a9-4a56-8535-781abc0f3a4d",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "b556c0d3-9d16-46d2-bb50-fa5491b20aa8",
+   "slot": "items",
+   "inputs": {
+    "label": "Terms of use",
+    "current": true
+   }
+  },
+  {
+   "uuid": "f04d2185-3a2d-4c10-8c23-e357f49f005f",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "div",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7902f679-a767-415d-a925-322ba4c278e0",
+   "component_id": "sdc.meridian.callout",
+   "parent_uuid": "f04d2185-3a2d-4c10-8c23-e357f49f005f",
+   "slot": "parts",
+   "inputs": {
+    "title": "Please note",
+    "body": "<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>"
+   }
+  },
+  {
+   "uuid": "3c60bb30-67b6-4050-b6dc-303bb0ab4913",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "about-this-website",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "about-this-website-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "5e127123-9ba9-4faa-9568-f86bb0d95072",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "3c60bb30-67b6-4050-b6dc-303bb0ab4913",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"about-this-website-title\">About this website</h2>\n<p>This website is a demonstration. It is run by Meridian Airport Ltd, a fictional company, at Meridian Airport, Skyline Way, Birmingham B99 1MA. By using the site, you agree to these terms.</p>"
+   }
+  },
+  {
+   "uuid": "ad568cfd-ed84-4adc-b3b4-494a01d84d77",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "nothing-here-is-real",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "nothing-here-is-real-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "354867d4-2f28-4099-b83e-46a09c64b496",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "ad568cfd-ed84-4adc-b3b4-494a01d84d77",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"nothing-here-is-real-title\">Nothing here is real</h2>\n<ul><li>There are no real flights, airlines, car parks, shops, restaurants, lounges or jobs on this site.</li><li>You cannot book, buy or reserve anything. Prices are examples only.</li><li>Forms do not send what you type. Do not enter real personal details.</li><li>Do not use this site to plan a real journey.</li></ul>"
+   }
+  },
+  {
+   "uuid": "1c418693-ce5f-4738-9e8d-8910ad5a2a54",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "accuracy",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "accuracy-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "cf3d2e74-8efd-4670-b309-f2b0cf0fcf20",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "1c418693-ce5f-4738-9e8d-8910ad5a2a54",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"accuracy-title\">Accuracy</h2>\n<p>The flight board, wait times, weather and travel notices are made-up examples. The board's changes are scripted and do not show real flights. Destination guides mention real cities and describe them in good faith, but entry rules, prices and opening times change. Always check official sources before you travel.</p>"
+   }
+  },
+  {
+   "uuid": "055b33ff-7fb7-48e4-a3ad-f625bae4e1c2",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "using-our-content",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "using-our-content-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c7e16ef3-3f78-4873-988d-3665598eb4e2",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "055b33ff-7fb7-48e4-a3ad-f625bae4e1c2",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"using-our-content-title\">Using our content</h2>\n<p>Text, illustrations and photographs on this site belong to Meridian Airport Ltd or are used with permission. You may view and print pages for your own use. You may not copy them for commercial use without asking us first.</p>"
+   }
+  },
+  {
+   "uuid": "cf376d04-d71b-4000-8918-06253ffffc47",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "links",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "links-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "bf02a578-2c12-4840-96ca-8d0b67f3565e",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "cf376d04-d71b-4000-8918-06253ffffc47",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"links-title\">Links</h2>\n<p>Some links on this site point to other websites, or are marked as not available in this demonstration. We are not responsible for the content of other websites.</p>"
+   }
+  },
+  {
+   "uuid": "55a16aa7-d5ca-4e83-9ef0-9d2ce5f3f84d",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "acceptable-use",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "acceptable-use-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "d6d0b177-c70d-4cf4-8a5a-c0ea91e74f0e",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "55a16aa7-d5ca-4e83-9ef0-9d2ce5f3f84d",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"acceptable-use-title\">Acceptable use</h2>\n<p>Do not try to break, overload or gain unauthorised access to this website, or use it to send harmful code or unwanted messages.</p>"
+   }
+  },
+  {
+   "uuid": "cfdeacf3-84b2-4009-ac31-b74045953c60",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "liability",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "liability-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "15602235-cada-47fe-97b0-0125676bcca2",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "cfdeacf3-84b2-4009-ac31-b74045953c60",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"liability-title\">Liability</h2>\n<p>We provide this website as it is, for demonstration purposes. We do not accept liability for any loss caused by relying on it, except where the law does not allow us to exclude it.</p>"
+   }
+  },
+  {
+   "uuid": "047a62f1-9239-43e5-91c6-0ea565119c9f",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "privacy-and-cookies",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "privacy-and-cookies-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c8270824-c227-4db9-80f9-d1d4bd0a9dea",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "047a62f1-9239-43e5-91c6-0ea565119c9f",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"privacy-and-cookies-title\">Privacy and cookies</h2>\n<p>How we handle information is set out in our privacy notice and cookies page.</p>\n<p><a href=\"/privacy\">Privacy</a></p>\n<p><a href=\"/cookies\">Cookies</a></p>"
+   }
+  },
+  {
+   "uuid": "454bf515-8eab-4f52-80f3-5c9684549851",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "changes-to-these-terms",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "changes-to-these-terms-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "b4b2ef9b-e693-412d-8462-709722c94adc",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "454bf515-8eab-4f52-80f3-5c9684549851",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"changes-to-these-terms-title\">Changes to these terms</h2>\n<p>We may update these terms. The date below shows when they last changed.</p>"
+   }
+  },
+  {
+   "uuid": "8af32e00-2309-42e1-b16b-f35dbd1d2ddc",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "law",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "law-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "43a384fa-e5cd-4922-9abf-b8efe7a89b71",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "8af32e00-2309-42e1-b16b-f35dbd1d2ddc",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"law-title\">Law</h2>\n<p>These terms are governed by the law of England and Wales, and the courts of England and Wales have jurisdiction.</p>"
+   }
+  },
+  {
+   "uuid": "bbcf909f-cdb9-4da0-8170-90668d06ca74",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "contact",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "contact-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f7d09083-8a3d-4ff2-bd83-0ced2b64758c",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "bbcf909f-cdb9-4da0-8170-90668d06ca74",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"contact-title\">Contact</h2>\n<p><a href=\"mailto:hello@meridianairport.example\">hello@meridianairport.example</a> <a href=\"tel:+441214960123\">0121 496 0123</a></p>\n<p>Last updated: 3 October 2026.</p>"
+   }
+  }
+ ]
+}

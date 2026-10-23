@@ -1,0 +1,378 @@
+{
+ "uuid": "92068a36-3b2b-41a0-917b-38270e1b1a4a",
+ "title": "Careers — Meridian Airport",
+ "description": "Jobs at Meridian Airport in operations, passenger services and engineering. See current roles, closing dates and what it is like to work here.",
+ "status": true,
+ "path": "/about/careers",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "e6943c22-0c47-4d2b-a011-42c879bc1db5",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "eyebrow": "About Meridian",
+    "title": "Careers",
+    "intro": "Around 3,100 people work at Meridian. Here is what it is like, and what we are hiring for now.",
+    "variant": "art",
+    "widths": "960,1440",
+    "sizes": "720px",
+    "image_src": "/assets/img/about/careers-960",
+    "image_alt": "Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.",
+    "image_width": 1440,
+    "image_height": 960
+   }
+  },
+  {
+   "uuid": "f391aa91-517f-4ade-a318-435eb93c3bba",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "div",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "81549fbb-b76f-4edc-a7fd-575a837d61ba",
+   "component_id": "sdc.meridian.callout",
+   "parent_uuid": "f391aa91-517f-4ade-a318-435eb93c3bba",
+   "slot": "parts",
+   "inputs": {
+    "title": "Demonstration note",
+    "body": "<p>These roles are fictional and are not open for applications.</p>"
+   }
+  },
+  {
+   "uuid": "a15b945e-72ae-4c90-95bb-25fcd2caab9a",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "working-at-meridian",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "working-at-meridian-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f2523d69-3654-4b52-915f-e46dd99cd19e",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "a15b945e-72ae-4c90-95bb-25fcd2caab9a",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"working-at-meridian-title\">Working at Meridian</h2>\n<h3>Shifts that fit</h3>\n<p>The airport runs 24 hours, so many roles are shift-based. We publish rotas 6 weeks ahead and you can swap shifts with colleagues through the staff app.</p>\n<h3>Getting to work</h3>\n<p>Free staff parking at Mid-Stay, and half-price rail travel from Birmingham Central for everyone on our payroll.</p>\n<h3>Training</h3>\n<p>Every new starter gets paid training before their first shift. Most of our managers started in frontline roles.</p>\n<h3>Pay and benefits</h3>\n<ul><li>Pay reviewed every April</li><li>25 days' holiday plus bank holidays, rising to 28 with service</li><li>Pension with up to 8% employer contribution</li><li>Free meals on shift in the staff canteen</li></ul>"
+   }
+  },
+  {
+   "uuid": "b5548e02-aa35-4231-8104-531d4bbb7187",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "current-roles",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "current-roles-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "af08104b-9e03-449e-b08b-1ca87a3a213c",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "b5548e02-aa35-4231-8104-531d4bbb7187",
+   "slot": "parts",
+   "inputs": {
+    "layout": "stack-lg"
+   }
+  },
+  {
+   "uuid": "18969fa9-ab2b-4fec-9ab7-4c67d859a3e3",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "af08104b-9e03-449e-b08b-1ca87a3a213c",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"current-roles-title\">Current roles</h2>"
+   }
+  },
+  {
+   "uuid": "52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75",
+   "component_id": "sdc.meridian.group",
+   "parent_uuid": "af08104b-9e03-449e-b08b-1ca87a3a213c",
+   "slot": "parts",
+   "inputs": {
+    "layout": "grid-3"
+   }
+  },
+  {
+   "uuid": "2fe6ed04-f1b6-4422-980a-b63edaf784e7",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Airside Operations Officer",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "e95891fc-8a5e-44a1-a373-89ebe895e186",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "2fe6ed04-f1b6-4422-980a-b63edaf784e7",
+   "slot": "parts",
+   "inputs": {
+    "variant": "default"
+   }
+  },
+  {
+   "uuid": "9cb6daa4-0fdc-4eab-bb32-9b546ea2b823",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "e95891fc-8a5e-44a1-a373-89ebe895e186",
+   "slot": "items",
+   "inputs": {
+    "term": "Team",
+    "value": "Operations"
+   }
+  },
+  {
+   "uuid": "d9525fa2-1601-4084-865f-d973770da8d1",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "e95891fc-8a5e-44a1-a373-89ebe895e186",
+   "slot": "items",
+   "inputs": {
+    "term": "Hours",
+    "value": "Full time, rotating shifts including nights and weekends"
+   }
+  },
+  {
+   "uuid": "e4febac9-d877-4b2f-b8a9-4fbf6a7380be",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "e95891fc-8a5e-44a1-a373-89ebe895e186",
+   "slot": "items",
+   "inputs": {
+    "term": "Salary",
+    "value": "£31,400 a year plus shift allowance"
+   }
+  },
+  {
+   "uuid": "16b4e2d6-b25b-4d82-86ef-05b3f5bad824",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "e95891fc-8a5e-44a1-a373-89ebe895e186",
+   "slot": "items",
+   "inputs": {
+    "term": "Closing date",
+    "value": "<time datetime=\"2026-10-30\">30 October 2026</time>"
+   }
+  },
+  {
+   "uuid": "bcd701ab-5201-462f-bb90-d16832cb8e3c",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "2fe6ed04-f1b6-4422-980a-b63edaf784e7",
+   "slot": "parts",
+   "inputs": {
+    "body": "Keep the aircraft stands, taxiways and runway safe and clear. You will carry out daily inspections, manage wildlife and foreign object checks, and work with air traffic control and airline ground teams.<span class=\"visually-hidden\"> (not available in this demonstration)</span>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "113db1ce-f623-465c-bbf7-b0e8c47753bb",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Passenger Assistance Agent",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "458b6b7a-af7a-40e1-8659-86932a8e1ffc",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "113db1ce-f623-465c-bbf7-b0e8c47753bb",
+   "slot": "parts",
+   "inputs": {
+    "variant": "default"
+   }
+  },
+  {
+   "uuid": "6a9c88d0-88d2-4f52-9069-7224aa9b4c70",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "458b6b7a-af7a-40e1-8659-86932a8e1ffc",
+   "slot": "items",
+   "inputs": {
+    "term": "Team",
+    "value": "Passenger Services"
+   }
+  },
+  {
+   "uuid": "0debcca1-f8fa-4507-b4ee-e6919559870e",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "458b6b7a-af7a-40e1-8659-86932a8e1ffc",
+   "slot": "items",
+   "inputs": {
+    "term": "Hours",
+    "value": "Full time or part time, early and late shifts"
+   }
+  },
+  {
+   "uuid": "dee3c686-9473-42eb-990d-6e487e0a03ae",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "458b6b7a-af7a-40e1-8659-86932a8e1ffc",
+   "slot": "items",
+   "inputs": {
+    "term": "Salary",
+    "value": "£24,800 a year, pro rata for part time"
+   }
+  },
+  {
+   "uuid": "c098c2ab-8c09-43c8-b077-e0498e40ef1b",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "458b6b7a-af7a-40e1-8659-86932a8e1ffc",
+   "slot": "items",
+   "inputs": {
+    "term": "Closing date",
+    "value": "<time datetime=\"2026-11-13\">13 November 2026</time>"
+   }
+  },
+  {
+   "uuid": "7bd518e6-7347-497f-8908-053e47eb705f",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "113db1ce-f623-465c-bbf7-b0e8c47753bb",
+   "slot": "parts",
+   "inputs": {
+    "body": "Help passengers with a disability or reduced mobility from the kerb to their seat and back again. Full training is given. What matters most is patience and good judgement.<span class=\"visually-hidden\"> (not available in this demonstration)</span>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "20d21c96-d06e-4e52-9e26-21a8d77155f2",
+   "component_id": "sdc.meridian.card",
+   "parent_uuid": "52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75",
+   "slot": "parts",
+   "inputs": {
+    "tag": "div",
+    "heading": "Electrical Engineer, Airfield Lighting",
+    "heading_level": "h3",
+    "padded": true
+   }
+  },
+  {
+   "uuid": "bebf6861-b862-481f-a12c-844458562e1a",
+   "component_id": "sdc.meridian.facts",
+   "parent_uuid": "20d21c96-d06e-4e52-9e26-21a8d77155f2",
+   "slot": "parts",
+   "inputs": {
+    "variant": "default"
+   }
+  },
+  {
+   "uuid": "a44a49b2-65ba-48a7-8991-3761564ea10b",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "bebf6861-b862-481f-a12c-844458562e1a",
+   "slot": "items",
+   "inputs": {
+    "term": "Team",
+    "value": "Engineering"
+   }
+  },
+  {
+   "uuid": "12d3e512-9f16-4b4a-9365-81847b9c0d64",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "bebf6861-b862-481f-a12c-844458562e1a",
+   "slot": "items",
+   "inputs": {
+    "term": "Hours",
+    "value": "Full time, Monday to Friday, with an on-call rota"
+   }
+  },
+  {
+   "uuid": "3dd394e6-6dc9-4428-bc92-b5ea91c9e5c6",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "bebf6861-b862-481f-a12c-844458562e1a",
+   "slot": "items",
+   "inputs": {
+    "term": "Salary",
+    "value": "£44,500 a year"
+   }
+  },
+  {
+   "uuid": "ac5e46bb-f96f-434b-9fe7-a24fc2484791",
+   "component_id": "sdc.meridian.fact",
+   "parent_uuid": "bebf6861-b862-481f-a12c-844458562e1a",
+   "slot": "items",
+   "inputs": {
+    "term": "Closing date",
+    "value": "<time datetime=\"2026-11-27\">27 November 2026</time>"
+   }
+  },
+  {
+   "uuid": "66e22952-6c46-4748-b107-d656a302b93e",
+   "component_id": "sdc.meridian.paragraph",
+   "parent_uuid": "20d21c96-d06e-4e52-9e26-21a8d77155f2",
+   "slot": "parts",
+   "inputs": {
+    "body": "Maintain and improve the runway, taxiway and approach lighting. You will hold an electrical qualification at level 3 or above and be comfortable working outside at night.<span class=\"visually-hidden\"> (not available in this demonstration)</span>",
+    "variant": "card-text"
+   }
+  },
+  {
+   "uuid": "cef499cc-11cd-4620-b402-aedfaa2932c2",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "how-to-apply",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "how-to-apply-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "71d2e9f6-2399-44ac-8c82-d3b9c8832a39",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "cef499cc-11cd-4620-b402-aedfaa2932c2",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"how-to-apply-title\">How to apply</h2>\n<ol><li>Read the full role description and check you meet the requirements.</li><li>Apply online with your CV and a short covering statement. We do not use automated scoring.</li><li>If you are shortlisted, we invite you to an interview at the airport within 2 weeks of the closing date.</li><li>Before you start, we carry out the background checks needed for an airport security pass. This takes 4 to 6 weeks.</li></ol>"
+   }
+  },
+  {
+   "uuid": "e91e8611-bbb0-4a59-a157-023fcccdfe10",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "adjustments",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "adjustments-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f2c5198d-0ddf-4ac5-98fc-54cfdc24f27d",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "e91e8611-bbb0-4a59-a157-023fcccdfe10",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"adjustments-title\">Adjustments</h2>\n<p>Tell us if you need any adjustments to apply or to attend an interview. We will make them. We guarantee an interview to disabled applicants who meet the essential requirements.</p>"
+   }
+  },
+  {
+   "uuid": "d1012d2b-665b-4b89-adcd-f356b66d767d",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "questions",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "questions-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "c1958003-7256-42d5-9b17-e686b384f4d7",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "d1012d2b-665b-4b89-adcd-f356b66d767d",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"questions-title\">Questions</h2>\n<p>Email <a href=\"mailto:hello@meridianairport.example\">hello@meridianairport.example</a> with \"Careers\" in the subject line, or call <a href=\"tel:+441214960123\">0121 496 0123</a>.</p>"
+   }
+  }
+ ]
+}

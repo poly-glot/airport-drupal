@@ -1,0 +1,25 @@
+uuid: 98c7477f-81b0-4798-9405-6890477f0b16
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.meridian.city-rail
+    - canvas.component.sdc.meridian.flight-board
+    - canvas.component.sdc.meridian.getting-here
+    - canvas.component.sdc.meridian.help-list
+    - canvas.component.sdc.meridian.hero
+    - canvas.component.sdc.meridian.photo-band
+    - canvas.component.sdc.meridian.tower-grid
+    - canvas.component.sdc.meridian.wait-panel
+name: 'Meridian · Bands'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.meridian.city-rail
+  - sdc.meridian.flight-board
+  - sdc.meridian.getting-here
+  - sdc.meridian.help-list
+  - sdc.meridian.hero
+  - sdc.meridian.photo-band
+  - sdc.meridian.tower-grid
+  - sdc.meridian.wait-panel

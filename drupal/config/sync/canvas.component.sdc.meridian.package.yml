@@ -1,0 +1,158 @@
+uuid: 138ae5d5-3a52-483d-946d-379fcbd62e34
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - meridian
+active_version: 108a76cccf59cbfe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        tier:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'P2 Long-stay'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        price_prefix:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: From
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        price:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: £8.50
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        unit:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'per day'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        badge:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Recommended
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '5 min walk · covered'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        best_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Best for'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Weekends, short breaks and holidays'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        recommended:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        cta_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Book P2 Long-stay'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        href:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '#quote'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        features:
+          title: Features
+          description: 'Package feature items.'
+label: Package
+id: sdc.meridian.package
+provider: meridian
+source: sdc
+source_local_id: 'meridian:package'

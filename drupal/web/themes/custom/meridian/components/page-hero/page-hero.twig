@@ -1,0 +1,13 @@
+<section{{ attributes.addClass('page-hero', variant|default('sky') == 'art' ? 'page-hero--with-art') }} aria-labelledby="page-title">
+{% block breadcrumb %}{% endblock %}
+<div class="page-hero__inner container">
+<div class="page-hero__content">
+{% if eyebrow|default(false) %}<p class="page-hero__eyebrow">{{ eyebrow|default('') }}</p>{% endif %}
+<h1 class="page-hero__title" id="page-title">{{ title }}</h1>
+{% if intro|default(false) %}<p class="page-hero__intro">{{ intro|default('') }}</p>{% endif %}
+</div>
+{% if image_src|default(false) %}
+{{ include('meridian:picture', { src: image_src, alt: image_alt|default(''), width: image_width, height: image_height, widths: widths|default(''), sizes: '(max-width: 900px) calc(100vw - 32px), ' ~ sizes|default('720px'), loading: 'eager', priority: true, css_class: 'media' }, with_context = false) }}
+{% endif %}
+</div>
+</section>

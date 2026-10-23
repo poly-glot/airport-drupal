@@ -1,0 +1,227 @@
+{
+ "uuid": "9b68a593-7cb7-4ceb-abad-b36d6e9c00ab",
+ "title": "Privacy — Meridian Airport",
+ "description": "How the Meridian Airport demonstration website handles information: no analytics, no tracking, no accounts, and forms that do not send what you type.",
+ "status": true,
+ "path": "/privacy",
+ "front": false,
+ "pageVariant": "meridian",
+ "components": [
+  {
+   "uuid": "c91ea1dd-ca4a-4d0a-b46a-4589cdf4ddce",
+   "component_id": "sdc.meridian.page-hero",
+   "inputs": {
+    "title": "Privacy",
+    "intro": "What this website collects about you, which is very little, and what we do with it.",
+    "variant": "sky"
+   }
+  },
+  {
+   "uuid": "fd4e8b93-2fc3-49da-a41f-e3517e17d61b",
+   "component_id": "sdc.meridian.breadcrumb",
+   "parent_uuid": "c91ea1dd-ca4a-4d0a-b46a-4589cdf4ddce",
+   "slot": "breadcrumb",
+   "inputs": {}
+  },
+  {
+   "uuid": "333992c4-35c0-4322-806e-569fbd58a7d5",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "fd4e8b93-2fc3-49da-a41f-e3517e17d61b",
+   "slot": "items",
+   "inputs": {
+    "label": "Home",
+    "href": "/"
+   }
+  },
+  {
+   "uuid": "81a672bb-7d15-4e0f-833d-9b6822d731cf",
+   "component_id": "sdc.meridian.breadcrumb-item",
+   "parent_uuid": "fd4e8b93-2fc3-49da-a41f-e3517e17d61b",
+   "slot": "items",
+   "inputs": {
+    "label": "Privacy",
+    "current": true
+   }
+  },
+  {
+   "uuid": "4b1f6204-c4d3-4111-ae3f-f61bfd9be704",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "tone": "light",
+    "tag": "div",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "b4f39700-49f7-4591-889a-f5784166b75d",
+   "component_id": "sdc.meridian.callout",
+   "parent_uuid": "4b1f6204-c4d3-4111-ae3f-f61bfd9be704",
+   "slot": "parts",
+   "inputs": {
+    "title": "Please note",
+    "body": "<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>"
+   }
+  },
+  {
+   "uuid": "216ec08d-1ff3-407a-89f9-a7ac15e367f8",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "the-short-version",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "the-short-version-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f1083232-f513-4bf0-8557-117068569419",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "216ec08d-1ff3-407a-89f9-a7ac15e367f8",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"the-short-version-title\">The short version</h2>\n<ul><li>We do not use analytics, advertising or tracking of any kind.</li><li>You do not need an account, and there is no way to create one.</li><li>The forms on this site do not send or store what you type. Please do not enter real personal details.</li><li>Our web server keeps short-lived technical logs to keep the site secure.</li></ul>"
+   }
+  },
+  {
+   "uuid": "d57cd57d-814d-44b5-a82c-d45333ecf8b4",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "who-we-are",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "who-we-are-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "291beca4-a636-4007-84e6-c5b054e54794",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "d57cd57d-814d-44b5-a82c-d45333ecf8b4",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"who-we-are-title\">Who we are</h2>\n<p>This website is a demonstration for Meridian Airport Ltd, a fictional company. For the purposes of this notice, Meridian Airport Ltd is the data controller. You can contact us at:</p>\n<ul><li>Email: <a href=\"mailto:hello@meridianairport.example\">hello@meridianairport.example</a></li><li>Phone: <a href=\"tel:+441214960123\">0121 496 0123</a></li><li>Post: Meridian Airport, Skyline Way, Birmingham B99 1MA</li></ul>"
+   }
+  },
+  {
+   "uuid": "37388056-c5cb-4f3f-8c9d-79f7e99db5b1",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "what-we-collect",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "what-we-collect-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "0d97b530-9794-4682-8643-890bd910acd1",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "37388056-c5cb-4f3f-8c9d-79f7e99db5b1",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"what-we-collect-title\">What we collect</h2>\n<h3>When you visit a page</h3>\n<p>Like any website, our server receives some technical information with each request: your IP address, the page you asked for, the date and time, and the type of browser you use. We use this only to deliver the page, to keep the site secure and to fix faults. These logs are deleted after 30 days. We do not use them to identify you or to build a profile.</p>\n<h3>When you use a form</h3>\n<p>The forms for parking quotes, flight alerts, special assistance, lost property and feedback are demonstrations. What you type is not sent to anyone and is not stored by us.</p>\n<h3>Fonts</h3>\n<p>Our typefaces are loaded from a third-party font service. To send the font files, that service receives your IP address and the type of browser you use. It does not set cookies, and we receive nothing from it.</p>\n<h3>Cookies</h3>\n<p>This site sets one strictly necessary cookie at most, and only on pages with a form. Our cookies page explains it.</p>\n<p><a href=\"/cookies\">Cookies</a></p>"
+   }
+  },
+  {
+   "uuid": "3dca66c3-510c-42b3-85e0-c1c03f99766a",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "what-we-do-not-do",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "what-we-do-not-do-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7ba27e4a-16f8-4098-b096-b51b8134af0b",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "3dca66c3-510c-42b3-85e0-c1c03f99766a",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"what-we-do-not-do-title\">What we do not do</h2>\n<ul><li>We do not sell or share information about you.</li><li>We do not use analytics, heatmaps, session recording or advertising tools.</li><li>We do not load social media widgets. The social links in our footer are plain links.</li><li>We do not make automated decisions about you.</li></ul>"
+   }
+  },
+  {
+   "uuid": "d6e9e579-e9f6-45a5-881a-f4efeb9d3597",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "lawful-basis",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "lawful-basis-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "7f95ef94-5ba5-4d49-9231-78c0178c6bc2",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "d6e9e579-e9f6-45a5-881a-f4efeb9d3597",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"lawful-basis-title\">Lawful basis</h2>\n<p>Our lawful basis for keeping server logs is our legitimate interest in running a secure, working website. The one cookie we may set is strictly necessary for a form to work safely, so it does not need your consent.</p>"
+   }
+  },
+  {
+   "uuid": "4aca07e3-a36b-467c-b5b8-b655c960e8d5",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "where-information-is-held",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "where-information-is-held-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "e34cad68-0072-4508-a165-c1d57ec0efec",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "4aca07e3-a36b-467c-b5b8-b655c960e8d5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"where-information-is-held-title\">Where information is held</h2>\n<p>Server logs are held by our hosting provider in the UK or the European Economic Area, under a contract that requires them to keep the information secure and to use it only on our instructions.</p>"
+   }
+  },
+  {
+   "uuid": "861c1089-e8ba-4d9e-8b90-06d2eaa58db5",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "your-rights",
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "your-rights-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "031671d7-73d6-4c9e-9112-9a968f2f9b48",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "861c1089-e8ba-4d9e-8b90-06d2eaa58db5",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"your-rights-title\">Your rights</h2>\n<p>You have the right to ask for a copy of any information we hold about you, to have it corrected or deleted, and to object to how we use it. Because we keep so little, and only for 30 days, we may hold nothing that we can link to you. Contact us and we will check.</p>\n<p>If you are unhappy with how we have handled your information, you can complain to the UK data protection regulator. We would appreciate the chance to put things right first.</p>"
+   }
+  },
+  {
+   "uuid": "063aeb65-86c2-4d7e-a887-7e9175bfd6e4",
+   "component_id": "sdc.meridian.section",
+   "inputs": {
+    "anchor": "changes-to-this-notice",
+    "last": true,
+    "tone": "light",
+    "tag": "section",
+    "labelled_by": "changes-to-this-notice-title",
+    "heading_level": "h2"
+   }
+  },
+  {
+   "uuid": "f3e74baa-4638-429f-9b52-d0faf7e2357c",
+   "component_id": "sdc.meridian.prose",
+   "parent_uuid": "063aeb65-86c2-4d7e-a887-7e9175bfd6e4",
+   "slot": "parts",
+   "inputs": {
+    "body": "<h2 id=\"changes-to-this-notice-title\">Changes to this notice</h2>\n<p>We will update this page if what we collect changes. This notice was last updated on 3 October 2026.</p>"
+   }
+  }
+ ]
+}

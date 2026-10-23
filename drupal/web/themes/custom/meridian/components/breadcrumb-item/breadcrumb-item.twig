@@ -1,0 +1,5 @@
+{% if current|default(false) %}
+<li{{ attributes.addClass('breadcrumb__item') }} aria-current="page">{{ label }}</li>
+{% else %}
+<li{{ attributes.addClass('breadcrumb__item') }}><a class="breadcrumb__link" href="{{ href }}">{{ label }}</a></li>
+{% endif %}

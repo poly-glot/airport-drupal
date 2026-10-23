@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Nav link
+status: stable
+group: Meridian · Parts
+description: One main navigation link. The current state maps to aria-current.
+props:
+  type: object
+  required: [label, href]
+  properties:
+    label:
+      type: string
+      title: Menu item text
+      examples: [Flights]
+    href:
+      type: string
+      format: uri-reference
+      title: Link
+      examples: [/flights]
+    current:
+      type: string
+      title: Current state
+      enum: [none, page, section]
+      default: none
+      examples: [none]

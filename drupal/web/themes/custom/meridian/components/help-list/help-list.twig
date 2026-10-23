@@ -1,0 +1,16 @@
+{% set plain = variant == 'plain' %}
+{% set heading_id = title_id|default('help-title') %}
+{% if plain %}
+<ul{{ attributes.addClass('help-list') }}>
+{% else %}
+<section{{ attributes.addClass('band', 'band--panel') }}{% if anchor %} id="{{ anchor }}"{% endif %} aria-labelledby="{{ heading_id }}">
+    <div class="container">
+        {{ include('meridian:section-head', { title: title, title_id: heading_id, link_label: link_label, link_href: link_href }, with_context = false) }}
+        <ul class="help-list">
+{% endif %}
+            {% block items %}{% endblock %}
+        </ul>
+{% if not plain %}
+    </div>
+</section>
+{% endif %}

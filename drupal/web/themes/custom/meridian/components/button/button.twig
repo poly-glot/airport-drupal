@@ -1,0 +1,6 @@
+{%- set classes = ['button', variant == 'secondary' ? 'button--secondary', large ? 'button--lg', block ? 'button--block']|filter(c => c) -%}
+{% if href %}
+<a{{ attributes.addClass(classes) }} href="{{ href }}">{{ label }}</a>
+{% else %}
+<button{{ attributes.addClass(classes) }} type="submit">{{ label }}</button>
+{% endif %}

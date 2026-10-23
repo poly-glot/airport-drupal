@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Card
+status: stable
+group: Meridian · Inner pages
+description: Ruled white card with an optional title and any content, as the role, release, airline, offer and contact cards and the site map groups.
+props:
+  type: object
+  properties:
+    tag:
+      type: string
+      title: Element
+      enum: [div, section]
+      examples: [div]
+    heading:
+      type: string
+      title: Card heading
+      examples: [Airside Operations Officer]
+    heading_level:
+      type: string
+      title: Heading level
+      enum: [h2, h3]
+      examples: [h3]
+    heading_id:
+      type: string
+      title: Heading id
+      examples: [flights-title]
+    padded:
+      type: boolean
+      title: Padded
+      examples: [true]
+slots:
+  parts:
+    title: Parts
+    description: The card content, facts, prose, paragraphs and buttons.

@@ -1,0 +1,22 @@
+uuid: 5384d569-b892-499a-baf8-f1e863d67cf1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - canvas
+_core:
+  default_config_hash: xm9kkafQ4sECItPrag1uY1efaOowx0RctdMAN-8myNI
+name: 'Drupal Canvas — Block HTML (locked)'
+format: canvas_html_block
+weight: 1000
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      allowed_html: '<strong> <em> <u> <a href class id> <br> <p class id> <ul class id> <ol class id start> <li class id> <h2 id class> <h3 id class> <h4 id class> <time datetime> <span class> <small> <table class> <thead> <tbody> <tr> <th scope class> <td class> <dl class> <dt class> <dd class> <div class> <svg class width height viewBox fill stroke stroke-width stroke-linecap stroke-linejoin aria-hidden> <path d> <button class type disabled>'
+      filter_html_help: false
+      filter_html_nofollow: false

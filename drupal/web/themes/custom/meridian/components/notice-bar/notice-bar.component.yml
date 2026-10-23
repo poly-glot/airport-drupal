@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Notice bar
+status: stable
+group: Meridian · Chrome
+description: Rotating travel notice bar at the top of every page. One notice is visible at a time once enhanced; without JavaScript the prev and next links jump between notices.
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Region label
+      examples: [Travel notices]
+slots:
+  notices:
+    title: Notices
+    description: Notice leaves, one per travel notice.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+  js:
+    notice-bar.js:
+      attributes:
+        defer: true

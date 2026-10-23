@@ -1,0 +1,13 @@
+uuid: a6bc3076-1e7e-42ff-a073-b41ad59694dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.marker.page_content
+    - canvas.component.theme_page_template.meridian
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - marker.page_content
+  - theme_page_template.meridian

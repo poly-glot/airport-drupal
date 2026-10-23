@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site header
+status: stable
+group: Meridian · Chrome
+description: White 76px header with lockup, main navigation, language label, search and basket buttons, the primary call to action and the mobile menu toggle.
+props:
+  type: object
+  required: [cta_label, cta_href, basket_href, basket_label]
+  properties:
+    cta_label:
+      type: string
+      title: Call to action label
+      examples: [Book parking]
+    cta_href:
+      type: string
+      format: uri-reference
+      title: Call to action link
+      examples: [/parking]
+    basket_href:
+      type: string
+      format: uri-reference
+      title: Basket link
+      examples: [/at-the-airport/shopping]
+    basket_label:
+      type: string
+      title: Basket label
+      examples: [Basket, 0 items]
+    brand_current:
+      type: boolean
+      title: Lockup is the current page
+      default: false
+      examples: [true]
+slots:
+  nav:
+    title: Navigation
+    description: Nav link leaves, one per main menu item.
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--button
+    - core/drupal
+    - core/once
+  js:
+    site-header.js:
+      attributes:
+        defer: true

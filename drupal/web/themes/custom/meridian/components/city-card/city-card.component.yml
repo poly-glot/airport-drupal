@@ -1,0 +1,48 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: City card
+status: stable
+group: Meridian · Parts
+description: Photo card with city name and meta; rail item on the homepage, guide card on the destinations page.
+props:
+  type: object
+  required: [city, image_src, href]
+  properties:
+    city:
+      type: string
+      title: City name
+      examples: ["Cairo"]
+    meta:
+      type: string
+      title: Line under the city name
+      examples: ["from £189 · 5h 10m · daily"]
+    image_src:
+      type: string
+      title: Image stem
+      description: Image path including the width suffix and no extension.
+      examples: ['/assets/img/cities/cairo-714']
+    image_alt:
+      type: string
+      title: Image alt text
+      examples: ['Photograph at Meridian Airport']
+    image_width:
+      type: integer
+      title: Image width
+      examples: [714]
+    image_height:
+      type: integer
+      title: Image height
+      examples: [1040]
+    href:
+      type: string
+      title: Link
+      format: uri-reference
+      examples: ["/destinations"]
+    variant:
+      type: string
+      title: Variant
+      enum: [rail, guide]
+      examples: ["rail"]
+    body:
+      type: string
+      title: Card text
+      examples: ["Where to eat, which hills to climb and the tram worth queueing for."]

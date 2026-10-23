@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Terminal map
+status: stable
+group: Meridian · Inner pages
+description: Schematic SVG map of one terminal, code-owned.
+props:
+  type: object
+  required: [terminal]
+  properties:
+    terminal:
+      type: string
+      title: Terminal
+      enum: [terminal-1, terminal-2]
+      examples: [terminal-1]
+libraryOverrides:
+  dependencies:
+    - core/components.meridian--card
+    - core/components.meridian--map-pane

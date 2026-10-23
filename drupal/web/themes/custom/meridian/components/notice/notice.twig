@@ -1,0 +1,11 @@
+{% set previous = position > 1 ? position - 1 : total %}
+{% set next = position < total ? position + 1 : 1 %}
+<li{{ attributes.addClass('notice-bar__item') }} id="notice-{{ position }}">
+    <div class="notice-bar__controls">
+        <a class="notice-bar__step notice-bar__step--prev" href="#notice-{{ previous }}" aria-label="Previous notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+        <span class="notice-bar__count">{{ position }} of {{ total }}</span>
+        <a class="notice-bar__step notice-bar__step--next" href="#notice-{{ next }}" aria-label="Next notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+    </div>
+    <p class="notice-bar__text"><strong class="notice-bar__kind">{{ kind }}</strong><span class="notice-bar__separator"> · </span>{{ text }} {% if action %}<span class="notice-bar__action">{{ action }}</span>{% endif %}</p>
+    <a class="notice-bar__link" href="{{ link_href|default('/flights') }}">{{ link_label|default('Check my flight') }}</a>
+</li>

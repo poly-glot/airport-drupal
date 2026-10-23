@@ -1,0 +1,47 @@
+.status {
+    align-items: center;
+    color: var(--ink);
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.status__dot {
+    background: var(--ok);
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 8px;
+    width: 8px;
+}
+
+.status--info .status__dot {
+    background: var(--brand);
+}
+
+.status--neutral {
+    color: var(--grey-2);
+}
+
+.status--neutral .status__dot {
+    background: var(--neutral-dot);
+}
+
+.status--warn {
+    color: var(--warn-ink);
+}
+
+.status--warn .status__dot {
+    background: var(--warn);
+}
+
+.status--bad {
+    color: var(--bad-ink);
+}
+
+.status--bad .status__dot {
+    background: var(--bad);
+}

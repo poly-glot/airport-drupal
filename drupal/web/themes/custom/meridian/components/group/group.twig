@@ -1,0 +1,11 @@
+{% set group_classes = {
+    'stack': 'stack',
+    'stack-lg': 'stack stack--lg',
+    'grid-2': 'grid grid--2',
+    'grid-3': 'grid grid--3',
+    'split': 'split',
+    'split-main-aside': 'split split--main-aside'
+} %}
+<div{{ attributes.addClass(group_classes[layout|default('stack')]|split(' ')) }}>
+{% block parts %}{% endblock %}
+</div>

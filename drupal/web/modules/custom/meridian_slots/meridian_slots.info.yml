@@ -1,0 +1,7 @@
+name: Meridian slots
+type: module
+description: Rejects a component tree save when a slot holds a component its definition does not expect.
+package: Meridian
+core_version_requirement: ^11.3
+dependencies:
+  - canvas:canvas

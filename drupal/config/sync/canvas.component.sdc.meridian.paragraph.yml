@@ -1,0 +1,80 @@
+uuid: ed5cc432-650b-40ad-80b7-51ad1d84d1ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+  theme:
+    - meridian
+active_version: b25b7dbce5ff83f8
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Prices are per vehicle per day.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: plain
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  794dd359a4006306:
+    settings:
+      prop_field_definitions:
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Prices are per vehicle per day.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: plain
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Paragraph
+id: sdc.meridian.paragraph
+provider: meridian
+source: sdc
+source_local_id: 'meridian:paragraph'
