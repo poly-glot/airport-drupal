@@ -2,61 +2,61 @@ name: Picture
 machineName: picture
 status: true
 required:
-  - src
+    - src
 props:
-  properties:
-    src:
-      title: Image stem
-      type: string
-      description: Image path including the width suffix and no extension.
-      examples:
-        - /assets/img/airport/tower-security-560
-    alt:
-      title: Image alt text
-      type: string
-      examples:
-        - Photograph at Meridian Airport
-    width:
-      title: Image width
-      type: integer
-      examples:
-        - 560
-    height:
-      title: Image height
-      type: integer
-      examples:
-        - 840
-    sizes:
-      title: Sizes
-      type: string
-      examples:
-        - '(max-width: 900px) calc(50vw - 22px), 265px'
-    widths:
-      title: Extra srcset widths
-      type: string
-      description: Comma separated widths with no spaces, for example 560,840. Empty means only the width in the stem.
-      examples:
-        - 560,840
-    loading:
-      title: Loading
-      type: string
-      enum:
-        - lazy
-        - eager
-      examples:
-        - lazy
-    priority:
-      title: High fetch priority
-      type: boolean
-      examples:
-        - false
-    cssClass:
-      title: Image class
-      type: string
-      examples:
-        - tower__img
-    pictureClass:
-      title: Picture class
-      type: string
-      examples:
-        - tower__media
+    properties:
+        src:
+            title: Image stem
+            type: string
+            description: Image path including the width suffix and no extension.
+            examples:
+                - /assets/img/airport/tower-security-560
+        alt:
+            title: Image alt text
+            type: string
+            examples:
+                - Photograph at Meridian Airport
+        width:
+            title: Image width
+            type: integer
+            examples:
+                - 560
+        height:
+            title: Image height
+            type: integer
+            examples:
+                - 840
+        sizes:
+            title: Sizes
+            type: string
+            examples:
+                - '(max-width: 900px) calc(50vw - 22px), 265px'
+        widths:
+            title: Extra srcset widths
+            type: string
+            description: Comma separated widths with no spaces, for example 560,840. Empty means only the width in the stem.
+            examples:
+                - 560,840
+        loading:
+            title: Loading
+            type: string
+            enum:
+                - lazy
+                - eager
+            examples:
+                - lazy
+        priority:
+            title: High fetch priority
+            type: boolean
+            examples:
+                - false
+        cssClass:
+            title: Image class
+            type: string
+            examples:
+                - tower__img
+        pictureClass:
+            title: Picture class
+            type: string
+            examples:
+                - tower__media

@@ -2,22 +2,22 @@ name: Status
 machineName: status
 status: true
 required:
-  - word
+    - word
 props:
-  properties:
-    word:
-      title: Status word
-      type: string
-      examples:
-        - On time
-    tone:
-      title: Tone
-      type: string
-      enum:
-        - ok
-        - info
-        - neutral
-        - warn
-        - bad
-      examples:
-        - ok
+    properties:
+        word:
+            title: Status word
+            type: string
+            examples:
+                - On time
+        tone:
+            title: Tone
+            type: string
+            enum:
+                - ok
+                - info
+                - neutral
+                - warn
+                - bad
+            examples:
+                - ok

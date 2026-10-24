@@ -16,7 +16,7 @@
 
 .photo-band__media::after {
     background: var(--gradient-parking);
-    content: "";
+    content: '';
     inset: 0;
     position: absolute;
 }

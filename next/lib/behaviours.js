@@ -230,7 +230,8 @@ export function enhanceBoardSearch(board) {
 
             emptyCell.textContent = noMatch ? message : '';
             emptyRow.hidden = !noMatch;
-            announcer.textContent = query === '' ? '' : noMatch ? message : `${shown} of ${rows.length} ${boardName} shown`;
+            announcer.textContent =
+                query === '' ? '' : noMatch ? message : `${shown} of ${rows.length} ${boardName} shown`;
         });
     });
 
@@ -411,13 +412,18 @@ function replayPanel(panel) {
     panel.querySelectorAll('.board__row').forEach((row, rowIndex) => {
         row.querySelectorAll('[data-flap]').forEach((element) => {
             const cellIndex = element.closest('td').cellIndex;
-            flipText(element, { delay: rowIndex * FLAP_ROW_STAGGER_MS + cellIndex * 4 * FLAP_TILE_STAGGER_MS, fromBlank: true });
+            flipText(element, {
+                delay: rowIndex * FLAP_ROW_STAGGER_MS + cellIndex * 4 * FLAP_TILE_STAGGER_MS,
+                fromBlank: true,
+            });
         });
     });
 }
 
 function findRow(panel, flight) {
-    return [...panel.querySelectorAll('.board__row')].find((row) => row.querySelector('.board__flight').dataset.flapText === flight);
+    return [...panel.querySelectorAll('.board__row')].find(
+        (row) => row.querySelector('.board__flight').dataset.flapText === flight,
+    );
 }
 
 function applyState(row, stateName) {
@@ -478,9 +484,7 @@ export function enhanceSplitFlap(board) {
     board.querySelectorAll('[data-flap]').forEach(enhanceFlap);
 
     const observer = new MutationObserver((mutations) => {
-        mutations
-            .filter((mutation) => !mutation.target.hidden)
-            .forEach((mutation) => replayPanel(mutation.target));
+        mutations.filter((mutation) => !mutation.target.hidden).forEach((mutation) => replayPanel(mutation.target));
     });
 
     panels.forEach((panel) => observer.observe(panel, { attributeFilter: ['hidden'] }));
@@ -530,7 +534,8 @@ export function enhanceCityRail(rail) {
         const [first, last] = fullyVisibleRange(track, items);
 
         rail.style.setProperty('--rail-progress', progress.toFixed(3));
-        count.textContent = first === last ? `${first + 1} / ${items.length}` : `${first + 1} – ${last + 1} / ${items.length}`;
+        count.textContent =
+            first === last ? `${first + 1} / ${items.length}` : `${first + 1} – ${last + 1} / ${items.length}`;
     };
 
     prev.addEventListener('click', () => track.scrollBy({ left: -step() }));
@@ -552,7 +557,10 @@ const SKY_WEATHERS = {
     sunny: { label: 'sunny', nightLabel: 'clear', temp: '18°C' },
 };
 
-const daypartFromHour = (hour) => Object.keys(SKY_DAYPART_HOURS).find((name) => hour >= SKY_DAYPART_HOURS[name][0] && hour <= SKY_DAYPART_HOURS[name][1]) ?? 'night';
+const daypartFromHour = (hour) =>
+    Object.keys(SKY_DAYPART_HOURS).find(
+        (name) => hour >= SKY_DAYPART_HOURS[name][0] && hour <= SKY_DAYPART_HOURS[name][1],
+    ) ?? 'night';
 
 export function enhanceHeroSky(hero) {
     const picture = hero.querySelector('.hero__media');
@@ -586,11 +594,14 @@ export function enhanceHeroSky(hero) {
 
     weatherBlock.classList.toggle('hero__weather--dry', weather !== 'rainy');
     weatherBlock.querySelector('.hero__temp-value').textContent = SKY_WEATHERS[weather].temp;
-    weatherBlock.querySelector('.hero__condition').textContent = daypart === 'night' ? SKY_WEATHERS[weather].nightLabel : SKY_WEATHERS[weather].label;
+    weatherBlock.querySelector('.hero__condition').textContent =
+        daypart === 'night' ? SKY_WEATHERS[weather].nightLabel : SKY_WEATHERS[weather].label;
 
     const now = new Date();
     const dateText = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', weekday: 'long' }).format(now);
-    const timeText = override ? SKY_PREVIEW_TIMES[daypart] : new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit' }).format(now);
+    const timeText = override
+        ? SKY_PREVIEW_TIMES[daypart]
+        : new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit' }).format(now);
     weatherBlock.querySelector('.hero__date').textContent = `${dateText} · ${timeText} local`;
 
     hero.dataset.sky = variant;

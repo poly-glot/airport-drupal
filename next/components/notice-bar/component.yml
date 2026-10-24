@@ -3,13 +3,13 @@ machineName: notice-bar
 status: true
 required: []
 props:
-  properties:
-    label:
-      title: Region label
-      type: string
-      examples:
-        - Travel notices
+    properties:
+        label:
+            title: Region label
+            type: string
+            examples:
+                - Travel notices
 slots:
-  notices:
-    title: Notices
-    description: Notice leaves, one per travel notice.
+    notices:
+        title: Notices
+        description: Notice leaves, one per travel notice.

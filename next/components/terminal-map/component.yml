@@ -2,14 +2,14 @@ name: Terminal map
 machineName: terminal-map
 status: true
 required:
-  - terminal
+    - terminal
 props:
-  properties:
-    terminal:
-      title: Terminal
-      type: string
-      enum:
-        - terminal-1
-        - terminal-2
-      examples:
-        - terminal-1
+    properties:
+        terminal:
+            title: Terminal
+            type: string
+            enum:
+                - terminal-1
+                - terminal-2
+            examples:
+                - terminal-1

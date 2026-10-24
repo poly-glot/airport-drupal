@@ -3,6 +3,6 @@ machineName: accordion
 status: true
 required: []
 slots:
-  items:
-    title: Items
-    description: Accordion items, one per question.
+    items:
+        title: Items
+        description: Accordion items, one per question.

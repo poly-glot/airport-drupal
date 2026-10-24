@@ -17,7 +17,7 @@
 
 .testimonial__quote::before {
     color: var(--accent-blue);
-    content: "\201C";
+    content: '\201C';
     display: block;
     font-size: 48px;
     line-height: 0.6;

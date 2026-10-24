@@ -21,7 +21,7 @@
 
 .city-card__media::after {
     background: var(--gradient-card);
-    content: "";
+    content: '';
     inset: 0;
     position: absolute;
 }

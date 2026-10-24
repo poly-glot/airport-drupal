@@ -17,7 +17,7 @@
 
 .hero__media::after {
     background: var(--gradient-hero);
-    content: "";
+    content: '';
     inset: 0;
     position: absolute;
 }

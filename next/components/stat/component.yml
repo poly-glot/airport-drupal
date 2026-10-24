@@ -2,17 +2,17 @@ name: Stat
 machineName: stat
 status: true
 required:
-  - label
-  - value
+    - label
+    - value
 props:
-  properties:
-    label:
-      title: Small label above the value
-      type: string
-      examples:
-        - Closest walk
-    value:
-      title: Large value
-      type: string
-      examples:
-        - 2 min
+    properties:
+        label:
+            title: Small label above the value
+            type: string
+            examples:
+                - Closest walk
+        value:
+            title: Large value
+            type: string
+            examples:
+                - 2 min

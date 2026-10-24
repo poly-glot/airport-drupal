@@ -2,41 +2,41 @@ name: Section head
 machineName: section-head
 status: true
 required:
-  - title
-  - titleId
+    - title
+    - titleId
 props:
-  properties:
-    title:
-      title: Section heading
-      type: string
-      examples:
-        - Help for the day you fly
-    intro:
-      title: Line under the heading
-      type: string
-      examples:
-        - Everything between the door and the gate.
-    headingLevel:
-      title: Heading level
-      type: string
-      enum:
-        - h2
-        - h3
-      examples:
-        - h2
-    titleId:
-      title: Heading id
-      type: string
-      examples:
-        - help-title
-    linkLabel:
-      title: Link text on the right
-      type: string
-      examples:
-        - All passenger services
-    linkHref:
-      title: Link
-      type: string
-      format: uri-reference
-      examples:
-        - /help
+    properties:
+        title:
+            title: Section heading
+            type: string
+            examples:
+                - Help for the day you fly
+        intro:
+            title: Line under the heading
+            type: string
+            examples:
+                - Everything between the door and the gate.
+        headingLevel:
+            title: Heading level
+            type: string
+            enum:
+                - h2
+                - h3
+            examples:
+                - h2
+        titleId:
+            title: Heading id
+            type: string
+            examples:
+                - help-title
+        linkLabel:
+            title: Link text on the right
+            type: string
+            examples:
+                - All passenger services
+        linkHref:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /help

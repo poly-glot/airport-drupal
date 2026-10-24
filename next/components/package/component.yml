@@ -2,69 +2,69 @@ name: Package
 machineName: package
 status: true
 required:
-  - tier
-  - price
-  - ctaLabel
-  - href
+    - tier
+    - price
+    - ctaLabel
+    - href
 props:
-  properties:
-    tier:
-      title: Package name
-      type: string
-      examples:
-        - P2 Long-stay
-    pricePrefix:
-      title: Text before the price
-      type: string
-      examples:
-        - From
-    price:
-      title: Price
-      type: string
-      examples:
-        - £8.50
-    unit:
-      title: Text after the price
-      type: string
-      examples:
-        - per day
-    badge:
-      title: Badge above the name
-      type: string
-      examples:
-        - Recommended
-    meta:
-      title: Line under the price
-      type: string
-      examples:
-        - 5 min walk · covered
-    bestLabel:
-      title: Bold start of the best-for line
-      type: string
-      examples:
-        - Best for
-    note:
-      title: Rest of the best-for line
-      type: string
-      examples:
-        - Weekends, short breaks and holidays
-    recommended:
-      title: Recommended
-      type: boolean
-      examples:
-        - true
-    ctaLabel:
-      title: Button text
-      type: string
-      examples:
-        - Book P2 Long-stay
-    href:
-      title: Button link
-      type: string
-      format: uri-reference
-      examples:
-        - '#quote'
+    properties:
+        tier:
+            title: Package name
+            type: string
+            examples:
+                - P2 Long-stay
+        pricePrefix:
+            title: Text before the price
+            type: string
+            examples:
+                - From
+        price:
+            title: Price
+            type: string
+            examples:
+                - £8.50
+        unit:
+            title: Text after the price
+            type: string
+            examples:
+                - per day
+        badge:
+            title: Badge above the name
+            type: string
+            examples:
+                - Recommended
+        meta:
+            title: Line under the price
+            type: string
+            examples:
+                - 5 min walk · covered
+        bestLabel:
+            title: Bold start of the best-for line
+            type: string
+            examples:
+                - Best for
+        note:
+            title: Rest of the best-for line
+            type: string
+            examples:
+                - Weekends, short breaks and holidays
+        recommended:
+            title: Recommended
+            type: boolean
+            examples:
+                - true
+        ctaLabel:
+            title: Button text
+            type: string
+            examples:
+                - Book P2 Long-stay
+        href:
+            title: Button link
+            type: string
+            format: uri-reference
+            examples:
+                - '#quote'
 slots:
-  features:
-    title: Features
-    description: Package feature items.
+    features:
+        title: Features
+        description: Package feature items.

@@ -2,37 +2,37 @@ name: Hero
 machineName: hero
 status: true
 required:
-  - title
-  - intro
+    - title
+    - intro
 props:
-  properties:
-    title:
-      title: Welcome heading
-      type: string
-      examples:
-        - Welcome to Meridian Airport
-    intro:
-      title: Line under the heading
-      type: string
-      examples:
-        - Your gateway to 112 destinations. Check your flight
-        - pre-book parking and reserve duty free to collect at the gate.
-    defaultWeather:
-      title: Default weather
-      type: string
-      enum:
-        - sunny
-        - cloudy
-        - rainy
-      examples:
-        - rainy
+    properties:
+        title:
+            title: Welcome heading
+            type: string
+            examples:
+                - Welcome to Meridian Airport
+        intro:
+            title: Line under the heading
+            type: string
+            examples:
+                - Your gateway to 112 destinations. Check your flight
+                - pre-book parking and reserve duty free to collect at the gate.
+        defaultWeather:
+            title: Default weather
+            type: string
+            enum:
+                - sunny
+                - cloudy
+                - rainy
+            examples:
+                - rainy
 slots:
-  signs:
-    title: Signs
-    description: Hero sign leaves, the quick links under the intro.
-  aside:
-    title: Aside
-    description: The white search card (form kind flight-search).
-  wait:
-    title: Wait panel
-    description: The wait panel that floats over the bottom edge of the hero.
+    signs:
+        title: Signs
+        description: Hero sign leaves, the quick links under the intro.
+    aside:
+        title: Aside
+        description: The white search card (form kind flight-search).
+    wait:
+        title: Wait panel
+        description: The wait panel that floats over the bottom edge of the hero.

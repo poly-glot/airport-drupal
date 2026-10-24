@@ -2,85 +2,85 @@ name: Photo band
 machineName: photo-band
 status: true
 required:
-  - title
-  - imageSrc
+    - title
+    - imageSrc
 props:
-  properties:
-    title:
-      title: Band heading
-      type: string
-      examples:
-        - Park at the terminal from £8.50 a day
-    intro:
-      title: Line under the heading
-      type: string
-      examples:
-        - Three car parks, all step-free to check-in. Pre-booked rates are up to 40% below drive-up, with free cancellation until 24 hours before you arrive.
-    imageSrc:
-      title: Image stem
-      type: string
-      description: Image path including the width suffix and no extension.
-      examples:
-        - /assets/img/home/parking-1440
-    imageAlt:
-      title: Image alt text
-      type: string
-      examples:
-        - Photograph at Meridian Airport
-    imageWidth:
-      title: Image width
-      type: integer
-      examples:
-        - 1440
-    imageHeight:
-      title: Image height
-      type: integer
-      examples:
-        - 810
-    variant:
-      title: Variant
-      type: string
-      enum:
-        - band
-        - hero
-      examples:
-        - band
-    headingLevel:
-      title: Heading level
-      type: string
-      enum:
-        - h1
-        - h2
-      examples:
-        - h2
-    anchor:
-      title: Anchor id
-      type: string
-      examples:
-        - parking
-    titleId:
-      title: Heading id
-      type: string
-      examples:
-        - parking-title
-    linkLabel:
-      title: Link text
-      type: string
-      examples:
-        - Compare all car parks and the map
-    linkHref:
-      title: Link
-      type: string
-      format: uri-reference
-      examples:
-        - /parking#compare
+    properties:
+        title:
+            title: Band heading
+            type: string
+            examples:
+                - Park at the terminal from £8.50 a day
+        intro:
+            title: Line under the heading
+            type: string
+            examples:
+                - Three car parks, all step-free to check-in. Pre-booked rates are up to 40% below drive-up, with free cancellation until 24 hours before you arrive.
+        imageSrc:
+            title: Image stem
+            type: string
+            description: Image path including the width suffix and no extension.
+            examples:
+                - /assets/img/home/parking-1440
+        imageAlt:
+            title: Image alt text
+            type: string
+            examples:
+                - Photograph at Meridian Airport
+        imageWidth:
+            title: Image width
+            type: integer
+            examples:
+                - 1440
+        imageHeight:
+            title: Image height
+            type: integer
+            examples:
+                - 810
+        variant:
+            title: Variant
+            type: string
+            enum:
+                - band
+                - hero
+            examples:
+                - band
+        headingLevel:
+            title: Heading level
+            type: string
+            enum:
+                - h1
+                - h2
+            examples:
+                - h2
+        anchor:
+            title: Anchor id
+            type: string
+            examples:
+                - parking
+        titleId:
+            title: Heading id
+            type: string
+            examples:
+                - parking-title
+        linkLabel:
+            title: Link text
+            type: string
+            examples:
+                - Compare all car parks and the map
+        linkHref:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /parking#compare
 slots:
-  breadcrumb:
-    title: Breadcrumb
-    description: Breadcrumb trail, used by the hero variant above the heading.
-  facts:
-    title: Facts
-    description: Stat leaves rendered inside the stats list.
-  aside:
-    title: Aside
-    description: The parking form card.
+    breadcrumb:
+        title: Breadcrumb
+        description: Breadcrumb trail, used by the hero variant above the heading.
+    facts:
+        title: Facts
+        description: Stat leaves rendered inside the stats list.
+    aside:
+        title: Aside
+        description: The parking form card.

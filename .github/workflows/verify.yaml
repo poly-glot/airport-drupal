@@ -19,8 +19,7 @@ jobs:
           cache-dependency-path: next/package-lock.json
           node-version: '24'
       - run: npm ci
-      - run: npm run lint
-      - run: npm run type-check
+      - run: npm run check
       - run: npm run build
 
   drupal:

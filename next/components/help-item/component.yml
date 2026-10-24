@@ -2,40 +2,40 @@ name: Help item
 machineName: help-item
 status: true
 required:
-  - icon
-  - title
-  - href
+    - icon
+    - title
+    - href
 props:
-  properties:
-    icon:
-      title: Icon
-      type: string
-      enum:
-        - assistance
-        - children
-        - first-flight
-        - alerts
-        - lost-property
-        - contact
-        - security
-        - eat-and-drink
-        - shopping
-        - lounges
-      examples:
-        - assistance
-    title:
-      title: Row heading
-      type: string
-      examples:
-        - Special assistance
-    body:
-      title: Row text
-      type: string
-      examples:
-        - Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.
-    href:
-      title: Link
-      type: string
-      format: uri-reference
-      examples:
-        - /help/special-assistance
+    properties:
+        icon:
+            title: Icon
+            type: string
+            enum:
+                - assistance
+                - children
+                - first-flight
+                - alerts
+                - lost-property
+                - contact
+                - security
+                - eat-and-drink
+                - shopping
+                - lounges
+            examples:
+                - assistance
+        title:
+            title: Row heading
+            type: string
+            examples:
+                - Special assistance
+        body:
+            title: Row text
+            type: string
+            examples:
+                - Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /help/special-assistance

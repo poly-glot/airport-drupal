@@ -30,13 +30,13 @@
 }
 
 .table td,
-.table th[scope="row"] {
+.table th[scope='row'] {
     border-bottom: 1px solid var(--rule-mid);
     padding: 16px;
     vertical-align: top;
 }
 
-.table th[scope="row"] {
+.table th[scope='row'] {
     color: var(--ink);
     font-size: 15px;
     font-weight: 700;

@@ -2,68 +2,68 @@ name: Tower
 machineName: tower
 status: true
 required:
-  - number
-  - icon
-  - title
-  - ctaLabel
-  - href
-  - imageSrc
+    - number
+    - icon
+    - title
+    - ctaLabel
+    - href
+    - imageSrc
 props:
-  properties:
-    number:
-      title: Corner number
-      type: string
-      examples:
-        - '01'
-    icon:
-      title: Icon
-      type: string
-      enum:
-        - security
-        - eat-and-drink
-        - baggage
-        - maps
-      examples:
-        - security
-    title:
-      title: Tower heading
-      type: string
-      examples:
-        - Security and customs
-    body:
-      title: Tower text
-      type: string
-      examples:
-        - 'New scanners in Terminal 1: liquids and laptops stay in your bag. Arrive two hours before short-haul, three for long-haul.'
-    ctaLabel:
-      title: Link text at the bottom
-      type: string
-      examples:
-        - What to expect
-    href:
-      title: Link
-      type: string
-      format: uri-reference
-      examples:
-        - /at-the-airport/security
-    imageSrc:
-      title: Image stem
-      type: string
-      description: Image path including the width suffix and no extension.
-      examples:
-        - /assets/img/airport/tower-security-560
-    imageAlt:
-      title: Image alt text
-      type: string
-      examples:
-        - Photograph at Meridian Airport
-    imageWidth:
-      title: Image width
-      type: integer
-      examples:
-        - 560
-    imageHeight:
-      title: Image height
-      type: integer
-      examples:
-        - 840
+    properties:
+        number:
+            title: Corner number
+            type: string
+            examples:
+                - '01'
+        icon:
+            title: Icon
+            type: string
+            enum:
+                - security
+                - eat-and-drink
+                - baggage
+                - maps
+            examples:
+                - security
+        title:
+            title: Tower heading
+            type: string
+            examples:
+                - Security and customs
+        body:
+            title: Tower text
+            type: string
+            examples:
+                - 'New scanners in Terminal 1: liquids and laptops stay in your bag. Arrive two hours before short-haul, three for long-haul.'
+        ctaLabel:
+            title: Link text at the bottom
+            type: string
+            examples:
+                - What to expect
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /at-the-airport/security
+        imageSrc:
+            title: Image stem
+            type: string
+            description: Image path including the width suffix and no extension.
+            examples:
+                - /assets/img/airport/tower-security-560
+        imageAlt:
+            title: Image alt text
+            type: string
+            examples:
+                - Photograph at Meridian Airport
+        imageWidth:
+            title: Image width
+            type: integer
+            examples:
+                - 560
+        imageHeight:
+            title: Image height
+            type: integer
+            examples:
+                - 840

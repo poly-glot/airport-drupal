@@ -21,8 +21,8 @@
 
 .breadcrumb__item + .breadcrumb__item::before {
     color: var(--grey-2);
-    content: "/";
-    content: "/" / "";
+    content: '/';
+    content: '/' / '';
 }
 
 .breadcrumb__link {

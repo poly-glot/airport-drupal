@@ -1,3 +1,3 @@
-import { createDraftRouteHandlers } from "@drupal-canvas/headless-next";
+import { createDraftRouteHandlers } from '@drupal-canvas/headless-next';
 
 export const POST = createDraftRouteHandlers().draftRenew.POST;

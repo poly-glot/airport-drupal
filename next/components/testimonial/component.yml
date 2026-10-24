@@ -2,23 +2,23 @@ name: Testimonial
 machineName: testimonial
 status: true
 required:
-  - quote
-  - name
+    - quote
+    - name
 props:
-  properties:
-    quote:
-      title: The quote
-      type: string
-      contentMediaType: text/html
-      examples:
-        - '<p>Eight minutes through security with a pram, and the family lane staff talked to my daughter, not over her.</p>'
-    name:
-      title: Who said it
-      type: string
-      examples:
-        - Priya N.
-    meta:
-      title: Line under the name, about their journey
-      type: string
-      examples:
-        - Flew to Lisbon, October 2026
+    properties:
+        quote:
+            title: The quote
+            type: string
+            contentMediaType: text/html
+            examples:
+                - '<p>Eight minutes through security with a pram, and the family lane staff talked to my daughter, not over her.</p>'
+        name:
+            title: Who said it
+            type: string
+            examples:
+                - Priya N.
+        meta:
+            title: Line under the name, about their journey
+            type: string
+            examples:
+                - Flew to Lisbon, October 2026

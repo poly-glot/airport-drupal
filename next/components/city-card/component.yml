@@ -2,58 +2,58 @@ name: City card
 machineName: city-card
 status: true
 required:
-  - city
-  - imageSrc
-  - href
+    - city
+    - imageSrc
+    - href
 props:
-  properties:
-    city:
-      title: City name
-      type: string
-      examples:
-        - Cairo
-    meta:
-      title: Line under the city name
-      type: string
-      examples:
-        - from £189 · 5h 10m · daily
-    imageSrc:
-      title: Image stem
-      type: string
-      description: Image path including the width suffix and no extension.
-      examples:
-        - /assets/img/cities/cairo-714
-    imageAlt:
-      title: Image alt text
-      type: string
-      examples:
-        - Photograph at Meridian Airport
-    imageWidth:
-      title: Image width
-      type: integer
-      examples:
-        - 714
-    imageHeight:
-      title: Image height
-      type: integer
-      examples:
-        - 1040
-    href:
-      title: Link
-      type: string
-      format: uri-reference
-      examples:
-        - /destinations
-    variant:
-      title: Variant
-      type: string
-      enum:
-        - rail
-        - guide
-      examples:
-        - rail
-    body:
-      title: Card text
-      type: string
-      examples:
-        - Where to eat, which hills to climb and the tram worth queueing for.
+    properties:
+        city:
+            title: City name
+            type: string
+            examples:
+                - Cairo
+        meta:
+            title: Line under the city name
+            type: string
+            examples:
+                - from £189 · 5h 10m · daily
+        imageSrc:
+            title: Image stem
+            type: string
+            description: Image path including the width suffix and no extension.
+            examples:
+                - /assets/img/cities/cairo-714
+        imageAlt:
+            title: Image alt text
+            type: string
+            examples:
+                - Photograph at Meridian Airport
+        imageWidth:
+            title: Image width
+            type: integer
+            examples:
+                - 714
+        imageHeight:
+            title: Image height
+            type: integer
+            examples:
+                - 1040
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /destinations
+        variant:
+            title: Variant
+            type: string
+            enum:
+                - rail
+                - guide
+            examples:
+                - rail
+        body:
+            title: Card text
+            type: string
+            examples:
+                - Where to eat, which hills to climb and the tram worth queueing for.

@@ -3,53 +3,53 @@ machineName: section
 status: true
 required: []
 props:
-  properties:
-    heading:
-      title: Section heading
-      type: string
-      examples:
-        - Our airlines
-    headingLevel:
-      title: Heading level
-      type: string
-      enum:
-        - h2
-        - h3
-      examples:
-        - h2
-    anchor:
-      title: Anchor
-      type: string
-      examples:
-        - airlines
-    tone:
-      title: Tone
-      type: string
-      enum:
-        - light
-        - panel
-      examples:
-        - light
-    labelledBy:
-      title: Labelled by
-      type: string
-      description: Id of the heading that names this section when that heading sits inside the section content rather than in the heading prop.
-      examples:
-        - careers-note-title
-    tag:
-      title: Element
-      type: string
-      enum:
-        - section
-        - div
-      examples:
-        - section
-    last:
-      title: Last section
-      type: boolean
-      examples:
-        - false
+    properties:
+        heading:
+            title: Section heading
+            type: string
+            examples:
+                - Our airlines
+        headingLevel:
+            title: Heading level
+            type: string
+            enum:
+                - h2
+                - h3
+            examples:
+                - h2
+        anchor:
+            title: Anchor
+            type: string
+            examples:
+                - airlines
+        tone:
+            title: Tone
+            type: string
+            enum:
+                - light
+                - panel
+            examples:
+                - light
+        labelledBy:
+            title: Labelled by
+            type: string
+            description: Id of the heading that names this section when that heading sits inside the section content rather than in the heading prop.
+            examples:
+                - careers-note-title
+        tag:
+            title: Element
+            type: string
+            enum:
+                - section
+                - div
+            examples:
+                - section
+        last:
+            title: Last section
+            type: boolean
+            examples:
+                - false
 slots:
-  parts:
-    title: Parts
-    description: The section content, a group, prose, table or other leaves.
+    parts:
+        title: Parts
+        description: The section content, a group, prose, table or other leaves.

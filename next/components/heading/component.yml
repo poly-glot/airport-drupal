@@ -2,34 +2,34 @@ name: Heading
 machineName: heading
 status: true
 required:
-  - text
+    - text
 props:
-  properties:
-    text:
-      title: Heading text
-      type: string
-      examples:
-        - Reading the board
-    level:
-      title: Level
-      type: string
-      enum:
-        - h2
-        - h3
-        - h4
-      examples:
-        - h2
-    size:
-      title: Size
-      type: string
-      enum:
-        - default
-        - sm
-        - card
-      examples:
-        - sm
-    id:
-      title: Id
-      type: string
-      examples:
-        - reading-the-board-title
+    properties:
+        text:
+            title: Heading text
+            type: string
+            examples:
+                - Reading the board
+        level:
+            title: Level
+            type: string
+            enum:
+                - h2
+                - h3
+                - h4
+            examples:
+                - h2
+        size:
+            title: Size
+            type: string
+            enum:
+                - default
+                - sm
+                - card
+            examples:
+                - sm
+        id:
+            title: Id
+            type: string
+            examples:
+                - reading-the-board-title

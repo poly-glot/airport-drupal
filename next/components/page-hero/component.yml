@@ -2,65 +2,65 @@ name: Page hero
 machineName: page-hero
 status: true
 required:
-  - title
+    - title
 props:
-  properties:
-    eyebrow:
-      title: Small text above the heading
-      type: string
-      examples:
-        - Assistance
-    title:
-      title: Page heading
-      type: string
-      examples:
-        - Help and contact
-    intro:
-      title: Line under the heading
-      type: string
-      examples:
-        - Answers to common questions, and how to reach us if you cannot find what you need.
-    variant:
-      title: Variant
-      type: string
-      enum:
-        - sky
-        - art
-      examples:
-        - sky
-    imageSrc:
-      title: Image stem
-      type: string
-      description: Image path including the width suffix and no extension.
-      examples:
-        - /assets/img/about/careers-960
-    imageAlt:
-      title: Image alt text
-      type: string
-      examples:
-        - Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.
-    imageWidth:
-      title: Image width
-      type: integer
-      examples:
-        - 1440
-    imageHeight:
-      title: Image height
-      type: integer
-      examples:
-        - 960
-    sizes:
-      title: Image sizes
-      type: string
-      description: Sizes attribute for the art picture.
-      examples:
-        - 720px
-    widths:
-      title: Extra srcset widths
-      type: string
-      examples:
-        - 960,1440
+    properties:
+        eyebrow:
+            title: Small text above the heading
+            type: string
+            examples:
+                - Assistance
+        title:
+            title: Page heading
+            type: string
+            examples:
+                - Help and contact
+        intro:
+            title: Line under the heading
+            type: string
+            examples:
+                - Answers to common questions, and how to reach us if you cannot find what you need.
+        variant:
+            title: Variant
+            type: string
+            enum:
+                - sky
+                - art
+            examples:
+                - sky
+        imageSrc:
+            title: Image stem
+            type: string
+            description: Image path including the width suffix and no extension.
+            examples:
+                - /assets/img/about/careers-960
+        imageAlt:
+            title: Image alt text
+            type: string
+            examples:
+                - Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.
+        imageWidth:
+            title: Image width
+            type: integer
+            examples:
+                - 1440
+        imageHeight:
+            title: Image height
+            type: integer
+            examples:
+                - 960
+        sizes:
+            title: Image sizes
+            type: string
+            description: Sizes attribute for the art picture.
+            examples:
+                - 720px
+        widths:
+            title: Extra srcset widths
+            type: string
+            examples:
+                - 960,1440
 slots:
-  breadcrumb:
-    title: Breadcrumb
-    description: The breadcrumb nav, rendered above the hero content.
+    breadcrumb:
+        title: Breadcrumb
+        description: The breadcrumb nav, rendered above the hero content.

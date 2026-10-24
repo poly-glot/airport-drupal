@@ -13,7 +13,7 @@
     align-items: center;
     column-gap: 16px;
     display: none;
-    grid-template-areas: "controls text link";
+    grid-template-areas: 'controls text link';
     grid-template-columns: auto minmax(0, 1fr) auto;
     padding-block: 8px;
 }
@@ -98,7 +98,7 @@
     .notice-bar__item {
         align-items: start;
         column-gap: 8px;
-        grid-template-areas: "text controls" "link controls";
+        grid-template-areas: 'text controls' 'link controls';
         grid-template-columns: minmax(0, 1fr) auto;
         padding-block: 10px;
     }
@@ -125,10 +125,10 @@
     }
 
     .notice-bar__action {
-    font-weight: 600;
-}
+        font-weight: 600;
+    }
 
-.notice-bar__link {
+    .notice-bar__link {
         justify-self: start;
         min-height: 24px;
     }
