@@ -1,0 +1,74 @@
+name: Flight row
+machineName: flight-row
+status: true
+required:
+  - time
+  - place
+  - flight
+  - terminal
+  - gate
+  - status
+props:
+  properties:
+    time:
+      title: Time
+      type: string
+      examples:
+        - '10:05'
+    place:
+      title: Destination or origin
+      type: string
+      examples:
+        - Lisbon
+    flight:
+      title: Flight number
+      type: string
+      examples:
+        - MA 204
+    terminal:
+      title: Terminal
+      type: string
+      examples:
+        - T1
+    gate:
+      title: Gate or belt
+      type: string
+      description: Use an em dash when the gate is not shown yet.
+      examples:
+        - '12'
+    gateLabel:
+      title: Gate spoken label
+      type: string
+      description: Spoken text for an em dash gate.
+      examples:
+        - Not shown yet
+    status:
+      title: Status
+      type: string
+      enum:
+        - on-time
+        - boarding
+        - gate-open
+        - delayed
+        - cancelled
+        - landed
+        - expected
+      examples:
+        - boarding
+    note:
+      title: Info column text
+      type: string
+      examples:
+        - Closes 10:20
+    tip:
+      title: Status tip
+      type: string
+      description: Hover and focus tip explaining the status.
+      examples:
+        - Go to the gate now.
+    tipId:
+      title: Status definition id
+      type: string
+      description: Id of the status definition the tip is described by.
+      examples:
+        - status-boarding

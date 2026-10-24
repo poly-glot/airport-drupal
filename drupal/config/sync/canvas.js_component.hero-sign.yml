@@ -1,0 +1,39 @@
+uuid: ccf31edd-aafc-4eb1-9442-3e6af61f166d
+langcode: en
+status: true
+dependencies: {  }
+machineName: hero-sign
+name: 'Hero sign'
+type: external
+required:
+  - icon
+  - title
+  - href
+props:
+  icon:
+    type: string
+    enum:
+      - shop
+      - parking
+      - fast-track
+    title: Icon
+    examples:
+      - shop
+  title:
+    type: string
+    title: 'Sign heading'
+    examples:
+      - 'Reserve duty free'
+  meta:
+    type: string
+    title: 'Line under the sign heading'
+    examples:
+      - 'Collect at your gate'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /at-the-airport/shopping
+slots: {  }
+dataDependencies: {  }

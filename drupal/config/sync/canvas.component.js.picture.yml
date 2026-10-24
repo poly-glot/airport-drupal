@@ -1,0 +1,259 @@
+uuid: 9fbc77fc-0781-4a07-979f-0df17fd86e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.picture
+  module:
+    - options
+active_version: 1684c1ee99df4fa2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        src:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /assets/img/airport/tower-security-560
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Photograph at Meridian Airport'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        width:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 560
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        height:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 840
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        sizes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '(max-width: 900px) calc(50vw - 22px), 265px'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        widths:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '560,840'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        loading:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: lazy
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        priority:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        cssClass:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: tower__img
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        pictureClass:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: tower__media
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  6674add749603c44:
+    settings:
+      prop_field_definitions:
+        src:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /assets/img/airport/tower-security-560
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Photograph at Meridian Airport'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        width:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 560
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        height:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 840
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        sizes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '(max-width: 900px) calc(50vw - 22px), 265px'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        widths:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '560,840'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        loading:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: lazy
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        priority:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        css_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: tower__img
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        picture_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: tower__media
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Picture
+id: js.picture
+provider: null
+source: js
+source_local_id: picture

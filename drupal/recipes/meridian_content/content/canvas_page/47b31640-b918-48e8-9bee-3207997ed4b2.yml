@@ -1,0 +1,232 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 47b31640-b918-48e8-9bee-3207997ed4b2
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Baggage and lost property — Meridian Airport'
+  description:
+    -
+      value: 'Cabin and hold bag allowances for all four airlines, what you can carry through security, what to do about a lost bag, and how to report a lost item.'
+  components:
+    -
+      uuid: f0f418c8-e4be-45c1-89e2-3fae8d79911c
+      component_id: js.page-hero
+      inputs:
+        eyebrow: Assistance
+        title: 'Baggage and lost property'
+        intro: 'Allowances by airline, what you can carry through security, and how to report a lost item.'
+        variant: sky
+    -
+      parent_uuid: f0f418c8-e4be-45c1-89e2-3fae8d79911c
+      slot: breadcrumb
+      uuid: 81df6669-922f-47d9-9af1-3b97476f8648
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 81df6669-922f-47d9-9af1-3b97476f8648
+      slot: items
+      uuid: 0f00ebab-7c5b-48c1-8287-b54439bcc3f2
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 81df6669-922f-47d9-9af1-3b97476f8648
+      slot: items
+      uuid: c2a74c9a-0bec-45ae-bcf5-8778188e085c
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Assistance
+        href: /help
+    -
+      parent_uuid: 81df6669-922f-47d9-9af1-3b97476f8648
+      slot: items
+      uuid: e00a1107-1364-421c-a687-41fee9278e21
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Baggage and lost property'
+        current: true
+    -
+      uuid: aa23e097-7366-40af-9139-6e9e4a800bf0
+      component_id: js.section
+      inputs:
+        anchor: allowances
+        tone: light
+        tag: section
+        labelledBy: allowances-title
+        headingLevel: h2
+    -
+      parent_uuid: aa23e097-7366-40af-9139-6e9e4a800bf0
+      slot: parts
+      uuid: f28bf082-46ba-4dfa-b8f4-5c20fc12bf62
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: f28bf082-46ba-4dfa-b8f4-5c20fc12bf62
+      slot: parts
+      uuid: 7babe628-96ff-4f3d-9301-8eb276619060
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="allowances-title">Baggage allowances</h2>
+          <p>Allowances depend on your airline and your ticket. These are the standard allowances. Always check your booking before you pack.</p>
+    -
+      parent_uuid: f28bf082-46ba-4dfa-b8f4-5c20fc12bf62
+      slot: parts
+      uuid: 685cea0d-7bc5-45c5-9f8c-d09b69c23be9
+      component_id: js.data-table
+      inputs:
+        caption: 'Standard baggage allowances by airline'
+        body: |-
+          <thead><tr><th scope="col">Airline</th><th scope="col">Small cabin bag (under the seat)</th><th scope="col">Large cabin bag</th><th scope="col">Hold bag</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Meridian Air</th><td>40 × 30 × 20 cm, included</td><td>55 × 40 × 23 cm, 10 kg, from £14</td><td>23 kg, from £28</td></tr>
+          <tr><th scope="row">Nordvik</th><td>40 × 30 × 15 cm, included</td><td>55 × 40 × 23 cm, 8 kg, from £16</td><td>23 kg, from £35</td></tr>
+          <tr><th scope="row">Azur Express</th><td>40 × 25 × 20 cm, included</td><td>55 × 40 × 20 cm, 10 kg, from £12</td><td>20 kg, from £25</td></tr>
+          <tr><th scope="row">Kestrel</th><td>40 × 30 × 20 cm, included</td><td>56 × 45 × 25 cm, 10 kg, included</td><td>23 kg, from £30. Skis and boots from £45</td></tr>
+          </tbody>
+    -
+      parent_uuid: f28bf082-46ba-4dfa-b8f4-5c20fc12bf62
+      slot: parts
+      uuid: cc77b99e-8d56-44a8-980d-df468c494b0b
+      component_id: js.prose
+      inputs:
+        body: '<p>Fees shown are the lowest price when added online. Bags added at the airport cost more.</p>'
+    -
+      uuid: 0093955a-794d-4404-9846-1033f2432626
+      component_id: js.section
+      inputs:
+        anchor: packing-your-bags
+        tone: light
+        tag: section
+        labelledBy: packing-your-bags-title
+        headingLevel: h2
+    -
+      parent_uuid: 0093955a-794d-4404-9846-1033f2432626
+      slot: parts
+      uuid: d5d0ddc7-928b-48ec-8ea0-4d2b779c7c34
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="packing-your-bags-title">Packing your bags</h2>
+          <h3>What goes in the hold</h3>
+          <p>Put large liquids, sharp items, tools and sports equipment in your hold bag. Label every bag inside and out with your name and a phone number.</p>
+          <h3>What stays with you</h3>
+          <p>Keep medicines, keys, valuables, travel documents and anything with a lithium battery in your hand luggage. Power banks and spare batteries are not allowed in the hold.</p>
+          <h3>Liquids</h3>
+          <p>In Terminal 1, liquids in containers up to 2 litres can stay in your bag. In Terminal 2, liquids must be 100 ml or less, in one clear bag that you take out at security.</p>
+          <p><a href="/at-the-airport/security">Full security rules</a></p>
+    -
+      uuid: 111efecb-0159-46a1-bbc4-11fe7f42e54c
+      component_id: js.section
+      inputs:
+        anchor: oversized-and-special-items
+        tone: light
+        tag: section
+        labelledBy: oversized-and-special-items-title
+        headingLevel: h2
+    -
+      parent_uuid: 111efecb-0159-46a1-bbc4-11fe7f42e54c
+      slot: parts
+      uuid: a80fc4e9-362e-4cbe-9d48-f947edd380ec
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="oversized-and-special-items-title">Oversized and special items</h2>
+          <p>Pushchairs, car seats and wheelchairs travel free on all four airlines. Take pushchairs to the gate. Drop off skis, golf clubs, bikes and other large items at the oversized baggage desk: check-in zone C in Terminal 1 or zone F in Terminal 2.</p>
+    -
+      uuid: 18073854-0e0b-45fc-9edd-0be1a7005f8d
+      component_id: js.section
+      inputs:
+        anchor: if-your-bag-does-not-arrive
+        tone: light
+        tag: section
+        labelledBy: if-your-bag-does-not-arrive-title
+        headingLevel: h2
+    -
+      parent_uuid: 18073854-0e0b-45fc-9edd-0be1a7005f8d
+      slot: parts
+      uuid: ae4a2c0c-6bb2-4bd8-a3d5-baa637f491bf
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="if-your-bag-does-not-arrive-title">If your bag does not arrive</h2>
+          <ol><li>Do not leave the baggage hall.</li><li>Go to your airline's baggage desk, next to the belts.</li><li>Show your boarding pass and baggage tag.</li><li>Keep the reference number you are given. Your airline will deliver the bag once it is found.</li></ol>
+          <p>If your bag is damaged, report it at the same desk before you leave. Airlines usually need damage reported within 7 days.</p>
+    -
+      uuid: 68997188-6e2e-4cf9-882a-270d0832eda8
+      component_id: js.section
+      inputs:
+        anchor: lost-property
+        tone: light
+        tag: section
+        labelledBy: lost-property-title
+        headingLevel: h2
+    -
+      parent_uuid: 68997188-6e2e-4cf9-882a-270d0832eda8
+      slot: parts
+      uuid: 3fabe832-b93b-46df-a978-6a8960b35998
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="lost-property-title">Lost property</h2>
+          <h3>Left something in the terminal, a car park or a shuttle bus?</h3>
+          <p>Report it using the form below. We keep everything handed in for 30 days and check reports against it every day. If we find a match, we will email you.</p>
+          <h3>Left something on the aircraft?</h3>
+          <p>Contact your airline. Items found on aircraft are handled by the airline, not by us.</p>
+          <h3>Collecting your item</h3>
+          <p>The lost property office is in the Terminal 1 arrivals hall, next to the taxi rank. It is open every day from 08:00 to 20:00. Bring photo ID. We can also post items to you for £12 within the UK.</p>
+    -
+      uuid: 98dfcea3-0c1e-49d9-97da-f7e7b17d2545
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        headingLevel: h2
+    -
+      parent_uuid: 98dfcea3-0c1e-49d9-97da-f7e7b17d2545
+      slot: parts
+      uuid: 60d2abcf-8e6b-4a74-9b51-d868854d18ca
+      component_id: js.form
+      inputs:
+        kind: lost-property
+    -
+      uuid: f8eef442-9a6e-48ee-aeff-54a578a736d4
+      component_id: js.section
+      inputs:
+        anchor: questions
+        last: true
+        tone: light
+        tag: section
+        labelledBy: questions-title
+        headingLevel: h2
+    -
+      parent_uuid: f8eef442-9a6e-48ee-aeff-54a578a736d4
+      slot: parts
+      uuid: 7f76ef44-60fa-496e-a508-3f6111b3f29d
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="questions-title">Questions</h2>
+          <p>Call <a href="tel:+441214960123">0121 496 0123</a>, every day 05:00–23:00, or email <a href="mailto:hello@meridianairport.example">hello@meridianairport.example</a>.</p>
+          <p><a href="/help#faqs">Baggage FAQs</a></p>
+  page_variant:
+    -
+      value: meridian_nav_help_section
+  path:
+    -
+      alias: /help/baggage-and-lost-property
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

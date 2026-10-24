@@ -1,0 +1,29 @@
+uuid: 302bdfb1-2ba5-4d1f-ab65-e752c48fbccf
+langcode: en
+status: true
+dependencies: {  }
+machineName: testimonial
+name: Testimonial
+type: external
+required:
+  - quote
+  - name
+props:
+  quote:
+    type: string
+    contentMediaType: text/html
+    title: 'The quote'
+    examples:
+      - '<p>Eight minutes through security with a pram, and the family lane staff talked to my daughter, not over her.</p>'
+  name:
+    type: string
+    title: 'Who said it'
+    examples:
+      - 'Priya N.'
+  meta:
+    type: string
+    title: 'Line under the name, about their journey'
+    examples:
+      - 'Flew to Lisbon, October 2026'
+slots: {  }
+dataDependencies: {  }

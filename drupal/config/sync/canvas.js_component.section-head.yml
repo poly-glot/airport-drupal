@@ -1,0 +1,47 @@
+uuid: 6f7d9cf8-0401-4000-b8d3-31c1a23cc0f8
+langcode: en
+status: true
+dependencies: {  }
+machineName: section-head
+name: 'Section head'
+type: external
+required:
+  - title
+  - titleId
+props:
+  title:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'Help for the day you fly'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Everything between the door and the gate.'
+  headingLevel:
+    type: string
+    enum:
+      - h2
+      - h3
+    title: 'Heading level'
+    examples:
+      - h2
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - help-title
+  linkLabel:
+    type: string
+    title: 'Link text on the right'
+    examples:
+      - 'All passenger services'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /help
+slots: {  }
+dataDependencies: {  }

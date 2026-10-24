@@ -1,0 +1,46 @@
+uuid: b46ef718-1d44-4504-a5d8-47133ae739b2
+langcode: en
+status: true
+dependencies: {  }
+machineName: tower-grid
+name: 'Tower grid'
+type: external
+required:
+  - title
+props:
+  title:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'At the airport'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Everything between the door and the gate.'
+  linkLabel:
+    type: string
+    title: 'Link text on the right'
+    examples:
+      - 'Terminal maps'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/at-the-airport#maps'
+  anchor:
+    type: string
+    title: 'Anchor id'
+    examples:
+      - at-the-airport
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - airport-title
+slots:
+  towers:
+    title: Towers
+    description: 'Tower tiles.'
+dataDependencies: {  }

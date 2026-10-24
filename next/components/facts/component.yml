@@ -1,0 +1,18 @@
+name: Facts
+machineName: facts
+status: true
+required: []
+props:
+  properties:
+    variant:
+      title: Variant
+      type: string
+      enum:
+        - default
+        - legend
+      examples:
+        - default
+slots:
+  items:
+    title: Items
+    description: Fact leaves, one per term and value pair.

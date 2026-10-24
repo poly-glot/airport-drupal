@@ -1,0 +1,312 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: e3b7c6c0-de10-4f3b-a981-4569bc0a3609
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Getting here — Meridian Airport'
+  description:
+    -
+      value: 'Trains every 10 minutes from the city centre, drop-off outside both terminals, and buses and coaches to the door. Plan your journey to Meridian Airport.'
+  components:
+    -
+      uuid: 9b237efe-d57a-4a1e-9b44-107735c672c7
+      component_id: js.page-hero
+      inputs:
+        title: 'Getting here'
+        intro: 'Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off zones are outside both terminals, with a free 10-minute wait at the Mid-Stay car park.'
+        variant: sky
+    -
+      parent_uuid: 9b237efe-d57a-4a1e-9b44-107735c672c7
+      slot: breadcrumb
+      uuid: bda08011-9faa-4771-820f-32c3152dc943
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: bda08011-9faa-4771-820f-32c3152dc943
+      slot: items
+      uuid: 8d084fd0-2673-42d3-b655-9e149193e98c
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: bda08011-9faa-4771-820f-32c3152dc943
+      slot: items
+      uuid: bca1787a-8f10-4fac-be83-3820014307ab
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Getting here'
+        current: true
+    -
+      uuid: 27ae1874-70fb-4a85-9276-6ab356bddda4
+      component_id: js.getting-here
+      inputs:
+        title: 'Airport map'
+        intro: 'Terminal 1 sits above the railway station. Terminal 2 is a 5-minute walk away along a covered walkway. P1 is a 2-minute walk from Terminal 1, P2 a 5-minute walk, and the Mid-Stay shuttle takes 8 minutes.'
+        noteLead: 'Step-free throughout.'
+        note: 'Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.'
+        noteIcon: step-free
+        titleId: airport-map-title
+    -
+      parent_uuid: 27ae1874-70fb-4a85-9276-6ab356bddda4
+      slot: rows
+      uuid: fad2c056-f80b-4292-8175-2f61a69df1da
+      component_id: js.row-link
+      inputs:
+        icon: train
+        title: 'By train'
+        meta: '18 min from Central · lifts from platform to check-in'
+        href: '#train'
+    -
+      parent_uuid: 27ae1874-70fb-4a85-9276-6ab356bddda4
+      slot: rows
+      uuid: d60eb539-097a-4c58-a4b2-caabc32a3ace
+      component_id: js.row-link
+      inputs:
+        icon: car
+        title: 'By car or taxi'
+        meta: 'Drop-off £3 at the door, or free for 10 min at Mid-Stay'
+        href: '#car'
+    -
+      parent_uuid: 27ae1874-70fb-4a85-9276-6ab356bddda4
+      slot: rows
+      uuid: ba810ade-6159-41bb-a1dc-b079fcfc8141
+      component_id: js.row-link
+      inputs:
+        icon: bus
+        title: 'By bus or coach'
+        meta: 'Routes, timetables and the coach station'
+        href: '#bus'
+    -
+      parent_uuid: 27ae1874-70fb-4a85-9276-6ab356bddda4
+      slot: map
+      uuid: d151254a-c06f-4590-a0c7-c27b90781edf
+      component_id: js.map-pane
+      inputs:
+        name: 'Meridian Airport'
+        address: 'Terminal 1, Birmingham B99 1MA'
+        directionsHref: '#car'
+        largerHref: '/at-the-airport#maps'
+    -
+      uuid: 0193284a-6384-459a-b7bd-58679059d010
+      component_id: js.section
+      inputs:
+        anchor: train
+        tone: light
+        tag: section
+        labelledBy: train-title
+        headingLevel: h2
+    -
+      parent_uuid: 0193284a-6384-459a-b7bd-58679059d010
+      slot: parts
+      uuid: 9e21bb3f-682f-4baa-934f-20ea1aa32f0f
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 9e21bb3f-682f-4baa-934f-20ea1aa32f0f
+      slot: parts
+      uuid: 6b79c770-4184-47d1-845e-37b566901c93
+      component_id: js.heading
+      inputs:
+        text: 'By train'
+        level: h2
+        id: train-title
+        size: sm
+    -
+      parent_uuid: 9e21bb3f-682f-4baa-934f-20ea1aa32f0f
+      slot: parts
+      uuid: 51c6c6d1-4536-43f4-bbf7-bf72610748e5
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Meridian Airport station is directly below Terminal 1. Trains run from Birmingham Central every 10 minutes, from 04:30 until midnight, and take 18 minutes.</p>
+          <h3>From the platform to your terminal</h3>
+          <ul>
+          <li>For Terminal 1, take the lifts or escalators up one level. You arrive next to check-in zone A.</li>
+          <li>For Terminal 2, go up to Terminal 1 and follow signs for the covered walkway. It is a 5-minute walk, step-free all the way.</li>
+          </ul>
+          <h3>Tickets</h3>
+          <p>Buy your ticket before you board, from the station machines or online. Ask for "Meridian Airport" as your destination. Station staff are on hand from the first train to the last, and can arrange help for anyone who needs it.</p>
+    -
+      uuid: 09af6452-41b8-470a-8aff-067fe288fdf8
+      component_id: js.section
+      inputs:
+        anchor: car
+        tone: light
+        tag: section
+        labelledBy: car-title
+        headingLevel: h2
+    -
+      parent_uuid: 09af6452-41b8-470a-8aff-067fe288fdf8
+      slot: parts
+      uuid: 49db1e31-dd8b-4c88-9e0c-2f7adece2124
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 49db1e31-dd8b-4c88-9e0c-2f7adece2124
+      slot: parts
+      uuid: 183ca666-da3b-4186-a045-b3f14932fbfd
+      component_id: js.heading
+      inputs:
+        text: 'By car or taxi'
+        level: h2
+        id: car-title
+        size: sm
+    -
+      parent_uuid: 49db1e31-dd8b-4c88-9e0c-2f7adece2124
+      slot: parts
+      uuid: 193a76f8-f79e-413a-bf6d-69b73e368a4c
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Follow signs for Meridian Airport from the A45. For sat-nav, use B99 1MA, then follow the road signs for Terminal 1 or Terminal 2.</p>
+          <p>Lane closures on the A45 approach are in place until 12 October. Allow an extra 15 minutes to reach Terminal 2.</p>
+          <h3>Drop-off</h3>
+          <p>Drop-off zones are outside both terminals. They cost £3 for up to 10 minutes. For free drop-off, use the 10-minute zone at the Mid-Stay car park and take the shuttle bus to the terminal.</p>
+          <h3>Pick-up</h3>
+          <p>Park in P1 Short-stay for a quick pick-up, from £4 an hour. Or wait for free for 10 minutes at Mid-Stay.</p>
+          <h3>Taxis</h3>
+          <p>There are taxi ranks outside the arrivals halls of both terminals, open 24 hours. Pre-booked taxis and private hire cars pick up from level 0 of P2 Long-stay.</p>
+    -
+      parent_uuid: 49db1e31-dd8b-4c88-9e0c-2f7adece2124
+      slot: parts
+      uuid: 6007efce-5510-436d-b28b-9a2874d0140c
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/parking">Parking and drop-off prices<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+    -
+      uuid: f272e2cc-ecc0-496f-b8b9-c70bd9472e21
+      component_id: js.section
+      inputs:
+        anchor: bus
+        tone: light
+        tag: section
+        labelledBy: bus-title
+        headingLevel: h2
+    -
+      parent_uuid: f272e2cc-ecc0-496f-b8b9-c70bd9472e21
+      slot: parts
+      uuid: 8c4732d5-864e-4410-be0e-eac9892d6e5a
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 8c4732d5-864e-4410-be0e-eac9892d6e5a
+      slot: parts
+      uuid: a35ffbd9-29ac-4965-afbb-263008d58cf4
+      component_id: js.heading
+      inputs:
+        text: 'By bus or coach'
+        level: h2
+        id: bus-title
+        size: sm
+    -
+      parent_uuid: 8c4732d5-864e-4410-be0e-eac9892d6e5a
+      slot: parts
+      uuid: 04cac0b5-8a35-4912-98c2-15bc8e07abf0
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h3>Local buses</h3>
+          <p>The Meridian Link bus runs between the city centre and both terminals every 20 minutes, from 05:00 to 23:30. The journey takes about 35 minutes. Stops are outside the arrivals halls. Pay the driver by card or phone.</p>
+          <h3>Coaches</h3>
+          <p>The coach station is next to Terminal 2, with direct coaches to towns and cities across the country. Book with the coach operator. The coach station has a waiting room, toilets and a ticket machine, open from 04:00 to midnight.</p>
+    -
+      uuid: 3891df3d-80f7-420a-8841-88c0e5cecafa
+      component_id: js.section
+      inputs:
+        anchor: bike-and-foot
+        tone: light
+        tag: section
+        labelledBy: bike-and-foot-title
+        headingLevel: h2
+    -
+      parent_uuid: 3891df3d-80f7-420a-8841-88c0e5cecafa
+      slot: parts
+      uuid: a4c17bc4-cafb-4818-b6bf-dc5d5851721a
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: a4c17bc4-cafb-4818-b6bf-dc5d5851721a
+      slot: parts
+      uuid: 86d78e49-6223-4804-a81d-c355ed49656b
+      component_id: js.heading
+      inputs:
+        text: 'By bike or on foot'
+        level: h2
+        id: bike-and-foot-title
+        size: sm
+    -
+      parent_uuid: a4c17bc4-cafb-4818-b6bf-dc5d5851721a
+      slot: parts
+      uuid: a9098bf6-b5c3-4492-b078-57e1ea2e705e
+      component_id: js.paragraph
+      inputs:
+        body: 'There is covered, free bike parking for 60 bikes outside Terminal 1. A shared path for walkers and cyclists runs from Skyline Way to both terminals.'
+        variant: plain
+    -
+      uuid: 6e583f30-1a1f-4b61-97e7-19304026deab
+      component_id: js.section
+      inputs:
+        anchor: help-getting-here
+        last: true
+        tone: light
+        tag: section
+        labelledBy: help-getting-here-title
+        headingLevel: h2
+    -
+      parent_uuid: 6e583f30-1a1f-4b61-97e7-19304026deab
+      slot: parts
+      uuid: eedf127f-0afd-4b8c-b6b5-a0f6d94b5ded
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: eedf127f-0afd-4b8c-b6b5-a0f6d94b5ded
+      slot: parts
+      uuid: 96b9418e-264b-4f1a-9d80-f65a230c014f
+      component_id: js.heading
+      inputs:
+        text: 'Help getting here'
+        level: h2
+        id: help-getting-here-title
+        size: sm
+    -
+      parent_uuid: eedf127f-0afd-4b8c-b6b5-a0f6d94b5ded
+      slot: parts
+      uuid: 498d94bc-3ce2-4d93-b7ef-efc6e2ffb7d7
+      component_id: js.paragraph
+      inputs:
+        body: 'If you need help from the station, a car park or the drop-off zone, book special assistance and we will meet you there.'
+        variant: plain
+    -
+      parent_uuid: eedf127f-0afd-4b8c-b6b5-a0f6d94b5ded
+      slot: parts
+      uuid: 5fc029bf-1b7b-4b30-8a82-e1b91f86a8ab
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/help/special-assistance">Special assistance<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+  page_variant:
+    -
+      value: meridian_nav_getting_here_page
+  path:
+    -
+      alias: /getting-here
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

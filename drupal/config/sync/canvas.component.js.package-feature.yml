@@ -1,0 +1,30 @@
+uuid: 9e33e848-730c-43c4-9119-b38cec356599
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.package-feature
+active_version: 7d8cfab45d5bcd9a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Blue Badge bays nearest the doors'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Package feature'
+id: js.package-feature
+provider: null
+source: js
+source_local_id: package-feature

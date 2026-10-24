@@ -1,0 +1,33 @@
+name: Row link
+machineName: row-link
+status: true
+required:
+  - title
+  - href
+props:
+  properties:
+    icon:
+      title: Icon
+      type: string
+      enum:
+        - train
+        - car
+        - bus
+      examples:
+        - train
+    title:
+      title: Row heading
+      type: string
+      examples:
+        - By train
+    meta:
+      title: Line under the row heading
+      type: string
+      examples:
+        - 18 min from Central · lifts from platform to check-in
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples:
+        - /getting-here#train

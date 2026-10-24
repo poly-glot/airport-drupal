@@ -1,0 +1,22 @@
+uuid: 5d414585-b968-4bfe-8429-b4099da2447d
+langcode: en
+status: true
+dependencies: {  }
+machineName: facts
+name: Facts
+type: external
+required: {  }
+props:
+  variant:
+    type: string
+    enum:
+      - default
+      - legend
+    title: Variant
+    examples:
+      - default
+slots:
+  items:
+    title: Items
+    description: 'Fact leaves, one per term and value pair.'
+dataDependencies: {  }

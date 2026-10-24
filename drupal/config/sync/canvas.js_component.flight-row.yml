@@ -1,0 +1,79 @@
+uuid: 705e7b19-9a89-4aba-9418-2d00b71bb36e
+langcode: en
+status: true
+dependencies: {  }
+machineName: flight-row
+name: 'Flight row'
+type: external
+required:
+  - time
+  - place
+  - flight
+  - terminal
+  - gate
+  - status
+props:
+  time:
+    type: string
+    title: Time
+    examples:
+      - '10:05'
+  place:
+    type: string
+    title: 'Destination or origin'
+    examples:
+      - Lisbon
+  flight:
+    type: string
+    title: 'Flight number'
+    examples:
+      - 'MA 204'
+  terminal:
+    type: string
+    title: Terminal
+    examples:
+      - T1
+  gate:
+    type: string
+    title: 'Gate or belt'
+    description: 'Use an em dash when the gate is not shown yet.'
+    examples:
+      - '12'
+  gateLabel:
+    type: string
+    title: 'Gate spoken label'
+    description: 'Spoken text for an em dash gate.'
+    examples:
+      - 'Not shown yet'
+  status:
+    type: string
+    enum:
+      - on-time
+      - boarding
+      - gate-open
+      - delayed
+      - cancelled
+      - landed
+      - expected
+    title: Status
+    examples:
+      - boarding
+  note:
+    type: string
+    title: 'Info column text'
+    examples:
+      - 'Closes 10:20'
+  tip:
+    type: string
+    title: 'Status tip'
+    description: 'Hover and focus tip explaining the status.'
+    examples:
+      - 'Go to the gate now.'
+  tipId:
+    type: string
+    title: 'Status definition id'
+    description: 'Id of the status definition the tip is described by.'
+    examples:
+      - status-boarding
+slots: {  }
+dataDependencies: {  }

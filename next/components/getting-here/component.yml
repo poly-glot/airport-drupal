@@ -1,0 +1,52 @@
+name: Getting here
+machineName: getting-here
+status: true
+required:
+  - title
+  - intro
+props:
+  properties:
+    title:
+      title: Section heading
+      type: string
+      examples:
+        - Getting here
+    intro:
+      title: Line under the heading
+      type: string
+      examples:
+        - Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.
+    noteLead:
+      title: Bold start of the note
+      type: string
+      examples:
+        - Step-free throughout.
+    note:
+      title: Rest of the note
+      type: string
+      examples:
+        - Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.
+    noteIcon:
+      title: Note icon
+      type: string
+      enum:
+        - step-free
+      examples:
+        - step-free
+    anchor:
+      title: Anchor id
+      type: string
+      examples:
+        - getting-here
+    titleId:
+      title: Heading id
+      type: string
+      examples:
+        - getting-here-title
+slots:
+  rows:
+    title: Rows
+    description: Row links, each rendering its own list item.
+  map:
+    title: Map
+    description: The map pane.

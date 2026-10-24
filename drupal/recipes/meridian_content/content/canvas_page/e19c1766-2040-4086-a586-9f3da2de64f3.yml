@@ -1,0 +1,552 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: e19c1766-2040-4086-a586-9f3da2de64f3
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Parking — Meridian Airport'
+  description:
+    -
+      value: 'Compare three car parks at Meridian Airport, from £8.50 a day. Pre-book for up to 40% off drive-up rates, with free cancellation up to 24 hours before.'
+  components:
+    -
+      uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      component_id: js.photo-band
+      inputs:
+        title: Parking
+        intro: 'Three car parks, all step-free to check-in, from a 2-minute walk to an 8-minute shuttle. Pre-book for up to 40% off drive-up rates.'
+        variant: hero
+        headingLevel: h1
+        titleId: page-title
+        linkLabel: 'Compare car parks'
+        linkHref: '#compare'
+        imageSrc: /assets/img/home/parking-1440
+        imageWidth: 1440
+        imageHeight: 810
+    -
+      parent_uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      slot: breadcrumb
+      uuid: 84f2da2e-71fd-4c0f-a2a8-eff0bb15fced
+      component_id: js.breadcrumb
+      inputs:
+        onDark: true
+    -
+      parent_uuid: 84f2da2e-71fd-4c0f-a2a8-eff0bb15fced
+      slot: items
+      uuid: 87498d08-c68d-4576-b11c-a04a3e24f98b
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 84f2da2e-71fd-4c0f-a2a8-eff0bb15fced
+      slot: items
+      uuid: eee183d2-26f7-466c-8444-ef07c9ce9398
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Parking
+        current: true
+    -
+      parent_uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      slot: facts
+      uuid: 3268cb56-70dd-414d-a361-3acad29b15f5
+      component_id: js.stat
+      inputs:
+        label: 'Closest walk'
+        value: '2 min'
+    -
+      parent_uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      slot: facts
+      uuid: 5c363f4b-c497-4d8a-af99-70420c92c9be
+      component_id: js.stat
+      inputs:
+        label: 'Pick-up wait'
+        value: '10 min free'
+    -
+      parent_uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      slot: facts
+      uuid: 52bf96ba-d4e1-4669-9e89-f87c0704d7ab
+      component_id: js.stat
+      inputs:
+        label: Drop-off
+        value: £3
+    -
+      parent_uuid: 2e3b225c-40a0-495f-a0a6-d28f498c2b00
+      slot: aside
+      uuid: aca90abf-0133-4cda-ba0b-1c7e68e1641b
+      component_id: js.form
+      inputs:
+        kind: parking
+    -
+      uuid: 76091bdf-7f18-43cb-ab25-ada77b327525
+      component_id: js.section
+      inputs:
+        anchor: compare
+        tone: light
+        tag: section
+        labelledBy: compare-title
+        headingLevel: h2
+    -
+      parent_uuid: 76091bdf-7f18-43cb-ab25-ada77b327525
+      slot: parts
+      uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      slot: parts
+      uuid: 40e769b5-1dd1-4516-a425-8d38054b6f59
+      component_id: js.heading
+      inputs:
+        text: 'Compare car parks'
+        level: h2
+        id: compare-title
+        size: sm
+    -
+      parent_uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      slot: parts
+      uuid: ba0f3886-2f7e-4b8b-a9d1-fc567b1e5254
+      component_id: js.group
+      inputs:
+        layout: grid-3
+    -
+      parent_uuid: ba0f3886-2f7e-4b8b-a9d1-fc567b1e5254
+      slot: parts
+      uuid: a37ed79c-8c2f-4677-b7d1-f3ce93907af1
+      component_id: js.package
+      inputs:
+        tier: 'P1 Short-stay'
+        pricePrefix: From
+        price: £4
+        unit: 'per hour'
+        meta: '2 min walk · pick-up and drop-off'
+        bestLabel: 'Best for'
+        note: 'Picking someone up, or a few hours at the airport'
+        ctaLabel: 'Book P1 Short-stay'
+        href: '#quote'
+    -
+      parent_uuid: a37ed79c-8c2f-4677-b7d1-f3ce93907af1
+      slot: features
+      uuid: dd4144e5-c903-4f21-95ab-d616d35dd790
+      component_id: js.package-feature
+      inputs:
+        text: 'Covered walkway to Terminal 1, 6 minutes on to Terminal 2'
+    -
+      parent_uuid: a37ed79c-8c2f-4677-b7d1-f3ce93907af1
+      slot: features
+      uuid: 815865b9-2491-4220-b207-8773d858928f
+      component_id: js.package-feature
+      inputs:
+        text: 'Blue Badge bays nearest the doors'
+    -
+      parent_uuid: a37ed79c-8c2f-4677-b7d1-f3ce93907af1
+      slot: features
+      uuid: d9f96df4-5b49-4ab9-a95d-a67fb98c551b
+      component_id: js.package-feature
+      inputs:
+        text: '6 electric vehicle charging bays'
+    -
+      parent_uuid: a37ed79c-8c2f-4677-b7d1-f3ce93907af1
+      slot: features
+      uuid: 122bdec1-e3ce-42f9-b7be-f1d7627b1416
+      component_id: js.package-feature
+      inputs:
+        text: 'Open 24 hours'
+    -
+      parent_uuid: ba0f3886-2f7e-4b8b-a9d1-fc567b1e5254
+      slot: parts
+      uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      component_id: js.package
+      inputs:
+        tier: 'P2 Long-stay'
+        pricePrefix: From
+        price: £8.50
+        unit: 'per day'
+        badge: Recommended
+        meta: '5 min walk · covered'
+        bestLabel: 'Best for'
+        note: 'Weekends, short breaks and holidays'
+        recommended: true
+        ctaLabel: 'Book P2 Long-stay'
+        href: '#quote'
+    -
+      parent_uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      slot: features
+      uuid: 6ddae292-5e15-4a0c-9c47-69ae06b2168d
+      component_id: js.package-feature
+      inputs:
+        text: 'Under cover on every level'
+    -
+      parent_uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      slot: features
+      uuid: 6a1d242c-35ba-4f75-946c-46fcf7fd94d7
+      component_id: js.package-feature
+      inputs:
+        text: 'Lifts to all floors'
+    -
+      parent_uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      slot: features
+      uuid: e93d80db-7972-48dd-a241-fbcb1d005326
+      component_id: js.package-feature
+      inputs:
+        text: '40 electric vehicle charging bays'
+    -
+      parent_uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      slot: features
+      uuid: d0c22825-1596-4923-a87b-5af9338bdff4
+      component_id: js.package-feature
+      inputs:
+        text: 'Height limit 2.1 metres'
+    -
+      parent_uuid: 2a6b3625-74e3-4983-9108-599eff6202d9
+      slot: features
+      uuid: 1342bf57-f043-4447-beb7-86d807b19f8e
+      component_id: js.package-feature
+      inputs:
+        text: 'Pre-booked taxi pick-up on level 0'
+    -
+      parent_uuid: ba0f3886-2f7e-4b8b-a9d1-fc567b1e5254
+      slot: parts
+      uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      component_id: js.package
+      inputs:
+        tier: Mid-Stay
+        pricePrefix: From
+        price: £12
+        unit: 'per day'
+        meta: '8 min shuttle · 10 min free wait'
+        bestLabel: 'Best for'
+        note: 'Free drop-off and pick-up, charging an electric car while you are away, and vehicles too tall for P2'
+        ctaLabel: 'Book Mid-Stay'
+        href: '#quote'
+    -
+      parent_uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      slot: features
+      uuid: 01801c7c-1f5d-4350-882e-96daa07acf39
+      component_id: js.package-feature
+      inputs:
+        text: 'Free shuttle to both terminals, every 10 minutes, 24 hours'
+    -
+      parent_uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      slot: features
+      uuid: f565f5bc-4e38-494f-acef-5b973ea97b10
+      component_id: js.package-feature
+      inputs:
+        text: 'Free 10-minute drop-off and pick-up zone'
+    -
+      parent_uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      slot: features
+      uuid: 2144aefb-a8a7-4123-aa84-eb99e291d03e
+      component_id: js.package-feature
+      inputs:
+        text: '120 electric vehicle charging bays'
+    -
+      parent_uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      slot: features
+      uuid: e6348d16-5bf2-4271-a109-86e4a3fa0608
+      component_id: js.package-feature
+      inputs:
+        text: 'Space for vans and roof boxes'
+    -
+      parent_uuid: 3dc4d922-065c-47c5-9643-215397c4ff78
+      slot: features
+      uuid: b648cf3a-9e3e-4fa0-8105-2e92f55bbda5
+      component_id: js.package-feature
+      inputs:
+        text: 'Shuttle buses have a ramp and space for a wheelchair'
+    -
+      parent_uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      slot: parts
+      uuid: 124e894a-762d-4572-a733-76c0690722b4
+      component_id: js.paragraph
+      inputs:
+        body: 'No payment until you confirm. Free cancellation up to 24 hours before arrival.'
+        variant: package-note
+    -
+      parent_uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      slot: parts
+      uuid: 8942e60b-8f93-4b53-934f-ad07d7509096
+      component_id: js.data-table
+      inputs:
+        caption: 'Car parks at a glance'
+        captionHidden: true
+        body: |-
+          <thead><tr><th scope="col">Car park</th><th scope="col">To the terminal</th><th scope="col">From</th><th scope="col">Covered</th><th scope="col">Electric charging</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">P1 Short-stay</th><td>2 min walk</td><td class="table__num">£4 per hour</td><td>Walkway only</td><td>6 bays</td></tr>
+          <tr><th scope="row">P2 Long-stay</th><td>5 min walk</td><td class="table__num">£8.50 per day</td><td>Yes</td><td>40 bays</td></tr>
+          <tr><th scope="row">Mid-Stay</th><td>8 min shuttle</td><td class="table__num">£12 per day</td><td>No</td><td>120 bays</td></tr>
+          </tbody>
+    -
+      parent_uuid: d66099fd-8a84-4873-baa4-854c7d66dd37
+      slot: parts
+      uuid: d83d73fb-8052-4d7c-96b5-a4651d2895b1
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/getting-here">See the car parks on the map<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+    -
+      uuid: a0788694-7df2-4de3-a429-9ab7dccc24e2
+      component_id: js.section
+      inputs:
+        anchor: drop-off-and-pick-up
+        tone: light
+        tag: section
+        labelledBy: drop-off-and-pick-up-title
+        headingLevel: h2
+    -
+      parent_uuid: a0788694-7df2-4de3-a429-9ab7dccc24e2
+      slot: parts
+      uuid: 8cb0cc78-05f0-47a1-8c4e-988e01d51d81
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 8cb0cc78-05f0-47a1-8c4e-988e01d51d81
+      slot: parts
+      uuid: 7a8b6ad4-3b4a-4ea6-983a-4b07f76f3094
+      component_id: js.heading
+      inputs:
+        text: 'Drop-off and pick-up'
+        level: h2
+        id: drop-off-and-pick-up-title
+        size: sm
+    -
+      parent_uuid: 8cb0cc78-05f0-47a1-8c4e-988e01d51d81
+      slot: parts
+      uuid: 6c741341-3afc-483f-a49f-ca955e126ed3
+      component_id: js.group
+      inputs:
+        layout: grid-3
+    -
+      parent_uuid: 6c741341-3afc-483f-a49f-ca955e126ed3
+      slot: parts
+      uuid: 9a816e94-4efa-461b-afa9-d311aa64c4ba
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'At the terminals'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 9a816e94-4efa-461b-afa9-d311aa64c4ba
+      slot: parts
+      uuid: 49644997-d338-4e1a-bfd2-3f8607bd490c
+      component_id: js.paragraph
+      inputs:
+        body: 'Drop-off zones are right outside both terminals. They cost £3 for up to 10 minutes, paid by card or phone at the exit barrier. You cannot leave your car unattended.'
+        variant: card-text
+    -
+      parent_uuid: 6c741341-3afc-483f-a49f-ca955e126ed3
+      slot: parts
+      uuid: 6bd08d6e-aa04-4c76-be22-d19a308da1c7
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Free at Mid-Stay'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 6bd08d6e-aa04-4c76-be22-d19a308da1c7
+      slot: parts
+      uuid: 87c60ec4-a7d4-443f-8f15-2e4df4f373e9
+      component_id: js.paragraph
+      inputs:
+        body: 'Use the free 10-minute zone at the Mid-Stay car park, for dropping off or picking up. Your passenger takes the shuttle bus to or from either terminal, which runs every 10 minutes, day and night.'
+        variant: card-text
+    -
+      parent_uuid: 6c741341-3afc-483f-a49f-ca955e126ed3
+      slot: parts
+      uuid: a9f35e6b-60f6-48a4-aee9-38929555e4ed
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Picking someone up'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: a9f35e6b-60f6-48a4-aee9-38929555e4ed
+      slot: parts
+      uuid: 9f12701b-e3e2-44c5-a538-16c95f13eaad
+      component_id: js.paragraph
+      inputs:
+        body: 'Park in P1 Short-stay and walk across the covered walkway to arrivals, from £4 an hour. Or wait for free for 10 minutes at Mid-Stay and ask your passenger to take the shuttle out to you.'
+        variant: card-text
+    -
+      uuid: d5801d6b-d20b-4a7b-8686-e51519b7b40d
+      component_id: js.section
+      inputs:
+        anchor: blue-badge
+        tone: light
+        tag: section
+        labelledBy: blue-badge-title
+        headingLevel: h2
+    -
+      parent_uuid: d5801d6b-d20b-4a7b-8686-e51519b7b40d
+      slot: parts
+      uuid: 9b7595e4-06d9-4fec-a0a0-a31687c13c7e
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 9b7595e4-06d9-4fec-a0a0-a31687c13c7e
+      slot: parts
+      uuid: 595258cb-4e0e-4b81-b31e-a78373d6e7a3
+      component_id: js.heading
+      inputs:
+        text: 'Blue Badge holders'
+        level: h2
+        id: blue-badge-title
+        size: sm
+    -
+      parent_uuid: 9b7595e4-06d9-4fec-a0a0-a31687c13c7e
+      slot: parts
+      uuid: ba263621-6805-4bc6-8b9e-6aa3fb8d9822
+      component_id: js.paragraph
+      inputs:
+        body: 'All three car parks have Blue Badge bays. The closest are in P1 Short-stay, next to the walkway to Terminal 1. You pay the normal rate. If you need help from the car park to check-in, book special assistance and we will meet you at your car.'
+        variant: plain
+    -
+      parent_uuid: 9b7595e4-06d9-4fec-a0a0-a31687c13c7e
+      slot: parts
+      uuid: 84463ace-270b-4f8f-80b0-b1134a08ef27
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/help/special-assistance">Special assistance<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+    -
+      uuid: cc4b068c-9bc4-4181-ab99-1ef46504c822
+      component_id: js.section
+      inputs:
+        anchor: electric-vehicles
+        tone: light
+        tag: section
+        labelledBy: electric-vehicles-title
+        headingLevel: h2
+    -
+      parent_uuid: cc4b068c-9bc4-4181-ab99-1ef46504c822
+      slot: parts
+      uuid: 138edfd3-b5ad-42e1-80a8-9ac80746ffd7
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 138edfd3-b5ad-42e1-80a8-9ac80746ffd7
+      slot: parts
+      uuid: bbc62d3a-957f-49d5-9de9-ff754ed1b9ca
+      component_id: js.heading
+      inputs:
+        text: 'Electric vehicles'
+        level: h2
+        id: electric-vehicles-title
+        size: sm
+    -
+      parent_uuid: 138edfd3-b5ad-42e1-80a8-9ac80746ffd7
+      slot: parts
+      uuid: a98d1e31-8e41-4c27-a9c7-a99937042e00
+      component_id: js.paragraph
+      inputs:
+        body: 'There are 166 charging bays across all three car parks: 6 in P1, 40 in P2 and 120 in Mid-Stay. Charging costs 45p per kWh, paid at the charger by card. You can add a charging bay when you book.'
+        variant: plain
+    -
+      uuid: e7255ca7-39d0-410e-8876-6c5dea196cbe
+      component_id: js.section
+      inputs:
+        anchor: good-to-know
+        tone: light
+        tag: section
+        labelledBy: good-to-know-title
+        headingLevel: h2
+    -
+      parent_uuid: e7255ca7-39d0-410e-8876-6c5dea196cbe
+      slot: parts
+      uuid: 655b34e9-e403-4394-b376-43f9686a0ac6
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 655b34e9-e403-4394-b376-43f9686a0ac6
+      slot: parts
+      uuid: 09d61993-37c1-4332-97a6-2a8420e4dc67
+      component_id: js.heading
+      inputs:
+        text: 'Good to know'
+        level: h2
+        id: good-to-know-title
+        size: sm
+    -
+      parent_uuid: 655b34e9-e403-4394-b376-43f9686a0ac6
+      slot: parts
+      uuid: 349556f0-787d-40ec-8ff1-55f7b4808301
+      component_id: js.prose
+      inputs:
+        body: |-
+          <ul>
+          <li>Your number plate is your ticket. Cameras read it on the way in and out.</li>
+          <li>All three car parks are step-free to check-in, with lifts in each one.</li>
+          <li>Shuttle buses have a ramp, space for a wheelchair and racks for big cases.</li>
+          <li>If your return flight is delayed, the first 2 hours past your booked time are free.</li>
+          <li>Height limit in P2 Long-stay is 2.1 metres. Vans and roof boxes should use Mid-Stay.</li>
+          </ul>
+    -
+      uuid: 1f56a41e-3b61-482b-ad55-79b7ce94ed9c
+      component_id: js.section
+      inputs:
+        anchor: parking-questions
+        last: true
+        tone: light
+        tag: section
+        labelledBy: parking-questions-title
+        headingLevel: h2
+    -
+      parent_uuid: 1f56a41e-3b61-482b-ad55-79b7ce94ed9c
+      slot: parts
+      uuid: 0157cd3e-fe31-49a2-95f3-7ac9f819ad62
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 0157cd3e-fe31-49a2-95f3-7ac9f819ad62
+      slot: parts
+      uuid: 314f5db3-f8bb-4e97-8a1f-d5214418ad5b
+      component_id: js.heading
+      inputs:
+        text: 'Parking questions'
+        level: h2
+        id: parking-questions-title
+        size: sm
+    -
+      parent_uuid: 0157cd3e-fe31-49a2-95f3-7ac9f819ad62
+      slot: parts
+      uuid: 7f2edcca-20c8-4b20-ad69-7f7ff99adb80
+      component_id: js.paragraph
+      inputs:
+        body: 'Common questions about parking are answered in our FAQs.'
+        variant: plain
+    -
+      parent_uuid: 0157cd3e-fe31-49a2-95f3-7ac9f819ad62
+      slot: parts
+      uuid: 2f8a125b-8cf9-424f-ac42-b9543e63fdd2
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/help#faqs">Parking FAQs<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+  page_variant:
+    -
+      value: meridian_nav_parking_page
+  path:
+    -
+      alias: /parking
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

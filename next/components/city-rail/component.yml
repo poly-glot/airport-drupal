@@ -1,0 +1,42 @@
+name: City rail
+machineName: city-rail
+status: true
+required:
+  - title
+props:
+  properties:
+    title:
+      title: Section heading
+      type: string
+      examples:
+        - Where we fly
+    subtitle:
+      title: Second line of the heading
+      type: string
+      examples:
+        - Find your next holiday
+    linkLabel:
+      title: Link text on the right
+      type: string
+      examples:
+        - View all 112 destinations
+    linkHref:
+      title: Link
+      type: string
+      format: uri-reference
+      examples:
+        - /flights/airlines#destinations
+    anchor:
+      title: Anchor id
+      type: string
+      examples:
+        - explore
+    titleId:
+      title: Heading id
+      type: string
+      examples:
+        - explore-title
+slots:
+  cards:
+    title: Cards
+    description: City cards, one per rail item.

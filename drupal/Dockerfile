@@ -3,7 +3,7 @@ FROM dunglas/frankenphp:1-php8.3
 RUN install-php-extensions apcu gd intl opcache pdo_mysql zip
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl git python3 unzip \
+    && apt-get install -y --no-install-recommends curl git unzip \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
@@ -29,13 +29,7 @@ COPY drupal/web/sites/default/settings.meridian.php ./web/sites/default/settings
 COPY drupal/web/sites/default/settings.cloudrun.php ./web/sites/default/settings.php
 
 COPY drupal/config ./config
-COPY drupal/seed ./seed
-COPY drupal/canvas.config.json ./canvas.config.json
-COPY drupal/web/themes/custom/meridian ./web/themes/custom/meridian
-COPY drupal/web/modules/custom ./web/modules/custom
-COPY scripts/seed_push.py scripts/ensure-oauth.php ./scripts/
-COPY static/assets ./web/assets
-COPY static/favicon.svg ./web/favicon.svg
+COPY scripts/ensure-oauth.php ./scripts/
 
 RUN mkdir -p private web/sites/default/files web/sites/default/assets /tmp/caddy-config /tmp/caddy-data \
     && chmod -R a+rX /app \

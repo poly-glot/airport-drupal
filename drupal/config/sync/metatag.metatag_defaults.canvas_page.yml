@@ -1,0 +1,9 @@
+uuid: 30544c6a-b490-4363-a2dc-3dbb004a3a34
+langcode: en
+status: true
+dependencies: {  }
+id: canvas_page
+label: 'Canvas page'
+tags:
+  title: '[canvas_page:title]'
+  description: '[canvas_page:description]'

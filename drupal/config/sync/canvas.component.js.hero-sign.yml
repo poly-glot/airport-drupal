@@ -1,0 +1,73 @@
+uuid: 53ee7ee3-2655-47bc-9f63-2f3688f12151
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.hero-sign
+  module:
+    - link
+    - options
+active_version: 229941a1d2981c52
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: shop
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Reserve duty free'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Collect at your gate'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        href:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /at-the-airport/shopping
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Hero sign'
+id: js.hero-sign
+provider: null
+source: js
+source_local_id: hero-sign

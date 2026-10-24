@@ -1,48 +1,25 @@
 # Status
 
-What is open, then the record of what was settled on the way to the live site. Open items are the honest list of what this port still does not do; ticked items stay because each one records a decision or a gotcha that a later change could undo.
+What is open, then the record of what was settled. Open items are the honest list of what the site does not do yet.
 
 ## Open
 
-- Flight-search "When" select has three hard-coded dates (3, 4, 5 October 2026), verbatim from static, and the `city-rail` "1 – 3 / 4" count is literal filler. Decide whether they become props or stay literal UI.
-- `scripts/hero_contrast.py` default path points at the sibling airport repo; pass `static/assets/img/home/hero` or change the default.
-- When a seed page template changes, delete the template in the site, re-run the pusher, then `ddev drush cex -y`, so `config/sync` stays the source.
-- `help-list` with an empty title crashes the Canvas preview (the section-head include receives null); mark `title`, `link_label` and `link_href` required or default them.
-- Slot restriction is declared on `help-list` only; the other single-child slots (facts, accordion, breadcrumb, city-rail, tower-grid, flight-board, package, wait-panel, hero signs, notice-bar, site-header, site-footer) have no `expected` yet.
-- The parity workflow's screenshot step flakes on the GitHub runner (lazy images, phone-width table wrapping between captures); its DOM check passes. The gate is `scripts/visual_diff.py` run locally before a push.
-- Flights and notices are seeded as leaf components, not content types with Views.
-- The custom domain `airport.junaid.guru` waits for its DNS record (docs/platform.md step 8).
+- **No production frontend.** The Next app has no Cloud Run service and Firebase Hosting still rewrites every path to the Drupal service, which in decoupled mode serves the editor and API only. Needed before `spike/nextjs-headless` can reach `main`: a Cloud Run service built from `next/` with `CANVAS_SITE_URL` set to the Drupal service URL, the Hosting rewrite pointed at it, and the production frontend URL registered in `canvas_headless.settings`. That setting is in `config/sync` as `http://localhost:3000`, so production needs a per-environment override (for example `$config['canvas_headless.settings']['frontends']` in `settings.cloudrun.php`).
+- **Drupal's own front end.** The default theme is Stark. Anyone who opens a page on the Drupal host sees it unstyled. Decide whether the Drupal host should redirect page routes to the frontend.
+- **`canvas_headless` is experimental** in Canvas 1.12: APIs, hooks and configuration may change without a deprecation path. Editor preview over plain HTTP works in Chromium only.
+- **Slot restrictions are not enforced.** Canvas 1.12 ignores a slot's `expected` children, and code component slots cannot declare it. The `meridian_slots` module that enforced it for SDCs is gone, so an editor can put any component in any slot.
+- **Behaviours after an edit in the editor.** `useEnhance` runs once per element. A component whose DOM React replaces after an edit (for example a notice added to the bar) is not re-enhanced until the preview reloads. The published site is unaffected.
+- **Content changes after the first install** are not deployed by the recipe: it is applied once, by the bootstrap job, on an empty database. Later content travels by editing in production, or by a migration.
+- The flight-search "When" select has three hard-coded dates (3, 4, 5 October 2026) and the city-rail "1 – 3 / 4" count is literal. Decide whether they become props.
+- Flights and notices are leaf components on the pages, not content types with Views.
+- `drupal/web/modules/custom/meridian_flights/` is an untracked leftover directory (`src/` and `.DS_Store`, never in git). Delete it locally.
+- The custom domain `airport.junaid.guru` waits for its DNS record (`docs/platform.md` step 8).
 
 ## Settled
 
-- `form.twig` and `terminal-map.twig` include partials as `@meridian/components/...`. Drupal maps `@meridian` to the theme's `templates/` directory, so these probably fail. Fix: move partials under `templates/components/form/<kind>.twig` and `templates/components/terminal-map/<terminal>.twig`, or verify the namespace resolves.
-- `core/components.meridian--button` library name used by `form` and `package` to attach button.css: confirm against the running site's library list.
-- `accordion-item` renders `{{ body }}` without `|raw`; `prose` and `data-table` from the Haiku agent may differ. Check how Canvas supplies `contentMediaType: text/html` props and make all four consistent.
-- Only one `button/` component may exist; the forms agent created it. Check no other agent created a second.
-- Hero uses its own `<picture>` (decision sent to the hero agent); every other image goes through `meridian:picture`.
-- `scripts/compare_port.py` still imports `umbraco_url` and defaults to the Umbraco port; needs a Drupal URL mapping and the ddev base URL.
-- `scripts/build_seed.py --target canvas` writes 29 pages and 10 page templates (one per header aria-current state) to drupal/seed; `scripts/seed_push.py` pushes them.
-- `notice` needs `position` and `total` props for `id="notice-N"`, the "N of M" count and prev/next hrefs; the seed and later the Views row template must pass them.
-- `picture` interface grew `widths` (comma list) and `picture_class`; `image.src` is the stem including the width suffix (for example `/assets/img/cities/cairo-714`). The seed emitter must produce exactly that.
-- `site-footer` phone prop must contain the non-breaking spaces static uses in the number.
-- `hero` has a third slot `wait` for the wait panel (static nests it in `div.hero__wait.container`); `aside` holds the flight-search `form`.
-- `section` renders `section.section.container` (container on the section itself, as static); some static pages use `div.section.container`, which the comparer will flag; decide element per page or add a `tag` enum.
-- `flat-block` had no static source and no user; deleted in the 2026-10-23 audit.
-- `group` layout enum: stack, stack-lg, grid-2, grid-3, split, split-main-aside; classes come from base layout.css so group has no CSS.
-- Every component root is written as `<tag class="..."{{ attributes }}>`. When Canvas or Drupal passes classes in `attributes` this yields two `class` attributes. Convert every root to `<tag{{ attributes.addClass('a', 'b') }}>` once the first Canvas render shows what it injects; the parity comparer will catch the difference either way.
-- Library names `core/components.meridian--section-head` and `core/components.meridian--button` used in `libraryOverrides.dependencies` are unverified against a running Drupal.
-- Image props are scalars (`image_src`, `image_alt`, `image_width`, `image_height`; picture takes `src`, `alt`, `width`, `height`). Decorative images omit alt; Canvas rejects an example of `""`.
-- Page skeleton matches static on Canvas pages: `lang="en-GB"`, skip link, header, `<main id="main" tabindex="-1">`, footer; achieved with page.html.twig, html.html.twig, region.html.twig, off-canvas-page-wrapper.html.twig and canvas-page-variant.html.twig overrides. Side effect: no messages fallback div on Canvas pages.
-- `<head>`: title is the exact static title (no site-name suffix), favicon is `/favicon.svg`, font preconnects and the Oswald face are in; meta description comes from the Canvas page description. Drupal's generator, canonical, shortlink and mobile metas remain.
-- Enum props arrive as `''` when omitted and fail validation; the seed always emits them. Consider defaults in component.yml later.
-- Seeded pages: PATCH replaces the tree; seed_push.py hash-skips unchanged pages via Drupal state so editor work on untouched pages survives (done; `--force` ignores hashes). Page templates are owned by config/sync; the pusher only verifies them.
-- compare_port.py compares `<body>` only, ignores `<script>` elements and the `data-component-id` and `data-component-variant` attributes core SDC adds.
-- `compare_port.py` prints ok for all 29 pages (body only).
-- `ddev drush cex -y` done; `config:status` clean; `cim -y` is a no-op; plain `seed_push.py` prints all skip.
-- Fresh install reproduces the site: the production image's bootstrap job ran `site:install --existing-config`, `ensure-oauth.php` and `seed_push.py` against an empty database on 2026-10-23; all 29 pages 200, token 200, `compare_port.py` 0 differ, `visual_diff.py` 0 differ.
-- `meridian_flights` module replaced by `components/flight-board/board-events.json`; `js/shared.js` removed (no callers); duplicated `.card`, `.stats` and `.map` rules replaced by component dependencies (2026-10-23 audit).
-- Visual parity: `scripts/visual_diff.py` reports 0 of 58 renders differing (29 pages at 1440 and 390) after fixing `flight-board.css` dropped by its own `libraryOverrides`, `status` and `button` CSS missing where their classes appear in another component's HTML, `/assets/` served from the `drupal/web/assets` symlink, `meridian_flights` enabled.
-- Slot restriction: `help-list.items` declares `expected: [meridian:help-item]`; `meridian_slots` shows a banner in the editor preview the moment a wrong child lands and refuses save and publish (API 422, publish dialog shows the error). Other single-child slots not yet declared.
-- Stale Canvas config caught by the fresh install: `canvas.component.sdc.meridian.flat-block` and its entry in the `Meridian · Inner pages` folder survived the component's deletion and broke `site:install --existing-config`; both removed and re-exported. Rule: after deleting a component, `drush cex` and grep `config/sync` for its id.
-- `drupal/gcs` removed: its stream wrappers register through Drupal 7 hooks that never fire on Drupal 11. Files are a Cloud Run GCS volume mount (docs/platform.md decision 8).
-- Live on Cloud Run 2026-10-23: `poly-glot/airport-drupal` deploys on push; bootstrap job installs or deploys, ensures OAuth and seeds; 29 pages at DOM and visual parity on the run.app and hosting URLs; files bucket mounted and writable. Custom domain waits for DNS (docs/platform.md step 8).
+- **2026-10-24, static contract retired.** The site moved from Drupal-rendered SDCs generated from a static prototype to React code components in Next.js. All 48 components were ported. Before `static/` was deleted, each one was checked against its Twig original by rendering both with the same props: every component printed `ok`, as did every enum and optional-prop branch Twig could render. The whole site was then checked against the static pages: `0 page(s) differ` on the DOM and `0 render(s) differ beyond the flap-animation noise ceiling` on screenshots at 1440 and 390. The content was migrated in place from `sdc.meridian.*` to `js.*`, with input and slot names camelCased: 10 page templates and 29 pages, `0 violations`. `static/`, the seed pipeline, the sync script, the parity scripts, the Meridian theme and `meridian_slots` were deleted.
+- **2026-10-24, fresh install reproduces the site.** `site:install --existing-config` plus `drush recipe ../recipes/meridian_content`: 29 pages, config status clean, `30 of 30 pages identical after fresh install` against the HTML saved before it. The Canvas editor previewed through Next straight after.
+- **Meta descriptions come from Metatag.** The headless `head` carries only the title unless Metatag is installed. `metatag.metatag_defaults.canvas_page` maps `[canvas_page:title]` and `[canvas_page:description]`; all 29 pages print the stored description with titles unchanged.
+- **Prop names are camelCase** because the content API camelCases them on the wire. The first full render returned 500 on three pages with `imageSrc` undefined, until the names matched.
+- **Core `content:export`, not contrib `default_content`.** `default_content` 2.0.0-beta1 crashes exporting a Canvas page (`parse_url()` on Canvas's `MaybeUrl`); core's exporter writes component trees cleanly.
+- **Page templates hold the chrome at the root.** `canvas_headless` refuses a page template that contains a `theme_page_template.*` component, which had left the header, notice bar and footer out of every response.

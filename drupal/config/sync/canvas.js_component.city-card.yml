@@ -1,0 +1,64 @@
+uuid: 7753aa40-fe05-4d24-817f-3dabfd005425
+langcode: en
+status: true
+dependencies: {  }
+machineName: city-card
+name: 'City card'
+type: external
+required:
+  - city
+  - imageSrc
+  - href
+props:
+  city:
+    type: string
+    title: 'City name'
+    examples:
+      - Cairo
+  meta:
+    type: string
+    title: 'Line under the city name'
+    examples:
+      - 'from £189 · 5h 10m · daily'
+  imageSrc:
+    type: string
+    title: 'Image stem'
+    description: 'Image path including the width suffix and no extension.'
+    examples:
+      - /assets/img/cities/cairo-714
+  imageAlt:
+    type: string
+    title: 'Image alt text'
+    examples:
+      - 'Photograph at Meridian Airport'
+  imageWidth:
+    type: integer
+    title: 'Image width'
+    examples:
+      - 714
+  imageHeight:
+    type: integer
+    title: 'Image height'
+    examples:
+      - 1040
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /destinations
+  variant:
+    type: string
+    enum:
+      - rail
+      - guide
+    title: Variant
+    examples:
+      - rail
+  body:
+    type: string
+    title: 'Card text'
+    examples:
+      - 'Where to eat, which hills to climb and the tram worth queueing for.'
+slots: {  }
+dataDependencies: {  }

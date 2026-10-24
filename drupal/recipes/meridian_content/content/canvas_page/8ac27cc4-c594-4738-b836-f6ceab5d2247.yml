@@ -1,0 +1,335 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 8ac27cc4-c594-4738-b836-f6ceab5d2247
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Lounges and rest — Meridian Airport'
+  description:
+    -
+      value: 'Hourly lounges, showers, work desks and free Quiet Rooms in both terminals at Meridian Airport. Pay only for the time you use.'
+  components:
+    -
+      uuid: 8c6cf638-a33b-4c88-b814-495e48987e65
+      component_id: js.page-hero
+      inputs:
+        eyebrow: 'At the airport'
+        title: 'Lounges and rest'
+        intro: 'Quiet space, showers and work desks, by the hour.'
+        variant: art
+        widths: '960,1440'
+        sizes: 491px
+        imageSrc: /assets/img/airport/lounges-hero-960
+        imageAlt: 'Armchairs and lamps in a quiet lounge look out through tall windows at aircraft on the apron at dawn.'
+        imageWidth: 1440
+        imageHeight: 960
+    -
+      parent_uuid: 8c6cf638-a33b-4c88-b814-495e48987e65
+      slot: breadcrumb
+      uuid: 46640cd7-118d-4b9c-9a7b-2e3f7858d6dd
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 46640cd7-118d-4b9c-9a7b-2e3f7858d6dd
+      slot: items
+      uuid: 10ddcf46-67ae-4e1b-aadc-1c0963daaf56
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 46640cd7-118d-4b9c-9a7b-2e3f7858d6dd
+      slot: items
+      uuid: 865ca16f-a7aa-4c54-a7af-a89eab2f082c
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'At the airport'
+        href: /at-the-airport
+    -
+      parent_uuid: 46640cd7-118d-4b9c-9a7b-2e3f7858d6dd
+      slot: items
+      uuid: fa9a66d6-755b-4ada-a834-b71fb6d99f09
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Lounges and rest'
+        current: true
+    -
+      uuid: e75a35c2-3d37-4ad0-ab94-8eba32085fa1
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: hourly-lounges-title
+        headingLevel: h2
+    -
+      parent_uuid: e75a35c2-3d37-4ad0-ab94-8eba32085fa1
+      slot: parts
+      uuid: 8315c0ce-fbe6-404e-8c45-15b315413773
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 8315c0ce-fbe6-404e-8c45-15b315413773
+      slot: parts
+      uuid: d553d15e-8dff-4331-ade2-06cab2df72ab
+      component_id: js.heading
+      inputs:
+        text: 'Hourly lounges'
+        level: h2
+        id: hourly-lounges-title
+        size: sm
+    -
+      parent_uuid: 8315c0ce-fbe6-404e-8c45-15b315413773
+      slot: parts
+      uuid: 76b193c6-a68e-4d0c-b345-b987a6e7800d
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Both terminals have a lounge after security. You pay by the hour, so there is no need to arrive early to get your money's worth.</p>
+          <h3>Prices</h3>
+    -
+      parent_uuid: 8315c0ce-fbe6-404e-8c45-15b315413773
+      slot: parts
+      uuid: 5eb5cccb-70cf-400d-b165-3282602c0602
+      component_id: js.data-table
+      inputs:
+        caption: Prices
+        captionHidden: true
+        body: |-
+          <thead><tr><th scope="col">Time</th><th scope="col">Adult</th><th scope="col">Child (2 to 11)</th><th scope="col">Under 2</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">First hour</th><td class="table__num">£12</td><td class="table__num">£6</td><td class="table__num">Free</td></tr>
+          <tr><th scope="row">Each extra hour</th><td class="table__num">£5</td><td class="table__num">£3</td><td class="table__num">Free</td></tr>
+          <tr><th scope="row">Up to 3 hours</th><td class="table__num">£22</td><td class="table__num">£12</td><td class="table__num">Free</td></tr>
+          </tbody>
+    -
+      parent_uuid: 8315c0ce-fbe6-404e-8c45-15b315413773
+      slot: parts
+      uuid: 3606db8a-c496-45e5-83ac-b9f431de2b27
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Book online to guarantee a seat, or walk in if there is space. Pay at the desk when you leave.</p>
+          <h3>What is included</h3>
+          <ul><li>Hot breakfast until 11:00, then soup, salads and hot dishes</li><li>Tea, coffee, soft drinks, beer and wine</li><li>Fast wifi, charging at every seat and flight screens</li><li>Newspapers and magazines</li></ul>
+          <h3>The Meridian Lounge, Terminal 1</h3>
+          <p>Open 04:00–21:00. Upstairs from the departure lounge, near gate 6. Lift access. Two shower rooms and eight work desks.</p>
+          <h3>Horizon Lounge, Terminal 2</h3>
+          <p>Open 04:30–21:30. Next to gate 22. A quiet room, a family area with games, three shower rooms and ten work desks.</p>
+    -
+      uuid: 8197d679-6ac7-4b72-8d06-9e2e6cdea127
+      component_id: js.section
+      inputs:
+        anchor: fast-track
+        tone: light
+        tag: section
+        labelledBy: fast-track-title
+        headingLevel: h2
+    -
+      parent_uuid: 8197d679-6ac7-4b72-8d06-9e2e6cdea127
+      slot: parts
+      uuid: 9ac2b18f-e9cf-455d-aac9-91c496d08de7
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 9ac2b18f-e9cf-455d-aac9-91c496d08de7
+      slot: parts
+      uuid: 5678e2c2-05a0-42e7-ba0d-00006e224e22
+      component_id: js.heading
+      inputs:
+        text: 'Fast Track'
+        level: h2
+        id: fast-track-title
+        size: sm
+    -
+      parent_uuid: 9ac2b18f-e9cf-455d-aac9-91c496d08de7
+      slot: parts
+      uuid: 73a54eeb-548f-40ca-8dbb-5569df81a5db
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Skip the main security queue. Fast Track has its own lane in both terminals and costs £7 per person when booked at least 24 hours ahead, or £8 at the entrance on the day. Book it on its own or with a lounge.</p>
+          <p><a href="/at-the-airport/security">How security works</a></p>
+          <p><button class="button button--secondary" type="button" disabled="">Book Fast Track<span class="visually-hidden"> (not available in this demonstration)</span></button></p>
+    -
+      uuid: 6ab8b3bf-b28d-4afe-a6ba-dfbfbfd52494
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: showers-title
+        headingLevel: h2
+    -
+      parent_uuid: 6ab8b3bf-b28d-4afe-a6ba-dfbfbfd52494
+      slot: parts
+      uuid: b84e04d9-4db2-4cf5-84f0-cda7d2474ff0
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: b84e04d9-4db2-4cf5-84f0-cda7d2474ff0
+      slot: parts
+      uuid: 46e4f128-6fc6-4996-a59f-7f5648fd37cf
+      component_id: js.heading
+      inputs:
+        text: Showers
+        level: h2
+        id: showers-title
+        size: sm
+    -
+      parent_uuid: b84e04d9-4db2-4cf5-84f0-cda7d2474ff0
+      slot: parts
+      uuid: 9a642592-e150-4935-934c-6cac8931830f
+      component_id: js.prose
+      inputs:
+        body: '<p>Shower rooms are inside both lounges and you do not need a lounge booking to use one. A 30-minute slot costs £15 and includes towels, soap, shampoo and a hairdryer. One shower room in each lounge is step-free with a fold-down seat.</p>'
+    -
+      uuid: cb28e921-7afc-440c-86ca-7b3195658149
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: work-desks-title
+        headingLevel: h2
+    -
+      parent_uuid: cb28e921-7afc-440c-86ca-7b3195658149
+      slot: parts
+      uuid: e1ab20bf-7465-431a-90d1-7222e7b2c0bc
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: e1ab20bf-7465-431a-90d1-7222e7b2c0bc
+      slot: parts
+      uuid: 0733ac8f-c562-4e6d-8446-3c79607915a6
+      component_id: js.heading
+      inputs:
+        text: 'Work desks'
+        level: h2
+        id: work-desks-title
+        size: sm
+    -
+      parent_uuid: e1ab20bf-7465-431a-90d1-7222e7b2c0bc
+      slot: parts
+      uuid: 4c9d44a2-eb4f-4f6f-8352-3fa9d824065d
+      component_id: js.prose
+      inputs:
+        body: '<p>Desks in both lounges have a power socket, a USB charger and a reading lamp. They are free with lounge entry. Without lounge entry, you can book a desk for £6 an hour.</p>'
+    -
+      uuid: 5a1030c9-1989-4980-9e4e-178da48d9abf
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: quiet-rooms-title
+        headingLevel: h2
+    -
+      parent_uuid: 5a1030c9-1989-4980-9e4e-178da48d9abf
+      slot: parts
+      uuid: fda2ac85-f521-4ea3-9beb-516d506d3fd1
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: fda2ac85-f521-4ea3-9beb-516d506d3fd1
+      slot: parts
+      uuid: 302c192b-7523-46dd-aec5-b278a74f034a
+      component_id: js.heading
+      inputs:
+        text: 'Quiet Rooms'
+        level: h2
+        id: quiet-rooms-title
+        size: sm
+    -
+      parent_uuid: fda2ac85-f521-4ea3-9beb-516d506d3fd1
+      slot: parts
+      uuid: 7b1ad2ba-9c0e-47b2-b13b-447cd1b0932f
+      component_id: js.prose
+      inputs:
+        body: '<p>Free to everyone after security, open 24 hours. Low lights, comfortable seating and no announcements. Find them near gate 4 in Terminal 1 and gate 24 in Terminal 2. Please keep phone calls outside.</p>'
+    -
+      uuid: bb1bea70-16d3-47fb-a117-32f53d504f1d
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: prayer-rooms-title
+        headingLevel: h2
+    -
+      parent_uuid: bb1bea70-16d3-47fb-a117-32f53d504f1d
+      slot: parts
+      uuid: 5a2fc03c-19af-4704-97f6-2a10203c0e05
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 5a2fc03c-19af-4704-97f6-2a10203c0e05
+      slot: parts
+      uuid: 138822b0-7f53-46a1-8baf-1b1af82ed766
+      component_id: js.heading
+      inputs:
+        text: 'Prayer rooms'
+        level: h2
+        id: prayer-rooms-title
+        size: sm
+    -
+      parent_uuid: 5a2fc03c-19af-4704-97f6-2a10203c0e05
+      slot: parts
+      uuid: 7ca9b78f-9da6-4322-b407-d589ffc76d59
+      component_id: js.prose
+      inputs:
+        body: '<p>A multi-faith prayer room is open 24 hours after security in each terminal, with washing facilities next door.</p>'
+    -
+      uuid: db7a95aa-a754-4300-aab4-eb444e77c15a
+      component_id: js.section
+      inputs:
+        last: true
+        tone: light
+        tag: section
+        labelledBy: overnight-title
+        headingLevel: h2
+    -
+      parent_uuid: db7a95aa-a754-4300-aab4-eb444e77c15a
+      slot: parts
+      uuid: 207d6a42-0a51-4332-9ffe-b2995314d995
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 207d6a42-0a51-4332-9ffe-b2995314d995
+      slot: parts
+      uuid: b48664fe-7714-44f2-b3c7-ca334f0c8752
+      component_id: js.heading
+      inputs:
+        text: Overnight
+        level: h2
+        id: overnight-title
+        size: sm
+    -
+      parent_uuid: 207d6a42-0a51-4332-9ffe-b2995314d995
+      slot: parts
+      uuid: 264dbd5d-7f98-4d65-be74-e28881e0b1a9
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>The terminals stay open 24 hours. If you have an early flight, you can wait in the check-in hall overnight. Security opens at 03:30. There are no beds in the terminals, but the Quiet Rooms are open all night.</p>
+          <p><button class="button button--secondary" type="button" disabled="">Book a lounge<span class="visually-hidden"> (not available in this demonstration)</span></button></p>
+  page_variant:
+    -
+      value: meridian_nav_at_the_airport_lounges_page
+  path:
+    -
+      alias: /at-the-airport/lounges
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

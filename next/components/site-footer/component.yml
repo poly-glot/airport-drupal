@@ -1,0 +1,52 @@
+name: Site footer
+machineName: site-footer
+status: true
+required:
+  - enquiries
+  - phone
+  - phoneHref
+  - legalLine
+props:
+  properties:
+    enquiries:
+      title: Enquiries text before the phone number
+      type: string
+      examples:
+        - Open 24 hours. Passenger enquiries
+    phone:
+      title: Phone number
+      type: string
+      examples:
+        - 0121 496 0123
+    phoneHref:
+      title: Phone link
+      type: string
+      format: uri-reference
+      examples:
+        - tel:+441214960123
+    enquiriesSuffix:
+      title: Enquiries text after the phone number
+      type: string
+      examples:
+        - ', every day 05:00–23:00. Live chat in the app.'
+    legalLine:
+      title: Legal line
+      type: string
+      examples:
+        - © 2026 Meridian Airport Ltd. A fictional airport.
+slots:
+  colFlights:
+    title: Flights column
+    description: Footer link leaves.
+  colShop:
+    title: Shop and relax column
+    description: Footer link leaves.
+  colPlan:
+    title: Plan column
+    description: Footer link leaves.
+  colCompany:
+    title: Company column
+    description: Footer link leaves.
+  legal:
+    title: Legal links
+    description: Footer link leaves for the legal bar.

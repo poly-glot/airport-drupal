@@ -1,0 +1,33 @@
+uuid: 99b05b01-dd01-4b25-b8e9-a8ded31e122b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.notice-bar
+active_version: 5ccfd9d7755ef56e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Travel notices'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        notices:
+          title: Notices
+          description: 'Notice leaves, one per travel notice.'
+label: 'Notice bar'
+id: js.notice-bar
+provider: null
+source: js
+source_local_id: notice-bar

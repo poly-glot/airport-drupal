@@ -1,5 +1,15 @@
 # Platform plan: poly-glot repo and infrastructure
 
+## 2026-10-24: decoupled frontend
+
+On `spike/nextjs-headless` the public site is the Next.js app in `next/`, and Drupal serves the Canvas editor and content API. What that changes below:
+
+- Image: no `python3`, no `seed/`, no theme, no `static/assets`. The bootstrap job installs from `config/sync`, applies `recipes/meridian_content` on an empty database only, otherwise runs `drush deploy`, then `ensure-oauth.php`. The seed pusher and decision 4 (seed on every deploy) are retired: content belongs to editors after the first install.
+- Workflows: `parity.yaml` is gone with the static contract. `verify.yaml` lints, type-checks and builds `next/`, validates `composer.json` and lints `ensure-oauth.php`.
+- Not built: a Cloud Run service for `next/`, the Hosting rewrite pointing at it, and a production value for `canvas_headless.settings` frontends (`docs/status.md`). Until they exist this branch must not reach `main`.
+
+The rest of this document is the record of the original Drupal-rendered deployment.
+
 Status: proposed, awaiting approval. Nothing in this document has been created, pushed or applied.
 
 The plan mirrors the agency WordPress platform (`firebase-cloud` Terraform, `wp-base` image, `wp-client-template`, Cloud Run behind Firebase Hosting, shared OCI HeatWave MySQL via `personal-cloud`) so that the Drupal site is run the same way as parley, wealth, legal and boxes. Where Drupal differs from WordPress the difference is named and a decision is listed in section 8.

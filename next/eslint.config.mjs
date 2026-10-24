@@ -13,6 +13,12 @@ export default defineConfig([
     },
   },
   ...drupalCanvasRequired,
+  {
+    rules: {
+      'drupal-canvas/component-prop-names': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
+    },
+  },
   globalIgnores([
     '.canvas/**',
     '.next/**',

@@ -1,48 +1,36 @@
-# Next.js frontend (spike)
+# Meridian frontend
 
-Spike branch `spike/nextjs-headless`: can a Next.js app built on Canvas Headless replace the Drupal-rendered site and remove `scripts/sync_static.py`?
-
-## How it works
-
-- Drupal stays the editor and the content API. `canvas_headless` (Canvas 1.12.0, experimental) serves `GET /canvas/content-api?requestUri=/path`.
-- The 48 SDC components are not rewritten. Canvas renders each one through its Twig template and sends it as a `drupal-markup` HTML string.
-- `lib/markup.tsx` lifts each string's root element into a React element and sets its inner HTML. The DOM matches static with no wrapper. Notice bar and site header go before `<main id="main" tabindex="-1">` and the site footer after it, picked by `data-component-id`.
-- `public/assets` and `public/favicon.svg` are symlinks to `static/`. The layout loads `/assets/css/site.css` and `/assets/js/site.js` exactly as `static/index.html` does. Nothing is generated or synced.
-- `site.js` runs before React hydrates and adds `--enhanced` classes to those root elements, so they carry `suppressHydrationWarning`.
-- In draft mode (inside the Canvas editor) the page renders through the SDK's `CanvasComponentTree` instead, which carries the selection markers the editor needs.
-- `htmlLimitedBots: /.*/` in `next.config.ts` makes metadata blocking. Without it Next streams metadata into a `<div hidden>` at the top of `<body>`, which breaks DOM parity on every page.
-
-## Drupal side
-
-- `drupal/custom_elements` added; `canvas_headless` and `custom_elements` enabled; frontend `http://localhost:3000` registered (config in `drupal/config/sync`).
-- Page templates no longer wrap the chrome in `theme_page_template.meridian` (`scripts/canvas_emit.py`). `canvas_headless` refuses any page template holding a `theme_page_template.*` component, which left header, notice bar and footer out of the response.
+Next.js 16 app on the Drupal Canvas Headless SDK (`@drupal-canvas/headless-next`). Drupal stores the pages; this app renders them with its own components and is what the Canvas editor previews through.
 
 ## Run
 
 ```bash
-cd drupal && ddev start
-cd ../next && cp .env.example .env && npm install && npm run dev
-PORT_BASE_URL=http://localhost:3000 .venv/bin/python scripts/compare_port.py
-python3 scripts/visual_diff.py http://127.0.0.1:8788 http://localhost:3000 <shots-dir>
+cp .env.example .env
+npm install
+npm run dev
 ```
 
-Open the editor on the `127.0.0.1` port `ddev describe` prints, in a Chromium browser.
+`CANVAS_SITE_URL` in `.env` is the whole configuration. `npm run check` runs eslint and tsc; `npm run build` is the production build.
 
-## Results (2026-10-24)
+## How a page renders
 
-| Check | Result |
-|---|---|
-| `compare_port.py` against Next | `0 page(s) differ` |
-| `visual_diff.py` against Next, 1440 and 390 | `0 render(s) differ beyond the flap-animation noise ceiling` |
-| Chrome, home and parking | no failed requests, no console errors, notice bar, header, board and city rail enhanced |
-| Canvas editor | previews through `localhost:3000`, hero selectable, a heading edit re-rendered in the preview |
-| `compare_port.py` against Drupal's own rendering | `29 page(s) differ`: without the page template wrapper Drupal no longer renders `<main>` |
-| `design_battery.py` | `design battery ok: 48 components` |
+1. `app/[[...slug]]/page.tsx` calls `fetchPage(path)`, which asks Drupal's `/canvas/content-api` what the path resolves to. The answer is a tree of elements named `js-<machineName>` with props and slots, plus `head` (title and description, from Metatag) and `context`.
+2. `lib/page-regions.ts` splits the root of the tree by component: `notice-bar` and `site-header` before `<main id="main" tabindex="-1">`, `site-footer` after, everything else inside. The page template in Drupal (`canvas.page_variant.*`) holds the chrome and a `marker.page_content` where the page goes.
+3. Each region renders through `CanvasComponentTree`, which looks components up in the registry `withCanvas()` generates from `components/*/component.yml` (`.canvas/components.ts`, not committed).
+4. In draft mode (inside the editor) the whole tree renders unsplit through `CanvasComponentTree`, which adds the markers the editor uses to select components.
 
-## Open
+## Canvas facts this app depends on
 
-- `<meta name="description">` is missing. The headless `head` holds only the title unless the `metatag` module is installed.
-- In the editor, a component re-rendered after an edit is new DOM that `site.js` never saw, so its enhancement is gone until reload. Expected from how `site.js` initialises; not seen in this spike because the edited hero looks the same at 09:42.
-- Drupal can render these page templates headless or through Twig, not both: the wrapper that gives the Twig site its `<main>` is the one headless refuses.
-- `canvas_headless` is experimental. Its README says APIs, hooks and configuration may change without a deprecation path. Preview over plain HTTP needs a Chromium browser.
-- The theme's generated per-component CSS and JS still exist, because the Canvas editor's component thumbnails and the Drupal-rendered fallback use them. Removing `sync_static.py` means deciding those can go.
+- Prop and slot names arrive camelCased, whatever `component.yml` says. Names are camelCase in `component.yml` so both sides agree.
+- A page template containing a `theme_page_template.*` component is not headless-compatible: Canvas leaves the chrome out of the response. Ours hold the chrome components at the root.
+- Components register when the editor loads (`ExternalComponentSync`, driven by the browser). Removing a component from the app deactivates it in Canvas; renaming its `machineName` creates a new one.
+- Rich text props reach the component as HTML strings.
+- `htmlLimitedBots: /.*/` in `next.config.ts` renders metadata in `<head>` instead of streaming it into a `<div hidden>` at the top of `<body>`.
+- `canvas_headless` is experimental in Canvas 1.12: its APIs may change without a deprecation path. Editor preview over plain HTTP works in Chromium only.
+
+## Decisions
+
+- Behaviours run from `useEnhance` after mount, once per element, so server and client render the same markup and React never sees the enhanced DOM during hydration.
+- Links are plain `<a>`: full page loads, so the behaviours' document-level listeners never accumulate. `@next/next/no-html-link-for-pages` is off.
+- `drupal-canvas/component-prop-names` is off: it wants each prop name derived from its title, and our titles describe where the text sits on the page.
+- Fonts load from Google Fonts by family name, because `styles/tokens.css` names the families; `next/font` would rename them.

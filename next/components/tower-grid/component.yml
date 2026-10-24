@@ -1,0 +1,42 @@
+name: Tower grid
+machineName: tower-grid
+status: true
+required:
+  - title
+props:
+  properties:
+    title:
+      title: Section heading
+      type: string
+      examples:
+        - At the airport
+    intro:
+      title: Line under the heading
+      type: string
+      examples:
+        - Everything between the door and the gate.
+    linkLabel:
+      title: Link text on the right
+      type: string
+      examples:
+        - Terminal maps
+    linkHref:
+      title: Link
+      type: string
+      format: uri-reference
+      examples:
+        - /at-the-airport#maps
+    anchor:
+      title: Anchor id
+      type: string
+      examples:
+        - at-the-airport
+    titleId:
+      title: Heading id
+      type: string
+      examples:
+        - airport-title
+slots:
+  towers:
+    title: Towers
+    description: Tower tiles.

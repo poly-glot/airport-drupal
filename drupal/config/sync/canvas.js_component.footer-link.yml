@@ -1,0 +1,24 @@
+uuid: e20b54db-c86f-43a5-95d2-2f4492d534a3
+langcode: en
+status: true
+dependencies: {  }
+machineName: footer-link
+name: 'Footer link'
+type: external
+required:
+  - label
+  - href
+props:
+  label:
+    type: string
+    title: 'Link text'
+    examples:
+      - 'Live departures'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/flights#departures'
+slots: {  }
+dataDependencies: {  }

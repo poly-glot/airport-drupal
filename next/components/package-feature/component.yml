@@ -1,0 +1,12 @@
+name: Package feature
+machineName: package-feature
+status: true
+required:
+  - text
+props:
+  properties:
+    text:
+      title: Feature line
+      type: string
+      examples:
+        - Blue Badge bays nearest the doors

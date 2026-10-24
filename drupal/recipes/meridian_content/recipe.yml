@@ -1,0 +1,3 @@
+name: Meridian Airport content
+description: The Meridian Airport Canvas pages, exported with drush content:export.
+type: Content

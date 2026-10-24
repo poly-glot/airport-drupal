@@ -1,0 +1,217 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 5ce3ffc5-c0bf-4ed2-94fa-b0d24676b471
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Site map — Meridian Airport'
+  description:
+    -
+      value: 'Every page on the Meridian Airport website in one list: flights, parking, getting here, at the airport, destination guides, help and corporate pages.'
+  components:
+    -
+      uuid: e2cf487e-930a-400d-ad9c-0e9cca292a74
+      component_id: js.page-hero
+      inputs:
+        title: 'Site map'
+        intro: 'Every page on this website, grouped by section.'
+        variant: sky
+    -
+      parent_uuid: e2cf487e-930a-400d-ad9c-0e9cca292a74
+      slot: breadcrumb
+      uuid: d889ffe7-0949-4b32-bfc5-d72d21b7661f
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: d889ffe7-0949-4b32-bfc5-d72d21b7661f
+      slot: items
+      uuid: 527040f1-5eeb-49c5-8f5c-41b0e80daf29
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: d889ffe7-0949-4b32-bfc5-d72d21b7661f
+      slot: items
+      uuid: cdb5788e-1c21-4977-9ec6-a3cd4e000f04
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Site map'
+        current: true
+    -
+      uuid: 918dec1a-074d-45dd-8fea-7aa6496219fe
+      component_id: js.section
+      inputs:
+        last: true
+        tone: light
+        tag: div
+        headingLevel: h2
+    -
+      parent_uuid: 918dec1a-074d-45dd-8fea-7aa6496219fe
+      slot: parts
+      uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      component_id: js.group
+      inputs:
+        layout: grid-3
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: 9c991b05-1354-47d9-8e62-457145225e91
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: Home
+        headingLevel: h2
+        headingId: home-title
+        padded: true
+    -
+      parent_uuid: 9c991b05-1354-47d9-8e62-457145225e91
+      slot: parts
+      uuid: a9fedb39-4a96-4623-b054-cb6252062b8f
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/">Home</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: d82493ed-da31-46b1-806c-f743ad2cda6f
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: Flights
+        headingLevel: h2
+        headingId: flights-title
+        padded: true
+    -
+      parent_uuid: d82493ed-da31-46b1-806c-f743ad2cda6f
+      slot: parts
+      uuid: 53092217-12fe-435b-bd21-da643f568052
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/flights">Live flights</a></li><li><a href="/flights/airlines">Airlines and destinations</a></li><li><a href="/flights/alerts">Flight alerts</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: 3d8b298c-1238-4d22-a0d2-af2678ff22ae
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: 'Parking and getting here'
+        headingLevel: h2
+        headingId: parking-and-getting-here-title
+        padded: true
+    -
+      parent_uuid: 3d8b298c-1238-4d22-a0d2-af2678ff22ae
+      slot: parts
+      uuid: 01b8e77e-4487-44f9-9527-3a59b054a97d
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/parking">Parking</a></li><li><a href="/getting-here">Getting here</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: c56c2cfb-e073-4d05-bc6d-217659c0d3c7
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: 'At the airport'
+        headingLevel: h2
+        headingId: at-the-airport-title
+        padded: true
+    -
+      parent_uuid: c56c2cfb-e073-4d05-bc6d-217659c0d3c7
+      slot: parts
+      uuid: d14bc1be-9d1c-4402-9819-a6348205d587
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/at-the-airport">At the airport</a></li><li><a href="/at-the-airport#maps">Terminal maps</a></li><li><a href="/at-the-airport/security">Security and customs</a></li><li><a href="/at-the-airport/eat-and-drink">Eat and drink</a></li><li><a href="/at-the-airport/shopping">Shopping</a></li><li><a href="/at-the-airport/lounges">Lounges and rest</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: f0a1eab9-6c32-4c99-aa0e-5f1eb4b17e32
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: 'Destination guides'
+        headingLevel: h2
+        headingId: destination-guides-title
+        padded: true
+    -
+      parent_uuid: f0a1eab9-6c32-4c99-aa0e-5f1eb4b17e32
+      slot: parts
+      uuid: 06980209-eb5b-4908-939d-c79bf1e2ad50
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/destinations">Destination guides</a></li><li><a href="/destinations/lisbon">Lisbon in a long weekend</a></li><li><a href="/destinations/reykjavik">Chasing the northern lights</a></li><li><a href="/destinations/marrakech">Marrakech for first-timers</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: d51c2e76-825c-4439-8e32-ae2fcc89f27b
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: Help
+        headingLevel: h2
+        headingId: help-title
+        padded: true
+    -
+      parent_uuid: d51c2e76-825c-4439-8e32-ae2fcc89f27b
+      slot: parts
+      uuid: 7edace1c-35f5-4d36-a361-5ed6803201b8
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/help">Help and contact</a></li><li><a href="/help#faqs">FAQs</a></li><li><a href="/help#feedback">Feedback</a></li><li><a href="/help/special-assistance">Special assistance</a></li><li><a href="/help/travelling-with-children">Travelling with children</a></li><li><a href="/help/first-time-flying">First time flying?</a></li><li><a href="/help/baggage-and-lost-property">Baggage and lost property</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: 87c11259-8f2e-47e5-87e3-3125f2d94e1f
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: 'About Meridian'
+        headingLevel: h2
+        headingId: about-meridian-title
+        padded: true
+    -
+      parent_uuid: 87c11259-8f2e-47e5-87e3-3125f2d94e1f
+      slot: parts
+      uuid: 2b016147-febd-4ea7-8ab7-1ebb4bf51fe4
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/about">About Meridian</a></li><li><a href="/about/careers">Careers</a></li><li><a href="/about/media-centre">Media centre</a></li><li><a href="/about/sustainability">Sustainability</a></li></ul>'
+    -
+      parent_uuid: 3a810f99-379b-40c4-845d-a6a8e72f5634
+      slot: parts
+      uuid: 7de200b5-29a4-4904-861a-b35c8945efa2
+      component_id: js.card
+      inputs:
+        tag: section
+        heading: Legal
+        headingLevel: h2
+        headingId: legal-title
+        padded: true
+    -
+      parent_uuid: 7de200b5-29a4-4904-861a-b35c8945efa2
+      slot: parts
+      uuid: d19eab5c-b5eb-4eab-ab13-51260f4db4c9
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><a href="/accessibility">Accessibility</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/cookies">Cookies</a></li><li><a href="/terms">Terms of use</a></li><li><a href="/sitemap">Site map</a></li></ul>'
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /sitemap
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

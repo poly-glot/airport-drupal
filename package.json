@@ -1,7 +1,0 @@
-{
-  "devDependencies": {
-    "puppeteer-core": "^24.0.0"
-  },
-  "name": "airport-drupal",
-  "private": true
-}

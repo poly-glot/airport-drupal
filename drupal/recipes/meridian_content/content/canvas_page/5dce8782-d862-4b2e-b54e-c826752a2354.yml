@@ -1,0 +1,197 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 5dce8782-d862-4b2e-b54e-c826752a2354
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Travelling with children — Meridian Airport'
+  description:
+    -
+      value: 'Family security lanes, prams to the aircraft door, baby-change and feeding rooms, and play areas by gates 12 and 30 at Meridian Airport.'
+  components:
+    -
+      uuid: 706048bc-b972-4098-9f7a-c6ec0ba2815e
+      component_id: js.page-hero
+      inputs:
+        eyebrow: Assistance
+        title: 'Travelling with children'
+        intro: 'Family security lanes, prams to the aircraft door and somewhere to play before you board.'
+        variant: sky
+    -
+      parent_uuid: 706048bc-b972-4098-9f7a-c6ec0ba2815e
+      slot: breadcrumb
+      uuid: e660644d-d571-464f-9f7c-42a1037ef5cb
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: e660644d-d571-464f-9f7c-42a1037ef5cb
+      slot: items
+      uuid: cf189508-ad10-44dd-9488-141aaeefb08a
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: e660644d-d571-464f-9f7c-42a1037ef5cb
+      slot: items
+      uuid: ef748922-307e-459d-9e69-66e317e735cc
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Assistance
+        href: /help
+    -
+      parent_uuid: e660644d-d571-464f-9f7c-42a1037ef5cb
+      slot: items
+      uuid: 3a02812f-8d0b-407c-a8b2-07b3c2437ad5
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Travelling with children'
+        current: true
+    -
+      uuid: 75bb5587-9b1d-48f0-9655-e20529e7e975
+      component_id: js.section
+      inputs:
+        anchor: through-security
+        tone: light
+        tag: section
+        labelledBy: through-security-title
+        headingLevel: h2
+    -
+      parent_uuid: 75bb5587-9b1d-48f0-9655-e20529e7e975
+      slot: parts
+      uuid: 2a9efc84-9e7c-4496-ac35-2d6c02ad7de4
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="through-security-title">Through security</h2>
+          <p>Both terminals have a family lane at security for anyone travelling with children under 12. It is wider, staff will help with trays, and nobody will hurry you.</p>
+          <p>You can take enough baby food, milk and sterilised water for the journey, even above the normal liquids limit. You may be asked to taste it or open it for a test.</p>
+          <p><a href="/at-the-airport/security">Security and customs</a></p>
+    -
+      uuid: a8a490b0-f62b-47d5-b452-3a3639287ebc
+      component_id: js.section
+      inputs:
+        anchor: prams-and-pushchairs
+        tone: light
+        tag: section
+        labelledBy: prams-and-pushchairs-title
+        headingLevel: h2
+    -
+      parent_uuid: a8a490b0-f62b-47d5-b452-3a3639287ebc
+      slot: parts
+      uuid: 6b0a8096-31cf-4bca-8a41-bdbcb96cf5cf
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="prams-and-pushchairs-title">Prams and pushchairs</h2>
+          <p>Keep your pram or pushchair all the way to the aircraft door. Leave it at the foot of the steps or the end of the air bridge with a gate tag, and the crew will load it. When you land, it is waiting for you at the aircraft door, not on the baggage belt. Pushchairs and car seats travel free on all four of our airlines.</p>
+    -
+      uuid: 3ee6346e-3afb-4650-b1aa-a6ca4084ca21
+      component_id: js.section
+      inputs:
+        anchor: baby-change-and-feeding
+        tone: light
+        tag: section
+        labelledBy: baby-change-and-feeding-title
+        headingLevel: h2
+    -
+      parent_uuid: 3ee6346e-3afb-4650-b1aa-a6ca4084ca21
+      slot: parts
+      uuid: 2d8e674c-97b7-41bd-bc92-3a07f599b961
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="baby-change-and-feeding-title">Baby-change and feeding</h2>
+          <p>There is baby-change in every toilet zone, before and after security, in both terminals. Quiet feeding rooms with a comfortable chair, a sink and a bottle warmer are next to each play area. Every café will warm milk or baby food if you ask.</p>
+    -
+      uuid: a4484d23-d2b8-4098-b18f-b24c26dfec1a
+      component_id: js.section
+      inputs:
+        anchor: play-areas
+        tone: light
+        tag: section
+        labelledBy: play-areas-title
+        headingLevel: h2
+    -
+      parent_uuid: a4484d23-d2b8-4098-b18f-b24c26dfec1a
+      slot: parts
+      uuid: 3fdffcca-002e-4767-842f-eea015c3f3b0
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="play-areas-title">Play areas</h2>
+          <p>There are free play areas by gate 12 in Terminal 1 and gate 30 in Terminal 2, with soft flooring and seating for parents in view of the departure screens. The Horizon Lounge in Terminal 2 also has a family area with games.</p>
+    -
+      uuid: 751dd2f1-88d4-4aac-90ba-196130c53de8
+      component_id: js.section
+      inputs:
+        anchor: tickets-and-passports
+        tone: light
+        tag: section
+        labelledBy: tickets-and-passports-title
+        headingLevel: h2
+    -
+      parent_uuid: 751dd2f1-88d4-4aac-90ba-196130c53de8
+      slot: parts
+      uuid: acd05fd5-8166-46b9-8b23-e98967a09ec7
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="tickets-and-passports-title">Tickets and passports</h2>
+          <p>Every child needs their own passport, including babies. Children under 2 usually fly on an adult's lap, and airlines set their own child fares and seat rules, so check your booking.</p>
+    -
+      uuid: 43ccec87-e138-4a34-8704-340a74edfd52
+      component_id: js.section
+      inputs:
+        anchor: flying-while-pregnant
+        tone: light
+        tag: section
+        labelledBy: flying-while-pregnant-title
+        headingLevel: h2
+    -
+      parent_uuid: 43ccec87-e138-4a34-8704-340a74edfd52
+      slot: parts
+      uuid: 87ddb3a1-3860-4341-93fc-66125a2284c7
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="flying-while-pregnant-title">Flying while pregnant</h2>
+          <p>Each airline sets its own rules. Most ask for a letter from your doctor or midwife after 28 weeks, and many will not fly you after 36 weeks, or 32 weeks if you are expecting more than one baby. Check with your airline before you book.</p>
+    -
+      uuid: 8dfb0405-7dc2-455c-bd1a-d1e093efbc02
+      component_id: js.section
+      inputs:
+        anchor: need-a-hand
+        last: true
+        tone: light
+        tag: section
+        labelledBy: need-a-hand-title
+        headingLevel: h2
+    -
+      parent_uuid: 8dfb0405-7dc2-455c-bd1a-d1e093efbc02
+      slot: parts
+      uuid: d3a98b80-3147-419d-8301-f074d55b279a
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="need-a-hand-title">Need a hand?</h2>
+          <p>Ask at any information desk, or call <a href="tel:+441214960123">0121 496 0123</a>, every day 05:00–23:00.</p>
+          <p><a href="/help">Help and contact</a></p>
+  page_variant:
+    -
+      value: meridian_nav_help_section
+  path:
+    -
+      alias: /help/travelling-with-children
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

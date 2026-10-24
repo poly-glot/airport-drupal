@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-10-24T09:47:04.441Z",
+        "reason": "project design law: docs/design/spec.md names Plus Jakarta Sans for component titles; the font set is copied verbatim from the existing site"
+      }
+    ]
+  }
+}

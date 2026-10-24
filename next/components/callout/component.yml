@@ -1,0 +1,18 @@
+name: Callout
+machineName: callout
+status: true
+required:
+  - body
+props:
+  properties:
+    title:
+      title: Callout heading
+      type: string
+      examples:
+        - Please note
+    body:
+      title: Callout text
+      type: string
+      contentMediaType: text/html
+      examples:
+        - <p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>

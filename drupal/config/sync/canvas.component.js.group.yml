@@ -1,0 +1,35 @@
+uuid: adaf8b8e-80dc-4f10-bf7b-8d05d08243a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.group
+  module:
+    - options
+active_version: a28d52a0e83df617
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: stack
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        parts:
+          title: Parts
+          description: 'The grouped components.'
+label: Group
+id: js.group
+provider: null
+source: js
+source_local_id: group

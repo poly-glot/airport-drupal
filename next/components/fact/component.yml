@@ -1,0 +1,25 @@
+name: Fact
+machineName: fact
+status: true
+required:
+  - term
+  - value
+props:
+  properties:
+    term:
+      title: Term, left column
+      type: string
+      contentMediaType: text/html
+      examples:
+        - Terminal
+    value:
+      title: Definition, right column
+      type: string
+      contentMediaType: text/html
+      examples:
+        - T1
+    id:
+      title: Value ID
+      type: string
+      examples:
+        - status-on-time

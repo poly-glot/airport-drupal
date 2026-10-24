@@ -1,0 +1,28 @@
+name: Nav link
+machineName: nav-link
+status: true
+required:
+  - label
+  - href
+props:
+  properties:
+    label:
+      title: Menu item text
+      type: string
+      examples:
+        - Flights
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples:
+        - /flights
+    current:
+      title: Current state
+      type: string
+      enum:
+        - none
+        - page
+        - section
+      examples:
+        - none

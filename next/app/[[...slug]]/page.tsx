@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import { notFound, permanentRedirect, redirect } from 'next/navigation';
 import { cache } from 'react';
-import { PageMarkup } from '../../lib/markup';
+import { pageRegions } from '../../lib/page-regions';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,5 +54,15 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
     return <CanvasComponentTree tree={page.content} context={page.context} />;
   }
 
-  return <PageMarkup tree={page.content} />;
+  const { before, main, after } = pageRegions(page.content);
+
+  return (
+    <>
+      <CanvasComponentTree tree={before} context={page.context} />
+      <main id="main" tabIndex={-1}>
+        <CanvasComponentTree tree={main} context={page.context} />
+      </main>
+      <CanvasComponentTree tree={after} context={page.context} />
+    </>
+  );
 }

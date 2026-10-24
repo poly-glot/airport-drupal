@@ -1,0 +1,37 @@
+uuid: 3e2a371a-23b4-49f1-8e63-8a2fa5d036e3
+langcode: en
+status: true
+dependencies: {  }
+machineName: map-pane
+name: 'Map pane'
+type: external
+required:
+  - name
+  - address
+  - directionsHref
+  - largerHref
+props:
+  name:
+    type: string
+    title: 'Place name'
+    examples:
+      - 'Meridian Airport'
+  address:
+    type: string
+    title: Address
+    examples:
+      - 'Terminal 1, Birmingham B99 1MA'
+  directionsHref:
+    type: string
+    format: uri-reference
+    title: 'Directions link'
+    examples:
+      - /getting-here
+  largerHref:
+    type: string
+    format: uri-reference
+    title: 'Larger map link'
+    examples:
+      - '/at-the-airport#maps'
+slots: {  }
+dataDependencies: {  }

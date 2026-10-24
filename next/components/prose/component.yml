@@ -1,0 +1,13 @@
+name: Prose
+machineName: prose
+status: true
+required:
+  - body
+props:
+  properties:
+    body:
+      title: Body copy
+      type: string
+      contentMediaType: text/html
+      examples:
+        - '<p>The airport runs 24 hours, so many roles are shift-based. We publish rotas 6 weeks ahead and you can swap shifts with colleagues through the staff app.</p>'

@@ -69,7 +69,7 @@ def check(path):
 
 
 def main():
-    target = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser('~/Desktop/projects/airport/static/assets/img/home/hero')
+    target = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'next', 'public', 'assets', 'img', 'home', 'hero')
     paths = [target] if target.endswith('.jpg') else sorted(glob.glob(os.path.join(target, '*-1440.jpg')))
     if not paths:
         print(f'no hero jpgs found under {target}')

@@ -23,6 +23,7 @@
         "drupal/core-recommended": "^11.4",
         "drupal/custom_elements": "^3",
         "drupal/default_content": "^2.0@beta",
+        "drupal/metatag": "^2",
         "drupal/simple_oauth": "^6",
         "drush/drush": "^13.8"
     },

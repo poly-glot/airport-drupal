@@ -1,0 +1,205 @@
+uuid: 75ee8a5c-a234-45d7-a101-d7af00193618
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.getting-here
+  module:
+    - options
+active_version: 070931fcb32782c3
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Getting here'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        intro:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        noteLead:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Step-free throughout.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        noteIcon:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: step-free
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        anchor:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: getting-here
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        titleId:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: getting-here-title
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        rows:
+          title: Rows
+          description: 'Row links, each rendering its own list item.'
+        map:
+          title: Map
+          description: 'The map pane.'
+  f9c05922d9260f0c:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Getting here'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        intro:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note_lead:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Step-free throughout.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note_icon:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: step-free
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        anchor:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: getting-here
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        title_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: getting-here-title
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        rows:
+          title: Rows
+          description: 'Row links, each rendering its own list item.'
+        map:
+          title: Map
+          description: 'The map pane.'
+label: 'Getting here'
+id: js.getting-here
+provider: null
+source: js
+source_local_id: getting-here

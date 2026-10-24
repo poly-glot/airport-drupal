@@ -1,0 +1,77 @@
+uuid: 62a1dedb-619b-4052-8ba6-adec6a321ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.wait-panel
+active_version: d3d41cfe1821fa5b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        updated:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '09:42'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        roadStatus:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Running normally'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        chips:
+          title: Chips
+          description: 'Wait chip leaves, one per terminal.'
+  b96dcb9935cd6eb6:
+    settings:
+      prop_field_definitions:
+        updated:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '09:42'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        road_status:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Running normally'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        chips:
+          title: Chips
+          description: 'Wait chip leaves, one per terminal.'
+label: 'Wait panel'
+id: js.wait-panel
+provider: null
+source: js
+source_local_id: wait-panel

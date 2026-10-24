@@ -1,0 +1,70 @@
+uuid: 2e3935a9-f707-409b-9c6e-df4a799bf2ea
+langcode: en
+status: true
+dependencies: {  }
+machineName: page-hero
+name: 'Page hero'
+type: external
+required:
+  - title
+props:
+  eyebrow:
+    type: string
+    title: 'Small text above the heading'
+    examples:
+      - Assistance
+  title:
+    type: string
+    title: 'Page heading'
+    examples:
+      - 'Help and contact'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Answers to common questions, and how to reach us if you cannot find what you need.'
+  variant:
+    type: string
+    enum:
+      - sky
+      - art
+    title: Variant
+    examples:
+      - sky
+  imageSrc:
+    type: string
+    title: 'Image stem'
+    description: 'Image path including the width suffix and no extension.'
+    examples:
+      - /assets/img/about/careers-960
+  imageAlt:
+    type: string
+    title: 'Image alt text'
+    examples:
+      - 'Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.'
+  imageWidth:
+    type: integer
+    title: 'Image width'
+    examples:
+      - 1440
+  imageHeight:
+    type: integer
+    title: 'Image height'
+    examples:
+      - 960
+  sizes:
+    type: string
+    title: 'Image sizes'
+    description: 'Sizes attribute for the art picture.'
+    examples:
+      - 720px
+  widths:
+    type: string
+    title: 'Extra srcset widths'
+    examples:
+      - '960,1440'
+slots:
+  breadcrumb:
+    title: Breadcrumb
+    description: 'The breadcrumb nav, rendered above the hero content.'
+dataDependencies: {  }

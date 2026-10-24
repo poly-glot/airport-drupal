@@ -1,0 +1,19 @@
+uuid: bc57612b-e7df-43ed-82e3-426a0bf34e4a
+langcode: en
+status: true
+dependencies: {  }
+machineName: notice-bar
+name: 'Notice bar'
+type: external
+required: {  }
+props:
+  label:
+    type: string
+    title: 'Region label'
+    examples:
+      - 'Travel notices'
+slots:
+  notices:
+    title: Notices
+    description: 'Notice leaves, one per travel notice.'
+dataDependencies: {  }

@@ -1,0 +1,26 @@
+uuid: e2a8794c-6bc5-41a9-8684-4d98f6ee6d81
+langcode: en
+status: true
+dependencies: {  }
+machineName: group
+name: Group
+type: external
+required: {  }
+props:
+  layout:
+    type: string
+    enum:
+      - stack
+      - stack-lg
+      - grid-2
+      - grid-3
+      - split
+      - split-main-aside
+    title: Layout
+    examples:
+      - stack
+slots:
+  parts:
+    title: Parts
+    description: 'The grouped components.'
+dataDependencies: {  }

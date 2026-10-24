@@ -1,0 +1,31 @@
+uuid: 9c801f23-4a05-444f-88cc-e261fa4a8630
+langcode: en
+status: true
+dependencies: {  }
+machineName: wait-chip
+name: 'Wait chip'
+type: external
+required:
+  - label
+  - minutes
+props:
+  label:
+    type: string
+    title: 'Label before the chip'
+    examples:
+      - 'Terminal 1'
+  minutes:
+    type: integer
+    title: Minutes
+    examples:
+      - 8
+  tone:
+    type: string
+    enum:
+      - ok
+      - warn
+    title: Tone
+    examples:
+      - ok
+slots: {  }
+dataDependencies: {  }

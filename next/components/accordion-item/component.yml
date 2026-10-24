@@ -1,0 +1,19 @@
+name: Accordion item
+machineName: accordion-item
+status: true
+required:
+  - summary
+  - body
+props:
+  properties:
+    summary:
+      title: Question, the line you click
+      type: string
+      examples:
+        - How early should I get to the airport?
+    body:
+      title: Answer
+      type: string
+      contentMediaType: text/html
+      examples:
+        - '<p>Be at the terminal 2 hours before your flight. Bag drop closes 45 minutes before departure, and gates close 20 minutes before.</p>'

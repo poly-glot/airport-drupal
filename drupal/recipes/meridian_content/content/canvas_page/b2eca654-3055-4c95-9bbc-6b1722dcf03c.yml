@@ -1,0 +1,545 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: b2eca654-3055-4c95-9bbc-6b1722dcf03c
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Help and contact — Meridian Airport'
+  description:
+    -
+      value: 'Contact Meridian Airport by phone or email, find answers to common questions about security, baggage, parking and assistance, or send us feedback.'
+  components:
+    -
+      uuid: ed5fa87f-36af-42fb-a4e7-5b880a6848cf
+      component_id: js.page-hero
+      inputs:
+        eyebrow: Assistance
+        title: 'Help and contact'
+        intro: 'Answers to common questions, and how to reach us if you cannot find what you need.'
+        variant: sky
+    -
+      parent_uuid: ed5fa87f-36af-42fb-a4e7-5b880a6848cf
+      slot: breadcrumb
+      uuid: f8948c2b-74a5-4932-9e38-90e6c09ea5b3
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: f8948c2b-74a5-4932-9e38-90e6c09ea5b3
+      slot: items
+      uuid: 5697da93-58fa-4217-a6db-0d1e0ecafca4
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: f8948c2b-74a5-4932-9e38-90e6c09ea5b3
+      slot: items
+      uuid: 2a87f0f7-afc0-4b50-9078-434eacc027fe
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Help and contact'
+        current: true
+    -
+      uuid: c9104b38-7f6d-4455-ad03-7a6d1721ed83
+      component_id: js.section
+      inputs:
+        anchor: contact
+        tone: light
+        tag: section
+        labelledBy: contact-title
+        headingLevel: h2
+    -
+      parent_uuid: c9104b38-7f6d-4455-ad03-7a6d1721ed83
+      slot: parts
+      uuid: 816ada5d-db51-4d67-93aa-ee70c117176c
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 816ada5d-db51-4d67-93aa-ee70c117176c
+      slot: parts
+      uuid: a527858a-4a8a-4fb3-84fe-6943d3690e20
+      component_id: js.prose
+      inputs:
+        body: '<h2 id="contact-title">Contact us</h2>'
+    -
+      parent_uuid: 816ada5d-db51-4d67-93aa-ee70c117176c
+      slot: parts
+      uuid: 719c1881-3e70-4099-8f91-106568884398
+      component_id: js.group
+      inputs:
+        layout: grid-2
+    -
+      parent_uuid: 719c1881-3e70-4099-8f91-106568884398
+      slot: parts
+      uuid: 1ec08941-97b0-49e0-9814-299e6c8ac1f7
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: Phone
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 1ec08941-97b0-49e0-9814-299e6c8ac1f7
+      slot: parts
+      uuid: 6ec6d658-fc25-4d6c-912e-cd21d807cdc9
+      component_id: js.paragraph
+      inputs:
+        body: "<a href=\"tel:+441214960123\">0121\_496\_0123</a>"
+        variant: card-text
+    -
+      parent_uuid: 1ec08941-97b0-49e0-9814-299e6c8ac1f7
+      slot: parts
+      uuid: ad9b209e-8946-42b3-aecc-c0f1abb4409a
+      component_id: js.paragraph
+      inputs:
+        body: 'Every day, 05:00–23:00. The airport itself is open 24 hours.'
+        variant: card-text
+    -
+      parent_uuid: 719c1881-3e70-4099-8f91-106568884398
+      slot: parts
+      uuid: 05b9deae-7fe0-4cbd-84b9-4c5f9302bd6a
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: Email
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 05b9deae-7fe0-4cbd-84b9-4c5f9302bd6a
+      slot: parts
+      uuid: 0e4b5e9d-3972-4bbc-837b-ae41fb70874b
+      component_id: js.paragraph
+      inputs:
+        body: '<a href="mailto:hello@meridianairport.example">hello@meridianairport.example</a>'
+        variant: card-text
+    -
+      parent_uuid: 05b9deae-7fe0-4cbd-84b9-4c5f9302bd6a
+      slot: parts
+      uuid: 67bb37de-b691-448e-9951-69cd59af0926
+      component_id: js.paragraph
+      inputs:
+        body: 'We reply within 2 working days.'
+        variant: card-text
+    -
+      parent_uuid: 719c1881-3e70-4099-8f91-106568884398
+      slot: parts
+      uuid: edd8fb1a-ee71-4863-b5cc-91afa441cdc3
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: Address
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: edd8fb1a-ee71-4863-b5cc-91afa441cdc3
+      slot: parts
+      uuid: 4494ad76-a21a-4bd5-952e-613d92d8a182
+      component_id: js.paragraph
+      inputs:
+        body: 'Meridian Airport, Skyline Way, Birmingham B99 1MA'
+        variant: card-text
+    -
+      parent_uuid: 719c1881-3e70-4099-8f91-106568884398
+      slot: parts
+      uuid: 3ec8b6d2-dc8f-4d0d-a099-4764efde992e
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'At the airport'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 3ec8b6d2-dc8f-4d0d-a099-4764efde992e
+      slot: parts
+      uuid: 9bf0e201-1760-4d93-9260-6bac94c59140
+      component_id: js.paragraph
+      inputs:
+        body: 'Information desks are in both check-in halls and both departure lounges, open from the first flight to the last.'
+        variant: card-text
+    -
+      uuid: 0557d1b9-535e-485b-af65-dcaa03b802c9
+      component_id: js.section
+      inputs:
+        anchor: who-to-contact
+        tone: light
+        tag: section
+        labelledBy: who-to-contact-title
+        headingLevel: h2
+    -
+      parent_uuid: 0557d1b9-535e-485b-af65-dcaa03b802c9
+      slot: parts
+      uuid: 12646e72-e842-4d59-9676-a158f0e7cbbf
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="who-to-contact-title">Who to contact</h2>
+          <p>Some questions are best answered by someone else. It will be quicker to go straight to them.</p>
+          <ul><li><strong>Bookings, changes, cancellations and refunds:</strong> your airline.</li><li><strong>A delayed or damaged bag:</strong> your airline's baggage desk in the arrivals hall, before you leave the building.</li><li><strong>Something left on the aircraft:</strong> your airline.</li><li><strong>Something left in the terminal, a car park or a shuttle bus:</strong> our lost property office.</li><li><strong>A parking booking:</strong> us, on <a href="tel:+441214960123">0121 496 0123</a>.</li><li><strong>Flying with a baby or young children:</strong> read our guide to travelling with children, or ask at any information desk.</li><li><strong>Flying for the first time:</strong> read our step-by-step guide, or ask at any information desk and we will point you the right way.</li></ul>
+          <p><a href="/help/baggage-and-lost-property">Lost property</a></p>
+          <p><a href="/help/travelling-with-children">Travelling with children</a></p>
+          <p><a href="/help/first-time-flying">First time flying?</a></p>
+    -
+      uuid: cd381266-c75c-4bb0-8f8b-9ca20dd21d50
+      component_id: js.section
+      inputs:
+        anchor: help-for-your-journey
+        tone: light
+        tag: section
+        labelledBy: help-for-your-journey-title
+        headingLevel: h2
+    -
+      parent_uuid: cd381266-c75c-4bb0-8f8b-9ca20dd21d50
+      slot: parts
+      uuid: e33136a6-bf51-4fa5-9284-5711c2a4e604
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: e33136a6-bf51-4fa5-9284-5711c2a4e604
+      slot: parts
+      uuid: 87ed3ade-c19e-467f-9868-052f455ce498
+      component_id: js.prose
+      inputs:
+        body: '<h2 id="help-for-your-journey-title">Help for your journey</h2>'
+    -
+      parent_uuid: e33136a6-bf51-4fa5-9284-5711c2a4e604
+      slot: parts
+      uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      component_id: js.help-list
+      inputs:
+        variant: plain
+    -
+      parent_uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      slot: items
+      uuid: 12190788-6f20-4878-be0f-c7d5f49e4142
+      component_id: js.help-item
+      inputs:
+        icon: assistance
+        title: 'Special assistance'
+        body: 'Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.'
+        href: /help/special-assistance
+    -
+      parent_uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      slot: items
+      uuid: e0372de8-e96a-4085-ac31-189acf4bcf19
+      component_id: js.help-item
+      inputs:
+        icon: children
+        title: 'Travelling with children'
+        body: 'Family security lane, prams to the aircraft door, baby-change in every zone and play areas by gates 12 and 30.'
+        href: /help/travelling-with-children
+    -
+      parent_uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      slot: items
+      uuid: e77e4eb9-7f66-4eb8-9384-67e43de4b86b
+      component_id: js.help-item
+      inputs:
+        icon: first-flight
+        title: 'First time flying?'
+        body: 'Check-in, bag drop, security, gate: a five-step walkthrough with how long each takes today.'
+        href: /help/first-time-flying
+    -
+      parent_uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      slot: items
+      uuid: 5608d0f4-fb39-4b2f-9b78-83624aa0147e
+      component_id: js.help-item
+      inputs:
+        icon: alerts
+        title: 'Flight alerts'
+        body: 'Gate changes, delays and boarding calls by text or WhatsApp the moment they happen. Free.'
+        href: /flights/alerts
+    -
+      parent_uuid: bbb51195-a2ad-43fc-82dc-bcab90743175
+      slot: items
+      uuid: eebf9820-68ea-47f8-805a-ae09e2948465
+      component_id: js.help-item
+      inputs:
+        icon: lost-property
+        title: 'Lost property'
+        body: 'Report a lost item in two minutes and track it. Most bags are reunited the same day.'
+        href: '/help/baggage-and-lost-property#lost-property'
+    -
+      uuid: 2dd0a329-4cca-4385-bbcf-4b5d1ef0f99b
+      component_id: js.section
+      inputs:
+        anchor: faqs
+        tone: light
+        tag: section
+        labelledBy: faqs-title
+        headingLevel: h2
+    -
+      parent_uuid: 2dd0a329-4cca-4385-bbcf-4b5d1ef0f99b
+      slot: parts
+      uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      slot: parts
+      uuid: 2ffe474e-c7b5-4c75-9789-92ccd42e1f5a
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="faqs-title">Frequently asked questions</h2>
+          <p>Quick answers to the questions we are asked most.</p>
+    -
+      parent_uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      slot: parts
+      uuid: db2c0f95-1373-4776-b255-d8432baffe37
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: db2c0f95-1373-4776-b255-d8432baffe37
+      slot: parts
+      uuid: d5bc0d85-bd46-42d0-8efc-686b4f847bc2
+      component_id: js.prose
+      inputs:
+        body: '<h3>Security</h3>'
+    -
+      parent_uuid: db2c0f95-1373-4776-b255-d8432baffe37
+      slot: parts
+      uuid: 10786c99-6758-412a-bd13-25a8073b508b
+      component_id: js.accordion
+      inputs: {  }
+    -
+      parent_uuid: 10786c99-6758-412a-bd13-25a8073b508b
+      slot: items
+      uuid: 9cb21e16-725d-4d18-bc1c-6544b11eac50
+      component_id: js.accordion-item
+      inputs:
+        summary: 'How early should I get to the airport?'
+        body: '<p>Be at the terminal 2 hours before your flight. Bag drop closes 45 minutes before departure, and gates close 20 minutes before. Allow longer on Friday and Sunday mornings, when security is busiest.</p>'
+    -
+      parent_uuid: 10786c99-6758-412a-bd13-25a8073b508b
+      slot: items
+      uuid: 4bad49b8-ef7c-40f6-bb6e-024afa79b03b
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Do I need to take liquids out of my bag?'
+        body: '<p>In Terminal 1, no. The new scanners mean liquids in containers up to 2 litres and laptops can stay in your bag. In Terminal 2, liquids must be in containers of 100 ml or less, in one clear bag about 20 cm by 20 cm, and you take that bag and any laptop out for screening.</p>'
+    -
+      parent_uuid: 10786c99-6758-412a-bd13-25a8073b508b
+      slot: items
+      uuid: b51e4c0d-bd36-4929-bf6e-917b42ca7a29
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Can I take medicine through security?'
+        body: '<p>Yes. Essential medicines, including liquids above the normal limit, are allowed. Carry them in their original packaging with a copy of your prescription or a letter from your doctor, and tell the security officer before your bag goes through.</p>'
+    -
+      parent_uuid: 10786c99-6758-412a-bd13-25a8073b508b
+      slot: items
+      uuid: b48381cd-4347-4082-91d5-de372e027901
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Can I book Fast Track security?'
+        body: '<p>Yes. Fast Track costs £7 per person when booked online at least 24 hours ahead, or £8 at the entrance on the day. It is free for anyone booked with special assistance and up to two companions.</p>'
+    -
+      parent_uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      slot: parts
+      uuid: f71fa0a7-ef85-4c94-b8df-fe05f7aad59c
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: f71fa0a7-ef85-4c94-b8df-fe05f7aad59c
+      slot: parts
+      uuid: 810498d2-6e76-4c0d-9085-12f698368045
+      component_id: js.prose
+      inputs:
+        body: '<h3>Baggage</h3>'
+    -
+      parent_uuid: f71fa0a7-ef85-4c94-b8df-fe05f7aad59c
+      slot: parts
+      uuid: 98871384-49cf-4a15-b003-6dd6a523ede9
+      component_id: js.accordion
+      inputs: {  }
+    -
+      parent_uuid: 98871384-49cf-4a15-b003-6dd6a523ede9
+      slot: items
+      uuid: f5f814de-a577-472c-a50d-9253956da5bd
+      component_id: js.accordion-item
+      inputs:
+        summary: 'How big can my cabin bag be?'
+        body: '<p>It depends on your airline and your ticket. Check the cabin and hold allowances table on our baggage page, then confirm with your airline before you pack.</p>'
+    -
+      parent_uuid: 98871384-49cf-4a15-b003-6dd6a523ede9
+      slot: items
+      uuid: ea432405-5fcf-480f-b52e-4f2b79f426ba
+      component_id: js.accordion-item
+      inputs:
+        summary: 'My bag did not arrive. What should I do?'
+        body: "<p>Go to your airline's baggage desk in the arrivals hall before you leave the building. Take your boarding pass and baggage tag. The airline will give you a reference number and deliver the bag once it is found.</p>"
+    -
+      parent_uuid: 98871384-49cf-4a15-b003-6dd6a523ede9
+      slot: items
+      uuid: a5f24826-6049-43ce-97e0-c6d74a0ab581
+      component_id: js.accordion-item
+      inputs:
+        summary: 'I left something on the plane. Who do I contact?'
+        body: "<p>Contact your airline. Items found on aircraft belong to the airline's lost property process, not ours.</p>"
+    -
+      parent_uuid: 98871384-49cf-4a15-b003-6dd6a523ede9
+      slot: items
+      uuid: 25113cf0-f334-4abd-a1c1-a7cb608f780d
+      component_id: js.accordion-item
+      inputs:
+        summary: 'I left something in the terminal or a car park. How do I get it back?'
+        body: '<p>Report it to our lost property office using the form on our baggage and lost property page. We keep found items for 30 days and will contact you if we find a match.</p>'
+    -
+      parent_uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      slot: parts
+      uuid: 59779d36-fb2b-4b36-8adf-89411b30955b
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 59779d36-fb2b-4b36-8adf-89411b30955b
+      slot: parts
+      uuid: c5538def-db4e-4a8a-8fa3-064f71ea1dc0
+      component_id: js.prose
+      inputs:
+        body: '<h3>Parking</h3>'
+    -
+      parent_uuid: 59779d36-fb2b-4b36-8adf-89411b30955b
+      slot: parts
+      uuid: c1df52c2-afc6-4f04-8b13-95b5180dbefb
+      component_id: js.accordion
+      inputs: {  }
+    -
+      parent_uuid: c1df52c2-afc6-4f04-8b13-95b5180dbefb
+      slot: items
+      uuid: 60ee8977-726c-4f6c-aa33-0cd635b9a0e6
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Can I change or cancel my parking booking?'
+        body: '<p>Yes. You can cancel free of charge up to 24 hours before your arrival time. You can change your dates at any time before you arrive. If the new price is higher, you pay the difference.</p>'
+    -
+      parent_uuid: c1df52c2-afc6-4f04-8b13-95b5180dbefb
+      slot: items
+      uuid: 642173fb-329d-4175-96bb-9bd191feee54
+      component_id: js.accordion-item
+      inputs:
+        summary: 'What happens if my flight is delayed and I get back late?'
+        body: '<p>We do not charge for the first 2 hours past your booked return time. After that, extra time is charged at the drive-up daily rate for that car park.</p>'
+    -
+      parent_uuid: c1df52c2-afc6-4f04-8b13-95b5180dbefb
+      slot: items
+      uuid: 7f67b5d2-7ef2-4816-a1cd-4e5b303e4182
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Is there parking for Blue Badge holders?'
+        body: '<p>Yes. Every car park has Blue Badge bays, and the closest are in P1 Short-stay, next to the covered walkway. You pay the normal rate. Mid-Stay shuttle buses have a ramp and space for a wheelchair.</p>'
+    -
+      parent_uuid: c1df52c2-afc6-4f04-8b13-95b5180dbefb
+      slot: items
+      uuid: 5eacab51-87ff-4890-a62a-b496fe8d8a70
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Can I charge an electric car while I am away?'
+        body: '<p>Yes. There are 6 charging bays in P1 Short-stay, 40 in P2 Long-stay and 120 in Mid-Stay. Charging costs 45p per kWh, paid at the charger by card.</p>'
+    -
+      parent_uuid: d693dfcf-9d04-4eb4-a2ff-95d35a34cd92
+      slot: parts
+      uuid: 5a41bf7f-e299-46e0-9eb6-26f3e952876a
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 5a41bf7f-e299-46e0-9eb6-26f3e952876a
+      slot: parts
+      uuid: 9026728e-463c-4983-80bb-74cc152b8336
+      component_id: js.prose
+      inputs:
+        body: '<h3>Assistance</h3>'
+    -
+      parent_uuid: 5a41bf7f-e299-46e0-9eb6-26f3e952876a
+      slot: parts
+      uuid: e19662df-45a9-4f05-8f81-ed327dca3775
+      component_id: js.accordion
+      inputs: {  }
+    -
+      parent_uuid: e19662df-45a9-4f05-8f81-ed327dca3775
+      slot: items
+      uuid: b49abff5-85aa-4df4-a63b-edfd2bf1e026
+      component_id: js.accordion-item
+      inputs:
+        summary: 'How do I book special assistance?'
+        body: '<p>Tell your airline at least 48 hours before you fly. You can also use the request form on our special assistance page. Either way, we receive your request and plan your help from the moment you arrive.</p>'
+    -
+      parent_uuid: e19662df-45a9-4f05-8f81-ed327dca3775
+      slot: items
+      uuid: 7ae407f0-6a81-4c89-b2e8-0dba86b7c61b
+      component_id: js.accordion-item
+      inputs:
+        summary: 'What is the sunflower lanyard for?'
+        body: '<p>It lets our staff know, quietly, that you have a disability that may not be obvious. We will offer more time, clear directions and help if you want it. Lanyards are free from any assistance desk.</p>'
+    -
+      parent_uuid: e19662df-45a9-4f05-8f81-ed327dca3775
+      slot: items
+      uuid: c1a26d68-58cd-4b38-ab87-cb1e076c026e
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Can I use my own wheelchair to the gate?'
+        body: '<p>Yes. You can stay in your own wheelchair until the aircraft door, where the airline loads it into the hold. If it is powered, tell your airline the battery type when you book.</p>'
+    -
+      parent_uuid: e19662df-45a9-4f05-8f81-ed327dca3775
+      slot: items
+      uuid: 3b39ba19-3e39-401f-877f-9655687ad32f
+      component_id: js.accordion-item
+      inputs:
+        summary: 'Is there a quieter way through the airport?'
+        body: '<p>Yes. Both terminals have an assistance lane at security, which is calmer and never rushed, and a free Quiet Room after security. Ask at any assistance desk and we will walk the route with you.</p>'
+    -
+      uuid: c991f8bb-7133-48b4-807a-9af39113567c
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        headingLevel: h2
+    -
+      parent_uuid: c991f8bb-7133-48b4-807a-9af39113567c
+      slot: parts
+      uuid: 3767cf79-e643-4fe1-8d21-6dd95e1173bd
+      component_id: js.form
+      inputs:
+        kind: feedback
+    -
+      uuid: 08ccedce-e2dd-44dd-9eef-0a54720d6420
+      component_id: js.section
+      inputs:
+        anchor: complaint
+        last: true
+        tone: light
+        tag: section
+        labelledBy: complaint-title
+        headingLevel: h2
+    -
+      parent_uuid: 08ccedce-e2dd-44dd-9eef-0a54720d6420
+      slot: parts
+      uuid: 43f57904-fe97-4f79-8906-d4f0dcad1c6a
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="complaint-title">Making a complaint</h2>
+          <p>If something has gone wrong, use the feedback form above and choose the topic that fits. We aim to reply in full within 10 working days. If you are not happy with our reply, ask for your complaint to be reviewed by a senior manager, who will reply within a further 10 working days.</p>
+  page_variant:
+    -
+      value: meridian_nav_help_page
+  path:
+    -
+      alias: /help
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

@@ -3,11 +3,105 @@ langcode: en
 status: true
 dependencies:
   config:
+    - canvas.component.js.accordion
+    - canvas.component.js.accordion-item
+    - canvas.component.js.breadcrumb
+    - canvas.component.js.breadcrumb-item
+    - canvas.component.js.button
+    - canvas.component.js.callout
+    - canvas.component.js.card
+    - canvas.component.js.city-card
+    - canvas.component.js.city-rail
+    - canvas.component.js.data-table
+    - canvas.component.js.fact
+    - canvas.component.js.facts
+    - canvas.component.js.flight-board
+    - canvas.component.js.flight-row
+    - canvas.component.js.footer-link
+    - canvas.component.js.form
+    - canvas.component.js.getting-here
+    - canvas.component.js.group
+    - canvas.component.js.heading
+    - canvas.component.js.help-item
+    - canvas.component.js.help-list
+    - canvas.component.js.hero
+    - canvas.component.js.hero-sign
+    - canvas.component.js.map-pane
+    - canvas.component.js.nav-link
+    - canvas.component.js.notice
+    - canvas.component.js.notice-bar
+    - canvas.component.js.package
+    - canvas.component.js.package-feature
+    - canvas.component.js.page-hero
+    - canvas.component.js.paragraph
+    - canvas.component.js.photo-band
+    - canvas.component.js.picture
+    - canvas.component.js.prose
+    - canvas.component.js.row-link
+    - canvas.component.js.ruled-list
+    - canvas.component.js.section
+    - canvas.component.js.section-head
+    - canvas.component.js.site-footer
+    - canvas.component.js.site-header
+    - canvas.component.js.stat
+    - canvas.component.js.status
+    - canvas.component.js.terminal-map
+    - canvas.component.js.testimonial
+    - canvas.component.js.tower
+    - canvas.component.js.tower-grid
+    - canvas.component.js.wait-chip
+    - canvas.component.js.wait-panel
     - canvas.component.marker.page_content
-    - canvas.component.theme_page_template.meridian
 name: Other
 configEntityTypeId: component
 weight: 0
 items:
+  - js.accordion
+  - js.accordion-item
+  - js.breadcrumb
+  - js.breadcrumb-item
+  - js.button
+  - js.callout
+  - js.card
+  - js.city-card
+  - js.city-rail
+  - js.data-table
+  - js.fact
+  - js.facts
+  - js.flight-board
+  - js.flight-row
+  - js.footer-link
+  - js.form
+  - js.getting-here
+  - js.group
+  - js.heading
+  - js.help-item
+  - js.help-list
+  - js.hero
+  - js.hero-sign
+  - js.map-pane
+  - js.nav-link
+  - js.notice
+  - js.notice-bar
+  - js.package
+  - js.package-feature
+  - js.page-hero
+  - js.paragraph
+  - js.photo-band
+  - js.picture
+  - js.prose
+  - js.row-link
+  - js.ruled-list
+  - js.section
+  - js.section-head
+  - js.site-footer
+  - js.site-header
+  - js.stat
+  - js.status
+  - js.terminal-map
+  - js.testimonial
+  - js.tower
+  - js.tower-grid
+  - js.wait-chip
+  - js.wait-panel
   - marker.page_content
-  - theme_page_template.meridian

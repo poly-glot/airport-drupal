@@ -1,0 +1,20 @@
+uuid: a869ef86-8a8b-4e8c-9b51-d5d634dc19d0
+langcode: en
+status: true
+dependencies: {  }
+machineName: terminal-map
+name: 'Terminal map'
+type: external
+required:
+  - terminal
+props:
+  terminal:
+    type: string
+    enum:
+      - terminal-1
+      - terminal-2
+    title: Terminal
+    examples:
+      - terminal-1
+slots: {  }
+dataDependencies: {  }

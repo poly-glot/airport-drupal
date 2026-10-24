@@ -1,0 +1,46 @@
+uuid: a37251a7-521b-48eb-9c71-2d4349a2d64e
+langcode: en
+status: true
+dependencies: {  }
+machineName: help-item
+name: 'Help item'
+type: external
+required:
+  - icon
+  - title
+  - href
+props:
+  icon:
+    type: string
+    enum:
+      - assistance
+      - children
+      - first-flight
+      - alerts
+      - lost-property
+      - contact
+      - security
+      - eat-and-drink
+      - shopping
+      - lounges
+    title: Icon
+    examples:
+      - assistance
+  title:
+    type: string
+    title: 'Row heading'
+    examples:
+      - 'Special assistance'
+  body:
+    type: string
+    title: 'Row text'
+    examples:
+      - 'Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /help/special-assistance
+slots: {  }
+dataDependencies: {  }

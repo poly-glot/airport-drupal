@@ -1,0 +1,24 @@
+name: Paragraph
+machineName: paragraph
+status: true
+required:
+  - body
+props:
+  properties:
+    body:
+      title: Paragraph text
+      type: string
+      contentMediaType: text/html
+      examples:
+        - Prices are per vehicle per day.
+    variant:
+      title: Variant
+      type: string
+      enum:
+        - plain
+        - package-note
+        - form-small
+        - card-text
+        - card-text-tabular
+      examples:
+        - plain

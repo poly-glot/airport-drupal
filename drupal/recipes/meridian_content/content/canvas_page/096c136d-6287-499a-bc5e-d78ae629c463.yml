@@ -1,0 +1,539 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 096c136d-6287-499a-bc5e-d78ae629c463
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Airlines and destinations — Meridian Airport'
+  description:
+    -
+      value: 'Four airlines fly from Meridian Airport to 20 destinations across Europe and Morocco. See who flies where, from which terminal, and how often.'
+  components:
+    -
+      uuid: 86725b90-21b2-4878-8707-e2d2d6218e6a
+      component_id: js.page-hero
+      inputs:
+        title: 'Airlines and destinations'
+        intro: 'Four airlines, 20 destinations, and most of them under three hours away.'
+        variant: sky
+    -
+      parent_uuid: 86725b90-21b2-4878-8707-e2d2d6218e6a
+      slot: breadcrumb
+      uuid: c8edc0a8-4e11-43ac-b589-ce14bc8fbc43
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: c8edc0a8-4e11-43ac-b589-ce14bc8fbc43
+      slot: items
+      uuid: 63022d00-d17f-48a9-89a7-340a1500844f
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: c8edc0a8-4e11-43ac-b589-ce14bc8fbc43
+      slot: items
+      uuid: a98910e7-77fc-4489-8bf9-1f79ce77b1b0
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Flights
+        href: /flights
+    -
+      parent_uuid: c8edc0a8-4e11-43ac-b589-ce14bc8fbc43
+      slot: items
+      uuid: 87ec13f0-6d7f-427c-8a85-06a1ecc3a557
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Airlines and destinations'
+        current: true
+    -
+      uuid: 79c2cdd9-9503-4f98-9207-9dc86ac66cb9
+      component_id: js.section
+      inputs:
+        anchor: airlines
+        tone: light
+        tag: section
+        labelledBy: airlines-title
+        headingLevel: h2
+    -
+      parent_uuid: 79c2cdd9-9503-4f98-9207-9dc86ac66cb9
+      slot: parts
+      uuid: ef3a8731-1e26-4226-87b7-640d5a159de7
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: ef3a8731-1e26-4226-87b7-640d5a159de7
+      slot: parts
+      uuid: 1e44327d-c413-462a-8c49-12a727404d99
+      component_id: js.heading
+      inputs:
+        text: 'Our airlines'
+        level: h2
+        id: airlines-title
+        size: sm
+    -
+      parent_uuid: ef3a8731-1e26-4226-87b7-640d5a159de7
+      slot: parts
+      uuid: 794ea9f8-e5e6-41ee-9129-451642ae36c9
+      component_id: js.paragraph
+      inputs:
+        body: 'Each airline uses one terminal. Check which one before you travel, because the terminals have separate drop-off areas and car parks closest to them.'
+        variant: plain
+    -
+      parent_uuid: ef3a8731-1e26-4226-87b7-640d5a159de7
+      slot: parts
+      uuid: 8fc00033-cd43-4807-9ba3-836467a0c0f1
+      component_id: js.group
+      inputs:
+        layout: grid-2
+    -
+      parent_uuid: 8fc00033-cd43-4807-9ba3-836467a0c0f1
+      slot: parts
+      uuid: 17e98541-f4fd-4710-842f-590a6bb9326e
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Meridian Air (MA)'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 17e98541-f4fd-4710-842f-590a6bb9326e
+      slot: parts
+      uuid: 1ec2f627-419b-4a1d-8ac9-e387393e32cf
+      component_id: js.paragraph
+      inputs:
+        body: 'Our home airline. Short flights across Europe, most of them daily.'
+        variant: card-text
+    -
+      parent_uuid: 17e98541-f4fd-4710-842f-590a6bb9326e
+      slot: parts
+      uuid: fe720c6e-93ec-4c5a-8245-b171644c5456
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: fe720c6e-93ec-4c5a-8245-b171644c5456
+      slot: items
+      uuid: 6a48a162-1ec4-482d-894b-271d1147cce8
+      component_id: js.fact
+      inputs:
+        term: Terminal
+        value: T1
+    -
+      parent_uuid: fe720c6e-93ec-4c5a-8245-b171644c5456
+      slot: items
+      uuid: a0bae934-bafc-447f-8763-e26f59eec5d6
+      component_id: js.fact
+      inputs:
+        term: Check-in
+        value: 'Zone A and B'
+    -
+      parent_uuid: fe720c6e-93ec-4c5a-8245-b171644c5456
+      slot: items
+      uuid: d1990266-2e10-45bb-a3d4-73e61f29b435
+      component_id: js.fact
+      inputs:
+        term: 'Flies to'
+        value: 'Amsterdam, Barcelona, Dublin, Faro, Lisbon, Paris, Rome'
+    -
+      parent_uuid: 17e98541-f4fd-4710-842f-590a6bb9326e
+      slot: parts
+      uuid: b84df49c-b392-4cd0-9788-800bdacac057
+      component_id: js.paragraph
+      inputs:
+        body: 'Book with Meridian Air<span class="visually-hidden"> (external site, not available in this demonstration)</span>'
+        variant: card-text
+    -
+      parent_uuid: 8fc00033-cd43-4807-9ba3-836467a0c0f1
+      slot: parts
+      uuid: 28d97937-fc45-4170-93b2-15c74498092c
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Nordvik (NV)'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 28d97937-fc45-4170-93b2-15c74498092c
+      slot: parts
+      uuid: fa5b8ecc-7c37-445e-bcca-95badd8179e0
+      component_id: js.paragraph
+      inputs:
+        body: 'Flights to Iceland, Norway and Denmark, with extra winter seats to Reykjavík.'
+        variant: card-text
+    -
+      parent_uuid: 28d97937-fc45-4170-93b2-15c74498092c
+      slot: parts
+      uuid: c65f6b15-47be-492f-9abe-bf6174114b28
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: c65f6b15-47be-492f-9abe-bf6174114b28
+      slot: items
+      uuid: 132c35ef-6f01-407d-ac59-746e35a9ac19
+      component_id: js.fact
+      inputs:
+        term: Terminal
+        value: T2
+    -
+      parent_uuid: c65f6b15-47be-492f-9abe-bf6174114b28
+      slot: items
+      uuid: e505f29d-ff59-408e-8098-6aa4cf03a09d
+      component_id: js.fact
+      inputs:
+        term: Check-in
+        value: 'Zone D'
+    -
+      parent_uuid: c65f6b15-47be-492f-9abe-bf6174114b28
+      slot: items
+      uuid: ef544caf-0fe4-44e3-9b83-41d7b200ae7f
+      component_id: js.fact
+      inputs:
+        term: 'Flies to'
+        value: 'Bergen, Copenhagen, Oslo, Reykjavík'
+    -
+      parent_uuid: 28d97937-fc45-4170-93b2-15c74498092c
+      slot: parts
+      uuid: b7e5ad5b-632a-426f-a5bf-5c174a1297e6
+      component_id: js.paragraph
+      inputs:
+        body: 'Book with Nordvik<span class="visually-hidden"> (external site, not available in this demonstration)</span>'
+        variant: card-text
+    -
+      parent_uuid: 8fc00033-cd43-4807-9ba3-836467a0c0f1
+      slot: parts
+      uuid: cf4d38e8-39e4-4a21-93dc-b453320e2e92
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Azur Express (ZX)'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: cf4d38e8-39e4-4a21-93dc-b453320e2e92
+      slot: parts
+      uuid: 8fed61ff-f1f7-4504-b83d-fc80fcf92007
+      component_id: js.paragraph
+      inputs:
+        body: 'Sunshine routes to Spain, France, the Balearics and Morocco.'
+        variant: card-text
+    -
+      parent_uuid: cf4d38e8-39e4-4a21-93dc-b453320e2e92
+      slot: parts
+      uuid: 94dd9a00-2334-48e8-8780-4bbe9d70bd19
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: 94dd9a00-2334-48e8-8780-4bbe9d70bd19
+      slot: items
+      uuid: d6a8754e-23fe-4d8b-8f13-a5820ec14fdd
+      component_id: js.fact
+      inputs:
+        term: Terminal
+        value: T2
+    -
+      parent_uuid: 94dd9a00-2334-48e8-8780-4bbe9d70bd19
+      slot: items
+      uuid: 1de1943e-f695-4db4-ae04-da7dd673d17c
+      component_id: js.fact
+      inputs:
+        term: Check-in
+        value: 'Zone E'
+    -
+      parent_uuid: 94dd9a00-2334-48e8-8780-4bbe9d70bd19
+      slot: items
+      uuid: 3b2916c8-0b01-487d-a5d9-c58964ccb57b
+      component_id: js.fact
+      inputs:
+        term: 'Flies to'
+        value: 'Agadir, Malaga, Marrakech, Nice, Palma'
+    -
+      parent_uuid: cf4d38e8-39e4-4a21-93dc-b453320e2e92
+      slot: parts
+      uuid: 663aa34f-e28f-4686-98fa-65693713fd39
+      component_id: js.paragraph
+      inputs:
+        body: 'Book with Azur Express<span class="visually-hidden"> (external site, not available in this demonstration)</span>'
+        variant: card-text
+    -
+      parent_uuid: 8fc00033-cd43-4807-9ba3-836467a0c0f1
+      slot: parts
+      uuid: de4a8db6-fd2a-4a14-a06d-2a8891261821
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Kestrel (KW)'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: de4a8db6-fd2a-4a14-a06d-2a8891261821
+      slot: parts
+      uuid: 40b03bdb-e965-405d-9696-293a189b913c
+      component_id: js.paragraph
+      inputs:
+        body: 'Flights to the Alps for skiers in winter and walkers in summer.'
+        variant: card-text
+    -
+      parent_uuid: de4a8db6-fd2a-4a14-a06d-2a8891261821
+      slot: parts
+      uuid: 433ef9fe-0bf1-4099-8060-a48b490712f3
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: 433ef9fe-0bf1-4099-8060-a48b490712f3
+      slot: items
+      uuid: 9d343c21-2da0-44b7-9e4d-56aa188b8f8b
+      component_id: js.fact
+      inputs:
+        term: Terminal
+        value: T2
+    -
+      parent_uuid: 433ef9fe-0bf1-4099-8060-a48b490712f3
+      slot: items
+      uuid: 045bba7e-746e-4249-8f95-765f204ec044
+      component_id: js.fact
+      inputs:
+        term: Check-in
+        value: 'Zone F'
+    -
+      parent_uuid: 433ef9fe-0bf1-4099-8060-a48b490712f3
+      slot: items
+      uuid: 7a1f3bf8-7ffb-4ca6-bc97-5f5f081e3857
+      component_id: js.fact
+      inputs:
+        term: 'Flies to'
+        value: 'Geneva, Innsbruck, Salzburg, Zurich'
+    -
+      parent_uuid: de4a8db6-fd2a-4a14-a06d-2a8891261821
+      slot: parts
+      uuid: e74030e1-6b7c-4326-a81e-f173a93469f8
+      component_id: js.paragraph
+      inputs:
+        body: 'Book with Kestrel<span class="visually-hidden"> (external site, not available in this demonstration)</span>'
+        variant: card-text
+    -
+      uuid: 9a16d6b5-fb60-4e24-add1-5b333c263c08
+      component_id: js.section
+      inputs:
+        anchor: destinations
+        tone: light
+        tag: section
+        labelledBy: destinations-title
+        headingLevel: h2
+    -
+      parent_uuid: 9a16d6b5-fb60-4e24-add1-5b333c263c08
+      slot: parts
+      uuid: 50ad83ff-9a17-457c-a9ef-879515f0b7ed
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 50ad83ff-9a17-457c-a9ef-879515f0b7ed
+      slot: parts
+      uuid: c25cf25d-3130-4a90-9ff8-59f439848468
+      component_id: js.heading
+      inputs:
+        text: 'Where you can fly'
+        level: h2
+        id: destinations-title
+        size: sm
+    -
+      parent_uuid: 50ad83ff-9a17-457c-a9ef-879515f0b7ed
+      slot: parts
+      uuid: d5633efb-1ab2-4ba1-a3e6-54822e8f890d
+      component_id: js.paragraph
+      inputs:
+        body: 'Our four airlines fly direct to these 20 destinations. With one change on a partner airline, you can reach 112 destinations in all, including Cairo, New York, Beijing and Singapore.'
+        variant: plain
+    -
+      parent_uuid: 50ad83ff-9a17-457c-a9ef-879515f0b7ed
+      slot: parts
+      uuid: ab5dcf3f-ba0a-463e-870b-9b84f96b6cdf
+      component_id: js.data-table
+      inputs:
+        caption: 'Destinations from Meridian Airport, by airline and terminal'
+        captionHidden: true
+        body: |-
+          <thead><tr><th scope="col">Destination</th><th scope="col">Country</th><th scope="col">Airline</th><th scope="col">Terminal</th><th scope="col">Flight time</th><th scope="col">How often</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Agadir</th><td>Morocco</td><td>Azur Express</td><td>T2</td><td class="table__num">3h 55m</td><td>Twice a week</td></tr>
+          <tr><th scope="row">Amsterdam</th><td>Netherlands</td><td>Meridian Air</td><td>T1</td><td class="table__num">1h 15m</td><td>Three times a day</td></tr>
+          <tr><th scope="row">Barcelona</th><td>Spain</td><td>Meridian Air</td><td>T1</td><td class="table__num">2h 10m</td><td>Daily</td></tr>
+          <tr><th scope="row">Bergen</th><td>Norway</td><td>Nordvik</td><td>T2</td><td class="table__num">1h 50m</td><td>Four times a week</td></tr>
+          <tr><th scope="row">Copenhagen</th><td>Denmark</td><td>Nordvik</td><td>T2</td><td class="table__num">1h 50m</td><td>Daily</td></tr>
+          <tr><th scope="row">Dublin</th><td>Ireland</td><td>Meridian Air</td><td>T1</td><td class="table__num">1h 05m</td><td>Four times a day</td></tr>
+          <tr><th scope="row">Faro</th><td>Portugal</td><td>Meridian Air</td><td>T1</td><td class="table__num">2h 50m</td><td>Daily</td></tr>
+          <tr><th scope="row">Geneva</th><td>Switzerland</td><td>Kestrel</td><td>T2</td><td class="table__num">1h 45m</td><td>Daily</td></tr>
+          <tr><th scope="row">Innsbruck</th><td>Austria</td><td>Kestrel</td><td>T2</td><td class="table__num">2h 05m</td><td>Twice a week, 19 December 2026 to 3 April 2027</td></tr>
+          <tr><th scope="row">Lisbon</th><td>Portugal</td><td>Meridian Air</td><td>T1</td><td class="table__num">2h 45m</td><td>Twice a day</td></tr>
+          <tr><th scope="row">Malaga</th><td>Spain</td><td>Azur Express</td><td>T2</td><td class="table__num">2h 50m</td><td>Daily</td></tr>
+          <tr><th scope="row">Marrakech</th><td>Morocco</td><td>Azur Express</td><td>T2</td><td class="table__num">3h 40m</td><td>Daily</td></tr>
+          <tr><th scope="row">Nice</th><td>France</td><td>Azur Express</td><td>T2</td><td class="table__num">2h 00m</td><td>Five times a week</td></tr>
+          <tr><th scope="row">Oslo</th><td>Norway</td><td>Nordvik</td><td>T2</td><td class="table__num">2h 00m</td><td>Daily</td></tr>
+          <tr><th scope="row">Palma</th><td>Spain</td><td>Azur Express</td><td>T2</td><td class="table__num">2h 25m</td><td>Daily</td></tr>
+          <tr><th scope="row">Paris</th><td>France</td><td>Meridian Air</td><td>T1</td><td class="table__num">1h 15m</td><td>Three times a day</td></tr>
+          <tr><th scope="row">Reykjavík</th><td>Iceland</td><td>Nordvik</td><td>T2</td><td class="table__num">3h 10m</td><td>Daily</td></tr>
+          <tr><th scope="row">Rome</th><td>Italy</td><td>Meridian Air</td><td>T1</td><td class="table__num">2h 40m</td><td>Daily</td></tr>
+          <tr><th scope="row">Salzburg</th><td>Austria</td><td>Kestrel</td><td>T2</td><td class="table__num">2h 00m</td><td>Four times a week</td></tr>
+          <tr><th scope="row">Zurich</th><td>Switzerland</td><td>Kestrel</td><td>T2</td><td class="table__num">1h 45m</td><td>Daily</td></tr>
+          </tbody>
+    -
+      parent_uuid: 50ad83ff-9a17-457c-a9ef-879515f0b7ed
+      slot: parts
+      uuid: d5b5fe30-7d30-45cb-bb4e-107612d8aaa2
+      component_id: js.paragraph
+      inputs:
+        body: 'Flight times are typical and depend on the wind. Seasonal routes run only on the dates shown.'
+        variant: form-small
+    -
+      uuid: 341ac928-1b2c-439b-a768-b7767344cb4a
+      component_id: js.section
+      inputs:
+        anchor: before-you-book
+        tone: light
+        tag: section
+        labelledBy: before-you-book-title
+        headingLevel: h2
+    -
+      parent_uuid: 341ac928-1b2c-439b-a768-b7767344cb4a
+      slot: parts
+      uuid: a091fda3-9038-4b69-9c81-5d992cd2ae9d
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: a091fda3-9038-4b69-9c81-5d992cd2ae9d
+      slot: parts
+      uuid: 85572991-d295-427b-8ddc-7cd718594c2f
+      component_id: js.heading
+      inputs:
+        text: 'Before you book'
+        level: h2
+        id: before-you-book-title
+        size: sm
+    -
+      parent_uuid: a091fda3-9038-4b69-9c81-5d992cd2ae9d
+      slot: parts
+      uuid: fef01111-f743-4f46-8ee7-d576383e2888
+      component_id: js.group
+      inputs:
+        layout: grid-3
+    -
+      parent_uuid: fef01111-f743-4f46-8ee7-d576383e2888
+      slot: parts
+      uuid: 1f972ca9-63a6-4392-b683-19568bac41f7
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Check your terminal'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 1f972ca9-63a6-4392-b683-19568bac41f7
+      slot: parts
+      uuid: 0d24d82f-8b94-48f5-9714-778035aacdd8
+      component_id: js.paragraph
+      inputs:
+        body: 'Meridian Air flies from Terminal 1. Nordvik, Azur Express and Kestrel fly from Terminal 2. If you are being dropped off, tell your driver which one.'
+        variant: card-text
+    -
+      parent_uuid: fef01111-f743-4f46-8ee7-d576383e2888
+      slot: parts
+      uuid: 9141ebe1-4f98-46c5-952a-04f65eeb97a3
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Check your bags'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 9141ebe1-4f98-46c5-952a-04f65eeb97a3
+      slot: parts
+      uuid: 0bb7adf9-d382-48ca-bee6-1e8427d57bd1
+      component_id: js.paragraph
+      inputs:
+        body: 'Each airline sets its own cabin and hold allowances. Our baggage page has a table for all four.'
+        variant: card-text
+    -
+      parent_uuid: 9141ebe1-4f98-46c5-952a-04f65eeb97a3
+      slot: parts
+      uuid: 13529836-1e4a-4949-94fb-5ab819478f43
+      component_id: js.paragraph
+      inputs:
+        body: '<a class="text-link" href="/help/baggage-and-lost-property#allowances">Baggage allowances by airline<svg class="text-link__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>'
+        variant: plain
+    -
+      parent_uuid: fef01111-f743-4f46-8ee7-d576383e2888
+      slot: parts
+      uuid: 3ad39c32-124f-4443-9287-eeafda30a6ae
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Check your documents'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 3ad39c32-124f-4443-9287-eeafda30a6ae
+      slot: parts
+      uuid: bfa76b72-9f69-47ca-992b-6e4518acd06c
+      component_id: js.paragraph
+      inputs:
+        body: 'For flights to the European Union, Switzerland, Norway and Iceland, check that your passport meets the entry rules of the country you are visiting. For Morocco, British passport holders do not need a visa for short stays, but your passport must be valid for your whole visit. Rules change, so check the official government travel advice before you go.'
+        variant: card-text
+    -
+      uuid: ff445fa9-b4c0-419f-bc22-5110336417f2
+      component_id: js.section
+      inputs:
+        anchor: booking-and-changes
+        last: true
+        tone: light
+        tag: section
+        labelledBy: booking-and-changes-title
+        headingLevel: h2
+    -
+      parent_uuid: ff445fa9-b4c0-419f-bc22-5110336417f2
+      slot: parts
+      uuid: bb565fcc-b166-485f-a6c1-5a206f26e724
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: bb565fcc-b166-485f-a6c1-5a206f26e724
+      slot: parts
+      uuid: b3ed1422-d588-4ae9-a9f8-696dc90c56f4
+      component_id: js.heading
+      inputs:
+        text: 'Booking and changes'
+        level: h2
+        id: booking-and-changes-title
+        size: sm
+    -
+      parent_uuid: bb565fcc-b166-485f-a6c1-5a206f26e724
+      slot: parts
+      uuid: 8fd8c5fc-8dba-4630-a0bb-0cb7743f6de9
+      component_id: js.paragraph
+      inputs:
+        body: 'We do not sell tickets. Book, change or cancel your flight with your airline. If your flight is cancelled, your airline is responsible for finding you another flight or giving you a refund.'
+        variant: plain
+  page_variant:
+    -
+      value: meridian_nav_flights_section
+  path:
+    -
+      alias: /flights/airlines
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

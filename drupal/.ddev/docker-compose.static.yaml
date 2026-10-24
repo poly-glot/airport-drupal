@@ -1,4 +1,0 @@
-services:
-  web:
-    volumes:
-      - ../../static:/var/www/static:ro

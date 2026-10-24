@@ -1,7 +1,7 @@
 {
   "componentDir": "components",
   "aliasBaseDir": ".",
-  "globalCssPath": "public/assets/css/site.css",
+  "globalCssPath": "app/globals.css",
   "sync": {
     "pages": false,
     "contentTemplates": false,

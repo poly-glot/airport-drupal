@@ -1,0 +1,47 @@
+uuid: b24b3f43-f59c-452b-95ea-ffa0a6fcfa91
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.callout
+    - filter.format.canvas_html_block
+  module:
+    - text
+active_version: bc69ac303ab2d3cc
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Please note'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Callout
+id: js.callout
+provider: null
+source: js
+source_local_id: callout

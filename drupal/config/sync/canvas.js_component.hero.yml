@@ -1,0 +1,42 @@
+uuid: e1475664-31b8-4e7a-a49c-249d81915b03
+langcode: en
+status: true
+dependencies: {  }
+machineName: hero
+name: Hero
+type: external
+required:
+  - title
+  - intro
+props:
+  title:
+    type: string
+    title: 'Welcome heading'
+    examples:
+      - 'Welcome to Meridian Airport'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Your gateway to 112 destinations. Check your flight'
+      - 'pre-book parking and reserve duty free to collect at the gate.'
+  defaultWeather:
+    type: string
+    enum:
+      - sunny
+      - cloudy
+      - rainy
+    title: 'Default weather'
+    examples:
+      - rainy
+slots:
+  signs:
+    title: Signs
+    description: 'Hero sign leaves, the quick links under the intro.'
+  aside:
+    title: Aside
+    description: 'The white search card (form kind flight-search).'
+  wait:
+    title: 'Wait panel'
+    description: 'The wait panel that floats over the bottom edge of the hero.'
+dataDependencies: {  }

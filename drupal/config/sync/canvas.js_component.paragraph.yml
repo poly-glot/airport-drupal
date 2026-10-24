@@ -1,0 +1,29 @@
+uuid: df5deb52-383f-431f-92ab-a517504eb188
+langcode: en
+status: true
+dependencies: {  }
+machineName: paragraph
+name: Paragraph
+type: external
+required:
+  - body
+props:
+  body:
+    type: string
+    contentMediaType: text/html
+    title: 'Paragraph text'
+    examples:
+      - 'Prices are per vehicle per day.'
+  variant:
+    type: string
+    enum:
+      - plain
+      - package-note
+      - form-small
+      - card-text
+      - card-text-tabular
+    title: Variant
+    examples:
+      - plain
+slots: {  }
+dataDependencies: {  }

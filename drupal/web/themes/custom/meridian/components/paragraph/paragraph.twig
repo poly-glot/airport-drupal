@@ -1,2 +1,0 @@
-{% set variant_classes = {'package-note': ['package__note'], 'form-small': ['form__small'], 'card-text': ['card__text'], 'card-text-tabular': ['card__text', 'u-tabular']}[variant|default('plain')]|default([]) %}
-<p{{ attributes.addClass(variant_classes) }}>{{ body|raw }}</p>

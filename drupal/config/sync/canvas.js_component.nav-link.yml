@@ -1,0 +1,33 @@
+uuid: 0568ff15-6c7f-430f-b694-0549345da103
+langcode: en
+status: true
+dependencies: {  }
+machineName: nav-link
+name: 'Nav link'
+type: external
+required:
+  - label
+  - href
+props:
+  label:
+    type: string
+    title: 'Menu item text'
+    examples:
+      - Flights
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /flights
+  current:
+    type: string
+    enum:
+      - none
+      - page
+      - section
+    title: 'Current state'
+    examples:
+      - none
+slots: {  }
+dataDependencies: {  }

@@ -1,0 +1,14 @@
+uuid: f7d99c54-2043-4443-879c-c1192282797f
+langcode: en
+status: true
+dependencies: {  }
+machineName: ruled-list
+name: 'Ruled list'
+type: external
+required: {  }
+props: {  }
+slots:
+  items:
+    title: Items
+    description: 'Row links, one per row.'
+dataDependencies: {  }

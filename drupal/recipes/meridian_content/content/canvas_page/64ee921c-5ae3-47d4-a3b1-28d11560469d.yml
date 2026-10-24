@@ -1,0 +1,353 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 64ee921c-5ae3-47d4-a3b1-28d11560469d
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Security and customs — Meridian Airport'
+  description:
+    -
+      value: 'How early to arrive, what to pack and what to take out at security in Terminals 1 and 2, plus what to expect at passport control and customs.'
+  components:
+    -
+      uuid: d4b5e7ef-4716-48a2-9f58-f56793bdfc75
+      component_id: js.page-hero
+      inputs:
+        eyebrow: 'At the airport'
+        title: 'Security and customs'
+        intro: 'What to pack, what to take out, and how early to arrive.'
+        variant: sky
+    -
+      parent_uuid: d4b5e7ef-4716-48a2-9f58-f56793bdfc75
+      slot: breadcrumb
+      uuid: 68894929-b554-430f-a5ef-50d352b87355
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 68894929-b554-430f-a5ef-50d352b87355
+      slot: items
+      uuid: e43f67f0-848d-43cf-93b0-a1463e57e7d8
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 68894929-b554-430f-a5ef-50d352b87355
+      slot: items
+      uuid: 5791bfb6-2e25-4fcb-9027-b52123e578f8
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'At the airport'
+        href: /at-the-airport
+    -
+      parent_uuid: 68894929-b554-430f-a5ef-50d352b87355
+      slot: items
+      uuid: bf7e10dd-08de-4ba3-ad4d-4ea77b3086e9
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Security and customs'
+        current: true
+    -
+      uuid: 23754ea2-68a6-4abf-be7d-2a2c550a101c
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: how-early-to-arrive-title
+        headingLevel: h2
+    -
+      parent_uuid: 23754ea2-68a6-4abf-be7d-2a2c550a101c
+      slot: parts
+      uuid: b36c3c5e-5fbe-4409-89ec-fba0be7095a8
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: b36c3c5e-5fbe-4409-89ec-fba0be7095a8
+      slot: parts
+      uuid: a3d12984-7f14-41ee-b8fc-63fbf7ca154a
+      component_id: js.heading
+      inputs:
+        text: 'How early to arrive'
+        level: h2
+        id: how-early-to-arrive-title
+        size: sm
+    -
+      parent_uuid: b36c3c5e-5fbe-4409-89ec-fba0be7095a8
+      slot: parts
+      uuid: be7f8155-933f-43f6-b225-aeb71ecfc006
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Be at the terminal 2 hours before your flight.</p>
+          <ul><li>Bag drop closes 45 minutes before departure.</li><li>Security can take up to 30 minutes at busy times.</li><li>Gates close 20 minutes before departure.</li></ul>
+          <p>Security is busiest from 05:00 to 07:30, and on Friday and Sunday mornings. Live wait times for both terminals are on our homepage.</p>
+          <p><a href="/">Live wait times</a></p>
+    -
+      uuid: 8b77d4b9-6005-48e3-85ef-e58027086125
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: liquids-and-laptops-title
+        headingLevel: h2
+    -
+      parent_uuid: 8b77d4b9-6005-48e3-85ef-e58027086125
+      slot: parts
+      uuid: 21838408-ecd8-4566-8372-c0c5ec99b4c6
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 21838408-ecd8-4566-8372-c0c5ec99b4c6
+      slot: parts
+      uuid: 1841322e-1698-4c2f-92d2-6488b48a9ca7
+      component_id: js.heading
+      inputs:
+        text: 'Liquids and laptops'
+        level: h2
+        id: liquids-and-laptops-title
+        size: sm
+    -
+      parent_uuid: 21838408-ecd8-4566-8372-c0c5ec99b4c6
+      slot: parts
+      uuid: 826df112-b02e-44a4-beb2-ed09d3f0249b
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>The rules are different in each terminal.</p>
+          <h3>Terminal 1</h3>
+          <p>New scanners mean you can leave liquids and laptops in your bag.</p>
+          <ul><li>Liquids can be in containers of up to 2 litres each.</li><li>Laptops, tablets and cameras can stay in your bag.</li><li>Take off your coat and belt, and empty your pockets into the tray.</li></ul>
+          <h3>Terminal 2</h3>
+          <p>The old rules still apply in Terminal 2 until new lanes open by spring 2027.</p>
+          <ul><li>Liquids must be in containers of 100 ml or less.</li><li>Put them all in one clear, resealable bag, about 20 cm by 20 cm.</li><li>Take the bag of liquids and any laptop or large tablet out of your hand luggage and put them in a tray on their own.</li></ul>
+          <h3>What counts as a liquid</h3>
+          <p>Drinks, soups, sauces, creams, gels, pastes, sprays, lip gloss, mascara and anything else that pours, spreads or squeezes.</p>
+    -
+      uuid: c811bcc0-3b16-48c8-81a5-941f595a7498
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: things-you-can-take-title
+        headingLevel: h2
+    -
+      parent_uuid: c811bcc0-3b16-48c8-81a5-941f595a7498
+      slot: parts
+      uuid: b31d73a1-de57-4f91-9f43-f25364f5f16e
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: b31d73a1-de57-4f91-9f43-f25364f5f16e
+      slot: parts
+      uuid: 9aae5fd4-fac2-4a9f-8161-e41a90a20eda
+      component_id: js.heading
+      inputs:
+        text: 'Things you can take'
+        level: h2
+        id: things-you-can-take-title
+        size: sm
+    -
+      parent_uuid: b31d73a1-de57-4f91-9f43-f25364f5f16e
+      slot: parts
+      uuid: bf7fb22b-54fc-4368-804e-2be0d8506694
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h3>Medicines</h3>
+          <p>Essential medicines are allowed in any quantity you need for the trip, including liquids above the limit. Carry them in their original packaging with a copy of your prescription or a letter from your doctor. Tell the security officer before your bag goes through.</p>
+          <h3>Baby food and milk</h3>
+          <p>You can take enough baby food, milk and sterilised water for the journey. You may be asked to taste it or open it for a test.</p>
+          <h3>Mobility aids and medical devices</h3>
+          <p>Wheelchairs, walking sticks and medical devices go through with you. If you cannot walk through the scanner, ask for a hand search in a private room.</p>
+    -
+      uuid: 45e0b2e3-3a9e-44d3-8a4a-e22e63b689b3
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: things-you-cannot-take-in-hand-luggage-title
+        headingLevel: h2
+    -
+      parent_uuid: 45e0b2e3-3a9e-44d3-8a4a-e22e63b689b3
+      slot: parts
+      uuid: 90f5f981-8886-4270-ae92-f7b4e3390686
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 90f5f981-8886-4270-ae92-f7b4e3390686
+      slot: parts
+      uuid: b5c50baf-0d32-4585-bb70-d653beecbd90
+      component_id: js.heading
+      inputs:
+        text: 'Things you cannot take in hand luggage'
+        level: h2
+        id: things-you-cannot-take-in-hand-luggage-title
+        size: sm
+    -
+      parent_uuid: 90f5f981-8886-4270-ae92-f7b4e3390686
+      slot: parts
+      uuid: 09c223df-0ab1-4dfe-8269-c843970857a8
+      component_id: js.prose
+      inputs:
+        body: |-
+          <ul><li>Knives, scissors with blades longer than 6 cm, and tools</li><li>Sports bats, clubs and walking poles</li><li>Lighter fluid, fireworks and flammable gas</li><li>Toy or replica guns</li></ul>
+          <p>If you are not sure, put it in your hold bag or leave it at home. Items taken at security cannot be returned.</p>
+    -
+      uuid: b4201bab-4891-489d-8cf1-c16caabc8804
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: fast-track-title
+        headingLevel: h2
+    -
+      parent_uuid: b4201bab-4891-489d-8cf1-c16caabc8804
+      slot: parts
+      uuid: ef931a5f-9e35-4d21-afcc-d9e6795e4fb0
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: ef931a5f-9e35-4d21-afcc-d9e6795e4fb0
+      slot: parts
+      uuid: c420d8bf-0eb5-4b71-adf2-84e7c487e7da
+      component_id: js.heading
+      inputs:
+        text: 'Fast Track'
+        level: h2
+        id: fast-track-title
+        size: sm
+    -
+      parent_uuid: ef931a5f-9e35-4d21-afcc-d9e6795e4fb0
+      slot: parts
+      uuid: cd0c81da-f396-46e6-8aa4-fd6febf0276f
+      component_id: js.prose
+      inputs:
+        body: '<p>Fast Track has its own lane in both terminals. It costs £7 per person when booked at least 24 hours ahead, or £8 at the entrance on the day. It is free for passengers booked with special assistance and up to two companions.</p>'
+    -
+      uuid: 2e208d87-11da-4c54-8843-4bc27f25d2ea
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: assistance-lane-title
+        headingLevel: h2
+    -
+      parent_uuid: 2e208d87-11da-4c54-8843-4bc27f25d2ea
+      slot: parts
+      uuid: d0d216f8-36cd-4e7d-ab31-60800e243b01
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: d0d216f8-36cd-4e7d-ab31-60800e243b01
+      slot: parts
+      uuid: de328765-feb5-4708-9ee1-599b1ea3ea68
+      component_id: js.heading
+      inputs:
+        text: 'Assistance lane'
+        level: h2
+        id: assistance-lane-title
+        size: sm
+    -
+      parent_uuid: d0d216f8-36cd-4e7d-ab31-60800e243b01
+      slot: parts
+      uuid: ac95d276-a0f4-4e9e-aaac-a889d781a82a
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Both terminals have an assistance lane at security. It is calmer, staff will take their time, and you can ask for help with trays and bags. You do not need to book. Just show a sunflower lanyard or tell a member of staff.</p>
+          <p><a href="/help/special-assistance">Special assistance</a></p>
+    -
+      uuid: be59c919-c352-434d-a7d2-b7ed21109646
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: arriving-passport-control-and-customs-title
+        headingLevel: h2
+    -
+      parent_uuid: be59c919-c352-434d-a7d2-b7ed21109646
+      slot: parts
+      uuid: dedb10de-c9e1-4990-8719-78784750e3f1
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: dedb10de-c9e1-4990-8719-78784750e3f1
+      slot: parts
+      uuid: 792c5303-f58c-440d-9cf1-e607527bc240
+      component_id: js.heading
+      inputs:
+        text: 'Arriving: passport control and customs'
+        level: h2
+        id: arriving-passport-control-and-customs-title
+        size: sm
+    -
+      parent_uuid: dedb10de-c9e1-4990-8719-78784750e3f1
+      slot: parts
+      uuid: 34a6d731-16a3-43cd-ae61-f476913a0ff7
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h3>Passport control</h3>
+          <p>Have your passport ready as you leave the aircraft. Eligible passport holders can use the automatic gates. Everyone else, and anyone travelling with young children, should use the staffed desks.</p>
+          <h3>Customs</h3>
+          <p>After baggage reclaim you walk through customs.</p>
+          <ul><li>Green channel: you have nothing to declare.</li><li>Red channel: you have goods over your allowance, or goods that are banned or restricted.</li></ul>
+          <p>Customs allowances are set by the government, not the airport. Check the official guidance before you buy anything abroad. If you are unsure, use the red channel and ask.</p>
+    -
+      uuid: 04e64238-52fb-41a9-8d17-1a0878051a5d
+      component_id: js.section
+      inputs:
+        last: true
+        tone: light
+        tag: section
+        labelledBy: security-questions-title
+        headingLevel: h2
+    -
+      parent_uuid: 04e64238-52fb-41a9-8d17-1a0878051a5d
+      slot: parts
+      uuid: 82c0165b-9fe2-4632-bd0d-bbe92ec0f61a
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 82c0165b-9fe2-4632-bd0d-bbe92ec0f61a
+      slot: parts
+      uuid: 2ae727ba-5535-4862-a1f7-9c230ccf0c68
+      component_id: js.heading
+      inputs:
+        text: 'Security questions'
+        level: h2
+        id: security-questions-title
+        size: sm
+    -
+      parent_uuid: 82c0165b-9fe2-4632-bd0d-bbe92ec0f61a
+      slot: parts
+      uuid: 96b6335b-c398-43e5-8905-1be993800bcf
+      component_id: js.prose
+      inputs:
+        body: '<p><a href="/help#faqs">Security FAQs</a></p>'
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /at-the-airport/security
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

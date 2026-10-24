@@ -1,0 +1,35 @@
+uuid: 261d8d6f-c83e-4bff-bd99-885295e4021e
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.facts
+  module:
+    - options
+active_version: 3cfe1a9b2ce45b2a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: default
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'Fact leaves, one per term and value pair.'
+label: Facts
+id: js.facts
+provider: null
+source: js
+source_local_id: facts
