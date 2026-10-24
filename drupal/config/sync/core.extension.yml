@@ -3,6 +3,7 @@ _core:
 module:
   block: 0
   canvas: 0
+  canvas_headless: 0
   canvas_oauth: 0
   canvas_page_template_component: 0
   ckeditor5: 0
@@ -32,6 +33,7 @@ module:
   text: 0
   update: 0
   user: 0
+  custom_elements: 10
   views: 10
   minimal: 1000
 theme:

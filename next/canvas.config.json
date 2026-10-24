@@ -1,0 +1,10 @@
+{
+  "componentDir": "components",
+  "aliasBaseDir": ".",
+  "globalCssPath": "public/assets/css/site.css",
+  "sync": {
+    "pages": false,
+    "contentTemplates": false,
+    "regions": false
+  }
+}

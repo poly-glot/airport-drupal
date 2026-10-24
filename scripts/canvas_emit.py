@@ -548,7 +548,7 @@ def notice_text(item):
 
 def emit_chrome(tree, home, current):
     soup = load_soup('index.html')
-    root = tree.add('theme_page_template.meridian', {})
+    root = None
     footer = BeautifulSoup((STATIC / 'partials' / 'footer.html').read_text(), 'html.parser')
     rewrite_links(footer, drupal_url)
     if home:

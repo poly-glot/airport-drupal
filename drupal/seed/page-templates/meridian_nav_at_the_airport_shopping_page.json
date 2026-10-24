@@ -6,14 +6,7 @@
  "component_tree": [
   {
    "uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
-   "component_id": "theme_page_template.meridian",
-   "inputs": {}
-  },
-  {
-   "uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
    "component_id": "sdc.meridian.site-header",
-   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
-   "slot": "header",
    "inputs": {
     "cta_label": "Book parking",
     "cta_href": "/parking",
@@ -22,9 +15,9 @@
    }
   },
   {
-   "uuid": "bd1c2235-95d4-4b07-ad66-8344ecdeaa07",
+   "uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Flights",
@@ -33,9 +26,9 @@
    }
   },
   {
-   "uuid": "e6f7fe8e-693f-44ec-9d25-98c03c0db21e",
+   "uuid": "bd1c2235-95d4-4b07-ad66-8344ecdeaa07",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Shop",
@@ -44,9 +37,9 @@
    }
   },
   {
-   "uuid": "36249304-726f-42ad-999f-96ddfddde412",
+   "uuid": "e6f7fe8e-693f-44ec-9d25-98c03c0db21e",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Parking",
@@ -55,9 +48,9 @@
    }
   },
   {
-   "uuid": "795254bd-9a23-4f15-84a5-27fde3cf78ca",
+   "uuid": "36249304-726f-42ad-999f-96ddfddde412",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Lounges",
@@ -66,9 +59,9 @@
    }
   },
   {
-   "uuid": "6afb4914-dddb-4d62-909b-d6bb5a5ccbbe",
+   "uuid": "795254bd-9a23-4f15-84a5-27fde3cf78ca",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Getting here",
@@ -77,9 +70,9 @@
    }
   },
   {
-   "uuid": "1cafafc7-8046-4b71-a475-a3879564b943",
+   "uuid": "6afb4914-dddb-4d62-909b-d6bb5a5ccbbe",
    "component_id": "sdc.meridian.nav-link",
-   "parent_uuid": "ea9be2e7-3be5-4e9f-a4fc-e40f1263d01c",
+   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
    "slot": "nav",
    "inputs": {
     "label": "Assistance",
@@ -88,17 +81,13 @@
    }
   },
   {
-   "uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
+   "uuid": "1cafafc7-8046-4b71-a475-a3879564b943",
    "component_id": "marker.page_content",
-   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
-   "slot": "content",
    "inputs": {}
   },
   {
-   "uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "component_id": "sdc.meridian.site-footer",
-   "parent_uuid": "e0074f6d-a8cf-488c-9d4d-0b98b2b5088a",
-   "slot": "footer",
    "inputs": {
     "enquiries": "Open 24 hours. Passenger enquiries",
     "phone": "0121 496 0123",
@@ -108,9 +97,9 @@
    }
   },
   {
-   "uuid": "cd1426ca-866b-422e-bd4b-a570e1e0721f",
+   "uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_flights",
    "inputs": {
     "label": "Live departures",
@@ -118,9 +107,9 @@
    }
   },
   {
-   "uuid": "f2d2f622-9768-423c-b795-b75dd3d540dd",
+   "uuid": "cd1426ca-866b-422e-bd4b-a570e1e0721f",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_flights",
    "inputs": {
     "label": "Live arrivals",
@@ -128,9 +117,9 @@
    }
   },
   {
-   "uuid": "35c4bec5-8884-46b3-b1e8-7e3c7781e8aa",
+   "uuid": "f2d2f622-9768-423c-b795-b75dd3d540dd",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_flights",
    "inputs": {
     "label": "Destinations",
@@ -138,9 +127,9 @@
    }
   },
   {
-   "uuid": "bc1d314c-6532-4248-833b-fa8b72d5b724",
+   "uuid": "35c4bec5-8884-46b3-b1e8-7e3c7781e8aa",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_flights",
    "inputs": {
     "label": "Flight alerts",
@@ -148,9 +137,9 @@
    }
   },
   {
-   "uuid": "911173b9-cf3f-40cf-8671-a90938e042a5",
+   "uuid": "bc1d314c-6532-4248-833b-fa8b72d5b724",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_shop",
    "inputs": {
     "label": "Reserve & collect",
@@ -158,9 +147,9 @@
    }
   },
   {
-   "uuid": "83edaafb-87b1-4202-8d87-f1a3f1d7ba1f",
+   "uuid": "911173b9-cf3f-40cf-8671-a90938e042a5",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_shop",
    "inputs": {
     "label": "Offers this week",
@@ -168,9 +157,9 @@
    }
   },
   {
-   "uuid": "8297821c-1534-49e2-8330-6db32e788a8f",
+   "uuid": "83edaafb-87b1-4202-8d87-f1a3f1d7ba1f",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_shop",
    "inputs": {
     "label": "Lounges & Fast Track",
@@ -178,9 +167,9 @@
    }
   },
   {
-   "uuid": "2ee2906f-bdf3-47ab-89e0-93b11258de20",
+   "uuid": "8297821c-1534-49e2-8330-6db32e788a8f",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_shop",
    "inputs": {
     "label": "Order-ahead food",
@@ -188,9 +177,9 @@
    }
   },
   {
-   "uuid": "584294bc-ec16-4ca6-b75b-42c78ca2c659",
+   "uuid": "2ee2906f-bdf3-47ab-89e0-93b11258de20",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_plan",
    "inputs": {
     "label": "Parking",
@@ -198,9 +187,9 @@
    }
   },
   {
-   "uuid": "8f071777-7a63-4e46-b97a-7d77691cbe02",
+   "uuid": "584294bc-ec16-4ca6-b75b-42c78ca2c659",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_plan",
    "inputs": {
     "label": "Getting here",
@@ -208,9 +197,9 @@
    }
   },
   {
-   "uuid": "237bd228-8163-4b95-9bb9-36f1af645d39",
+   "uuid": "8f071777-7a63-4e46-b97a-7d77691cbe02",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_plan",
    "inputs": {
     "label": "Special assistance",
@@ -218,9 +207,9 @@
    }
   },
   {
-   "uuid": "24ea5568-c4cf-40f7-858e-3946174c524b",
+   "uuid": "237bd228-8163-4b95-9bb9-36f1af645d39",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_plan",
    "inputs": {
     "label": "Travelling with children",
@@ -228,9 +217,9 @@
    }
   },
   {
-   "uuid": "5a3fd6b3-8b26-4c67-a8eb-0ca81ee4e983",
+   "uuid": "24ea5568-c4cf-40f7-858e-3946174c524b",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_company",
    "inputs": {
     "label": "Contact us",
@@ -238,9 +227,9 @@
    }
   },
   {
-   "uuid": "cafb0832-14d9-49d8-b216-dc6bebd79045",
+   "uuid": "5a3fd6b3-8b26-4c67-a8eb-0ca81ee4e983",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_company",
    "inputs": {
     "label": "Careers",
@@ -248,9 +237,9 @@
    }
   },
   {
-   "uuid": "f0fb42e2-b918-42b5-962a-674a06d2f093",
+   "uuid": "cafb0832-14d9-49d8-b216-dc6bebd79045",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_company",
    "inputs": {
     "label": "Media centre",
@@ -258,9 +247,9 @@
    }
   },
   {
-   "uuid": "4cd6cc05-b0cf-477d-8f81-163f58d309e4",
+   "uuid": "f0fb42e2-b918-42b5-962a-674a06d2f093",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "col_company",
    "inputs": {
     "label": "Sustainability",
@@ -268,9 +257,9 @@
    }
   },
   {
-   "uuid": "945a736b-65cd-43bb-b6d0-c81b1b7492ff",
+   "uuid": "4cd6cc05-b0cf-477d-8f81-163f58d309e4",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "legal",
    "inputs": {
     "label": "Accessibility",
@@ -278,9 +267,9 @@
    }
   },
   {
-   "uuid": "530976e4-1a1f-4a85-9b73-dd3d0f389263",
+   "uuid": "945a736b-65cd-43bb-b6d0-c81b1b7492ff",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "legal",
    "inputs": {
     "label": "Privacy",
@@ -288,9 +277,9 @@
    }
   },
   {
-   "uuid": "b9e6fdfb-9873-4e58-9344-fdd1958102fa",
+   "uuid": "530976e4-1a1f-4a85-9b73-dd3d0f389263",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "legal",
    "inputs": {
     "label": "Cookies",
@@ -298,9 +287,9 @@
    }
   },
   {
-   "uuid": "fdc327da-628f-4bec-ae73-b579a29badd1",
+   "uuid": "b9e6fdfb-9873-4e58-9344-fdd1958102fa",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "legal",
    "inputs": {
     "label": "Terms",
@@ -308,9 +297,9 @@
    }
   },
   {
-   "uuid": "6307d8b4-e3e7-47b8-81aa-6e07d80d7729",
+   "uuid": "fdc327da-628f-4bec-ae73-b579a29badd1",
    "component_id": "sdc.meridian.footer-link",
-   "parent_uuid": "73bc644d-04d3-4a38-8e71-8b5968c9ec3a",
+   "parent_uuid": "8d1fcb16-7cf7-4315-9382-04ca82834ebd",
    "slot": "legal",
    "inputs": {
     "label": "Site map",
