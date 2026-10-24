@@ -302,7 +302,7 @@ A form can be the card itself: `<form class="card card--padded form" …>` (the 
 
 ### 7.6 Dark board with tabs (`:target` pattern)
 
-The homepage board is the reference: copy `section.board` from `/index.html`. On `/flights/index.html` drop `board--overlapped` (that modifier only adds the 104px top padding needed under the hero's wait panel), keep panel ids `departures` and `arrivals`, give the board a heading that differs from the page `h1` ("Departures and arrivals"), extend each `tbody` to the 12 rows in `docs/copy/data.md`, and drop the `.board__foot` ghost button (it would point at the same page) but keep the legend.
+The homepage board is the reference: copy `section.board` from `/index.html`. On `/flights/index.html` drop `board--overlapped` (that modifier only adds the 104px top padding needed under the hero's wait panel), keep panel ids `departures` and `arrivals`, give the board a heading that differs from the page `h1` ("Departures and arrivals"), show 12 rows in each `tbody`, and drop the `.board__foot` ghost button (it would point at the same page) but keep the legend.
 
 ```html
 <section class="board tabs on-dark" id="live-flights" aria-labelledby="board-title">

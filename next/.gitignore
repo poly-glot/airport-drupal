@@ -45,4 +45,3 @@ next-env.d.ts
 /.canvas/
 test-results/
 playwright-report/
-.impeccable/hook.cache.json
