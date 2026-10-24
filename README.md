@@ -70,20 +70,28 @@ The homepage hero changes with the time of day and the weather. Twelve photo var
 
 ## Production
 
-Today `main` deploys Drupal only: service `airport-drupal` in `firebase-cloud-491613`, `europe-west2`, behind Firebase Hosting site `airport-drupal-junaid` for `airport.junaid.guru`. Each deploy runs the `airport-drupal-bootstrap` job: on an empty database `site:install --existing-config` then the content recipe, otherwise `drush deploy`; then `scripts/ensure-oauth.php` points `simple_oauth` at the keys the entrypoint wrote and upserts the `canvas-cli` consumer. Content is applied only on first install; after that it belongs to the editors.
+Two Cloud Run services in `firebase-cloud-491613`, `europe-west2`, both built from this repo on every push to `main` and both defined in `firebase-cloud` (`terraform/apps/airport-drupal.tf`):
 
-The Next app has no production deployment yet, and Hosting still rewrites every path to the Drupal service, which in decoupled mode serves the editor and the API, not the public pages. Merging this branch to `main` before the frontend service exists would take the public site down. See `docs/status.md`.
+| Service | Image | Serves |
+|---|---|---|
+| `airport-web` | `next/Dockerfile` (Next standalone, Node 24) | The public site. Firebase Hosting site `airport-drupal-junaid` rewrites every path of `airport.junaid.guru` to it. `CANVAS_SITE_URL` points it at `airport-drupal` |
+| `airport-drupal` | `drupal/Dockerfile` (FrankenPHP) | The Canvas editor, the content API and the admin. `CANVAS_FRONTEND_URL` tells Canvas Headless which frontend to preview through, overriding the `localhost:3000` in `config/sync` (`settings.cloudrun.php`) |
 
-Editors use the Canvas editor on the `run.app` URL: Hosting forwards no cookie except `__session`. The admin password lives in Secret Manager:
+The services reach each other on their deterministic URLs (`https://<service>-563789376070.europe-west2.run.app`), so neither waits for the other's Terraform output. `airport-web` caches each published page for 60 seconds and serves the stale copy while it refreshes, so a cold Drupal never holds up a visitor once a page is cached; draft previews always fetch live. Two Cloud Scheduler pings every 15 minutes keep both warm: `airport-web-warm` requests `/`, `airport-drupal-warm` requests the content API.
+
+Each deploy builds both images, deploys `airport-drupal`, runs the `airport-drupal-bootstrap` job (on an empty database `site:install --existing-config` then the content recipe, otherwise `drush deploy`; then `scripts/ensure-oauth.php`), updates the cron job, deploys `airport-web`, and finally deploys Hosting. Content is applied only on first install; after that it belongs to the editors.
+
+Editors use the Canvas editor on the `airport-drupal` `run.app` URL: Hosting forwards no cookie except `__session`. The editor previews through the `airport-web` `run.app` URL, in a Chromium browser. The admin password lives in Secret Manager:
 
 ```bash
 gcloud secrets versions access latest --secret airport-drupal-admin-pass --project firebase-cloud-491613
 ```
 
-Public files are the GCS bucket mounted at `web/sites/default/files`. `drush cron` runs as the `airport-drupal-cron` job. Rehearse the production image locally against an empty database before changing it:
+Public files are the GCS bucket mounted at `web/sites/default/files`. `drush cron` runs as the `airport-drupal-cron` job. Rehearse both production images locally against an empty database before changing them (then `docker run -d --network ddev_default -p 8090:8080` the Drupal image without the command, `docker run -d -p 3001:8080 -e CANVAS_SITE_URL=http://host.docker.internal:8090 airport-web:local`, and `PLAYWRIGHT_BASE_URL=http://127.0.0.1:3001 npm run test:e2e`):
 
 ```bash
 docker build -f drupal/Dockerfile -t airport-drupal:local .
+docker build -t airport-web:local next
 docker exec ddev-airport-drupal-db mysql -uroot -proot -e "CREATE DATABASE airport_probe; GRANT ALL ON airport_probe.* TO 'db'@'%';"
 docker run --rm --network ddev_default -e DRUPAL_DB_HOST=ddev-airport-drupal-db -e DRUPAL_DB_NAME=airport_probe -e DRUPAL_DB_USER=db -e DRUPAL_DB_PASSWORD=db \
   -e DRUPAL_HASH_SALT=$(openssl rand -hex 32) -e DRUPAL_ADMIN_PASS=admin -e DRUPAL_CANVAS_CLIENT_SECRET=probe \

@@ -1,3 +1,3 @@
 import { withCanvas } from '@drupal-canvas/headless-next/config';
 
-export default withCanvas({ htmlLimitedBots: /.*/ });
+export default withCanvas({ htmlLimitedBots: /.*/, output: 'standalone' });

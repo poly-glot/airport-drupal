@@ -6,7 +6,7 @@
       {
         "source": "**",
         "run": {
-          "serviceId": "airport-drupal",
+          "serviceId": "airport-web",
           "region": "europe-west2"
         }
       }

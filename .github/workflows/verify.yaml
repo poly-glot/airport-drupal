@@ -46,8 +46,6 @@ jobs:
         options: --health-cmd="mysqladmin ping -h 127.0.0.1" --health-interval=5s --health-retries=20
         ports:
           - 3306:3306
-    env:
-      CANVAS_SITE_URL: http://127.0.0.1:8080
     steps:
       - uses: actions/checkout@v4
       - run: docker build -f drupal/Dockerfile -t airport-drupal:ci .
@@ -71,6 +69,9 @@ jobs:
           airport-drupal:ci meridian-bootstrap
       - run: docker run -d --network host --env-file "$RUNNER_TEMP/drupal.env" airport-drupal:ci
       - run: timeout 60 sh -c 'until curl -fs http://127.0.0.1:8080/health.php; do sleep 1; done'
+      - run: docker build -t airport-web:ci next
+      - run: docker run -d --network host -e PORT=3000 -e CANVAS_SITE_URL=http://127.0.0.1:8080 airport-web:ci
+      - run: timeout 60 sh -c 'until curl -fs http://127.0.0.1:3000/api/health; do sleep 1; done'
       - uses: actions/setup-node@v4
         with:
           cache: npm
@@ -78,12 +79,7 @@ jobs:
           node-version: '24'
       - run: npm ci
         working-directory: next
-      - run: npm run build
-        working-directory: next
       - run: npx playwright install --with-deps chromium
         working-directory: next
-      - run: |
-          npm start &
-          timeout 60 sh -c 'until curl -fs http://127.0.0.1:3000/ > /dev/null; do sleep 1; done'
-          npm run test:e2e
+      - run: npm run test:e2e
         working-directory: next

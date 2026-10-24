@@ -45,4 +45,9 @@ $settings['trusted_host_patterns'] = array_filter([
   $public_host ? '^' . preg_quote($public_host, '/') . '$' : NULL,
 ]);
 
+$frontend_url = getenv('CANVAS_FRONTEND_URL');
+if ($frontend_url) {
+  $config['canvas_headless.settings']['frontends'] = [['url' => $frontend_url, 'components' => []]];
+}
+
 require __DIR__ . '/settings.meridian.php';

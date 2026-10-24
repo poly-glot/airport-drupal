@@ -1,6 +1,8 @@
 import CanvasComponentTree from '@drupal-canvas/headless-next/CanvasComponentTree';
 import { fetchPage, isPageRedirect, toNextMetadata } from '@drupal-canvas/headless-next';
+import { fetchPage as fetchPublishedPage } from '@drupal-canvas/headless/server';
 import type { Metadata } from 'next';
+import { unstable_cache } from 'next/cache';
 import { draftMode } from 'next/headers';
 import { notFound, permanentRedirect, redirect } from 'next/navigation';
 import { cache } from 'react';
@@ -12,7 +14,17 @@ interface CatchAllPageProps {
     params: Promise<{ slug?: string[] }>;
 }
 
-const getPage = cache((path: string) => fetchPage(path));
+const PUBLISHED_PAGE_SECONDS = 60;
+
+const getPublishedPage = unstable_cache(
+    (path: string) => fetchPublishedPage(path, { baseUrl: process.env.CANVAS_SITE_URL ?? '' }),
+    ['canvas-published-page'],
+    { revalidate: PUBLISHED_PAGE_SECONDS },
+);
+
+const getPage = cache(async (path: string) =>
+    (await draftMode()).isEnabled ? fetchPage(path) : getPublishedPage(path),
+);
 
 async function getPath(params: CatchAllPageProps['params']) {
     const { slug } = await params;

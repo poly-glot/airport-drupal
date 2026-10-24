@@ -6,7 +6,7 @@ On `spike/nextjs-headless` the public site is the Next.js app in `next/`, and Dr
 
 - Image: no `python3`, no `seed/`, no theme, no `static/assets`. The bootstrap job installs from `config/sync`, applies `recipes/meridian_content` on an empty database only, otherwise runs `drush deploy`, then `ensure-oauth.php`. The seed pusher and decision 4 (seed on every deploy) are retired: content belongs to editors after the first install.
 - Workflows: `parity.yaml` is gone with the static contract. `verify.yaml` lints, type-checks and builds `next/`, validates `composer.json` and lints `ensure-oauth.php`.
-- Not built: a Cloud Run service for `next/`, the Hosting rewrite pointing at it, and a production value for `canvas_headless.settings` frontends (`docs/status.md`). Until they exist this branch must not reach `main`.
+- Two services: `airport-web` (Next standalone image from `next/Dockerfile`, runtime account `airport-web-runtime` with log writing only, up to 2 instances, warmed every 15 minutes) serves the public site behind Hosting; `airport-drupal` serves the editor and the content API. Each finds the other on its deterministic `run.app` URL (`CANVAS_SITE_URL`, `CANVAS_FRONTEND_URL`), so the Terraform has no dependency cycle. The deploy workflow builds and deploys both; the existing CI service account deploys `airport-web` through its project-wide Cloud Run roles. One image for both was rejected: PHP and Node in one container need a supervisor, share scaling and cold starts, and couple every deploy.
 
 The rest of this document is the record of the original Drupal-rendered deployment.
 

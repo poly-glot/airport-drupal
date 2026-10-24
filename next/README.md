@@ -4,17 +4,19 @@ Next.js 16 app on the Drupal Canvas Headless SDK (`@drupal-canvas/headless-next`
 
 ## Run
 
+Production runs the standalone build from `Dockerfile` (port 8080; `/api/health` answers without touching Drupal). Never run `npm run build` in the folder a dev server is using: the build replaces `.next` underneath it and the dev server starts failing with client-manifest errors.
+
 ```bash
 cp .env.example .env
 npm install
 npm run dev
 ```
 
-`CANVAS_SITE_URL` in `.env` is the whole configuration. `npm run check` runs eslint and tsc; `npm run build` is the production build.
+`CANVAS_SITE_URL` in `.env` is the whole configuration. `npm run check` runs eslint, stylelint, Prettier and tsc; `npm run test:e2e` runs the Playwright smoke, axe and behaviour tests.
 
 ## How a page renders
 
-1. `app/[[...slug]]/page.tsx` calls `fetchPage(path)`, which asks Drupal's `/canvas/content-api` what the path resolves to. The answer is a tree of elements named `js-<machineName>` with props and slots, plus `head` (title and description, from Metatag) and `context`.
+1. `app/[[...slug]]/page.tsx` asks Drupal's `/canvas/content-api` what the path resolves to: published pages through the SDK's cookie-free `fetchPage` wrapped in `unstable_cache` (60 seconds, stale while it refreshes), draft previews through the adapter's draft-aware `fetchPage`, never cached. The answer is a tree of elements named `js-<machineName>` with props and slots, plus `head` (title and description, from Metatag) and `context`.
 2. `lib/page-regions.ts` splits the root of the tree by component: `notice-bar` and `site-header` before `<main id="main" tabindex="-1">`, `site-footer` after, everything else inside. The page template in Drupal (`canvas.page_variant.*`) holds the chrome and a `marker.page_content` where the page goes.
 3. Each region renders through `CanvasComponentTree`, which looks components up in the registry `withCanvas()` generates from `components/*/component.yml` (`.canvas/components.ts`, not committed).
 4. In draft mode (inside the editor) the whole tree renders unsplit through `CanvasComponentTree`, which adds the markers the editor uses to select components.

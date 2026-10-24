@@ -4,11 +4,11 @@ What is open, then the record of what was settled. Open items are the honest lis
 
 ## Open
 
-- **No production frontend.** The Next app has no Cloud Run service and Firebase Hosting still rewrites every path to the Drupal service, which in decoupled mode serves the editor and API only. Needed before `spike/nextjs-headless` can reach `main`: a Cloud Run service built from `next/` with `CANVAS_SITE_URL` set to the Drupal service URL, the Hosting rewrite pointed at it, and the production frontend URL registered in `canvas_headless.settings`. That setting is in `config/sync` as `http://localhost:3000`, so production needs a per-environment override (for example `$config['canvas_headless.settings']['frontends']` in `settings.cloudrun.php`).
 - **Drupal's own front end.** The default theme is Stark. Anyone who opens a page on the Drupal host sees it unstyled. Decide whether the Drupal host should redirect page routes to the frontend.
 - **`canvas_headless` is experimental** in Canvas 1.12: APIs, hooks and configuration may change without a deprecation path. Editor preview over plain HTTP works in Chromium only.
 - **Slot restrictions are not enforced.** Canvas 1.12 ignores a slot's `expected` children, and code component slots cannot declare it. The `meridian_slots` module that enforced it for SDCs is gone, so an editor can put any component in any slot.
 - **Behaviours after an edit in the editor.** `useEnhance` runs once per element. A component whose DOM React replaces after an edit (for example a notice added to the bar) is not re-enhanced until the preview reloads. The published site is unaffected.
+- **Published edits reach visitors within about a minute**, not instantly: `airport-web` caches each published page for 60 seconds. On-demand revalidation when an editor publishes would remove the lag.
 - **Content changes after the first install** are not deployed by the recipe: it is applied once, by the bootstrap job, on an empty database. Later content travels by editing in production, or by a migration.
 - The flight-search "When" select has three hard-coded dates (3, 4, 5 October 2026) and the city-rail "1 – 3 / 4" count is literal. Decide whether they become props.
 - Flights and notices are leaf components on the pages, not content types with Views.

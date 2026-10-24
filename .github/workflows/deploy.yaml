@@ -7,6 +7,7 @@ on:
 
 env:
   IMAGE: europe-west2-docker.pkg.dev/firebase-cloud-491613/firebase-cloud/${{ github.event.repository.name }}
+  WEB_IMAGE: europe-west2-docker.pkg.dev/firebase-cloud-491613/firebase-cloud/airport-web
   PROJECT: firebase-cloud-491613
   REGION: europe-west2
 
@@ -26,6 +27,8 @@ jobs:
       - run: gcloud auth configure-docker europe-west2-docker.pkg.dev --quiet
       - run: docker build --platform linux/amd64 -f drupal/Dockerfile -t "$IMAGE:${{ github.sha }}" -t "$IMAGE:latest" .
       - run: docker push --all-tags "$IMAGE"
+      - run: docker build --platform linux/amd64 -t "$WEB_IMAGE:${{ github.sha }}" -t "$WEB_IMAGE:latest" next
+      - run: docker push --all-tags "$WEB_IMAGE"
       - run: >-
           gcloud run deploy "${{ github.event.repository.name }}"
           --image "$IMAGE:${{ github.sha }}"
@@ -47,6 +50,12 @@ jobs:
       - run: >-
           gcloud run jobs update "${{ github.event.repository.name }}-cron"
           --image "$IMAGE:${{ github.sha }}"
+          --project "$PROJECT"
+          --region "$REGION"
+          --quiet
+      - run: >-
+          gcloud run deploy airport-web
+          --image "$WEB_IMAGE:${{ github.sha }}"
           --project "$PROJECT"
           --region "$REGION"
           --quiet
