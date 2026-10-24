@@ -30,4 +30,5 @@ jobs:
         with:
           php-version: '8.3'
       - run: composer validate --working-dir=drupal --no-check-publish
-      - run: php -l scripts/ensure-oauth.php
+      - run: composer install --working-dir=drupal --no-interaction --no-progress
+      - run: composer quality --working-dir=drupal

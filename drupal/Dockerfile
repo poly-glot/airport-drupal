@@ -29,7 +29,7 @@ COPY drupal/web/sites/default/settings.meridian.php ./web/sites/default/settings
 COPY drupal/web/sites/default/settings.cloudrun.php ./web/sites/default/settings.php
 
 COPY drupal/config ./config
-COPY scripts/ensure-oauth.php ./scripts/
+COPY drupal/scripts ./scripts
 
 RUN mkdir -p private web/sites/default/files web/sites/default/assets /tmp/caddy-config /tmp/caddy-data \
     && chmod -R a+rX /app \

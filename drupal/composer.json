@@ -105,5 +105,24 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/coder": "^9.0",
+        "mglaman/phpstan-drupal": "^2.2",
+        "palantirnet/drupal-rector": "^1.1",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.3",
+        "phpstan/phpstan-deprecation-rules": "^2.0"
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "phpstan": "phpstan analyse --no-progress --memory-limit=1G",
+        "rector-dry": "rector process --dry-run --no-progress-bar",
+        "quality": [
+            "@cs-check",
+            "@phpstan",
+            "@rector-dry"
+        ]
     }
 }

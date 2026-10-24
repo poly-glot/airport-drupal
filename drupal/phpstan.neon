@@ -1,0 +1,7 @@
+parameters:
+    level: 8
+    paths:
+        - scripts
+        - docker/health.php
+        - web/sites/default/settings.cloudrun.php
+        - web/sites/default/settings.meridian.php
