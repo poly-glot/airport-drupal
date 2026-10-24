@@ -1,0 +1,5 @@
+name: 'Meridian revalidate'
+type: module
+description: 'Tells the Next.js frontend to drop its cached pages when a Canvas page or page template is saved.'
+package: Meridian
+core_version_requirement: ^11

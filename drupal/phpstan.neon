@@ -2,6 +2,7 @@ parameters:
     level: 8
     paths:
         - scripts
+        - web/modules/custom
         - docker/health.php
         - web/sites/default/settings.cloudrun.php
         - web/sites/default/settings.meridian.php

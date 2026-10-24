@@ -16,7 +16,7 @@ npm run dev
 
 ## How a page renders
 
-1. `app/[[...slug]]/page.tsx` asks Drupal's `/canvas/content-api` what the path resolves to: published pages through the SDK's cookie-free `fetchPage` wrapped in `unstable_cache` (60 seconds, stale while it refreshes), draft previews through the adapter's draft-aware `fetchPage`, never cached. The answer is a tree of elements named `js-<machineName>` with props and slots, plus `head` (title and description, from Metatag) and `context`.
+1. `app/[[...slug]]/page.tsx` asks Drupal's `/canvas/content-api` what the path resolves to: published pages through the SDK's cookie-free `fetchPage` wrapped in `unstable_cache` under the `canvas-published-pages` tag (expired at once by `POST /api/revalidate` with `Authorization: Bearer $REVALIDATE_SECRET`, which Drupal's `meridian_revalidate` module sends on every publish; otherwise after an hour), draft previews through the adapter's draft-aware `fetchPage`, never cached. The answer is a tree of elements named `js-<machineName>` with props and slots, plus `head` (title and description, from Metatag) and `context`.
 2. `lib/page-regions.ts` splits the root of the tree by component: `notice-bar` and `site-header` before `<main id="main" tabindex="-1">`, `site-footer` after, everything else inside. The page template in Drupal (`canvas.page_variant.*`) holds the chrome and a `marker.page_content` where the page goes.
 3. Each region renders through `CanvasComponentTree`, which looks components up in the registry `withCanvas()` generates from `components/*/component.yml` (`.canvas/components.ts`, not committed).
 4. In draft mode (inside the editor) the whole tree renders unsplit through `CanvasComponentTree`, which adds the markers the editor uses to select components.

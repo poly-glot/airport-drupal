@@ -21,6 +21,7 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->paths([
         __DIR__ . '/scripts',
+        __DIR__ . '/web/modules/custom',
         __DIR__ . '/docker/health.php',
         __DIR__ . '/web/sites/default/settings.cloudrun.php',
         __DIR__ . '/web/sites/default/settings.meridian.php',
