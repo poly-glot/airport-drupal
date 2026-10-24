@@ -1,0 +1,14 @@
+uuid: e7cb999e-3fdf-42fb-b06a-468f2705501d
+langcode: en
+status: true
+dependencies: {  }
+machineName: accordion
+name: Accordion
+type: external
+required: {  }
+props: {  }
+slots:
+  items:
+    title: Items
+    description: 'Accordion items, one per question.'
+dataDependencies: {  }

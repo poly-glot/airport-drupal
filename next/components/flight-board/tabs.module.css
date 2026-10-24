@@ -1,0 +1,68 @@
+.list {
+    align-items: flex-end;
+    display: flex;
+    gap: 6px;
+}
+
+.tab {
+    align-items: center;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    color: var(--board-muted);
+    display: inline-flex;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    gap: 10px;
+    margin-bottom: -1px;
+    min-height: 56px;
+    padding: 0 26px;
+    text-decoration: none;
+}
+
+.tab:hover {
+    color: var(--white);
+}
+
+.tab[aria-selected='true'],
+.root:not([data-tabs-enhanced], :has(.panel:target)) .tab:first-child,
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(1):target) .tab:nth-child(1),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(2):target) .tab:nth-child(2),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(3):target) .tab:nth-child(3),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(4):target) .tab:nth-child(4) {
+    background: var(--board-panel);
+    border-color: var(--on-dark-rule);
+    color: var(--white);
+}
+
+.tabIcon {
+    flex-shrink: 0;
+}
+
+.panel {
+    display: none;
+    scroll-margin-top: 120px;
+}
+
+.root:not([data-tabs-enhanced]) .panel:target,
+.root:not([data-tabs-enhanced], :has(.panel:target)) .panel:first-child,
+.root[data-tabs-enhanced] .panel {
+    display: block;
+}
+
+.panel:focus {
+    outline: none;
+}
+
+@media (width <= 900px) {
+    .list {
+        gap: 4px;
+    }
+
+    .tab {
+        font-size: 15px;
+        min-height: 50px;
+        padding: 0 18px;
+    }
+}

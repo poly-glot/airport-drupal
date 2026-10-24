@@ -1,9 +1,0 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
-name: Accordion
-status: stable
-group: Meridian · Inner pages
-description: Ruled disclosure list for FAQs. Holds accordion-item children.
-slots:
-  items:
-    title: Items
-    description: Accordion items, one per question.

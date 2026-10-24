@@ -1,0 +1,279 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.note {
+    background: var(--sand);
+    color: var(--ink);
+    font-size: 14px;
+    padding: 12px 16px;
+}
+
+.actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rule {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+}
+
+.small {
+    color: var(--grey-2);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fieldLabel {
+    color: var(--ink-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fieldLabelCaps {
+    color: var(--grey-2);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.fieldMarker {
+    font-weight: 400;
+}
+
+.fieldHint {
+    color: var(--grey-2);
+    font-size: 13px;
+}
+
+.fieldError {
+    color: var(--bad-ink);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fieldControl {
+    position: relative;
+}
+
+.fieldIcon {
+    color: var(--icon-grey);
+    left: 14px;
+    pointer-events: none;
+    position: absolute;
+    top: 15px;
+}
+
+.fieldInput {
+    background: var(--white);
+    border: 1px solid var(--line-input);
+    border-radius: var(--radius-input);
+    color: var(--ink);
+    font-size: 15px;
+    min-height: 48px;
+    padding: 0 14px;
+    width: 100%;
+}
+
+.fieldInput::placeholder {
+    color: var(--icon-grey);
+    opacity: 1;
+}
+
+.fieldInput:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
+
+.fieldInput[aria-invalid='true'] {
+    border-color: var(--bad);
+}
+
+.fieldInputSoft {
+    border-radius: var(--radius-button-lg);
+}
+
+.fieldInputWithIcon {
+    padding-left: 42px;
+}
+
+.fieldInputDark {
+    background: var(--on-dark-field);
+    border-color: var(--on-dark-rule);
+    color: var(--white);
+}
+
+.fieldInputDark::placeholder {
+    color: var(--board-muted);
+}
+
+.fieldInputDark:focus {
+    outline-color: var(--white);
+}
+
+.fieldInputMultiline {
+    line-height: 1.5;
+    min-height: 132px;
+    padding: 10px 14px;
+    resize: vertical;
+}
+
+.fieldGrid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+}
+
+.fieldsetInline {
+    column-gap: 20px;
+    flex-flow: row wrap;
+}
+
+.fieldsetLegend {
+    color: var(--grey-2);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.check {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    gap: 10px;
+    min-height: 44px;
+}
+
+.checkInput {
+    accent-color: var(--brand);
+    flex-shrink: 0;
+    height: 18px;
+    margin: 0;
+    width: 18px;
+}
+
+.choice {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+    display: flex;
+    gap: 14px;
+    min-height: 44px;
+    padding: 14px 0;
+}
+
+.choiceText {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.choiceTitle,
+.choicePrice {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.choiceMeta {
+    color: var(--grey-2);
+    font-size: 13px;
+}
+
+.choicePrice {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.searchCard {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-hero-card);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-self: end;
+    max-width: 440px;
+    padding: 22px 24px 24px;
+    width: 100%;
+}
+
+.searchCardTabs {
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 22px;
+}
+
+.searchCardTab {
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    color: var(--grey-2);
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: -1px;
+    min-height: 44px;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
+.searchCardTab:hover {
+    border-bottom-color: var(--line-input);
+    color: var(--brand);
+}
+
+.searchCardTabCurrent {
+    border-bottom-color: var(--brand);
+    color: var(--brand);
+    font-weight: 700;
+}
+
+.searchCardSubmit {
+    border-radius: var(--radius-button-lg);
+    min-height: 50px;
+}
+
+@media (width <= 900px) {
+    .root {
+        gap: 16px;
+    }
+
+    .fieldGrid {
+        gap: 10px;
+    }
+
+    .searchCard {
+        gap: 12px;
+        max-width: none;
+        padding: 14px 16px 16px;
+    }
+
+    .searchCardTabs {
+        gap: 18px;
+    }
+}

@@ -1,0 +1,40 @@
+uuid: 3a79ec12-5146-4d79-af77-c7ffd0f55e73
+langcode: en
+status: true
+dependencies: {  }
+machineName: heading
+name: Heading
+type: external
+required:
+  - text
+props:
+  text:
+    type: string
+    title: 'Heading text'
+    examples:
+      - 'Reading the board'
+  level:
+    type: string
+    enum:
+      - h2
+      - h3
+      - h4
+    title: Level
+    examples:
+      - h2
+  size:
+    type: string
+    enum:
+      - default
+      - sm
+      - card
+    title: Size
+    examples:
+      - sm
+  id:
+    type: string
+    title: Id
+    examples:
+      - reading-the-board-title
+slots: {  }
+dataDependencies: {  }

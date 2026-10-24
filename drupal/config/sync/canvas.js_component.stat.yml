@@ -1,0 +1,23 @@
+uuid: a3dba837-4809-4333-a832-49f5c4662dc3
+langcode: en
+status: true
+dependencies: {  }
+machineName: stat
+name: Stat
+type: external
+required:
+  - label
+  - value
+props:
+  label:
+    type: string
+    title: 'Small label above the value'
+    examples:
+      - 'Closest walk'
+  value:
+    type: string
+    title: 'Large value'
+    examples:
+      - '2 min'
+slots: {  }
+dataDependencies: {  }

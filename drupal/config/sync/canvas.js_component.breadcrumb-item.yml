@@ -1,0 +1,28 @@
+uuid: 6039bcf8-0602-4eb3-9c14-33132825c6d2
+langcode: en
+status: true
+dependencies: {  }
+machineName: breadcrumb-item
+name: 'Breadcrumb item'
+type: external
+required:
+  - label
+props:
+  label:
+    type: string
+    title: 'Crumb text'
+    examples:
+      - Home
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /
+  current:
+    type: boolean
+    title: 'Current page'
+    examples:
+      - false
+slots: {  }
+dataDependencies: {  }

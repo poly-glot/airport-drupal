@@ -2,17 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(ddev:*)",
-      "Bash(python3 scripts/*)",
-      "Bash(.venv/bin/python scripts/*)",
-      "Bash(PORT_BASE_URL=* .venv/bin/python scripts/*)",
-      "Bash(PORT_BASE_URL=* python3 scripts/*)",
-      "Bash(node scripts/screens.mjs:*)",
-      "Bash(npx canvas:*)",
+      "Bash(npm run check)",
+      "Bash(npm run lint)",
+      "Bash(npm run type-check)",
+      "Bash(npm run build)",
+      "Bash(.venv/bin/python scripts/hero_contrast.py:*)",
+      "Bash(python3 scripts/contrast.py:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(sed -n:*)",
       "Bash(curl -s:*)",
-      "Bash(python3 -m http.server 8788 -d static)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)"

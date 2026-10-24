@@ -1,0 +1,23 @@
+uuid: 614112b1-b6f1-4f16-b0a3-f9ac4ac1afd3
+langcode: en
+status: true
+dependencies: {  }
+machineName: callout
+name: Callout
+type: external
+required:
+  - body
+props:
+  title:
+    type: string
+    title: 'Callout heading'
+    examples:
+      - 'Please note'
+  body:
+    type: string
+    contentMediaType: text/html
+    title: 'Callout text'
+    examples:
+      - '<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>'
+slots: {  }
+dataDependencies: {  }

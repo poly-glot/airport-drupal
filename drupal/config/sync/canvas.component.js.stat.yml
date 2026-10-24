@@ -1,0 +1,42 @@
+uuid: b9b5a60d-b1f3-432c-9801-1c85faef975b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.stat
+active_version: e1513ba59f905627
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Closest walk'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        value:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2 min'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Stat
+id: js.stat
+provider: null
+source: js
+source_local_id: stat

@@ -1,0 +1,51 @@
+uuid: 972348a2-1e0f-45ce-aa79-6f636d4b6fb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.breadcrumb
+active_version: 3cc25f30e3a526bf
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        onDark:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'One breadcrumb item per crumb, the last one current.'
+  9c1779d22ebb0c63:
+    settings:
+      prop_field_definitions:
+        on_dark:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'One breadcrumb item per crumb, the last one current.'
+label: Breadcrumb
+id: js.breadcrumb
+provider: null
+source: js
+source_local_id: breadcrumb

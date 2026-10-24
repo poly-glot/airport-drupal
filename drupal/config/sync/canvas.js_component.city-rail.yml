@@ -1,0 +1,46 @@
+uuid: deea84d3-2686-4665-a6de-51ba19088652
+langcode: en
+status: true
+dependencies: {  }
+machineName: city-rail
+name: 'City rail'
+type: external
+required:
+  - title
+props:
+  title:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'Where we fly'
+  subtitle:
+    type: string
+    title: 'Second line of the heading'
+    examples:
+      - 'Find your next holiday'
+  linkLabel:
+    type: string
+    title: 'Link text on the right'
+    examples:
+      - 'View all 112 destinations'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/flights/airlines#destinations'
+  anchor:
+    type: string
+    title: 'Anchor id'
+    examples:
+      - explore
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - explore-title
+slots:
+  cards:
+    title: Cards
+    description: 'City cards, one per rail item.'
+dataDependencies: {  }

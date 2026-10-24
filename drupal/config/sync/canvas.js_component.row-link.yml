@@ -1,0 +1,38 @@
+uuid: 2a9af3ed-2e15-4d36-a131-481755722766
+langcode: en
+status: true
+dependencies: {  }
+machineName: row-link
+name: 'Row link'
+type: external
+required:
+  - title
+  - href
+props:
+  icon:
+    type: string
+    enum:
+      - train
+      - car
+      - bus
+    title: Icon
+    examples:
+      - train
+  title:
+    type: string
+    title: 'Row heading'
+    examples:
+      - 'By train'
+  meta:
+    type: string
+    title: 'Line under the row heading'
+    examples:
+      - '18 min from Central · lifts from platform to check-in'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/getting-here#train'
+slots: {  }
+dataDependencies: {  }

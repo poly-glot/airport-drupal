@@ -1,0 +1,74 @@
+uuid: 25eca87b-b98c-4309-a546-792cb08f42b4
+langcode: en
+status: true
+dependencies: {  }
+machineName: tower
+name: Tower
+type: external
+required:
+  - number
+  - icon
+  - title
+  - ctaLabel
+  - href
+  - imageSrc
+props:
+  number:
+    type: string
+    title: 'Corner number'
+    examples:
+      - '01'
+  icon:
+    type: string
+    enum:
+      - security
+      - eat-and-drink
+      - baggage
+      - maps
+    title: Icon
+    examples:
+      - security
+  title:
+    type: string
+    title: 'Tower heading'
+    examples:
+      - 'Security and customs'
+  body:
+    type: string
+    title: 'Tower text'
+    examples:
+      - 'New scanners in Terminal 1: liquids and laptops stay in your bag. Arrive two hours before short-haul, three for long-haul.'
+  ctaLabel:
+    type: string
+    title: 'Link text at the bottom'
+    examples:
+      - 'What to expect'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /at-the-airport/security
+  imageSrc:
+    type: string
+    title: 'Image stem'
+    description: 'Image path including the width suffix and no extension.'
+    examples:
+      - /assets/img/airport/tower-security-560
+  imageAlt:
+    type: string
+    title: 'Image alt text'
+    examples:
+      - 'Photograph at Meridian Airport'
+  imageWidth:
+    type: integer
+    title: 'Image width'
+    examples:
+      - 560
+  imageHeight:
+    type: integer
+    title: 'Image height'
+    examples:
+      - 840
+slots: {  }
+dataDependencies: {  }

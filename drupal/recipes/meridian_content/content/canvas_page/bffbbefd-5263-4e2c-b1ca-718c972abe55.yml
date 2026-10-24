@@ -1,0 +1,207 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: bffbbefd-5263-4e2c-b1ca-718c972abe55
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Accessibility
+  description:
+    -
+      value: 'Accessibility statement for the Meridian Airport website: how it meets WCAG 2.2 level AA, how we test it, known limitations and how to report a problem.'
+  components:
+    -
+      uuid: f26aef96-6062-4a1c-8f03-a117d414214e
+      component_id: js.page-hero
+      inputs:
+        title: Accessibility
+        intro: 'How this website meets WCAG 2.2 level AA, and what to do if something does not work for you.'
+        variant: sky
+    -
+      parent_uuid: f26aef96-6062-4a1c-8f03-a117d414214e
+      slot: breadcrumb
+      uuid: 5cbbd6cc-8602-4878-b7a6-5074706f5bee
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 5cbbd6cc-8602-4878-b7a6-5074706f5bee
+      slot: items
+      uuid: 0d6a591d-049d-4157-be81-9ed75e1d9781
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 5cbbd6cc-8602-4878-b7a6-5074706f5bee
+      slot: items
+      uuid: 37a491ac-8bef-4d21-9d8c-3a575bb4608a
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Accessibility
+        current: true
+    -
+      uuid: b361a9e8-bb16-4ffe-a016-6b1c8292a105
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: div
+        headingLevel: h2
+    -
+      parent_uuid: b361a9e8-bb16-4ffe-a016-6b1c8292a105
+      slot: parts
+      uuid: 1eba22ec-6ab8-4b85-96f4-e5ac7b4a1745
+      component_id: js.callout
+      inputs:
+        title: 'Please note'
+        body: '<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>'
+    -
+      uuid: c2a660a1-ac80-4757-8dda-d21ed594eeeb
+      component_id: js.section
+      inputs:
+        anchor: using-this-website
+        tone: light
+        tag: section
+        labelledBy: using-this-website-title
+        headingLevel: h2
+    -
+      parent_uuid: c2a660a1-ac80-4757-8dda-d21ed594eeeb
+      slot: parts
+      uuid: 3da43d35-5527-47aa-9422-e7688cbc0ed6
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="using-this-website-title">Using this website</h2>
+          <p>We want as many people as possible to be able to use this website. You should be able to:</p>
+          <ul><li>zoom in up to 400% without text spilling off the screen or content being lost</li><li>use the whole site with a keyboard only, with a visible focus outline on every link, button and form field</li><li>navigate with a screen reader, using headings, landmarks and a skip link to the main content</li><li>use the site with JavaScript turned off, including the flight board and travel notices</li><li>turn off animation, using your device's reduced motion setting</li></ul>
+          <p>For help at the airport itself, see Special assistance.</p>
+          <p><a href="/help/special-assistance">Special assistance</a></p>
+    -
+      uuid: 81c84ca7-95dc-4357-8253-d95b05b239eb
+      component_id: js.section
+      inputs:
+        anchor: conformance-status
+        tone: light
+        tag: section
+        labelledBy: conformance-status-title
+        headingLevel: h2
+    -
+      parent_uuid: 81c84ca7-95dc-4357-8253-d95b05b239eb
+      slot: parts
+      uuid: b9df8114-77fe-4101-919e-d3c2c46eb57d
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="conformance-status-title">Conformance status</h2>
+          <p>This website is designed to conform fully to the Web Content Accessibility Guidelines (WCAG) version 2.2 at level AA. Where we know of a limitation, we list it below.</p>
+    -
+      uuid: 5163baa3-6d58-443c-9e2a-adb34dc9a0a0
+      component_id: js.section
+      inputs:
+        anchor: what-we-have-done
+        tone: light
+        tag: section
+        labelledBy: what-we-have-done-title
+        headingLevel: h2
+    -
+      parent_uuid: 5163baa3-6d58-443c-9e2a-adb34dc9a0a0
+      slot: parts
+      uuid: a54b9718-af97-4e14-950f-a88a3d389202
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="what-we-have-done-title">What we have done</h2>
+          <ul><li>Every page has one main heading, headings in order, and landmarks for the header, navigation, main content and footer.</li><li>Text and interactive elements meet the AA colour contrast ratios. We calculated every colour pair rather than judging by eye.</li><li>Flight statuses use a word as well as a coloured dot, so nothing relies on colour alone.</li><li>Every form field has a visible label, and optional fields are marked in words.</li><li>Main buttons and links are at least 44 by 44 pixels, and every other control is at least 24 by 24 pixels.</li><li>Maps and illustrations that carry information have a text description. Decorative images are hidden from screen readers.</li><li>Photographs have alternative text that describes what they show.</li><li>Tables have header cells, so screen readers announce the column for each value.</li><li>Links make sense on their own. Where the visible text is short, such as "Read more", hidden text adds the context.</li></ul>
+    -
+      uuid: 01488df8-d083-4e4d-bdae-ec520fcadade
+      component_id: js.section
+      inputs:
+        anchor: how-we-tested
+        tone: light
+        tag: section
+        labelledBy: how-we-tested-title
+        headingLevel: h2
+    -
+      parent_uuid: 01488df8-d083-4e4d-bdae-ec520fcadade
+      slot: parts
+      uuid: 0928fab5-d970-47b3-b47b-1e33c1dd6776
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="how-we-tested-title">How we tested</h2>
+          <p>We tested this website on 3 October 2026. Every page was:</p>
+          <ul><li>checked with an automated HTML validator</li><li>checked with an automated accessibility tool against WCAG 2.2 level AA</li><li>checked by hand with a keyboard only, at desktop and mobile widths, in an up-to-date desktop browser</li></ul>
+          <p>Automated tools cannot find every problem, so we also reviewed headings, link text, focus order and form errors by hand.</p>
+    -
+      uuid: e75fca53-4822-4315-beb4-86a482a5911b
+      component_id: js.section
+      inputs:
+        anchor: known-limitations
+        tone: light
+        tag: section
+        labelledBy: known-limitations-title
+        headingLevel: h2
+    -
+      parent_uuid: e75fca53-4822-4315-beb4-86a482a5911b
+      slot: parts
+      uuid: ea02e4d4-049a-4aca-906d-45812d3eb2a4
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="known-limitations-title">Known limitations</h2>
+          <ul><li><strong>Live information.</strong> The flight board plays a short, scripted set of gate and status changes when the page opens, then stops. Screen readers announce each change. Security wait times and travel notices are a fixed example and do not update.</li><li><strong>Schematic maps.</strong> The airport and terminal maps are simplified drawings. The same information is given in the text next to each map.</li><li><strong>Demonstration forms.</strong> Forms on this site do not send what you type anywhere. Required fields are checked by your browser, so the wording of those messages depends on the browser you use.</li><li><strong>Links to other sites.</strong> Some links, such as airline booking and social media links, go nowhere in this demonstration. They are marked as not available.</li></ul>
+    -
+      uuid: 0bbe358a-ad94-4d21-8012-c4155072cda3
+      component_id: js.section
+      inputs:
+        anchor: report-a-problem
+        tone: light
+        tag: section
+        labelledBy: report-a-problem-title
+        headingLevel: h2
+    -
+      parent_uuid: 0bbe358a-ad94-4d21-8012-c4155072cda3
+      slot: parts
+      uuid: 03579bf7-9acb-48c8-95c2-ed43e961a4d9
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="report-a-problem-title">Report a problem</h2>
+          <p>If you find something on this website that does not work for you, tell us. Say which page, what you were trying to do, and what device and assistive technology you use.</p>
+          <ul><li>Email: <a href="mailto:hello@meridianairport.example">hello@meridianairport.example</a></li><li>Phone: <a href="tel:+441214960123">0121 496 0123</a>, every day 05:00–23:00</li><li>Post: Meridian Airport, Skyline Way, Birmingham B99 1MA</li></ul>
+          <p>We will reply within 5 working days. If you need information from this website in another format, such as large print or audio, ask and we will send it within 10 working days.</p>
+    -
+      uuid: ffa56014-c81d-4763-b2f6-9646051820bc
+      component_id: js.section
+      inputs:
+        anchor: preparation-of-this-statement
+        last: true
+        tone: light
+        tag: section
+        labelledBy: preparation-of-this-statement-title
+        headingLevel: h2
+    -
+      parent_uuid: ffa56014-c81d-4763-b2f6-9646051820bc
+      slot: parts
+      uuid: 75d6ae40-dc1f-4035-bd5d-42ff10aafd36
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="preparation-of-this-statement-title">Preparation of this statement</h2>
+          <p>This statement was prepared on 3 October 2026 and last reviewed on 3 October 2026. We review it whenever the website changes significantly, and at least once a year.</p>
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /accessibility
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

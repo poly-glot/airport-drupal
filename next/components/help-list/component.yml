@@ -1,0 +1,44 @@
+name: Help list
+machineName: help-list
+status: true
+required: []
+props:
+    properties:
+        title:
+            title: Section heading
+            type: string
+            examples:
+                - Help for the day you fly
+        linkLabel:
+            title: Link text on the right
+            type: string
+            examples:
+                - All passenger services
+        linkHref:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /help
+        variant:
+            title: Variant
+            type: string
+            enum:
+                - band
+                - plain
+            examples:
+                - band
+        anchor:
+            title: Anchor id
+            type: string
+            examples:
+                - help
+        titleId:
+            title: Heading id
+            type: string
+            examples:
+                - help-title
+slots:
+    items:
+        title: Items
+        description: Help items, one per row. Only help-item components belong here.

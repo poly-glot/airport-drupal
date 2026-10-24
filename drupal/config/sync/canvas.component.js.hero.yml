@@ -1,0 +1,115 @@
+uuid: deae9e04-2eaa-4d3d-8b66-7e3f581341b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.hero
+  module:
+    - options
+active_version: 5384b47a5b49d997
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Welcome to Meridian Airport'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        intro:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Your gateway to 112 destinations. Check your flight'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        defaultWeather:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: rainy
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        signs:
+          title: Signs
+          description: 'Hero sign leaves, the quick links under the intro.'
+        aside:
+          title: Aside
+          description: 'The white search card (form kind flight-search).'
+        wait:
+          title: 'Wait panel'
+          description: 'The wait panel that floats over the bottom edge of the hero.'
+  9976665c6476ffac:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Welcome to Meridian Airport'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        intro:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Your gateway to 112 destinations. Check your flight'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        default_weather:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: rainy
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        signs:
+          title: Signs
+          description: 'Hero sign leaves, the quick links under the intro.'
+        aside:
+          title: Aside
+          description: 'The white search card (form kind flight-search).'
+        wait:
+          title: 'Wait panel'
+          description: 'The wait panel that floats over the bottom edge of the hero.'
+label: Hero
+id: js.hero
+provider: null
+source: js
+source_local_id: hero

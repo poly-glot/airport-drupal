@@ -7,19 +7,23 @@ description: Use to review components or pages for compliance with docs/design/s
 
 Read `docs/components.md`, `docs/design/spec.md` and `docs/status.md` first. A review is read-only: report fixes with file and line, do not make them unless asked. Never write a comment in any file.
 
-## 1. Grep battery
+## 1. Probes
 
-Run the block in `CLAUDE.md` from the repo root. Anything printed is a defect, except a hex copied from a static CSS file that is already there (verify with `grep -n '<hex>' static/assets/css/components/*.css`). Add these review-only probes; each hit is a candidate, judge it against the spec:
+Run `cd next && npm run check` first; anything it prints is a defect. Then these review probes from the repo root; each hit is a candidate, judge it against the spec:
 
 ```bash
-T=drupal/web/themes/custom/meridian/components
+T=next/components
+grep -rnE '#[0-9a-fA-F]{3,8}\b' $T --include=*.css --include=*.tsx
 grep -rnE 'border-radius' $T --include=*.css
 grep -rnE 'border-(left|inline-start)' $T --include=*.css
 grep -rnE 'transition[^;]*(shadow|transform)|:hover[^{]*\{[^}]*(transform|shadow)' $T --include=*.css
 grep -rnE 'linear-gradient|radial-gradient' $T --include=*.css
-grep -rnE ' style="' $T --include=*.twig
+grep -rnE 'style=\{' $T --include=*.tsx
+grep -rnE '//|/\*' $T next/lib next/app
 grep -rnP '[\x{1F300}-\x{1FAFF}\x{2600}-\x{27BF}]' $T
 ```
+
+A hex is allowed only in `next/styles/tokens.css` and the eight board palette variables at the top of `next/components/flight-board/index.module.css`, which the original board stylesheet defined.
 
 ## 2. Spec checks
 
@@ -30,16 +34,16 @@ grep -rnP '[\x{1F300}-\x{1FAFF}\x{2600}-\x{27BF}]' $T
 - Colour (§6): tokens only; status is dot or square plus a word; sand only for callouts and map accents.
 - Inner-page vocabulary (§7): the component chosen is the highest in the order of preference that fits. A rounded shadowed card in the page plane is never right.
 - Forms (§8): 48 to 50px inputs, `--line-input` border, radius 6, flat block max-width 720.
-- Imagery (§9): no rounded photo corners in the page plane; hero text assets pass `scripts/hero_contrast.py`.
+- Imagery (§9): no rounded photo corners in the page plane; hero text assets pass `.venv/bin/python scripts/hero_contrast.py`.
 - Rhythm (§10): one h1 per page.
 
 ## 3. Derivation and structure
 
-- Each component README names the static file and element and the governing spec rule. "Carried from v1" fails.
-- Directory holds only the five permitted files; Twig keeps every static class, `aria-*`, `id`, `hidden`, `data-*`; root has `{{ attributes }}`.
-- component.yml: every prop has `title` and `examples`; no `array` or `object` props; groups are the four named groups.
-- JS and CSS are generated: `python3 scripts/sync_static.py --check` prints `theme css and js match static`.
-- No comments in any file, no editorial text in Twig.
+- The component's derivation is stated (homepage element or spec rule). "It was in v1" fails.
+- Directory holds `component.yml`, `index.tsx` and `index.module.css` (plus `partials/` or `maps/` where one component renders fixed variants). Module classes are camelCase; only the utilities and the button, text-link and status families are global. `aria-*`, `id`, `hidden` and the `data-*` hooks the behaviours read are present.
+- component.yml: camelCase names, every prop has `title` and `examples`; no `array` or `object` props.
+- Another component's classes come from importing its module, not copied rules.
+- No comments in any file, no editorial text in components.
 
 ## 4. Slop tells (docs/design/spec.md)
 

@@ -1,0 +1,20 @@
+.root {
+    align-items: center;
+    border-radius: var(--radius-button-lg);
+    display: inline-flex;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+}
+
+.ok {
+    background: var(--chip-ok-bg);
+    color: var(--chip-ok-fg);
+}
+
+.warn {
+    background: var(--chip-warn-bg);
+    color: var(--chip-warn-fg);
+}

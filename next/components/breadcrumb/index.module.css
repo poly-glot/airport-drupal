@@ -1,0 +1,51 @@
+.root {
+    padding-top: 20px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 4px 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    align-items: center;
+    color: var(--grey-2);
+    display: inline-flex;
+    gap: 8px;
+}
+
+.item + .item::before {
+    color: var(--grey-2);
+    content: '/';
+    content: '/' / '';
+}
+
+.link {
+    align-items: center;
+    color: var(--ink-muted);
+    display: inline-flex;
+    min-height: 24px;
+    text-underline-offset: 3px;
+}
+
+.onDark {
+    padding-top: 0;
+}
+
+.onDark .item,
+.onDark .item + .item::before {
+    color: var(--board-muted);
+}
+
+.onDark .link {
+    color: var(--on-dark-meta);
+}
+
+.onDark .link:hover {
+    color: var(--white);
+}

@@ -1,0 +1,579 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 26af21c9-cfeb-42c3-8b71-769007243882
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Flights, parking and travel information'
+  description:
+    -
+      value: 'Live flights, security wait times and parking at Meridian Airport, Birmingham. Check everything before you leave the house.'
+  components:
+    -
+      uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      component_id: js.hero
+      inputs:
+        title: 'Welcome to Meridian Airport'
+        intro: 'Your gateway to 112 destinations. Check your flight, pre-book parking and reserve duty free to collect at the gate.'
+        defaultWeather: rainy
+    -
+      parent_uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      slot: signs
+      uuid: 5dd49b99-542a-4e4c-8c9c-2b44853ca827
+      component_id: js.hero-sign
+      inputs:
+        icon: shop
+        title: 'Reserve duty free'
+        meta: 'Collect at your gate'
+        href: /at-the-airport/shopping
+    -
+      parent_uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      slot: signs
+      uuid: 34df9686-ee06-4bb6-be7e-744927c80850
+      component_id: js.hero-sign
+      inputs:
+        icon: parking
+        title: 'Book parking'
+        meta: 'From £8.50 a day'
+        href: /parking
+    -
+      parent_uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      slot: signs
+      uuid: 520ab97e-303f-492f-8cc9-658ad2898940
+      component_id: js.hero-sign
+      inputs:
+        icon: fast-track
+        title: 'Fast Track'
+        meta: '£7 · skip the queue'
+        href: /at-the-airport/lounges
+    -
+      parent_uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      slot: aside
+      uuid: 4261b384-bbce-4615-a14a-f4508fb09545
+      component_id: js.form
+      inputs:
+        kind: flight-search
+    -
+      parent_uuid: 1e35b7b4-7705-4a96-b3dc-9baae289a1c5
+      slot: wait
+      uuid: d365e65f-f956-4a81-bf23-ffc704a076dd
+      component_id: js.wait-panel
+      inputs:
+        updated: '09:42'
+        roadStatus: 'Running normally'
+    -
+      parent_uuid: d365e65f-f956-4a81-bf23-ffc704a076dd
+      slot: chips
+      uuid: 37c8eb81-3e6b-4031-915f-1b0cde807191
+      component_id: js.wait-chip
+      inputs:
+        label: 'Terminal 1'
+        minutes: 8
+        tone: ok
+    -
+      parent_uuid: d365e65f-f956-4a81-bf23-ffc704a076dd
+      slot: chips
+      uuid: c1f805c9-ee89-423c-824b-db8ca8468360
+      component_id: js.wait-chip
+      inputs:
+        label: 'Terminal 2'
+        minutes: 22
+        tone: warn
+    -
+      uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      component_id: js.flight-board
+      inputs:
+        title: 'Live flights'
+        titleId: live-flights-title
+        meta: 'refreshes every minute · gates shown from 60 min before departure'
+        clockTime: '09:42'
+        overlapped: true
+        showSearch: true
+        departuresSearchLabel: 'Search departures by flight or city'
+        arrivalsSearchLabel: 'Search arrivals by flight or city'
+        departuresCaption: Departures
+        arrivalsCaption: Arrivals
+        allDeparturesLabel: 'All departures'
+        allDeparturesHref: '/flights#departures'
+        allArrivalsLabel: 'All arrivals'
+        allArrivalsHref: '/flights#arrivals'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: c9c4833a-44a6-4237-b15f-7f7cd7454be2
+      component_id: js.flight-row
+      inputs:
+        time: '10:05'
+        place: Lisbon
+        flight: 'MA 204'
+        terminal: T1
+        gate: '12'
+        status: boarding
+        note: 'Closes 10:20'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: eaeab4c8-7803-426f-91ee-6087595365e2
+      component_id: js.flight-row
+      inputs:
+        time: '10:20'
+        place: Reykjavík
+        flight: 'NV 118'
+        terminal: T2
+        gate: '24'
+        status: delayed
+        note: 'New time 10:58 · fog'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: ca52feb6-1377-47a7-be0f-12ca322825fd
+      component_id: js.flight-row
+      inputs:
+        time: '10:35'
+        place: Amsterdam
+        flight: 'MA 310'
+        terminal: T1
+        gate: '7'
+        status: gate-open
+        note: ''
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: 2586559a-655d-4c8f-9ddd-9356ead1f435
+      component_id: js.flight-row
+      inputs:
+        time: '10:50'
+        place: Marrakech
+        flight: 'ZX 762'
+        terminal: T2
+        gate: '31'
+        status: on-time
+        note: ''
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: 42e52576-78f7-4950-bca2-e5e45bd2e33e
+      component_id: js.flight-row
+      inputs:
+        time: '11:10'
+        place: Dublin
+        flight: 'MA 522'
+        terminal: T1
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: on-time
+        note: 'Gate at 10:10'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: departures
+      uuid: 9d2e354b-5eb4-4e5b-9747-1a6382aab621
+      component_id: js.flight-row
+      inputs:
+        time: '11:25'
+        place: Geneva
+        flight: 'KW 1430'
+        terminal: T2
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: cancelled
+        note: 'Rebook at desk 14 or in app'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: 3d8d6854-53a9-443a-b4d6-54000a203999
+      component_id: js.flight-row
+      inputs:
+        time: '09:48'
+        place: Lisbon
+        flight: 'MA 205'
+        terminal: T1
+        gate: '3'
+        status: landed
+        note: 'Exit: Arrivals A'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: b67c3598-5a2c-4d58-9f95-7cce18495053
+      component_id: js.flight-row
+      inputs:
+        time: '09:55'
+        place: Marrakech
+        flight: 'ZX 761'
+        terminal: T2
+        gate: '6'
+        status: landed
+        note: 'Exit: Arrivals B'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: 10cdc5df-bb9b-4a18-9ca4-d54767fc8fce
+      component_id: js.flight-row
+      inputs:
+        time: '10:10'
+        place: Reykjavík
+        flight: 'NV 117'
+        terminal: T2
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: delayed
+        note: 'Expected 10:40'
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: 2d4072a9-217f-4f28-87d6-4b1d160d0c39
+      component_id: js.flight-row
+      inputs:
+        time: '10:30'
+        place: Amsterdam
+        flight: 'MA 311'
+        terminal: T1
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: expected
+        note: ''
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: 77035a26-34ca-4f5f-b27e-a9042115f232
+      component_id: js.flight-row
+      inputs:
+        time: '10:45'
+        place: Geneva
+        flight: 'KW 1429'
+        terminal: T2
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: expected
+        note: ''
+    -
+      parent_uuid: 699c2962-f165-45f9-a741-b53c834c3196
+      slot: arrivals
+      uuid: c0e57851-8683-46b3-a424-3a2588c38020
+      component_id: js.flight-row
+      inputs:
+        time: '11:00'
+        place: Dublin
+        flight: 'MA 523'
+        terminal: T1
+        gate: —
+        gateLabel: 'Not shown yet'
+        status: expected
+        note: ''
+    -
+      uuid: f94b8641-c49c-4a34-bd17-9367f66553d6
+      component_id: js.photo-band
+      inputs:
+        title: 'Park at the terminal from £8.50 a day'
+        intro: 'Three car parks, all step-free to check-in. Pre-booked rates are up to 40% below drive-up, with free cancellation until 24 hours before you arrive.'
+        variant: band
+        headingLevel: h2
+        anchor: parking
+        titleId: parking-title
+        linkLabel: 'Compare all car parks and the map'
+        linkHref: '/parking#compare'
+        imageSrc: /assets/img/home/parking-1440
+        imageWidth: 1440
+        imageHeight: 810
+    -
+      parent_uuid: f94b8641-c49c-4a34-bd17-9367f66553d6
+      slot: facts
+      uuid: e68a1fe3-932e-457e-9f90-5e955c2a6e19
+      component_id: js.stat
+      inputs:
+        label: 'Closest walk'
+        value: '2 min'
+    -
+      parent_uuid: f94b8641-c49c-4a34-bd17-9367f66553d6
+      slot: facts
+      uuid: d2abd942-2fc9-43c5-acc4-813bb25527ea
+      component_id: js.stat
+      inputs:
+        label: 'Pick-up wait'
+        value: '10 min free'
+    -
+      parent_uuid: f94b8641-c49c-4a34-bd17-9367f66553d6
+      slot: facts
+      uuid: cbe6dbc1-01ea-40f9-9f85-c98d1e25aa44
+      component_id: js.stat
+      inputs:
+        label: Drop-off
+        value: £3
+    -
+      parent_uuid: f94b8641-c49c-4a34-bd17-9367f66553d6
+      slot: aside
+      uuid: f9c3af07-b86e-43d8-93d6-014c1abb7cce
+      component_id: js.form
+      inputs:
+        kind: parking
+        compact: true
+    -
+      uuid: 821297a1-d1e3-42bf-a55f-41284dd9d249
+      component_id: js.city-rail
+      inputs:
+        title: 'Where we fly'
+        subtitle: 'Find your next holiday'
+        linkLabel: 'View all 112 destinations'
+        linkHref: '/flights/airlines#destinations'
+        anchor: explore
+        titleId: explore-title
+    -
+      parent_uuid: 821297a1-d1e3-42bf-a55f-41284dd9d249
+      slot: cards
+      uuid: 098d024f-1dbf-414b-89a4-a2c7d59489ea
+      component_id: js.city-card
+      inputs:
+        city: Cairo
+        meta: 'from £189 · 5h 10m · daily'
+        href: /destinations
+        variant: rail
+        imageSrc: /assets/img/cities/cairo-714
+        imageWidth: 714
+        imageHeight: 1040
+    -
+      parent_uuid: 821297a1-d1e3-42bf-a55f-41284dd9d249
+      slot: cards
+      uuid: c98c7376-cf3d-4f19-b7d2-45ee019b2775
+      component_id: js.city-card
+      inputs:
+        city: 'New York'
+        meta: 'from £329 · 8h 05m · twice daily'
+        href: /destinations
+        variant: rail
+        imageSrc: /assets/img/cities/new-york-714
+        imageWidth: 714
+        imageHeight: 1040
+    -
+      parent_uuid: 821297a1-d1e3-42bf-a55f-41284dd9d249
+      slot: cards
+      uuid: 3608eb57-8dd8-40a8-9d97-6e635057e66c
+      component_id: js.city-card
+      inputs:
+        city: Beijing
+        meta: 'from £449 · 10h 30m · 4 a week'
+        href: /destinations
+        variant: rail
+        imageSrc: /assets/img/cities/beijing-714
+        imageWidth: 714
+        imageHeight: 1040
+    -
+      parent_uuid: 821297a1-d1e3-42bf-a55f-41284dd9d249
+      slot: cards
+      uuid: 3b8fd321-8d1b-4a0d-83c8-8dcbc7640cdc
+      component_id: js.city-card
+      inputs:
+        city: Singapore
+        meta: 'from £479 · 13h 15m · daily'
+        href: /destinations
+        variant: rail
+        imageSrc: /assets/img/cities/singapore-714
+        imageWidth: 714
+        imageHeight: 1040
+    -
+      uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      component_id: js.help-list
+      inputs:
+        title: 'Help for the day you fly'
+        linkLabel: 'All passenger services'
+        linkHref: /help
+        variant: band
+        anchor: help
+        titleId: help-title
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: 5e7abf34-805b-4889-a9a0-4ebfbfd391ca
+      component_id: js.help-item
+      inputs:
+        icon: assistance
+        title: 'Special assistance'
+        body: 'Help from kerb to gate, step-free routes and sunflower lanyards. Book up to 48 hours before and we confirm within the hour.'
+        href: /help/special-assistance
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: c63475a8-be14-42f3-b8c8-3459905af826
+      component_id: js.help-item
+      inputs:
+        icon: children
+        title: 'Travelling with children'
+        body: 'Family security lane, prams to the aircraft door, baby-change in every zone and play areas by gates 12 and 30.'
+        href: /help/travelling-with-children
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: 3049b3b3-060f-4b32-bd0a-43a6cc7aca24
+      component_id: js.help-item
+      inputs:
+        icon: first-flight
+        title: 'First time flying?'
+        body: 'Check-in, bag drop, security, gate: a five-step walkthrough with how long each takes today.'
+        href: /help/first-time-flying
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: 79121c7e-e0db-4dd5-b9fd-b63498dcf986
+      component_id: js.help-item
+      inputs:
+        icon: alerts
+        title: 'Flight alerts'
+        body: 'Gate changes, delays and boarding calls by text or WhatsApp the moment they happen. Free.'
+        href: /flights/alerts
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: 37e0bd05-cc99-4ac9-9f11-c930c9be2c12
+      component_id: js.help-item
+      inputs:
+        icon: lost-property
+        title: 'Lost property'
+        body: 'Report a lost item in two minutes and track it. Most bags are reunited the same day.'
+        href: '/help/baggage-and-lost-property#lost-property'
+    -
+      parent_uuid: b71c0806-56ce-4072-9d4c-9f4468eb9b06
+      slot: items
+      uuid: e26d5e31-520a-401b-a5be-8687b9af7076
+      component_id: js.help-item
+      inputs:
+        icon: contact
+        title: 'Info and contacts'
+        body: 'Passenger enquiries 05:00–23:00 on 0121 496 0123, live chat in the app, and help desks in both terminals.'
+        href: /help
+    -
+      uuid: 7c739343-dca9-43f2-b689-04d88ef581eb
+      component_id: js.tower-grid
+      inputs:
+        title: 'At the airport'
+        intro: 'Everything between the door and the gate.'
+        linkLabel: 'Terminal maps'
+        linkHref: '/at-the-airport#maps'
+        anchor: at-the-airport
+        titleId: airport-title
+    -
+      parent_uuid: 7c739343-dca9-43f2-b689-04d88ef581eb
+      slot: towers
+      uuid: 21d60fba-e5ca-476d-aa0f-54316685f784
+      component_id: js.tower
+      inputs:
+        number: '01'
+        icon: security
+        title: 'Security and customs'
+        body: 'New scanners in Terminal 1: liquids and laptops stay in your bag. Arrive two hours before short-haul, three for long-haul.'
+        ctaLabel: 'What to expect'
+        href: /at-the-airport/security
+        imageSrc: /assets/img/airport/tower-security-560
+        imageWidth: 560
+        imageHeight: 840
+    -
+      parent_uuid: 7c739343-dca9-43f2-b689-04d88ef581eb
+      slot: towers
+      uuid: 5f8c0142-5097-49eb-b07c-c44003f32669
+      component_id: js.tower
+      inputs:
+        number: '02'
+        icon: eat-and-drink
+        title: 'Eat and drink'
+        body: '24 cafés, restaurants and bars across both terminals. Order ahead and your coffee is waiting after security.'
+        ctaLabel: 'Order ahead'
+        href: /at-the-airport/eat-and-drink
+        imageSrc: /assets/img/airport/tower-eat-and-drink-560
+        imageWidth: 560
+        imageHeight: 840
+    -
+      parent_uuid: 7c739343-dca9-43f2-b689-04d88ef581eb
+      slot: towers
+      uuid: 00ea9bfb-3f64-4af0-a74e-31581fcc8b55
+      component_id: js.tower
+      inputs:
+        number: '03'
+        icon: baggage
+        title: 'Baggage and lost property'
+        body: 'Allowances by airline, what you can carry, and how to report and track a lost item. Most bags are reunited the same day.'
+        ctaLabel: 'Read more'
+        href: /help/baggage-and-lost-property
+        imageSrc: /assets/img/airport/tower-baggage-560
+        imageWidth: 560
+        imageHeight: 840
+    -
+      parent_uuid: 7c739343-dca9-43f2-b689-04d88ef581eb
+      slot: towers
+      uuid: 987139df-fc14-480b-8ef1-64a07869fb16
+      component_id: js.tower
+      inputs:
+        number: '04'
+        icon: maps
+        title: 'Terminal maps'
+        body: 'Shops, lounges, lifts, baby-change and every gate on an interactive map of both terminals.'
+        ctaLabel: 'Open the map'
+        href: '/at-the-airport#maps'
+        imageSrc: /assets/img/airport/tower-maps-560
+        imageWidth: 560
+        imageHeight: 840
+    -
+      uuid: af1908a7-25db-4572-b87b-e1f81b94722b
+      component_id: js.getting-here
+      inputs:
+        title: 'Getting here'
+        intro: 'Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.'
+        noteLead: 'Step-free throughout.'
+        note: 'Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.'
+        noteIcon: step-free
+        anchor: getting-here
+        titleId: getting-here-title
+    -
+      parent_uuid: af1908a7-25db-4572-b87b-e1f81b94722b
+      slot: rows
+      uuid: ac02ae7b-1c34-4b9a-b820-af8f0f5e5bc8
+      component_id: js.row-link
+      inputs:
+        icon: train
+        title: 'By train'
+        meta: '18 min from Central · lifts from platform to check-in'
+        href: '/getting-here#train'
+    -
+      parent_uuid: af1908a7-25db-4572-b87b-e1f81b94722b
+      slot: rows
+      uuid: 5e30dda1-b56a-4b06-a439-48a84f0b6cf9
+      component_id: js.row-link
+      inputs:
+        icon: car
+        title: 'By car or taxi'
+        meta: 'Drop-off £3 at the door, or free for 10 min at Mid-Stay'
+        href: '/getting-here#car'
+    -
+      parent_uuid: af1908a7-25db-4572-b87b-e1f81b94722b
+      slot: rows
+      uuid: 7d58380b-3be3-4d25-b177-9c9f9ed0176b
+      component_id: js.row-link
+      inputs:
+        icon: bus
+        title: 'By bus or coach'
+        meta: 'Routes, timetables and the coach station'
+        href: '/getting-here#bus'
+    -
+      parent_uuid: af1908a7-25db-4572-b87b-e1f81b94722b
+      slot: map
+      uuid: faf4b43d-ec60-48fc-95b1-da3e9e661160
+      component_id: js.map-pane
+      inputs:
+        name: 'Meridian Airport'
+        address: 'Terminal 1, Birmingham B99 1MA'
+        directionsHref: /getting-here
+        largerHref: '/at-the-airport#maps'
+  page_variant:
+    -
+      value: meridian_home
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

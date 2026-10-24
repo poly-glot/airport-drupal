@@ -1,0 +1,18 @@
+uuid: af022c45-f39d-4afd-99d8-e13ebce27377
+langcode: en
+status: true
+dependencies: {  }
+machineName: prose
+name: Prose
+type: external
+required:
+  - body
+props:
+  body:
+    type: string
+    contentMediaType: text/html
+    title: 'Body copy'
+    examples:
+      - '<p>The airport runs 24 hours, so many roles are shift-based. We publish rotas 6 weeks ahead and you can swap shifts with colleagues through the staff app.</p>'
+slots: {  }
+dataDependencies: {  }

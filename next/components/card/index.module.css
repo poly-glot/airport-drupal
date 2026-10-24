@@ -1,0 +1,38 @@
+.root {
+    background: var(--white);
+    border: 1px solid var(--line);
+    color: var(--ink);
+}
+
+.padded {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 32px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.text {
+    color: var(--grey-2);
+    font-size: 14px;
+}
+
+@media (width <= 900px) {
+    .padded {
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}

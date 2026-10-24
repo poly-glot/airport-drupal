@@ -1,0 +1,42 @@
+name: Site header
+machineName: site-header
+status: true
+required:
+    - ctaLabel
+    - ctaHref
+    - basketHref
+    - basketLabel
+props:
+    properties:
+        ctaLabel:
+            title: Call to action label
+            type: string
+            examples:
+                - Book parking
+        ctaHref:
+            title: Call to action link
+            type: string
+            format: uri-reference
+            examples:
+                - /parking
+        basketHref:
+            title: Basket link
+            type: string
+            format: uri-reference
+            examples:
+                - /at-the-airport/shopping
+        basketLabel:
+            title: Basket label
+            type: string
+            examples:
+                - Basket
+                - 0 items
+        brandCurrent:
+            title: Lockup is the current page
+            type: boolean
+            examples:
+                - true
+slots:
+    nav:
+        title: Navigation
+        description: Nav link leaves, one per main menu item.

@@ -1,0 +1,8 @@
+name: Ruled list
+machineName: ruled-list
+status: true
+required: []
+slots:
+    items:
+        title: Items
+        description: Row links, one per row.

@@ -1,8 +1,0 @@
-<div{{ attributes.addClass('table-wrap') }}>
-<table class="table">
-{% if caption|default(false) %}
-<caption class="{{ caption_hidden|default(false) ? 'visually-hidden' : 'table__caption' }}">{{ caption }}</caption>
-{% endif %}
-{{ body|raw }}
-</table>
-</div>

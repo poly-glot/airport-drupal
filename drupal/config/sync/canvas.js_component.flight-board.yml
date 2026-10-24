@@ -1,0 +1,94 @@
+uuid: bf49f8e3-9da7-4da1-a106-880731196ffe
+langcode: en
+status: true
+dependencies: {  }
+machineName: flight-board
+name: 'Flight board'
+type: external
+required:
+  - title
+  - titleId
+  - clockTime
+props:
+  title:
+    type: string
+    title: 'Board heading'
+    examples:
+      - 'Live flights'
+  titleId:
+    type: string
+    title: 'Title id'
+    description: 'Id of the heading, referenced by aria-labelledby.'
+    examples:
+      - live-flights-title
+  meta:
+    type: string
+    title: 'Line under the heading, after "Updated hh:mm · "'
+    description: 'Text after "Updated hh:mm · ".'
+    examples:
+      - 'refreshes every minute · gates shown from 60 min before departure'
+  clockTime:
+    type: string
+    title: 'Clock time'
+    examples:
+      - '09:42'
+  overlapped:
+    type: boolean
+    title: 'Overlap the section above'
+    examples:
+      - true
+  showSearch:
+    type: boolean
+    title: 'Show search'
+    examples:
+      - true
+  departuresSearchLabel:
+    type: string
+    title: 'Departures search label'
+    examples:
+      - 'Search departures by flight or city'
+  arrivalsSearchLabel:
+    type: string
+    title: 'Arrivals search label'
+    examples:
+      - 'Search arrivals by flight or city'
+  departuresCaption:
+    type: string
+    title: 'Departures table caption'
+    examples:
+      - Departures
+  arrivalsCaption:
+    type: string
+    title: 'Arrivals table caption'
+    examples:
+      - Arrivals
+  allDeparturesLabel:
+    type: string
+    title: 'All departures button label'
+    examples:
+      - 'All departures'
+  allDeparturesHref:
+    type: string
+    format: uri-reference
+    title: 'All departures link'
+    examples:
+      - '/flights#departures'
+  allArrivalsLabel:
+    type: string
+    title: 'All arrivals button label'
+    examples:
+      - 'All arrivals'
+  allArrivalsHref:
+    type: string
+    format: uri-reference
+    title: 'All arrivals link'
+    examples:
+      - '/flights#arrivals'
+slots:
+  departures:
+    title: Departures
+    description: 'Flight rows for the departures table.'
+  arrivals:
+    title: Arrivals
+    description: 'Flight rows for the arrivals table.'
+dataDependencies: {  }

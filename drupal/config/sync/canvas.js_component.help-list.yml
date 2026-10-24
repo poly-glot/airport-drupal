@@ -1,0 +1,48 @@
+uuid: f1f95833-2d53-4cc3-9620-3777d16f2ae7
+langcode: en
+status: true
+dependencies: {  }
+machineName: help-list
+name: 'Help list'
+type: external
+required: {  }
+props:
+  title:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'Help for the day you fly'
+  linkLabel:
+    type: string
+    title: 'Link text on the right'
+    examples:
+      - 'All passenger services'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /help
+  variant:
+    type: string
+    enum:
+      - band
+      - plain
+    title: Variant
+    examples:
+      - band
+  anchor:
+    type: string
+    title: 'Anchor id'
+    examples:
+      - help
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - help-title
+slots:
+  items:
+    title: Items
+    description: 'Help items, one per row. Only help-item components belong here.'
+dataDependencies: {  }

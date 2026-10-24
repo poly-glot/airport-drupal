@@ -1,0 +1,22 @@
+name: Wait panel
+machineName: wait-panel
+status: true
+required:
+    - updated
+    - roadStatus
+props:
+    properties:
+        updated:
+            title: Updated time, after "updated "
+            type: string
+            examples:
+                - 09:42
+        roadStatus:
+            title: Roads and rail status
+            type: string
+            examples:
+                - Running normally
+slots:
+    chips:
+        title: Chips
+        description: Wait chip leaves, one per terminal.

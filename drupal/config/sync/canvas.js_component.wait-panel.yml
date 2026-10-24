@@ -1,0 +1,26 @@
+uuid: 17c87761-8df9-4d9b-a8e6-1e1b159adb9b
+langcode: en
+status: true
+dependencies: {  }
+machineName: wait-panel
+name: 'Wait panel'
+type: external
+required:
+  - updated
+  - roadStatus
+props:
+  updated:
+    type: string
+    title: 'Updated time, after "updated "'
+    examples:
+      - '09:42'
+  roadStatus:
+    type: string
+    title: 'Roads and rail status'
+    examples:
+      - 'Running normally'
+slots:
+  chips:
+    title: Chips
+    description: 'Wait chip leaves, one per terminal.'
+dataDependencies: {  }

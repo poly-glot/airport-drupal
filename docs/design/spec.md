@@ -1,6 +1,6 @@
 # Meridian Airport — design specification (normative)
 
-Derived from the reviewed homepage (`static/index.html` and its CSS), which is the source of truth for look, feel and branding. Every page must read as a page of THIS site. Where the catalogue (`system.md`) or any page disagrees with this spec, this spec wins and the catalogue gets corrected. Rules cite the homepage element that establishes them.
+Derived from the reviewed homepage of the static prototype that preceded this app; its markup and CSS now live in `next/components` and `next/styles`, which are the source of truth for look, feel and branding. Every page must read as a page of THIS site. Where the catalogue (`system.md`) or any page disagrees with this spec, this spec wins and the catalogue gets corrected. Rules cite the homepage element that establishes them.
 
 ## 1. Brand character
 
@@ -75,7 +75,7 @@ Field grammar exactly as the homepage: 12px uppercase or 13px/600 labels; hints 
 
 ## 9. Imagery
 
-Photography: full-bleed or flush-framed, cool/blue grade, under navy gradients when text sits on it; every hero-text asset passes `scripts/hero_contrast.py`. No rounded photo corners in the page plane. Illustration: schematic map language only (map tokens, labels ≥12px). Icons: 1.4–1.9 stroke outline SVGs, `currentColor`, no filled blobs, no emoji.
+Photography: full-bleed or flush-framed, cool/blue grade, under navy gradients when text sits on it; every hero-text asset passes `.venv/bin/python scripts/hero_contrast.py`. No rounded photo corners in the page plane. Illustration: schematic map language only (map tokens, labels ≥12px). Icons: 1.4–1.9 stroke outline SVGs, `currentColor`, no filled blobs, no emoji.
 
 ## 10. Rhythm
 

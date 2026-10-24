@@ -6,15 +6,12 @@ drupal/.ddev
 drupal/.env
 drupal/keys
 drupal/vendor
-drupal/web/assets
+next
 drupal/web/core
-drupal/web/favicon.svg
 drupal/web/modules/contrib
 drupal/web/sites/default/files
 drupal/web/sites/default/settings.ddev.php
 drupal/web/sites/default/settings.php
 drupal/web/themes/contrib
 node_modules
-scripts/__pycache__
-static/node_modules
 tasks

@@ -1,0 +1,59 @@
+uuid: a9354a53-4c2e-45db-bd61-53791239a9cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.testimonial
+    - filter.format.canvas_html_block
+  module:
+    - text
+active_version: c40048b3e6057462
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        quote:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Eight minutes through security with a pram, and the family lane staff talked to my daughter, not over her.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Priya N.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Flew to Lisbon, October 2026'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Testimonial
+id: js.testimonial
+provider: null
+source: js
+source_local_id: testimonial

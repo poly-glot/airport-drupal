@@ -1,9 +1,0 @@
-{% set root_tag = tag|default('div') %}
-{% set title_tag = heading_level|default('h3') %}
-{% set padded_class = padded is defined and padded == false ? null : 'card--padded' %}
-<{{ root_tag }}{{ attributes.addClass('card', padded_class) }}{% if heading and heading_id %} aria-labelledby="{{ heading_id }}"{% endif %}>
-{% if heading %}
-<{{ title_tag }} class="card__title"{% if heading_id %} id="{{ heading_id }}"{% endif %}>{{ heading }}</{{ title_tag }}>
-{% endif %}
-{% block parts %}{% endblock %}
-</{{ root_tag }}>

@@ -19,9 +19,7 @@ drupal/web/robots.txt
 drupal/web/update.php
 drupal/web/web.config
 drupal/web/autoload.php
-drupal/seed/.pulled/
 *.sqlite
-drupal/web/assets
-drupal/web/favicon.svg
 .DS_Store
 .idea/
+drupal/private/

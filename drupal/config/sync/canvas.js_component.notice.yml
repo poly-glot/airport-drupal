@@ -1,0 +1,51 @@
+uuid: 22ed60f3-ef58-4581-bea3-b17c04eca704
+langcode: en
+status: true
+dependencies: {  }
+machineName: notice
+name: Notice
+type: external
+required:
+  - kind
+  - text
+  - position
+  - total
+props:
+  kind:
+    type: string
+    title: 'Bold notice kind, before the dot'
+    examples:
+      - 'Travel disruption'
+  text:
+    type: string
+    title: 'Notice text'
+    examples:
+      - 'Fog is delaying some morning departures by up to 40 minutes.'
+  action:
+    type: string
+    title: 'Trailing instruction, after the text'
+    examples:
+      - 'What to do: check your flight below before setting off and allow extra time at security.'
+  position:
+    type: integer
+    title: Position
+    examples:
+      - 1
+  total:
+    type: integer
+    title: 'Total notices'
+    examples:
+      - 3
+  linkLabel:
+    type: string
+    title: 'Link text on the right'
+    examples:
+      - 'Check my flight'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - /flights
+slots: {  }
+dataDependencies: {  }

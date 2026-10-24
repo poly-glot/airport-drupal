@@ -1,0 +1,28 @@
+uuid: 11fdc1aa-6e68-45ca-9f2c-dc3d9eae7e01
+langcode: en
+status: true
+dependencies: {  }
+machineName: status
+name: Status
+type: external
+required:
+  - word
+props:
+  word:
+    type: string
+    title: 'Status word'
+    examples:
+      - 'On time'
+  tone:
+    type: string
+    enum:
+      - ok
+      - info
+      - neutral
+      - warn
+      - bad
+    title: Tone
+    examples:
+      - ok
+slots: {  }
+dataDependencies: {  }

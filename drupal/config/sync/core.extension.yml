@@ -3,8 +3,8 @@ _core:
 module:
   block: 0
   canvas: 0
+  canvas_headless: 0
   canvas_oauth: 0
-  canvas_page_template_component: 0
   ckeditor5: 0
   consumers: 0
   datetime: 0
@@ -19,7 +19,7 @@ module:
   link: 0
   media: 0
   media_library: 0
-  meridian_slots: 0
+  metatag: 0
   mysql: 0
   node: 0
   options: 0
@@ -30,12 +30,14 @@ module:
   simple_oauth: 0
   system: 0
   text: 0
+  token: 0
   update: 0
   user: 0
+  custom_elements: 10
   views: 10
   minimal: 1000
 theme:
   stark: 0
   canvas_stark: 0
-  meridian: 0
+  claro: 0
 profile: minimal

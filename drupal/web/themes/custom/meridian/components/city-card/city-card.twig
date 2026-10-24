@@ -1,7 +1,0 @@
-{% set is_guide = variant == 'guide' %}
-{% if not is_guide %}<li{{ attributes.addClass('city-rail__item') }}>{% endif %}
-    <a{% if is_guide %}{{ attributes.addClass('city-card', 'city-card--guide') }}{% else %} class="city-card"{% endif %} href="{{ href }}">
-        {{ include('meridian:picture', { src: image_src, alt: image_alt|default(''), width: image_width, height: image_height, sizes: is_guide ? '(max-width: 900px) calc(100vw - 32px), 357px' : '(max-width: 900px) 260px, 357px', loading: 'lazy', widths: is_guide ? '960,1440' : '', picture_class: 'city-card__media', css_class: 'city-card__img' }, with_context = false) }}
-        <div class="city-card__text"><h3 class="city-card__name">{{ city }}</h3><p class="city-card__meta">{{ meta }}</p>{% if body %}<p class="city-card__body">{{ body }}</p>{% endif %}</div>
-    </a>
-{% if not is_guide %}</li>{% endif %}

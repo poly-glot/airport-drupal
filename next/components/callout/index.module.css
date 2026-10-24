@@ -1,0 +1,16 @@
+.root {
+    background: var(--sand);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+}
+
+.title {
+    color: var(--sand-ink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

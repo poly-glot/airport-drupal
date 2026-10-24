@@ -1,0 +1,22 @@
+name: Group
+machineName: group
+status: true
+required: []
+props:
+    properties:
+        layout:
+            title: Layout
+            type: string
+            enum:
+                - stack
+                - stack-lg
+                - grid-2
+                - grid-3
+                - split
+                - split-main-aside
+            examples:
+                - stack
+slots:
+    parts:
+        title: Parts
+        description: The grouped components.

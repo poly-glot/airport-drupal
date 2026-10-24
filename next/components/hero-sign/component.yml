@@ -1,0 +1,34 @@
+name: Hero sign
+machineName: hero-sign
+status: true
+required:
+    - icon
+    - title
+    - href
+props:
+    properties:
+        icon:
+            title: Icon
+            type: string
+            enum:
+                - shop
+                - parking
+                - fast-track
+            examples:
+                - shop
+        title:
+            title: Sign heading
+            type: string
+            examples:
+                - Reserve duty free
+        meta:
+            title: Line under the sign heading
+            type: string
+            examples:
+                - Collect at your gate
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /at-the-airport/shopping

@@ -1,0 +1,41 @@
+uuid: 886402b9-2981-44f0-aeac-bd2f049798ea
+langcode: en
+status: true
+dependencies: {  }
+machineName: button
+name: Button
+type: external
+required:
+  - label
+props:
+  label:
+    type: string
+    title: 'Button text'
+    examples:
+      - 'Check prices and availability'
+  href:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/parking#quote'
+  variant:
+    type: string
+    enum:
+      - primary
+      - secondary
+    title: Variant
+    examples:
+      - primary
+  block:
+    type: boolean
+    title: 'Full width'
+    examples:
+      - true
+  large:
+    type: boolean
+    title: Large
+    examples:
+      - false
+slots: {  }
+dataDependencies: {  }

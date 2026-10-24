@@ -1,0 +1,90 @@
+name: Flight board
+machineName: flight-board
+status: true
+required:
+    - title
+    - titleId
+    - clockTime
+props:
+    properties:
+        title:
+            title: Board heading
+            type: string
+            examples:
+                - Live flights
+        titleId:
+            title: Title id
+            type: string
+            description: Id of the heading, referenced by aria-labelledby.
+            examples:
+                - live-flights-title
+        meta:
+            title: Line under the heading, after "Updated hh:mm · "
+            type: string
+            description: Text after "Updated hh:mm · ".
+            examples:
+                - refreshes every minute · gates shown from 60 min before departure
+        clockTime:
+            title: Clock time
+            type: string
+            examples:
+                - 09:42
+        overlapped:
+            title: Overlap the section above
+            type: boolean
+            examples:
+                - true
+        showSearch:
+            title: Show search
+            type: boolean
+            examples:
+                - true
+        departuresSearchLabel:
+            title: Departures search label
+            type: string
+            examples:
+                - Search departures by flight or city
+        arrivalsSearchLabel:
+            title: Arrivals search label
+            type: string
+            examples:
+                - Search arrivals by flight or city
+        departuresCaption:
+            title: Departures table caption
+            type: string
+            examples:
+                - Departures
+        arrivalsCaption:
+            title: Arrivals table caption
+            type: string
+            examples:
+                - Arrivals
+        allDeparturesLabel:
+            title: All departures button label
+            type: string
+            examples:
+                - All departures
+        allDeparturesHref:
+            title: All departures link
+            type: string
+            format: uri-reference
+            examples:
+                - /flights#departures
+        allArrivalsLabel:
+            title: All arrivals button label
+            type: string
+            examples:
+                - All arrivals
+        allArrivalsHref:
+            title: All arrivals link
+            type: string
+            format: uri-reference
+            examples:
+                - /flights#arrivals
+slots:
+    departures:
+        title: Departures
+        description: Flight rows for the departures table.
+    arrivals:
+        title: Arrivals
+        description: Flight rows for the arrivals table.

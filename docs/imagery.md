@@ -13,56 +13,56 @@ Style preamble used on every v1 prompt:
 - Final prompt: preamble above, then Scene: a Lisbon-style hilly street at golden hour with tiled facades in blue and cream, a vintage tram-era feel with tram tracks, warm light on the tiles, sky turning cool blue.
 - Shows: A tram climbs a cobbled hillside street lined with tiled facades in the golden evening light.
 - Alt text suggestion: A tram climbs a cobbled hillside street lined with tiled facades in the golden evening light.
-- Files (`static/assets/img/destinations/lisbon-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 57 KB, 960.webp 94 KB, 960.jpg 130 KB, 1440.avif 80 KB, 1440.webp 143 KB, 1440.jpg 238 KB. Total 745 KB.
+- Files (`next/public/assets/img/destinations/lisbon-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 57 KB, 960.webp 94 KB, 960.jpg 130 KB, 1440.avif 80 KB, 1440.webp 143 KB, 1440.jpg 238 KB. Total 745 KB.
 
 ### destinations/reykjavik-hero
 
 - Final prompt: preamble above, then Scene: an Icelandic landscape at night, green northern lights over a dark volcanic lava-field and distant mountains, a single small lit wooden cabin in the middle distance, stars, no people.
 - Shows: Green northern lights arc over a dark lava field and a small lit cabin.
 - Alt text suggestion: Green northern lights arc over a dark lava field and a small lit cabin.
-- Files (`static/assets/img/destinations/reykjavik-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 26 KB, 960.webp 46 KB, 960.jpg 81 KB, 1440.avif 38 KB, 1440.webp 73 KB, 1440.jpg 155 KB. Total 422 KB.
+- Files (`next/public/assets/img/destinations/reykjavik-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 26 KB, 960.webp 46 KB, 960.jpg 81 KB, 1440.avif 38 KB, 1440.webp 73 KB, 1440.jpg 155 KB. Total 422 KB.
 
 ### destinations/marrakech-hero
 
 - Final prompt: preamble above, then Scene: a Moroccan medina riad courtyard with a small tiled fountain, hanging brass lanterns, richly coloured woven textiles and rugs, warm lantern glow balanced against cool blue shade, carved plasterwork, no people.
 - Shows: A riad courtyard with a tiled fountain, glowing brass lanterns and woven rugs hung from the balconies.
 - Alt text suggestion: A riad courtyard with a tiled fountain, glowing brass lanterns and woven rugs hung from the balconies.
-- Files (`static/assets/img/destinations/marrakech-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 48 KB, 960.webp 80 KB, 960.jpg 119 KB, 1440.avif 68 KB, 1440.webp 123 KB, 1440.jpg 217 KB. Total 658 KB.
+- Files (`next/public/assets/img/destinations/marrakech-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 48 KB, 960.webp 80 KB, 960.jpg 119 KB, 1440.avif 68 KB, 1440.webp 123 KB, 1440.jpg 217 KB. Total 658 KB.
 
 ### airport/eat-and-drink-hero
 
 - Final prompt: preamble above, then Scene: a modern airport cafe interior, a clean counter with a coffee machine, cups and a glass case of pastries, early morning light streaming through tall terminal glass, a couple of blurred seated travellers far in the background, unidentifiable.
 - Shows: A coffee machine and a case of pastries on a cafe counter beside tall terminal windows.
 - Alt text suggestion: A coffee machine and a case of pastries on a cafe counter beside tall terminal windows.
-- Files (`static/assets/img/airport/eat-and-drink-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 17 KB, 960.webp 34 KB, 960.jpg 74 KB, 1440.avif 24 KB, 1440.webp 53 KB, 1440.jpg 133 KB. Total 338 KB.
+- Files (`next/public/assets/img/airport/eat-and-drink-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 17 KB, 960.webp 34 KB, 960.jpg 74 KB, 1440.avif 24 KB, 1440.webp 53 KB, 1440.jpg 133 KB. Total 338 KB.
 
 ### airport/shopping-hero
 
 - Final prompt: preamble above, then Scene: an airside retail walkway in a clean modern airport terminal, high ceiling with pale architecture, shopfronts with blank unbranded glass facades, a few blurred travellers with trolley bags walking away, unidentifiable, soft daylight from above.
 - Shows: Travellers with wheeled bags walk along a bright airside shopping concourse.
 - Alt text suggestion: Travellers with wheeled bags walk along a bright airside shopping concourse.
-- Files (`static/assets/img/airport/shopping-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 15 KB, 960.webp 30 KB, 960.jpg 70 KB, 1440.avif 21 KB, 1440.webp 47 KB, 1440.jpg 124 KB. Total 308 KB.
+- Files (`next/public/assets/img/airport/shopping-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 15 KB, 960.webp 30 KB, 960.jpg 70 KB, 1440.avif 21 KB, 1440.webp 47 KB, 1440.jpg 124 KB. Total 308 KB.
 
 ### airport/lounges-hero
 
 - Final prompt: preamble above, then Scene: a quiet airport lounge at dawn, comfortable armchairs and low tables beside floor-to-ceiling windows overlooking an airport apron with parked aircraft in soft blue pre-dawn light, warm lamp glow, empty seats, no people.
 - Shows: Armchairs and lamps in a quiet lounge look out through tall windows at aircraft on the apron at dawn.
 - Alt text suggestion: Armchairs and lamps in a quiet lounge look out through tall windows at aircraft on the apron at dawn.
-- Files (`static/assets/img/airport/lounges-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 13 KB, 960.webp 28 KB, 960.jpg 65 KB, 1440.avif 19 KB, 1440.webp 46 KB, 1440.jpg 119 KB. Total 292 KB.
+- Files (`next/public/assets/img/airport/lounges-hero-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 13 KB, 960.webp 28 KB, 960.jpg 65 KB, 1440.avif 19 KB, 1440.webp 46 KB, 1440.jpg 119 KB. Total 292 KB.
 
 ### about/terminal
 
 - Final prompt: preamble above, then Scene: the exterior of a modern mid-size airport terminal at blue hour, glass and steel facade glowing warmly from inside, a slim air traffic control tower silhouetted against a deep blue twilight sky, an empty forecourt, no people.
 - Shows: A glass airport terminal glows at blue hour beside a control tower.
 - Alt text suggestion: A glass airport terminal glows at blue hour beside a control tower.
-- Files (`static/assets/img/about/terminal-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 14 KB, 960.webp 29 KB, 960.jpg 65 KB, 1440.avif 20 KB, 1440.webp 47 KB, 1440.jpg 121 KB. Total 299 KB.
+- Files (`next/public/assets/img/about/terminal-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 14 KB, 960.webp 29 KB, 960.jpg 65 KB, 1440.avif 20 KB, 1440.webp 47 KB, 1440.jpg 121 KB. Total 299 KB.
 
 ### about/careers
 
 - Final prompt: preamble above, then Scene: a diverse group of four airport staff in conversation, two in plain high-visibility jackets and two in smart navy operations-room clothing, standing in a bright modern operations area with screens showing only abstract blurred shapes, faces soft, turned away or in profile, unidentifiable. Regenerated once with: whole scene in crisp focus, everyone seen from behind or in profile, screens showing plain dark abstract graphics with no maps or text.
 - Shows: Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.
 - Alt text suggestion: Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.
-- Files (`static/assets/img/about/careers-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 12 KB, 960.webp 24 KB, 960.jpg 58 KB, 1440.avif 17 KB, 1440.webp 37 KB, 1440.jpg 106 KB. Total 255 KB.
+- Files (`next/public/assets/img/about/careers-{960,1440}.{avif,webp,jpg}`, 960x640 and 1440x960): 960.avif 12 KB, 960.webp 24 KB, 960.jpg 58 KB, 1440.avif 17 KB, 1440.webp 37 KB, 1440.jpg 106 KB. Total 255 KB.
 
 ## v2 images
 
@@ -86,7 +86,7 @@ Style preamble used on the first prompt (later prompts prefixed with 'Next image
 - Shows: Dawn over a wet airfield seen through terminal glass, with aircraft tails and the control tower against a dramatic sky.
 - Alt: Decorative, alt="" (heading text carries the meaning). Descriptive fallback: Dawn light over a wet apron with aircraft tails and the control tower seen from inside the terminal.
 - Source 1376x768. Final 1440x810, upscale 1.05x. 1920 dropped.
-- Files (`static/assets/img/home/hero-1440.{avif,webp,jpg}`): avif 41 KB, webp 63 KB, jpg 135 KB.
+- Files (`next/public/assets/img/home/hero-1440.{avif,webp,jpg}`): avif 41 KB, webp 63 KB, jpg 135 KB.
 
 ### home/parking
 
@@ -181,4 +181,4 @@ Pipeline: source 1376x768 (Gemini full-size download), centre-crop 16:9, Lanczos
 | night-cloudy | low orange-grey cloud ceiling lit from below by the floodlights, no stars | 11.55:1 / 10.39:1 | 32 / 42 / 104 | 178 |
 | night-rainy | night rain, streaked glass, glowing floodlight and taxiway reflections | 12.42:1 / 10.97:1 | 44 / 54 / 118 | 216 |
 
-Prompt scene lines (all prefixed with the identical-camera sentence and the unbranded-aircraft sentence, "no text, no logos"): see the Scene column; wording per variant is the scene text with "interior left third stays dark" appended. Alt text is empty (decorative; the hero text carries the meaning). Gate: `python3 scripts/hero_contrast.py`, 12/12 pass at 4.5:1 desktop and narrow.
+Prompt scene lines (all prefixed with the identical-camera sentence and the unbranded-aircraft sentence, "no text, no logos"): see the Scene column; wording per variant is the scene text with "interior left third stays dark" appended. Alt text is empty (decorative; the hero text carries the meaning). Gate: `.venv/bin/python scripts/hero_contrast.py`, 12/12 pass at 4.5:1 desktop and narrow.

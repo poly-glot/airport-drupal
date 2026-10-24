@@ -1,0 +1,19 @@
+name: Footer link
+machineName: footer-link
+status: true
+required:
+    - label
+    - href
+props:
+    properties:
+        label:
+            title: Link text
+            type: string
+            examples:
+                - Live departures
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /flights#departures

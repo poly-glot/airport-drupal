@@ -1,0 +1,41 @@
+name: Card
+machineName: card
+status: true
+required: []
+props:
+    properties:
+        tag:
+            title: Element
+            type: string
+            enum:
+                - div
+                - section
+            examples:
+                - div
+        heading:
+            title: Card heading
+            type: string
+            examples:
+                - Airside Operations Officer
+        headingLevel:
+            title: Heading level
+            type: string
+            enum:
+                - h2
+                - h3
+            examples:
+                - h3
+        headingId:
+            title: Heading id
+            type: string
+            examples:
+                - flights-title
+        padded:
+            title: Padded
+            type: boolean
+            examples:
+                - true
+slots:
+    parts:
+        title: Parts
+        description: The card content, facts, prose, paragraphs and buttons.

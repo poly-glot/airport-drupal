@@ -1,0 +1,54 @@
+.root {
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+    padding: 40px 0 44px;
+    text-decoration: none;
+}
+
+.root:hover {
+    color: var(--ink);
+}
+
+.root:hover .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.head {
+    align-items: center;
+    color: var(--brand);
+    display: flex;
+    gap: 14px;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.body {
+    color: var(--ink-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 44px;
+}
+
+@media (width <= 900px) {
+    .root {
+        padding: 22px 0 24px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .body {
+        font-size: 15px;
+    }
+}

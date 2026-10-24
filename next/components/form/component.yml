@@ -1,0 +1,24 @@
+name: Form
+machineName: form
+status: true
+required:
+    - kind
+props:
+    properties:
+        kind:
+            title: Kind
+            type: string
+            enum:
+                - flight-search
+                - parking
+                - alerts
+                - assistance
+                - feedback
+                - lost-property
+            examples:
+                - alerts
+        compact:
+            title: Compact (homepage variant, parking only)
+            type: boolean
+            examples:
+                - false

@@ -1,0 +1,29 @@
+uuid: 6bcc6db1-e58c-4e88-bfb6-e995a2c11ce8
+langcode: en
+status: true
+dependencies: {  }
+machineName: form
+name: Form
+type: external
+required:
+  - kind
+props:
+  kind:
+    type: string
+    enum:
+      - flight-search
+      - parking
+      - alerts
+      - assistance
+      - feedback
+      - lost-property
+    title: Kind
+    examples:
+      - alerts
+  compact:
+    type: boolean
+    title: 'Compact (homepage variant, parking only)'
+    examples:
+      - false
+slots: {  }
+dataDependencies: {  }

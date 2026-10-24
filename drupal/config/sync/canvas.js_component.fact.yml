@@ -1,0 +1,30 @@
+uuid: 043813d4-cb47-40fc-9bdb-34a6f956f462
+langcode: en
+status: true
+dependencies: {  }
+machineName: fact
+name: Fact
+type: external
+required:
+  - term
+  - value
+props:
+  term:
+    type: string
+    contentMediaType: text/html
+    title: 'Term, left column'
+    examples:
+      - Terminal
+  value:
+    type: string
+    contentMediaType: text/html
+    title: 'Definition, right column'
+    examples:
+      - T1
+  id:
+    type: string
+    title: 'Value ID'
+    examples:
+      - status-on-time
+slots: {  }
+dataDependencies: {  }

@@ -1,0 +1,32 @@
+name: Map pane
+machineName: map-pane
+status: true
+required:
+    - name
+    - address
+    - directionsHref
+    - largerHref
+props:
+    properties:
+        name:
+            title: Place name
+            type: string
+            examples:
+                - Meridian Airport
+        address:
+            title: Address
+            type: string
+            examples:
+                - Terminal 1, Birmingham B99 1MA
+        directionsHref:
+            title: Directions link
+            type: string
+            format: uri-reference
+            examples:
+                - /getting-here
+        largerHref:
+            title: Larger map link
+            type: string
+            format: uri-reference
+            examples:
+                - /at-the-airport#maps

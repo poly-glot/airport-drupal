@@ -1,0 +1,100 @@
+uuid: 87ba1f22-b215-47eb-9774-e027f248e0fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.data-table
+    - filter.format.canvas_html_block
+  module:
+    - text
+active_version: cf1424421150d0ec
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Car parks at a glance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        captionHidden:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<thead><tr><th scope="col">Car park</th><th scope="col">To the terminal</th><th scope="col">From</th><th scope="col">Covered</th><th scope="col">Electric charging</th></tr></thead><tbody><tr><th scope="row">P1 Short-stay</th><td>2 min walk</td><td class="table__num">£4 per hour</td><td>Walkway only</td><td>6 bays</td></tr><tr><th scope="row">P2 Long-stay</th><td>5 min walk</td><td class="table__num">£8.50 per day</td><td>Yes</td><td>40 bays</td></tr></tbody>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  721ca237773ffbde:
+    settings:
+      prop_field_definitions:
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Car parks at a glance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        caption_hidden:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<thead><tr><th scope="col">Car park</th><th scope="col">To the terminal</th><th scope="col">From</th><th scope="col">Covered</th><th scope="col">Electric charging</th></tr></thead><tbody><tr><th scope="row">P1 Short-stay</th><td>2 min walk</td><td class="table__num">£4 per hour</td><td>Walkway only</td><td>6 bays</td></tr><tr><th scope="row">P2 Long-stay</th><td>5 min walk</td><td class="table__num">£8.50 per day</td><td>Yes</td><td>40 bays</td></tr></tbody>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Data table'
+id: js.data-table
+provider: null
+source: js
+source_local_id: data-table

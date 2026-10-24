@@ -1,0 +1,46 @@
+name: Notice
+machineName: notice
+status: true
+required:
+    - kind
+    - text
+    - position
+    - total
+props:
+    properties:
+        kind:
+            title: Bold notice kind, before the dot
+            type: string
+            examples:
+                - Travel disruption
+        text:
+            title: Notice text
+            type: string
+            examples:
+                - Fog is delaying some morning departures by up to 40 minutes.
+        action:
+            title: Trailing instruction, after the text
+            type: string
+            examples:
+                - 'What to do: check your flight below before setting off and allow extra time at security.'
+        position:
+            title: Position
+            type: integer
+            examples:
+                - 1
+        total:
+            title: Total notices
+            type: integer
+            examples:
+                - 3
+        linkLabel:
+            title: Link text on the right
+            type: string
+            examples:
+                - Check my flight
+        linkHref:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /flights

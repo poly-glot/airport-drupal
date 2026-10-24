@@ -1,0 +1,95 @@
+.root {
+    align-items: flex-end;
+    background: var(--brand);
+    color: var(--white);
+    display: flex;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+.root:hover {
+    color: var(--white);
+}
+
+.media {
+    display: block;
+    inset: 0;
+    position: absolute;
+}
+
+.media::after {
+    background: var(--gradient-card);
+    content: '';
+    inset: 0;
+    position: absolute;
+}
+
+.img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .root:hover .img {
+        transform: scale(1.04);
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 6px;
+    padding: 28px;
+    position: relative;
+}
+
+.name {
+    font-size: 44px;
+    line-height: 1;
+}
+
+.meta {
+    color: var(--on-dark-meta);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.body {
+    color: var(--on-dark-meta);
+    font-size: 15px;
+    line-height: 1.5;
+    order: -1;
+}
+
+.guide {
+    height: 440px;
+}
+
+.guide .name {
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+@media (width <= 900px) {
+    .root {
+        height: 360px;
+    }
+
+    .text {
+        padding: 20px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .guide .name {
+        font-size: 24px;
+    }
+}

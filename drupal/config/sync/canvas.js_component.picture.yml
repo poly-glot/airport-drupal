@@ -1,0 +1,67 @@
+uuid: b94d1c66-cd7b-48ca-ac39-cd3746ccf232
+langcode: en
+status: true
+dependencies: {  }
+machineName: picture
+name: Picture
+type: external
+required:
+  - src
+props:
+  src:
+    type: string
+    title: 'Image stem'
+    description: 'Image path including the width suffix and no extension.'
+    examples:
+      - /assets/img/airport/tower-security-560
+  alt:
+    type: string
+    title: 'Image alt text'
+    examples:
+      - 'Photograph at Meridian Airport'
+  width:
+    type: integer
+    title: 'Image width'
+    examples:
+      - 560
+  height:
+    type: integer
+    title: 'Image height'
+    examples:
+      - 840
+  sizes:
+    type: string
+    title: Sizes
+    examples:
+      - '(max-width: 900px) calc(50vw - 22px), 265px'
+  widths:
+    type: string
+    title: 'Extra srcset widths'
+    description: 'Comma separated widths with no spaces, for example 560,840. Empty means only the width in the stem.'
+    examples:
+      - '560,840'
+  loading:
+    type: string
+    enum:
+      - lazy
+      - eager
+    title: Loading
+    examples:
+      - lazy
+  priority:
+    type: boolean
+    title: 'High fetch priority'
+    examples:
+      - false
+  cssClass:
+    type: string
+    title: 'Image class'
+    examples:
+      - tower__img
+  pictureClass:
+    type: string
+    title: 'Picture class'
+    examples:
+      - tower__media
+slots: {  }
+dataDependencies: {  }

@@ -1,0 +1,307 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: d429ebd8-e75a-48e7-91a2-d933beaadddd
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Chasing the northern lights'
+  description:
+    -
+      value: 'Seeing the northern lights from Reykjavík: when to go, what to pack, how far from the city you need to be, and what else to do while you wait.'
+  components:
+    -
+      uuid: 7f92b7c6-966c-415a-a9fb-fba4527e8c04
+      component_id: js.page-hero
+      inputs:
+        eyebrow: 'Reykjavík · from 3h 10m · Nordvik · Terminal 2'
+        title: 'Chasing the northern lights'
+        intro: 'When to go, what to pack and how far from the city you really need to be.'
+        variant: art
+        widths: '960,1440'
+        sizes: 491px
+        imageSrc: /assets/img/destinations/reykjavik-hero-960
+        imageAlt: 'Green northern lights arc over a dark lava field and a small lit cabin.'
+        imageWidth: 1440
+        imageHeight: 960
+    -
+      parent_uuid: 7f92b7c6-966c-415a-a9fb-fba4527e8c04
+      slot: breadcrumb
+      uuid: 48204c14-f56d-4eef-84d8-f0f56253c18c
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 48204c14-f56d-4eef-84d8-f0f56253c18c
+      slot: items
+      uuid: 05fd30fe-81c1-4daa-846b-34d4aea45f37
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 48204c14-f56d-4eef-84d8-f0f56253c18c
+      slot: items
+      uuid: 4070402c-fb25-4af5-a6fc-cd711ecadf42
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Destination guides'
+        href: /destinations
+    -
+      parent_uuid: 48204c14-f56d-4eef-84d8-f0f56253c18c
+      slot: items
+      uuid: 7aad9e29-e552-4b15-ab74-d24a966740c2
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'Chasing the northern lights'
+        current: true
+    -
+      uuid: 7c9cb62d-e7df-48e7-ac75-f0b093d50014
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: getting-there-from-meridian-title
+        headingLevel: h2
+    -
+      parent_uuid: 7c9cb62d-e7df-48e7-ac75-f0b093d50014
+      slot: parts
+      uuid: 8a5efc5b-d34d-4c64-aa4c-7c4099717ae6
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 8a5efc5b-d34d-4c64-aa4c-7c4099717ae6
+      slot: parts
+      uuid: 04d711db-b9d4-4060-bc56-d70b6ee9983c
+      component_id: js.heading
+      inputs:
+        text: 'Getting there from Meridian'
+        level: h2
+        id: getting-there-from-meridian-title
+        size: sm
+    -
+      parent_uuid: 8a5efc5b-d34d-4c64-aa4c-7c4099717ae6
+      slot: parts
+      uuid: e10d8c88-b558-4b9a-a5e1-71981f8e73de
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>Nordvik flies to Reykjavík every day from Terminal 2. NV 118 leaves at 10:20 and takes about 3 hours 10 minutes. Iceland stays on GMT all year, so it is one hour behind the UK in summer and on the same time in winter.</p>
+          <p>The international airport is about 50 kilometres from the city. Airport buses meet every flight and take around 45 minutes to the city bus terminal, with connections to most hotels. Book the bus online before you fly, as it is cheaper than buying on arrival.</p>
+    -
+      uuid: f8d07eac-5d87-4996-a8c3-20ba6c158211
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: when-to-go-title
+        headingLevel: h2
+    -
+      parent_uuid: f8d07eac-5d87-4996-a8c3-20ba6c158211
+      slot: parts
+      uuid: e64cadc5-c231-4327-ae67-59b08520d0ae
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: e64cadc5-c231-4327-ae67-59b08520d0ae
+      slot: parts
+      uuid: 073e435b-61de-4a5a-82fc-2e2db252bba9
+      component_id: js.heading
+      inputs:
+        text: 'When to go'
+        level: h2
+        id: when-to-go-title
+        size: sm
+    -
+      parent_uuid: e64cadc5-c231-4327-ae67-59b08520d0ae
+      slot: parts
+      uuid: 8b4bd816-be27-4305-b234-09bd5d3a36fb
+      component_id: js.prose
+      inputs:
+        body: |-
+          <p>The northern lights appear from early September to early April, when the nights are dark enough. You need three things: darkness, a clear sky and some activity from the sun. You can control only the first.</p>
+          <ul><li>Look between 21:00 and 02:00.</li><li>Check the cloud forecast as well as the aurora forecast. Clear sky matters more.</li><li>Plan at least three nights. One night is a gamble.</li></ul>
+    -
+      uuid: c48f4436-6266-44cd-a74a-fd8137683ece
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: how-far-you-need-to-go-title
+        headingLevel: h2
+    -
+      parent_uuid: c48f4436-6266-44cd-a74a-fd8137683ece
+      slot: parts
+      uuid: 57aae71c-7203-4703-a4d4-76c47e68b76b
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 57aae71c-7203-4703-a4d4-76c47e68b76b
+      slot: parts
+      uuid: 814313a7-74e9-4310-84bd-39c000e40676
+      component_id: js.heading
+      inputs:
+        text: 'How far you need to go'
+        level: h2
+        id: how-far-you-need-to-go-title
+        size: sm
+    -
+      parent_uuid: 57aae71c-7203-4703-a4d4-76c47e68b76b
+      slot: parts
+      uuid: f7fcc337-87ae-4679-b671-11d59c0d3543
+      component_id: js.prose
+      inputs:
+        body: '<p>City lights wash out faint displays, but strong ones are visible from Reykjavík itself, especially from the shore. For better odds, drive 20 to 30 minutes out of town, away from street lights. The national park at Þingvellir, about 45 minutes east, is dark, open and a classic spot. If you do not want to drive on icy roads at night, an organised minibus tour will take you to wherever the sky is clearest that evening.</p>'
+    -
+      uuid: 41770d31-6368-46af-8204-4dbccd68070e
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: eat-title
+        headingLevel: h2
+    -
+      parent_uuid: 41770d31-6368-46af-8204-4dbccd68070e
+      slot: parts
+      uuid: 167a9916-117f-42de-bda3-6ae20b268531
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 167a9916-117f-42de-bda3-6ae20b268531
+      slot: parts
+      uuid: 97bf0d07-4244-4029-9607-bb06128b1aac
+      component_id: js.heading
+      inputs:
+        text: Eat
+        level: h2
+        id: eat-title
+        size: sm
+    -
+      parent_uuid: 167a9916-117f-42de-bda3-6ae20b268531
+      slot: parts
+      uuid: ab89b543-7b32-4af2-ab97-977e3aa869a6
+      component_id: js.prose
+      inputs:
+        body: |-
+          <ul><li><strong>Lamb soup.</strong> Slow-cooked with root vegetables. Warming after a cold night outside.</li><li><strong>Fish.</strong> Cod, haddock and Arctic char, landed that morning. Look for the fish of the day.</li><li><strong>Skyr.</strong> A thick, mild dairy food, eaten for breakfast or pudding.</li><li><strong>Hot dogs.</strong> A national snack, with crispy onions and sweet mustard. The cheapest hot meal in town.</li></ul>
+          <p>Eating out is expensive. Expect around £30 for a main course. Supermarkets and bakeries keep costs down at lunchtime.</p>
+    -
+      uuid: ddb9f2e1-51ad-421f-8f7d-745f904dcc08
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: see-title
+        headingLevel: h2
+    -
+      parent_uuid: ddb9f2e1-51ad-421f-8f7d-745f904dcc08
+      slot: parts
+      uuid: 5cba07b9-6aee-4cbd-ae8d-869a72c7cb2b
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 5cba07b9-6aee-4cbd-ae8d-869a72c7cb2b
+      slot: parts
+      uuid: b587b409-7923-458b-9ae3-4f1137e340c8
+      component_id: js.heading
+      inputs:
+        text: See
+        level: h2
+        id: see-title
+        size: sm
+    -
+      parent_uuid: 5cba07b9-6aee-4cbd-ae8d-869a72c7cb2b
+      slot: parts
+      uuid: 27ea32e0-cc82-4333-aef9-6f3f03e77ae6
+      component_id: js.prose
+      inputs:
+        body: '<ul><li><strong>The geothermal pools.</strong> Every neighbourhood has a public outdoor pool fed by hot springs, open into the evening and much cheaper than the famous spas. Shower without your swimwear before you go in. It is the rule.</li><li><strong>The big church.</strong> The tall concrete church at the top of the main shopping street has a lift to a viewing platform over the whole city.</li><li><strong>The harbour.</strong> Walk the old harbour and the glass concert hall at sunset.</li></ul>'
+    -
+      uuid: 1ed6a966-3d77-4710-be10-de625b4d39cd
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: section
+        labelledBy: what-to-pack-title
+        headingLevel: h2
+    -
+      parent_uuid: 1ed6a966-3d77-4710-be10-de625b4d39cd
+      slot: parts
+      uuid: 0272c516-e9fd-44e0-980c-f797fa42b5c3
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: 0272c516-e9fd-44e0-980c-f797fa42b5c3
+      slot: parts
+      uuid: 9ca678e6-4812-4bd9-9fcb-2ff7e44c072e
+      component_id: js.heading
+      inputs:
+        text: 'What to pack'
+        level: h2
+        id: what-to-pack-title
+        size: sm
+    -
+      parent_uuid: 0272c516-e9fd-44e0-980c-f797fa42b5c3
+      slot: parts
+      uuid: 62a2acfa-e4bc-4f8f-a654-b8363c57f75a
+      component_id: js.prose
+      inputs:
+        body: '<ul><li>Warm layers, a waterproof outer layer, a hat and gloves. It can feel far colder than the thermometer says.</li><li>Boots with grip. Pavements can be icy from November.</li><li>A swimsuit for the pools.</li><li>A phone tripod. Most phones take good aurora photos on a 3 to 10 second exposure.</li></ul>'
+    -
+      uuid: 86d91970-d574-4983-98eb-f60320d61634
+      component_id: js.section
+      inputs:
+        last: true
+        tone: light
+        tag: section
+        labelledBy: practical-tips-title
+        headingLevel: h2
+    -
+      parent_uuid: 86d91970-d574-4983-98eb-f60320d61634
+      slot: parts
+      uuid: e207f898-f853-443a-ae5c-ecaaa54cb23f
+      component_id: js.group
+      inputs:
+        layout: stack
+    -
+      parent_uuid: e207f898-f853-443a-ae5c-ecaaa54cb23f
+      slot: parts
+      uuid: e108941a-ac9b-4032-9ae4-0a72af84c1ce
+      component_id: js.heading
+      inputs:
+        text: 'Practical tips'
+        level: h2
+        id: practical-tips-title
+        size: sm
+    -
+      parent_uuid: e207f898-f853-443a-ae5c-ecaaa54cb23f
+      slot: parts
+      uuid: ca4526ff-9810-418a-9a28-016ebfbb48f9
+      component_id: js.prose
+      inputs:
+        body: |-
+          <ul><li>Iceland uses the króna. Cards are accepted everywhere, even for a coffee, so you may not need cash at all.</li><li>Tap water is excellent. Do not buy bottled.</li><li>Weather changes fast. Check road conditions before any drive outside the city.</li></ul>
+          <p><a href="/flights">Check Reykjavík flights</a></p>
+          <p><a href="/flights/alerts">Set up flight alerts</a></p>
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /destinations/reykjavik
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

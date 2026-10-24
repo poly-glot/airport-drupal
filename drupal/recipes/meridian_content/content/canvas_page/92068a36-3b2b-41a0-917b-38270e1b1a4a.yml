@@ -1,0 +1,339 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 92068a36-3b2b-41a0-917b-38270e1b1a4a
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Careers
+  description:
+    -
+      value: 'Jobs at Meridian Airport in operations, passenger services and engineering. See current roles, closing dates and what it is like to work here.'
+  components:
+    -
+      uuid: e6943c22-0c47-4d2b-a011-42c879bc1db5
+      component_id: js.page-hero
+      inputs:
+        eyebrow: 'About Meridian'
+        title: Careers
+        intro: 'Around 3,100 people work at Meridian. Here is what it is like, and what we are hiring for now.'
+        variant: art
+        widths: '960,1440'
+        sizes: 720px
+        imageSrc: /assets/img/about/careers-960
+        imageAlt: 'Airport staff in high-visibility jackets and navy uniforms talk together in an operations room.'
+        imageWidth: 1440
+        imageHeight: 960
+    -
+      uuid: f391aa91-517f-4ade-a318-435eb93c3bba
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: div
+        headingLevel: h2
+    -
+      parent_uuid: f391aa91-517f-4ade-a318-435eb93c3bba
+      slot: parts
+      uuid: 81549fbb-b76f-4edc-a7fd-575a837d61ba
+      component_id: js.callout
+      inputs:
+        title: 'Demonstration note'
+        body: '<p>These roles are fictional and are not open for applications.</p>'
+    -
+      uuid: a15b945e-72ae-4c90-95bb-25fcd2caab9a
+      component_id: js.section
+      inputs:
+        anchor: working-at-meridian
+        tone: light
+        tag: section
+        labelledBy: working-at-meridian-title
+        headingLevel: h2
+    -
+      parent_uuid: a15b945e-72ae-4c90-95bb-25fcd2caab9a
+      slot: parts
+      uuid: f2523d69-3654-4b52-915f-e46dd99cd19e
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="working-at-meridian-title">Working at Meridian</h2>
+          <h3>Shifts that fit</h3>
+          <p>The airport runs 24 hours, so many roles are shift-based. We publish rotas 6 weeks ahead and you can swap shifts with colleagues through the staff app.</p>
+          <h3>Getting to work</h3>
+          <p>Free staff parking at Mid-Stay, and half-price rail travel from Birmingham Central for everyone on our payroll.</p>
+          <h3>Training</h3>
+          <p>Every new starter gets paid training before their first shift. Most of our managers started in frontline roles.</p>
+          <h3>Pay and benefits</h3>
+          <ul><li>Pay reviewed every April</li><li>25 days' holiday plus bank holidays, rising to 28 with service</li><li>Pension with up to 8% employer contribution</li><li>Free meals on shift in the staff canteen</li></ul>
+    -
+      uuid: b5548e02-aa35-4231-8104-531d4bbb7187
+      component_id: js.section
+      inputs:
+        anchor: current-roles
+        tone: light
+        tag: section
+        labelledBy: current-roles-title
+        headingLevel: h2
+    -
+      parent_uuid: b5548e02-aa35-4231-8104-531d4bbb7187
+      slot: parts
+      uuid: af08104b-9e03-449e-b08b-1ca87a3a213c
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: af08104b-9e03-449e-b08b-1ca87a3a213c
+      slot: parts
+      uuid: 18969fa9-ab2b-4fec-9ab7-4c67d859a3e3
+      component_id: js.prose
+      inputs:
+        body: '<h2 id="current-roles-title">Current roles</h2>'
+    -
+      parent_uuid: af08104b-9e03-449e-b08b-1ca87a3a213c
+      slot: parts
+      uuid: 52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75
+      component_id: js.group
+      inputs:
+        layout: grid-3
+    -
+      parent_uuid: 52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75
+      slot: parts
+      uuid: 2fe6ed04-f1b6-4422-980a-b63edaf784e7
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Airside Operations Officer'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 2fe6ed04-f1b6-4422-980a-b63edaf784e7
+      slot: parts
+      uuid: e95891fc-8a5e-44a1-a373-89ebe895e186
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: e95891fc-8a5e-44a1-a373-89ebe895e186
+      slot: items
+      uuid: 9cb6daa4-0fdc-4eab-bb32-9b546ea2b823
+      component_id: js.fact
+      inputs:
+        term: Team
+        value: Operations
+    -
+      parent_uuid: e95891fc-8a5e-44a1-a373-89ebe895e186
+      slot: items
+      uuid: d9525fa2-1601-4084-865f-d973770da8d1
+      component_id: js.fact
+      inputs:
+        term: Hours
+        value: 'Full time, rotating shifts including nights and weekends'
+    -
+      parent_uuid: e95891fc-8a5e-44a1-a373-89ebe895e186
+      slot: items
+      uuid: e4febac9-d877-4b2f-b8a9-4fbf6a7380be
+      component_id: js.fact
+      inputs:
+        term: Salary
+        value: '£31,400 a year plus shift allowance'
+    -
+      parent_uuid: e95891fc-8a5e-44a1-a373-89ebe895e186
+      slot: items
+      uuid: 16b4e2d6-b25b-4d82-86ef-05b3f5bad824
+      component_id: js.fact
+      inputs:
+        term: 'Closing date'
+        value: '<time datetime="2026-10-30">30 October 2026</time>'
+    -
+      parent_uuid: 2fe6ed04-f1b6-4422-980a-b63edaf784e7
+      slot: parts
+      uuid: bcd701ab-5201-462f-bb90-d16832cb8e3c
+      component_id: js.paragraph
+      inputs:
+        body: 'Keep the aircraft stands, taxiways and runway safe and clear. You will carry out daily inspections, manage wildlife and foreign object checks, and work with air traffic control and airline ground teams.<span class="visually-hidden"> (not available in this demonstration)</span>'
+        variant: card-text
+    -
+      parent_uuid: 52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75
+      slot: parts
+      uuid: 113db1ce-f623-465c-bbf7-b0e8c47753bb
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Passenger Assistance Agent'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 113db1ce-f623-465c-bbf7-b0e8c47753bb
+      slot: parts
+      uuid: 458b6b7a-af7a-40e1-8659-86932a8e1ffc
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: 458b6b7a-af7a-40e1-8659-86932a8e1ffc
+      slot: items
+      uuid: 6a9c88d0-88d2-4f52-9069-7224aa9b4c70
+      component_id: js.fact
+      inputs:
+        term: Team
+        value: 'Passenger Services'
+    -
+      parent_uuid: 458b6b7a-af7a-40e1-8659-86932a8e1ffc
+      slot: items
+      uuid: 0debcca1-f8fa-4507-b4ee-e6919559870e
+      component_id: js.fact
+      inputs:
+        term: Hours
+        value: 'Full time or part time, early and late shifts'
+    -
+      parent_uuid: 458b6b7a-af7a-40e1-8659-86932a8e1ffc
+      slot: items
+      uuid: dee3c686-9473-42eb-990d-6e487e0a03ae
+      component_id: js.fact
+      inputs:
+        term: Salary
+        value: '£24,800 a year, pro rata for part time'
+    -
+      parent_uuid: 458b6b7a-af7a-40e1-8659-86932a8e1ffc
+      slot: items
+      uuid: c098c2ab-8c09-43c8-b077-e0498e40ef1b
+      component_id: js.fact
+      inputs:
+        term: 'Closing date'
+        value: '<time datetime="2026-11-13">13 November 2026</time>'
+    -
+      parent_uuid: 113db1ce-f623-465c-bbf7-b0e8c47753bb
+      slot: parts
+      uuid: 7bd518e6-7347-497f-8908-053e47eb705f
+      component_id: js.paragraph
+      inputs:
+        body: 'Help passengers with a disability or reduced mobility from the kerb to their seat and back again. Full training is given. What matters most is patience and good judgement.<span class="visually-hidden"> (not available in this demonstration)</span>'
+        variant: card-text
+    -
+      parent_uuid: 52e7078f-e5a2-4e2c-bb63-3e3b3cbc9d75
+      slot: parts
+      uuid: 20d21c96-d06e-4e52-9e26-21a8d77155f2
+      component_id: js.card
+      inputs:
+        tag: div
+        heading: 'Electrical Engineer, Airfield Lighting'
+        headingLevel: h3
+        padded: true
+    -
+      parent_uuid: 20d21c96-d06e-4e52-9e26-21a8d77155f2
+      slot: parts
+      uuid: bebf6861-b862-481f-a12c-844458562e1a
+      component_id: js.facts
+      inputs:
+        variant: default
+    -
+      parent_uuid: bebf6861-b862-481f-a12c-844458562e1a
+      slot: items
+      uuid: a44a49b2-65ba-48a7-8991-3761564ea10b
+      component_id: js.fact
+      inputs:
+        term: Team
+        value: Engineering
+    -
+      parent_uuid: bebf6861-b862-481f-a12c-844458562e1a
+      slot: items
+      uuid: 12d3e512-9f16-4b4a-9365-81847b9c0d64
+      component_id: js.fact
+      inputs:
+        term: Hours
+        value: 'Full time, Monday to Friday, with an on-call rota'
+    -
+      parent_uuid: bebf6861-b862-481f-a12c-844458562e1a
+      slot: items
+      uuid: 3dd394e6-6dc9-4428-bc92-b5ea91c9e5c6
+      component_id: js.fact
+      inputs:
+        term: Salary
+        value: '£44,500 a year'
+    -
+      parent_uuid: bebf6861-b862-481f-a12c-844458562e1a
+      slot: items
+      uuid: ac5e46bb-f96f-434b-9fe7-a24fc2484791
+      component_id: js.fact
+      inputs:
+        term: 'Closing date'
+        value: '<time datetime="2026-11-27">27 November 2026</time>'
+    -
+      parent_uuid: 20d21c96-d06e-4e52-9e26-21a8d77155f2
+      slot: parts
+      uuid: 66e22952-6c46-4748-b107-d656a302b93e
+      component_id: js.paragraph
+      inputs:
+        body: 'Maintain and improve the runway, taxiway and approach lighting. You will hold an electrical qualification at level 3 or above and be comfortable working outside at night.<span class="visually-hidden"> (not available in this demonstration)</span>'
+        variant: card-text
+    -
+      uuid: cef499cc-11cd-4620-b402-aedfaa2932c2
+      component_id: js.section
+      inputs:
+        anchor: how-to-apply
+        tone: light
+        tag: section
+        labelledBy: how-to-apply-title
+        headingLevel: h2
+    -
+      parent_uuid: cef499cc-11cd-4620-b402-aedfaa2932c2
+      slot: parts
+      uuid: 71d2e9f6-2399-44ac-8c82-d3b9c8832a39
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="how-to-apply-title">How to apply</h2>
+          <ol><li>Read the full role description and check you meet the requirements.</li><li>Apply online with your CV and a short covering statement. We do not use automated scoring.</li><li>If you are shortlisted, we invite you to an interview at the airport within 2 weeks of the closing date.</li><li>Before you start, we carry out the background checks needed for an airport security pass. This takes 4 to 6 weeks.</li></ol>
+    -
+      uuid: e91e8611-bbb0-4a59-a157-023fcccdfe10
+      component_id: js.section
+      inputs:
+        anchor: adjustments
+        tone: light
+        tag: section
+        labelledBy: adjustments-title
+        headingLevel: h2
+    -
+      parent_uuid: e91e8611-bbb0-4a59-a157-023fcccdfe10
+      slot: parts
+      uuid: f2c5198d-0ddf-4ac5-98fc-54cfdc24f27d
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="adjustments-title">Adjustments</h2>
+          <p>Tell us if you need any adjustments to apply or to attend an interview. We will make them. We guarantee an interview to disabled applicants who meet the essential requirements.</p>
+    -
+      uuid: d1012d2b-665b-4b89-adcd-f356b66d767d
+      component_id: js.section
+      inputs:
+        anchor: questions
+        last: true
+        tone: light
+        tag: section
+        labelledBy: questions-title
+        headingLevel: h2
+    -
+      parent_uuid: d1012d2b-665b-4b89-adcd-f356b66d767d
+      slot: parts
+      uuid: c1958003-7256-42d5-9b17-e686b384f4d7
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="questions-title">Questions</h2>
+          <p>Email <a href="mailto:hello@meridianairport.example">hello@meridianairport.example</a> with "Careers" in the subject line, or call <a href="tel:+441214960123">0121 496 0123</a>.</p>
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /about/careers
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

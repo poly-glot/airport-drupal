@@ -1,0 +1,70 @@
+.root {
+    background: var(--panel);
+    display: flex;
+    min-height: 680px;
+    overflow: hidden;
+    position: relative;
+}
+
+.inner {
+    align-items: center;
+    display: grid;
+    gap: 64px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding-block: 88px;
+    position: relative;
+    z-index: 1;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.intro {
+    color: var(--ink-muted);
+    line-height: 1.55;
+    max-width: 460px;
+    text-wrap: pretty;
+}
+
+.note {
+    align-items: flex-start;
+    color: var(--ink-muted);
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.noteIcon {
+    color: var(--brand);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.noteLead {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+@media (width <= 900px) {
+    .root {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .inner {
+        display: block;
+        padding-block: 32px 24px;
+    }
+
+    .copy {
+        gap: 14px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+}

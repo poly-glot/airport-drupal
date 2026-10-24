@@ -1,0 +1,121 @@
+.root {
+    overflow: hidden;
+}
+
+.head {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.titles {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nav {
+    align-items: center;
+    display: none;
+    gap: 8px;
+}
+
+.root[data-enhanced] .nav {
+    display: flex;
+}
+
+.count {
+    color: var(--grey-2);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    margin-right: 8px;
+}
+
+.button {
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--line-input);
+    border-radius: 0;
+    color: var(--brand);
+    display: inline-flex;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+}
+
+.button:hover {
+    background: var(--panel);
+}
+
+.track {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 40px 0 0;
+    overflow-x: auto;
+    padding: 0 var(--gutter) 8px max(var(--gutter), calc((100% - 1200px) / 2 + var(--gutter)));
+    scroll-padding-left: max(var(--gutter), calc((100% - 1200px) / 2 + var(--gutter)));
+    scroll-snap-type: x mandatory;
+}
+
+.root[data-enhanced] .track {
+    scrollbar-width: none;
+}
+
+.root[data-enhanced] .track::-webkit-scrollbar {
+    display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .track {
+        scroll-behavior: smooth;
+    }
+}
+
+.item {
+    flex: 0 0 357px;
+    scroll-snap-align: start;
+}
+
+.progress {
+    display: none;
+    margin-top: 28px;
+}
+
+.root[data-enhanced] .progress {
+    display: block;
+}
+
+.bar {
+    background: var(--line);
+    display: block;
+    height: 3px;
+    overflow: hidden;
+}
+
+.fill {
+    background: var(--brand);
+    display: block;
+    height: 100%;
+    transform: scaleX(var(--rail-progress, 0));
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+@media (width <= 900px) {
+    .track {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .item {
+        flex-basis: 260px;
+    }
+
+    .progress {
+        margin-top: 20px;
+    }
+}

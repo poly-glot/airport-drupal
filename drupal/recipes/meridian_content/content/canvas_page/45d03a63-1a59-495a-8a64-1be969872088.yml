@@ -1,0 +1,209 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 45d03a63-1a59-495a-8a64-1be969872088
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Cookies
+  description:
+    -
+      value: 'This website uses no analytics or advertising cookies. It sets one strictly necessary cookie at most, only on pages with a form, to protect it from misuse.'
+  components:
+    -
+      uuid: 921bcc72-d742-45c9-8019-76c397a056d7
+      component_id: js.page-hero
+      inputs:
+        title: Cookies
+        intro: 'One strictly necessary cookie at most. No analytics, no advertising and no tracking.'
+        variant: sky
+    -
+      parent_uuid: 921bcc72-d742-45c9-8019-76c397a056d7
+      slot: breadcrumb
+      uuid: e5a811e0-834b-401b-b3b8-dcb41bd18053
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: e5a811e0-834b-401b-b3b8-dcb41bd18053
+      slot: items
+      uuid: 1f53e653-ddb7-4488-89cf-625be8cdc571
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: e5a811e0-834b-401b-b3b8-dcb41bd18053
+      slot: items
+      uuid: 7ed7cf4a-561a-4956-b46f-12721e953db7
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Cookies
+        current: true
+    -
+      uuid: 091e1664-6989-4b14-87fc-97d704a27a35
+      component_id: js.section
+      inputs:
+        tone: light
+        tag: div
+        headingLevel: h2
+    -
+      parent_uuid: 091e1664-6989-4b14-87fc-97d704a27a35
+      slot: parts
+      uuid: 53056a49-1907-46df-9744-41202c6cf732
+      component_id: js.callout
+      inputs:
+        title: 'Please note'
+        body: '<p>Meridian Airport is a fictional airport created for this demonstration website. Nothing on this site describes a real place or service.</p>'
+    -
+      uuid: f77d51b9-6a00-4d7b-989d-42f98ce0859e
+      component_id: js.section
+      inputs:
+        anchor: what-cookies-are
+        tone: light
+        tag: section
+        labelledBy: what-cookies-are-title
+        headingLevel: h2
+    -
+      parent_uuid: f77d51b9-6a00-4d7b-989d-42f98ce0859e
+      slot: parts
+      uuid: 7cf886ee-3092-4448-b617-91fc489f2594
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="what-cookies-are-title">What cookies are</h2>
+          <p>Cookies are small files that a website saves in your browser. Some are needed for a site to work. Others track what you do, often for advertising. We only use the first kind, and only one of them.</p>
+    -
+      uuid: d24aacb3-b205-43f0-948e-5277194379f2
+      component_id: js.section
+      inputs:
+        anchor: the-cookie-we-use
+        tone: light
+        tag: section
+        labelledBy: the-cookie-we-use-title
+        headingLevel: h2
+    -
+      parent_uuid: d24aacb3-b205-43f0-948e-5277194379f2
+      slot: parts
+      uuid: 27892566-b471-4123-8aa6-3eaf7904158e
+      component_id: js.group
+      inputs:
+        layout: stack-lg
+    -
+      parent_uuid: 27892566-b471-4123-8aa6-3eaf7904158e
+      slot: parts
+      uuid: fc2e4b2c-13c2-40b8-859d-a89043441058
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="the-cookie-we-use-title">The cookie we use</h2>
+          <p>This site sets one cookie at most, and only when you open a page with a form. It protects the form from being submitted by another website pretending to be you.</p>
+    -
+      parent_uuid: 27892566-b471-4123-8aa6-3eaf7904158e
+      slot: parts
+      uuid: 13428ee2-bfbb-4375-b232-943f194d7bd8
+      component_id: js.data-table
+      inputs:
+        caption: 'Cookies set by this website'
+        body: |-
+          <thead><tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Contains</th><th scope="col">Expires</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">mer_form</th><td>Protects forms from forged submissions</td><td>A random code. No personal information.</td><td>When you close your browser</td></tr>
+          </tbody>
+    -
+      parent_uuid: 27892566-b471-4123-8aa6-3eaf7904158e
+      slot: parts
+      uuid: 160a51b2-8d38-4fa3-9d05-62218b60299a
+      component_id: js.prose
+      inputs:
+        body: '<p>Because this cookie is strictly necessary for the form to work safely, we do not ask for your consent and there is no cookie banner. Pages without a form set no cookies at all.</p>'
+    -
+      uuid: 147d3cf9-af98-4218-85b8-dcaf42bb5e7a
+      component_id: js.section
+      inputs:
+        anchor: cookies-we-do-not-use
+        tone: light
+        tag: section
+        labelledBy: cookies-we-do-not-use-title
+        headingLevel: h2
+    -
+      parent_uuid: 147d3cf9-af98-4218-85b8-dcaf42bb5e7a
+      slot: parts
+      uuid: 02795696-edb8-4021-8078-b8e477d2c952
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="cookies-we-do-not-use-title">Cookies we do not use</h2>
+          <ul><li>No analytics or statistics cookies</li><li>No advertising or retargeting cookies</li><li>No social media cookies</li><li>No cookies from any other company</li></ul>
+          <p>The social media links in our footer are plain links. Nothing from those services loads on our pages.</p>
+    -
+      uuid: 89288ff9-8143-4714-8823-829f35b1fc93
+      component_id: js.section
+      inputs:
+        anchor: managing-cookies
+        tone: light
+        tag: section
+        labelledBy: managing-cookies-title
+        headingLevel: h2
+    -
+      parent_uuid: 89288ff9-8143-4714-8823-829f35b1fc93
+      slot: parts
+      uuid: 1526b825-d83a-4dfb-a97a-e6a3632b715d
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="managing-cookies-title">Managing cookies</h2>
+          <p>You can block or delete cookies in your browser settings. If you block the form cookie, the forms on this site may not work, but every other page will.</p>
+    -
+      uuid: 9a363962-4397-4094-b52a-da0cb45e3f37
+      component_id: js.section
+      inputs:
+        anchor: changes
+        tone: light
+        tag: section
+        labelledBy: changes-title
+        headingLevel: h2
+    -
+      parent_uuid: 9a363962-4397-4094-b52a-da0cb45e3f37
+      slot: parts
+      uuid: 615be916-793e-4ce8-bfb3-855eb9767917
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="changes-title">Changes</h2>
+          <p>If we ever add a cookie, we will list it here first. This page was last updated on 3 October 2026.</p>
+    -
+      uuid: 25d53d65-b4e0-40e8-999e-81cf8bae601e
+      component_id: js.section
+      inputs:
+        anchor: contact
+        last: true
+        tone: light
+        tag: section
+        labelledBy: contact-title
+        headingLevel: h2
+    -
+      parent_uuid: 25d53d65-b4e0-40e8-999e-81cf8bae601e
+      slot: parts
+      uuid: abcd3b8f-5b88-4e24-86a4-7c9fa3dd9075
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="contact-title">Contact</h2>
+          <p>Questions about cookies: <a href="mailto:hello@meridianairport.example">hello@meridianairport.example</a> or <a href="tel:+441214960123">0121 496 0123</a>.</p>
+  page_variant:
+    -
+      value: meridian
+  path:
+    -
+      alias: /cookies
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

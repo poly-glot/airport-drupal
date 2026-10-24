@@ -1,0 +1,15 @@
+name: Breadcrumb
+machineName: breadcrumb
+status: true
+required: []
+props:
+    properties:
+        onDark:
+            title: On dark
+            type: boolean
+            examples:
+                - false
+slots:
+    items:
+        title: Items
+        description: One breadcrumb item per crumb, the last one current.

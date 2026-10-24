@@ -1,0 +1,46 @@
+uuid: d5780306-bf5c-442e-bf30-444b9aa55f8a
+langcode: en
+status: true
+dependencies: {  }
+machineName: site-header
+name: 'Site header'
+type: external
+required:
+  - ctaLabel
+  - ctaHref
+  - basketHref
+  - basketLabel
+props:
+  ctaLabel:
+    type: string
+    title: 'Call to action label'
+    examples:
+      - 'Book parking'
+  ctaHref:
+    type: string
+    format: uri-reference
+    title: 'Call to action link'
+    examples:
+      - /parking
+  basketHref:
+    type: string
+    format: uri-reference
+    title: 'Basket link'
+    examples:
+      - /at-the-airport/shopping
+  basketLabel:
+    type: string
+    title: 'Basket label'
+    examples:
+      - Basket
+      - '0 items'
+  brandCurrent:
+    type: boolean
+    title: 'Lockup is the current page'
+    examples:
+      - true
+slots:
+  nav:
+    title: Navigation
+    description: 'Nav link leaves, one per main menu item.'
+dataDependencies: {  }

@@ -1,0 +1,19 @@
+uuid: 8795d28c-c484-4484-bde7-879d6f35b163
+langcode: en
+status: true
+dependencies: {  }
+machineName: breadcrumb
+name: Breadcrumb
+type: external
+required: {  }
+props:
+  onDark:
+    type: boolean
+    title: 'On dark'
+    examples:
+      - false
+slots:
+  items:
+    title: Items
+    description: 'One breadcrumb item per crumb, the last one current.'
+dataDependencies: {  }

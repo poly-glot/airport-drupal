@@ -1,0 +1,55 @@
+_core:
+  default_config_hash: FNSFqBlCXLC2Gewt2S3kEqKQy69i0YKkhhmPndKgo0M
+frontends:
+  -
+    url: 'http://localhost:3000'
+    components:
+      - js.accordion-item
+      - js.accordion
+      - js.breadcrumb-item
+      - js.breadcrumb
+      - js.button
+      - js.callout
+      - js.card
+      - js.city-card
+      - js.city-rail
+      - js.data-table
+      - js.fact
+      - js.facts
+      - js.flight-board
+      - js.flight-row
+      - js.footer-link
+      - js.form
+      - js.getting-here
+      - js.group
+      - js.heading
+      - js.help-item
+      - js.help-list
+      - js.hero-sign
+      - js.hero
+      - js.map-pane
+      - js.nav-link
+      - js.notice-bar
+      - js.notice
+      - js.package-feature
+      - js.package
+      - js.page-hero
+      - js.paragraph
+      - js.photo-band
+      - js.picture
+      - js.prose
+      - js.row-link
+      - js.ruled-list
+      - js.section-head
+      - js.section
+      - js.site-footer
+      - js.site-header
+      - js.stat
+      - js.status
+      - js.terminal-map
+      - js.testimonial
+      - js.tower-grid
+      - js.tower
+      - js.wait-chip
+      - js.wait-panel
+assertion_expiration: 60

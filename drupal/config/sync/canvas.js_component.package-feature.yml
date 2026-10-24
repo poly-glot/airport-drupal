@@ -1,0 +1,17 @@
+uuid: 295d7300-25cc-481a-a924-22ea3a1a9e29
+langcode: en
+status: true
+dependencies: {  }
+machineName: package-feature
+name: 'Package feature'
+type: external
+required:
+  - text
+props:
+  text:
+    type: string
+    title: 'Feature line'
+    examples:
+      - 'Blue Badge bays nearest the doors'
+slots: {  }
+dataDependencies: {  }

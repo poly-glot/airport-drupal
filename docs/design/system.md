@@ -1,5 +1,7 @@
 # Meridian Airport: design system catalogue (v2)
 
+> Written for the agents that built the static prototype. The snippets and image table describe the design vocabulary `next/components` implements. Components are CSS modules, so apart from the utilities and the button, text-link and status families the class strings in the page are hashed local names (`.notice-bar__item` here is `styles.item` in `notice-bar/index.module.css`). The page-building instructions (partials to paste, `html-validate`, the local static server) describe that retired prototype; components are now written as in `docs/components.md`.
+
 This is the only component reference for `static/`. Page agents copy the snippets **verbatim** and change only text, `href`, `id`, image slot names and data rows. The homepage `/index.html` is the live reference for every homepage component. **`docs/design/spec.md` is the normative design law derived from that homepage — read it first; where a snippet here and the spec disagree, the spec wins.** The short version: the page plane is flat (rules, not boxes; zero radius, zero shadow); radius and shadow exist only on elements floating over photo, dark or map surfaces; hover is colour and underline, never lift or shadow.
 
 **Page agents may not write CSS.** No `<style>`, no `style=""`, no new class names, no new files under `static/assets/`. If a page needs something this catalogue does not cover, build it from the components below as closely as you can and list the gap in your final report. The design-system owner fixes all gaps in one pass.
@@ -653,7 +655,7 @@ A passenger quote as a flat white block (spec §3): 1px `--line` border, flush c
 
 ## 8. Photographs: picture snippet and image slots
 
-Pages reference these exact paths (`static/assets/img/…`). Only the variants listed exist; never reference a width that is not in this table.
+Pages reference these exact paths (`/assets/img/…`, files in `next/public/assets/img/`). Only the variants listed exist; never reference a width that is not in this table.
 
 | Slot | Files | Intrinsic size (`width`/`height`) | `sizes` | Used on |
 |---|---|---|---|---|

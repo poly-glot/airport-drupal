@@ -1,0 +1,162 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 41728df0-a720-40d7-ba66-dfd7d47bedee
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'First time flying?'
+  description:
+    -
+      value: 'A five-step walkthrough of Meridian Airport, from check-in to the gate, with how long each step takes today and what to bring.'
+  components:
+    -
+      uuid: 0abc3c0e-a8e2-4a06-ac62-22b371e675cc
+      component_id: js.page-hero
+      inputs:
+        eyebrow: Assistance
+        title: 'First time flying?'
+        intro: 'Check-in, bag drop, security, the departure lounge and the gate: five steps, and how long each takes today.'
+        variant: sky
+    -
+      parent_uuid: 0abc3c0e-a8e2-4a06-ac62-22b371e675cc
+      slot: breadcrumb
+      uuid: 5fd4dad5-9a56-4985-a714-1033f209567c
+      component_id: js.breadcrumb
+      inputs: {  }
+    -
+      parent_uuid: 5fd4dad5-9a56-4985-a714-1033f209567c
+      slot: items
+      uuid: 2aacfb73-133f-4718-a145-a4c2b631f15e
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Home
+        href: /
+    -
+      parent_uuid: 5fd4dad5-9a56-4985-a714-1033f209567c
+      slot: items
+      uuid: f66781bc-dac5-446f-ad94-95e8a1225a20
+      component_id: js.breadcrumb-item
+      inputs:
+        label: Assistance
+        href: /help
+    -
+      parent_uuid: 5fd4dad5-9a56-4985-a714-1033f209567c
+      slot: items
+      uuid: 027058f6-ca01-4a44-9b14-73167f2405c5
+      component_id: js.breadcrumb-item
+      inputs:
+        label: 'First time flying?'
+        current: true
+    -
+      uuid: ab98f366-3ee1-49ae-b38d-d6af8dc2ed65
+      component_id: js.section
+      inputs:
+        anchor: before-you-leave-home
+        tone: light
+        tag: section
+        labelledBy: before-you-leave-home-title
+        headingLevel: h2
+    -
+      parent_uuid: ab98f366-3ee1-49ae-b38d-d6af8dc2ed65
+      slot: parts
+      uuid: b5e3adce-0cb5-486b-803e-07f44b2d99cb
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="before-you-leave-home-title">Before you leave home</h2>
+          <p>Plan to be at the terminal 2 hours before a short-haul flight and 3 hours before a long-haul one. Check which terminal you fly from: Meridian Air uses Terminal 1, and Nordvik, Azur Express and Kestrel use Terminal 2.</p>
+          <p>Times below are for today, updated 09:42.</p>
+    -
+      uuid: 1c6854b4-ee7c-4707-81c2-885fe9a66208
+      component_id: js.section
+      inputs:
+        anchor: five-steps-to-the-gate
+        tone: light
+        tag: section
+        labelledBy: five-steps-to-the-gate-title
+        headingLevel: h2
+    -
+      parent_uuid: 1c6854b4-ee7c-4707-81c2-885fe9a66208
+      slot: parts
+      uuid: b2604f55-f313-4662-9f3d-7395dfc122a2
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="five-steps-to-the-gate-title">Five steps to the gate</h2>
+          <ol><li><strong>Check in.</strong> Most airlines let you check in online from 24 hours before, and your boarding pass goes on your phone. If you cannot, go to your airline's desk in the check-in hall. Today: about 2 minutes online, or 10 minutes at a desk.</li><li><strong>Drop your bag.</strong> If you have a hold bag, take it to your airline's bag drop. It closes 45 minutes before departure. Today: about 10 minutes.</li><li><strong>Go through security.</strong> Put your coat, belt and anything in your pockets in a tray. In Terminal 1, liquids and laptops stay in your bag. In Terminal 2, take out your clear bag of liquids and your laptop. Today: 8 minutes in Terminal 1, 22 minutes in Terminal 2.</li><li><strong>Wait in the departure lounge.</strong> Find a seat, eat, shop or rest. Your gate number appears on the screens 60 minutes before departure.</li><li><strong>Go to the gate.</strong> Walk there as soon as your gate shows. The furthest gates in Terminal 2 are 15 minutes away. Gates close 20 minutes before departure.</li></ol>
+          <p><a href="/flights">Live flights</a></p>
+    -
+      uuid: 5e6b40fe-0707-413d-b395-60a0c2acdaf4
+      component_id: js.section
+      inputs:
+        anchor: what-to-bring
+        tone: light
+        tag: section
+        labelledBy: what-to-bring-title
+        headingLevel: h2
+    -
+      parent_uuid: 5e6b40fe-0707-413d-b395-60a0c2acdaf4
+      slot: parts
+      uuid: 90d49d6f-93b5-40ee-b2e9-c68eb5f4d7ef
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="what-to-bring-title">What to bring</h2>
+          <ul><li>Your passport, valid for your whole trip, and any visa you need</li><li>Your boarding pass, on your phone or printed</li><li>Your booking reference, in case you need to speak to your airline</li></ul>
+    -
+      uuid: 7d457963-e5a1-4bf1-87b9-c5692e9db874
+      component_id: js.section
+      inputs:
+        anchor: what-you-can-carry
+        tone: light
+        tag: section
+        labelledBy: what-you-can-carry-title
+        headingLevel: h2
+    -
+      parent_uuid: 7d457963-e5a1-4bf1-87b9-c5692e9db874
+      slot: parts
+      uuid: edf849d0-ce65-4eef-b2f1-1c60245e8e67
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="what-you-can-carry-title">What you can carry</h2>
+          <p>Each airline sets its own cabin bag size, so check your booking. Keep medicines, keys, valuables and anything with a lithium battery, such as a power bank, with you. Put large liquids, sharp items and tools in your hold bag.</p>
+          <p><a href="/help/baggage-and-lost-property#allowances">Baggage allowances</a></p>
+    -
+      uuid: 7611bb90-c959-4c86-b67a-58a0b23094be
+      component_id: js.section
+      inputs:
+        anchor: who-to-ask
+        last: true
+        tone: light
+        tag: section
+        labelledBy: who-to-ask-title
+        headingLevel: h2
+    -
+      parent_uuid: 7611bb90-c959-4c86-b67a-58a0b23094be
+      slot: parts
+      uuid: 8ed7d044-c079-447f-b48c-a9c187908a51
+      component_id: js.prose
+      inputs:
+        body: |-
+          <h2 id="who-to-ask-title">Who to ask</h2>
+          <p>Information desks are in both check-in halls and both departure lounges, open from the first flight to the last. Any member of staff will point you the right way. If flying makes you anxious, wear a sunflower lanyard, free from any assistance desk, and we will give you more time.</p>
+          <p><a href="/help/special-assistance">Special assistance</a></p>
+  page_variant:
+    -
+      value: meridian_nav_help_section
+  path:
+    -
+      alias: /help/first-time-flying
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

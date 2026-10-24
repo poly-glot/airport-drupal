@@ -1,0 +1,35 @@
+uuid: d45843dc-686b-4f64-b443-6966c421d16b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.prose
+    - filter.format.canvas_html_block
+  module:
+    - text
+active_version: 7fb36c8f8355cdfe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>The airport runs 24 hours, so many roles are shift-based. We publish rotas 6 weeks ahead and you can swap shifts with colleagues through the staff app.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Prose
+id: js.prose
+provider: null
+source: js
+source_local_id: prose

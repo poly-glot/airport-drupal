@@ -1,0 +1,59 @@
+uuid: bb31dfa4-2736-4d2a-a507-bdc646d650f5
+langcode: en
+status: true
+dependencies: {  }
+machineName: section
+name: Section
+type: external
+required: {  }
+props:
+  heading:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'Our airlines'
+  headingLevel:
+    type: string
+    enum:
+      - h2
+      - h3
+    title: 'Heading level'
+    examples:
+      - h2
+  anchor:
+    type: string
+    title: Anchor
+    examples:
+      - airlines
+  tone:
+    type: string
+    enum:
+      - light
+      - panel
+    title: Tone
+    examples:
+      - light
+  labelledBy:
+    type: string
+    title: 'Labelled by'
+    description: 'Id of the heading that names this section when that heading sits inside the section content rather than in the heading prop.'
+    examples:
+      - careers-note-title
+  tag:
+    type: string
+    enum:
+      - section
+      - div
+    title: Element
+    examples:
+      - section
+  last:
+    type: boolean
+    title: 'Last section'
+    examples:
+      - false
+slots:
+  parts:
+    title: Parts
+    description: 'The section content, a group, prose, table or other leaves.'
+dataDependencies: {  }

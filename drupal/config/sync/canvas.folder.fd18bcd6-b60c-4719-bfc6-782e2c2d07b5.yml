@@ -1,45 +1,8 @@
 uuid: fd18bcd6-b60c-4719-bfc6-782e2c2d07b5
 langcode: en
 status: true
-dependencies:
-  config:
-    - canvas.component.sdc.meridian.accordion
-    - canvas.component.sdc.meridian.accordion-item
-    - canvas.component.sdc.meridian.breadcrumb
-    - canvas.component.sdc.meridian.callout
-    - canvas.component.sdc.meridian.card
-    - canvas.component.sdc.meridian.data-table
-    - canvas.component.sdc.meridian.facts
-    - canvas.component.sdc.meridian.form
-    - canvas.component.sdc.meridian.group
-    - canvas.component.sdc.meridian.help-item
-    - canvas.component.sdc.meridian.package
-    - canvas.component.sdc.meridian.page-hero
-    - canvas.component.sdc.meridian.prose
-    - canvas.component.sdc.meridian.row-link
-    - canvas.component.sdc.meridian.ruled-list
-    - canvas.component.sdc.meridian.section
-    - canvas.component.sdc.meridian.terminal-map
-    - canvas.component.sdc.meridian.testimonial
+dependencies: {  }
 name: 'Meridian · Inner pages'
 configEntityTypeId: component
 weight: 0
-items:
-  - sdc.meridian.accordion
-  - sdc.meridian.accordion-item
-  - sdc.meridian.breadcrumb
-  - sdc.meridian.callout
-  - sdc.meridian.card
-  - sdc.meridian.data-table
-  - sdc.meridian.facts
-  - sdc.meridian.form
-  - sdc.meridian.group
-  - sdc.meridian.help-item
-  - sdc.meridian.package
-  - sdc.meridian.page-hero
-  - sdc.meridian.prose
-  - sdc.meridian.row-link
-  - sdc.meridian.ruled-list
-  - sdc.meridian.section
-  - sdc.meridian.terminal-map
-  - sdc.meridian.testimonial
+items: {  }

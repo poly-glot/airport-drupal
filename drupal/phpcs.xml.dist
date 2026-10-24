@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="meridian">
+    <arg name="extensions" value="php,module,inc,install,theme,profile"/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+    <file>scripts</file>
+    <file>docker/health.php</file>
+    <file>web/sites/default/settings.cloudrun.php</file>
+    <file>web/sites/default/settings.meridian.php</file>
+    <rule ref="Drupal">
+        <exclude name="Drupal.Commenting"/>
+    </rule>
+    <rule ref="DrupalPractice"/>
+</ruleset>

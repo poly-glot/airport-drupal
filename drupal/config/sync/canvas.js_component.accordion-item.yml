@@ -1,0 +1,24 @@
+uuid: 1e05a233-cb93-4d8a-8125-c4d23a9f0874
+langcode: en
+status: true
+dependencies: {  }
+machineName: accordion-item
+name: 'Accordion item'
+type: external
+required:
+  - summary
+  - body
+props:
+  summary:
+    type: string
+    title: 'Question, the line you click'
+    examples:
+      - 'How early should I get to the airport?'
+  body:
+    type: string
+    contentMediaType: text/html
+    title: Answer
+    examples:
+      - '<p>Be at the terminal 2 hours before your flight. Bag drop closes 45 minutes before departure, and gates close 20 minutes before.</p>'
+slots: {  }
+dataDependencies: {  }

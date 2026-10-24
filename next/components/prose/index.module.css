@@ -1,0 +1,45 @@
+.root {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 720px;
+}
+
+.root > * + * {
+    margin-top: 16px;
+}
+
+.root h2 {
+    font-size: 30px;
+    line-height: 1.12;
+    margin-top: 48px;
+}
+
+.root h3 {
+    font-size: 20px;
+    margin-top: 28px;
+}
+
+.root ul,
+.root ol {
+    padding-left: 22px;
+}
+
+.root li + li {
+    margin-top: 6px;
+}
+
+.root a {
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+@media (width <= 900px) {
+    .root h2 {
+        font-size: 24px;
+        margin-top: 36px;
+    }
+
+    .root h3 {
+        font-size: 18px;
+    }
+}

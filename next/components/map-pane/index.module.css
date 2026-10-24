@@ -1,0 +1,229 @@
+.root {
+    background: var(--map-bg);
+    inset: 0 0 0 50%;
+    position: absolute;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-form);
+    box-shadow: var(--shadow-map-card);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 24px;
+    min-width: 260px;
+    padding: 14px 16px;
+    position: absolute;
+    top: 24px;
+}
+
+.place {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.address {
+    color: var(--grey-2);
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.credit {
+    bottom: 12px;
+    color: var(--grey-2);
+    font-size: 12px;
+    position: absolute;
+    right: 24px;
+}
+
+.creditLink {
+    align-items: center;
+    color: var(--grey-2);
+    display: inline-flex;
+    min-height: 24px;
+}
+
+.map {
+    display: block;
+    font-family: var(--font-body);
+    height: auto;
+    width: 100%;
+}
+
+.mapFill {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+}
+
+.mapGround {
+    fill: var(--map-bg);
+}
+
+.mapRiver {
+    fill: var(--map-river);
+}
+
+.mapGreen {
+    fill: var(--map-green);
+}
+
+.mapBlock {
+    fill: var(--map-block);
+}
+
+.mapRunway,
+.mapRoad {
+    fill: none;
+    stroke: var(--map-road);
+    stroke-linecap: round;
+}
+
+.mapRoadCore {
+    fill: none;
+    stroke: var(--sand-mid);
+    stroke-linecap: round;
+}
+
+.mapLane {
+    fill: none;
+    stroke: var(--white);
+    stroke-linecap: round;
+}
+
+.mapDash {
+    fill: none;
+    stroke: var(--white);
+}
+
+.mapRail {
+    fill: none;
+    stroke: var(--neutral-dot);
+}
+
+.mapTerminal {
+    fill: var(--brand);
+}
+
+.mapTerminalAlt {
+    fill: var(--navy-2);
+}
+
+.mapLink {
+    stroke: var(--brand);
+}
+
+.mapZone {
+    fill: var(--white);
+    stroke: var(--line-input);
+}
+
+.mapZoneSand {
+    fill: var(--sand);
+    stroke: var(--sand-mid);
+}
+
+.mapGate {
+    fill: var(--sky);
+    stroke: var(--brand);
+}
+
+.mapSecurity {
+    fill: none;
+    stroke: var(--sand-ink);
+    stroke-linecap: round;
+}
+
+.mapChip {
+    fill: var(--white);
+    stroke: var(--line-input);
+}
+
+.mapChipTitle {
+    fill: var(--brand);
+    font-weight: 800;
+}
+
+.mapChipSub {
+    fill: var(--grey-2);
+}
+
+.mapA45 {
+    fill: var(--sand-mid);
+}
+
+.mapA45Text {
+    fill: var(--a45-ink);
+    font-weight: 700;
+}
+
+.mapStation {
+    fill: var(--white);
+    stroke: var(--brand);
+}
+
+.mapStationLabel {
+    fill: var(--brand);
+    font-weight: 700;
+}
+
+.mapLabel {
+    fill: var(--grey-2);
+}
+
+.mapLabelRiver {
+    fill: var(--map-river-ink);
+    font-style: italic;
+}
+
+.mapLabelCaps {
+    font-weight: 600;
+}
+
+.mapBlockTitle {
+    fill: var(--white);
+    font-weight: 700;
+}
+
+.mapBlockSub {
+    fill: var(--footer-link);
+}
+
+.mapPin {
+    fill: var(--bad);
+}
+
+.mapPinDot {
+    fill: var(--white);
+}
+
+@media (width <= 900px) {
+    .root {
+        height: 380px;
+        left: 0;
+        position: relative;
+    }
+
+    .card {
+        left: 16px;
+        min-width: 0;
+        right: 16px;
+        top: 14px;
+    }
+
+    .credit {
+        right: 16px;
+    }
+}

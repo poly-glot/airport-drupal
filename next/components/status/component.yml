@@ -1,0 +1,23 @@
+name: Status
+machineName: status
+status: true
+required:
+    - word
+props:
+    properties:
+        word:
+            title: Status word
+            type: string
+            examples:
+                - On time
+        tone:
+            title: Tone
+            type: string
+            enum:
+                - ok
+                - info
+                - neutral
+                - warn
+                - bad
+            examples:
+                - ok

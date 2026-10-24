@@ -1,3 +1,0 @@
-{% set tag_name = level|default('h2') %}
-{% set size_classes = {'default': ['section-title'], 'sm': ['section-title', 'section-title--sm'], 'card': ['card__title']}[size|default('default')] %}
-<{{ tag_name }}{{ attributes.addClass(size_classes) }}{% if id %} id="{{ id }}"{% endif %}>{{ text }}</{{ tag_name }}>

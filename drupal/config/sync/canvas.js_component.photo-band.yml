@@ -1,0 +1,90 @@
+uuid: 017a5868-1f14-4f98-8db6-5a4dc2e271fc
+langcode: en
+status: true
+dependencies: {  }
+machineName: photo-band
+name: 'Photo band'
+type: external
+required:
+  - title
+  - imageSrc
+props:
+  title:
+    type: string
+    title: 'Band heading'
+    examples:
+      - 'Park at the terminal from £8.50 a day'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Three car parks, all step-free to check-in. Pre-booked rates are up to 40% below drive-up, with free cancellation until 24 hours before you arrive.'
+  imageSrc:
+    type: string
+    title: 'Image stem'
+    description: 'Image path including the width suffix and no extension.'
+    examples:
+      - /assets/img/home/parking-1440
+  imageAlt:
+    type: string
+    title: 'Image alt text'
+    examples:
+      - 'Photograph at Meridian Airport'
+  imageWidth:
+    type: integer
+    title: 'Image width'
+    examples:
+      - 1440
+  imageHeight:
+    type: integer
+    title: 'Image height'
+    examples:
+      - 810
+  variant:
+    type: string
+    enum:
+      - band
+      - hero
+    title: Variant
+    examples:
+      - band
+  headingLevel:
+    type: string
+    enum:
+      - h1
+      - h2
+    title: 'Heading level'
+    examples:
+      - h2
+  anchor:
+    type: string
+    title: 'Anchor id'
+    examples:
+      - parking
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - parking-title
+  linkLabel:
+    type: string
+    title: 'Link text'
+    examples:
+      - 'Compare all car parks and the map'
+  linkHref:
+    type: string
+    format: uri-reference
+    title: Link
+    examples:
+      - '/parking#compare'
+slots:
+  breadcrumb:
+    title: Breadcrumb
+    description: 'Breadcrumb trail, used by the hero variant above the heading.'
+  facts:
+    title: Facts
+    description: 'Stat leaves rendered inside the stats list.'
+  aside:
+    title: Aside
+    description: 'The parking form card.'
+dataDependencies: {  }

@@ -1,0 +1,45 @@
+uuid: 9a379ff6-e78f-469f-9a56-07f91148dc1c
+langcode: en
+status: true
+dependencies: {  }
+machineName: card
+name: Card
+type: external
+required: {  }
+props:
+  tag:
+    type: string
+    enum:
+      - div
+      - section
+    title: Element
+    examples:
+      - div
+  heading:
+    type: string
+    title: 'Card heading'
+    examples:
+      - 'Airside Operations Officer'
+  headingLevel:
+    type: string
+    enum:
+      - h2
+      - h3
+    title: 'Heading level'
+    examples:
+      - h3
+  headingId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - flights-title
+  padded:
+    type: boolean
+    title: Padded
+    examples:
+      - true
+slots:
+  parts:
+    title: Parts
+    description: 'The card content, facts, prose, paragraphs and buttons.'
+dataDependencies: {  }

@@ -1,0 +1,26 @@
+name: Wait chip
+machineName: wait-chip
+status: true
+required:
+    - label
+    - minutes
+props:
+    properties:
+        label:
+            title: Label before the chip
+            type: string
+            examples:
+                - Terminal 1
+        minutes:
+            title: Minutes
+            type: integer
+            examples:
+                - 8
+        tone:
+            title: Tone
+            type: string
+            enum:
+                - ok
+                - warn
+            examples:
+                - ok

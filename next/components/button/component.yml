@@ -1,0 +1,36 @@
+name: Button
+machineName: button
+status: true
+required:
+    - label
+props:
+    properties:
+        label:
+            title: Button text
+            type: string
+            examples:
+                - Check prices and availability
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /parking#quote
+        variant:
+            title: Variant
+            type: string
+            enum:
+                - primary
+                - secondary
+            examples:
+                - primary
+        block:
+            title: Full width
+            type: boolean
+            examples:
+                - true
+        large:
+            title: Large
+            type: boolean
+            examples:
+                - false

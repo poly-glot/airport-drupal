@@ -1,0 +1,385 @@
+uuid: 217b9dc6-2216-44f4-b1b2-c11d8d31742f
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.flight-board
+  module:
+    - link
+active_version: 38e604034254b0b7
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Live flights'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        titleId:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: live-flights-title
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'refreshes every minute · gates shown from 60 min before departure'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        clockTime:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '09:42'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        overlapped:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        showSearch:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        departuresSearchLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Search departures by flight or city'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        arrivalsSearchLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Search arrivals by flight or city'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        departuresCaption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Departures
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        arrivalsCaption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Arrivals
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        allDeparturesLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All departures'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        allDeparturesHref:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/flights#departures'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        allArrivalsLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All arrivals'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        allArrivalsHref:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/flights#arrivals'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        departures:
+          title: Departures
+          description: 'Flight rows for the departures table.'
+        arrivals:
+          title: Arrivals
+          description: 'Flight rows for the arrivals table.'
+  8edcbfd52491a01d:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Live flights'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        title_id:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: live-flights-title
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'refreshes every minute · gates shown from 60 min before departure'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        clock_time:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '09:42'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        overlapped:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        show_search:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        departures_search_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Search departures by flight or city'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        arrivals_search_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Search arrivals by flight or city'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        departures_caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Departures
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        arrivals_caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Arrivals
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        all_departures_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All departures'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        all_departures_href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/flights#departures'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        all_arrivals_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All arrivals'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        all_arrivals_href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/flights#arrivals'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        departures:
+          title: Departures
+          description: 'Flight rows for the departures table.'
+        arrivals:
+          title: Arrivals
+          description: 'Flight rows for the arrivals table.'
+label: 'Flight board'
+id: js.flight-board
+provider: null
+source: js
+source_local_id: flight-board

@@ -1,0 +1,23 @@
+name: Breadcrumb item
+machineName: breadcrumb-item
+status: true
+required:
+    - label
+props:
+    properties:
+        label:
+            title: Crumb text
+            type: string
+            examples:
+                - Home
+        href:
+            title: Link
+            type: string
+            format: uri-reference
+            examples:
+                - /
+        current:
+            title: Current page
+            type: boolean
+            examples:
+                - false

@@ -1,0 +1,56 @@
+uuid: 3080a5eb-51c5-4999-a41a-b23cb23945e4
+langcode: en
+status: true
+dependencies: {  }
+machineName: getting-here
+name: 'Getting here'
+type: external
+required:
+  - title
+  - intro
+props:
+  title:
+    type: string
+    title: 'Section heading'
+    examples:
+      - 'Getting here'
+  intro:
+    type: string
+    title: 'Line under the heading'
+    examples:
+      - 'Trains from the city centre run every 10 minutes and stop under Terminal 1. Drop-off is outside both terminals, with a free 10-minute wait at Mid-Stay.'
+  noteLead:
+    type: string
+    title: 'Bold start of the note'
+    examples:
+      - 'Step-free throughout.'
+  note:
+    type: string
+    title: 'Rest of the note'
+    examples:
+      - 'Lifts at the station, every car park and both terminals. Prams go all the way to the aircraft door.'
+  noteIcon:
+    type: string
+    enum:
+      - step-free
+    title: 'Note icon'
+    examples:
+      - step-free
+  anchor:
+    type: string
+    title: 'Anchor id'
+    examples:
+      - getting-here
+  titleId:
+    type: string
+    title: 'Heading id'
+    examples:
+      - getting-here-title
+slots:
+  rows:
+    title: Rows
+    description: 'Row links, each rendering its own list item.'
+  map:
+    title: Map
+    description: 'The map pane.'
+dataDependencies: {  }

@@ -1,0 +1,62 @@
+.tableWrap {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    font-size: 15px;
+    width: 100%;
+}
+
+.caption {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    padding-bottom: 14px;
+    text-align: left;
+}
+
+.table th {
+    border-bottom: 2px solid var(--brand);
+    color: var(--grey-2);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 12px 16px 10px;
+    text-align: left;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.table td,
+.table th[scope='row'] {
+    border-bottom: 1px solid var(--rule-mid);
+    padding: 16px;
+    vertical-align: top;
+}
+
+.table th[scope='row'] {
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.table th:first-child,
+.table td:first-child {
+    padding-left: 0;
+}
+
+.table :global(.table__num) {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+@media (width <= 900px) {
+    .table td,
+    .table th {
+        padding-inline: 12px;
+    }
+}
