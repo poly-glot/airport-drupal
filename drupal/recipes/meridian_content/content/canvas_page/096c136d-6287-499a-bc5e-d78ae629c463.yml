@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Airlines and destinations — Meridian Airport'
+      value: 'Airlines and destinations'
   description:
     -
       value: 'Four airlines fly from Meridian Airport to 20 destinations across Europe and Morocco. See who flies where, from which terminal, and how often.'

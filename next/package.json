@@ -15,7 +15,9 @@
         "check": "npm run lint && npm run lint:css && npm run format:check && npm run type-check",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "lint:css": "stylelint \"**/*.css\""
+        "lint:css": "stylelint \"**/*.css\"",
+        "test:e2e": "playwright test",
+        "a11y": "playwright test e2e/a11y.spec.ts"
     },
     "dependencies": {
         "@drupal-canvas/headless": "^0.11.0",
@@ -47,7 +49,8 @@
         "stylelint": "^17.16.0",
         "stylelint-config-standard": "^40.0.0",
         "stylelint-order": "^8.1.2",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "yaml": "^2.9.1"
     },
     "allowScripts": {
         "esbuild@0.25.12": true,

@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Site map — Meridian Airport'
+      value: 'Site map'
   description:
     -
       value: 'Every page on the Meridian Airport website in one list: flights, parking, getting here, at the airport, destination guides, help and corporate pages.'

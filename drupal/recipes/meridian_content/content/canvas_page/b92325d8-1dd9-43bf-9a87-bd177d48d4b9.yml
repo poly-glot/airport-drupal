@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Terms of use — Meridian Airport'
+      value: 'Terms of use'
   description:
     -
       value: 'Terms of use for the Meridian Airport demonstration website: what the site is for, how accurate the information is, and your use of its content.'

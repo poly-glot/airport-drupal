@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Accessibility — Meridian Airport'
+      value: Accessibility
   description:
     -
       value: 'Accessibility statement for the Meridian Airport website: how it meets WCAG 2.2 level AA, how we test it, known limitations and how to report a problem.'

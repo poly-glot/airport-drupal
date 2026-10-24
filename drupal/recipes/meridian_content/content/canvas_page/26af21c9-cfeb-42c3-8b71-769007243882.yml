@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Flights, parking and travel information — Meridian Airport'
+      value: 'Flights, parking and travel information'
   description:
     -
       value: 'Live flights, security wait times and parking at Meridian Airport, Birmingham. Check everything before you leave the house.'

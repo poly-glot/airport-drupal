@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Help and contact — Meridian Airport'
+      value: 'Help and contact'
   description:
     -
       value: 'Contact Meridian Airport by phone or email, find answers to common questions about security, baggage, parking and assistance, or send us feedback.'

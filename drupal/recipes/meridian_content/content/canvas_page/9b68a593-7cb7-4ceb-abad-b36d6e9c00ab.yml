@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Privacy — Meridian Airport'
+      value: Privacy
   description:
     -
       value: 'How the Meridian Airport demonstration website handles information: no analytics, no tracking, no accounts, and forms that do not send what you type.'

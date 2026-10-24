@@ -54,7 +54,15 @@ The frontend `http://localhost:3000` is registered with Canvas in `config/sync` 
 - **Content**: edit in the Canvas editor and publish. To ship content changes with the code, export them: `ddev drush content:export canvas_page --dir=/var/www/html/recipes/meridian_content/content`, review the YAML diff, commit.
 - **Configuration**: change it in the site, `ddev drush cex -y`, commit `drupal/config/sync`. Production imports it with `drush deploy`.
 
-Checks that CI runs (`verify.yaml`): `npm run lint`, `npm run type-check` and `npm run build` in `next/`; `composer validate` and `php -l` on the Drupal side.
+Quality gates, the same locally and in CI (`verify.yaml`):
+
+| Gate | Command | What it runs |
+|---|---|---|
+| Frontend | `cd next && npm run check` | eslint, stylelint (standard config, alphabetical properties), `prettier --check`, tsc |
+| Pages | `cd next && npm run test:e2e` | Playwright on every page in the content recipe at 1440 and 390: 200, one `<main>`, the expected title and description, no failed requests, no console errors, no axe WCAG 2.2 AA violations. `npm run a11y` runs only the axe half |
+| Drupal | `cd drupal && ddev composer quality` | phpcs (Drupal and DrupalPractice, comment sniffs off), PHPStan level 8 with phpstan-drupal, drupal-rector dry run |
+
+CI's e2e job builds the production Drupal image, runs its bootstrap against an empty MySQL, starts it, builds and starts Next against it, and runs `npm run test:e2e`: the same path a fresh production install takes.
 
 ## The hero
 

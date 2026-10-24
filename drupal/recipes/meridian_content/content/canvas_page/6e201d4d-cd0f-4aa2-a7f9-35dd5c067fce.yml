@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'At the airport — Meridian Airport'
+      value: 'At the airport'
   description:
     -
       value: 'Security, food, shops, lounges and terminal maps for Meridian Airport. Everything between the door and the gate, in both terminals.'

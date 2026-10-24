@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Cookies — Meridian Airport'
+      value: Cookies
   description:
     -
       value: 'This website uses no analytics or advertising cookies. It sets one strictly necessary cookie at most, only on pages with a form, to protect it from misuse.'

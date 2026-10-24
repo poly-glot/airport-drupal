@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'About Meridian — Meridian Airport'
+      value: 'About Meridian'
   description:
     -
       value: 'Meridian Airport is a fictional airport in Birmingham with two terminals, four airlines and 20 destinations. Who we are and what we are working on.'

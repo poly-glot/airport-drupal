@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Getting here — Meridian Airport'
+      value: 'Getting here'
   description:
     -
       value: 'Trains every 10 minutes from the city centre, drop-off outside both terminals, and buses and coaches to the door. Plan your journey to Meridian Airport.'

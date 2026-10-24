@@ -9,7 +9,7 @@ Drupal 11 with Canvas is the editor and content API (`drupal/`); a Next.js app o
 3. Editorial copy lives in Canvas pages, never in components. Literal text in a component is limited to UI chrome every page shares (skip link, legend labels, "Updated" prefixes, control labels).
 4. Content ships as `drupal/recipes/meridian_content/content/` exported with `drush content:export`; configuration ships as `drupal/config/sync/` exported with `drush cex`. Never hand-edit either; change the site and export.
 5. A component's prop and slot names are camelCase: Canvas sends them camelCased to the frontend.
-6. Done means checked: `cd next && npm run check` clean, the change seen in the Canvas editor (reload it so it registers metadata changes), and the page looked at in Chrome at 1440 and 390 with the network tab filtered to errors. A sentence that states a check result is written only after the command printed it, and quotes it.
+6. Done means checked: `cd next && npm run check` (eslint, stylelint, Prettier, tsc) and `npm run test:e2e` (Playwright smoke and axe on every shipped page at 1440 and 390, against the running dev server) pass; `cd drupal && ddev composer quality` (phpcs, PHPStan level 8, Rector dry run) passes when PHP changed; the change is seen in the Canvas editor (reload it so it registers metadata changes). A sentence that states a check result is written only after the command printed it, and quotes it.
 7. Anything the design docs and the existing components do not settle: stop and report. Do not invent.
 8. Before deleting a symbol, file or library, search for its bare name and for destructuring; then run `npm run build`.
 

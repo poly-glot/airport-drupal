@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Flight alerts — Meridian Airport'
+      value: 'Flight alerts'
   description:
     -
       value: 'Free alerts for gate changes, delays and boarding calls by text or WhatsApp. Set them up in a minute with your flight number and date.'

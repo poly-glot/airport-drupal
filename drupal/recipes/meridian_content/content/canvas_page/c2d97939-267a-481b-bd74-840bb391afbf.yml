@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Live flights — Meridian Airport'
+      value: 'Live flights'
   description:
     -
       value: "Today's departures and arrivals at Meridian Airport, with terminal, gate, bags belt and status for every flight. Search by flight number or city."

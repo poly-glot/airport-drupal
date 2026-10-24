@@ -74,7 +74,7 @@ Owners: `site-header` (menu), `notice-bar` (notices), `flight-board` (tabs, sear
 ## Adding or changing a component
 
 1. Write or edit the directory as above.
-2. `cd next && npm run check` (eslint and tsc).
+2. `cd next && npm run check` (eslint, stylelint, Prettier, tsc), then `npm run test:e2e` with the dev server running.
 3. With `npm run dev` running, reload the Canvas editor: it reads `/api/canvas/components` and registers the change. A changed prop list makes a new component version; existing instances keep working and pick it up when edited.
 4. Place it on a page in the editor and look at it in Chrome at 1440 and 390 with the network tab filtered to errors.
 5. If a prop is renamed or removed, stored content still holds the old key: change it in the editor, or migrate it and re-export the content recipe (`docs/status.md`, Content).

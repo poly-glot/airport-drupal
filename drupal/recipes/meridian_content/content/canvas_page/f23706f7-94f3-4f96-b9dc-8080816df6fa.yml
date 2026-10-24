@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Destination guides — Meridian Airport'
+      value: 'Destination guides'
   description:
     -
       value: 'Short, practical guides to Lisbon, Reykjavík and Marrakech: how to get there from Meridian, where to eat, what to see and what to pack.'

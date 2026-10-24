@@ -32,3 +32,58 @@ jobs:
       - run: composer validate --working-dir=drupal --no-check-publish
       - run: composer install --working-dir=drupal --no-interaction --no-progress
       - run: composer quality --working-dir=drupal
+
+  e2e:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_DATABASE: drupal
+          MYSQL_PASSWORD: drupal
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_USER: drupal
+        options: --health-cmd="mysqladmin ping -h 127.0.0.1" --health-interval=5s --health-retries=20
+        ports:
+          - 3306:3306
+    env:
+      CANVAS_SITE_URL: http://127.0.0.1:8080
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f drupal/Dockerfile -t airport-drupal:ci .
+      - run: |
+          mkdir -p "$RUNNER_TEMP/keys"
+          openssl genrsa -out "$RUNNER_TEMP/keys/private.key" 2048
+          openssl rsa -in "$RUNNER_TEMP/keys/private.key" -pubout -out "$RUNNER_TEMP/keys/public.key"
+          {
+            echo DRUPAL_DB_HOST=127.0.0.1
+            echo DRUPAL_DB_NAME=drupal
+            echo DRUPAL_DB_USER=drupal
+            echo DRUPAL_DB_PASSWORD=drupal
+            echo "DRUPAL_HASH_SALT=$(openssl rand -hex 32)"
+            echo "DRUPAL_ADMIN_PASS=$(openssl rand -hex 16)"
+            echo "DRUPAL_CANVAS_CLIENT_SECRET=$(openssl rand -hex 16)"
+          } > "$RUNNER_TEMP/drupal.env"
+      - run: >-
+          docker run --rm --network host --env-file "$RUNNER_TEMP/drupal.env"
+          -e DRUPAL_OAUTH_PRIVATE_KEY="$(cat "$RUNNER_TEMP/keys/private.key")"
+          -e DRUPAL_OAUTH_PUBLIC_KEY="$(cat "$RUNNER_TEMP/keys/public.key")"
+          airport-drupal:ci meridian-bootstrap
+      - run: docker run -d --network host --env-file "$RUNNER_TEMP/drupal.env" airport-drupal:ci
+      - run: timeout 60 sh -c 'until curl -fs http://127.0.0.1:8080/health.php; do sleep 1; done'
+      - uses: actions/setup-node@v4
+        with:
+          cache: npm
+          cache-dependency-path: next/package-lock.json
+          node-version: '24'
+      - run: npm ci
+        working-directory: next
+      - run: npm run build
+        working-directory: next
+      - run: npx playwright install --with-deps chromium
+        working-directory: next
+      - run: |
+          npm start &
+          timeout 60 sh -c 'until curl -fs http://127.0.0.1:3000/ > /dev/null; do sleep 1; done'
+          npm run test:e2e
+        working-directory: next

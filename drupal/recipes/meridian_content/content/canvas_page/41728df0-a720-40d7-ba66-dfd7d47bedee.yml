@@ -12,7 +12,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'First time flying? — Meridian Airport'
+      value: 'First time flying?'
   description:
     -
       value: 'A five-step walkthrough of Meridian Airport, from check-in to the gate, with how long each step takes today and what to bring.'
