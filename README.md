@@ -21,6 +21,7 @@ cd drupal
 ddev start
 ddev composer install
 ddev drush site:install --existing-config --account-pass=admin --yes
+ddev drush cache:rebuild
 ddev drush recipe ../recipes/meridian_content
 ```
 
