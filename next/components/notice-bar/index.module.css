@@ -1,15 +1,15 @@
-.notice-bar {
+.root {
     background: var(--notice);
     color: var(--white);
 }
 
-.notice-bar__list {
+.list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.notice-bar__item {
+.item {
     align-items: center;
     column-gap: 16px;
     display: none;
@@ -18,20 +18,20 @@
     padding-block: 8px;
 }
 
-.notice-bar__item:target,
-.notice-bar:not(:has(.notice-bar__item:target)) .notice-bar__item:first-child,
-.notice-bar--enhanced .notice-bar__item {
+.item:target,
+.root:not(:has(.item:target)) .item:first-child,
+.root[data-enhanced] .item {
     display: grid;
 }
 
-.notice-bar__controls {
+.controls {
     align-items: center;
     display: flex;
     gap: 2px;
     grid-area: controls;
 }
 
-.notice-bar__step {
+.step {
     align-items: center;
     border-radius: var(--radius-button);
     color: var(--white);
@@ -41,12 +41,12 @@
     width: 44px;
 }
 
-.notice-bar__step:hover {
+.step:hover {
     background: var(--white-wash);
     color: var(--white);
 }
 
-.notice-bar__count {
+.count {
     font-size: 13px;
     font-variant-numeric: tabular-nums;
     font-weight: 600;
@@ -55,25 +55,25 @@
     text-align: center;
 }
 
-.notice-bar__text {
+.text {
     font-size: 15px;
     grid-area: text;
     line-height: 1.4;
 }
 
-.notice-bar__kind {
+.kind {
     font-weight: 700;
 }
 
-.notice-bar__separator {
+.separator {
     opacity: 0.7;
 }
 
-.notice-bar__action {
+.action {
     font-weight: 600;
 }
 
-.notice-bar__link {
+.link {
     align-items: center;
     color: var(--white);
     display: inline-flex;
@@ -85,17 +85,17 @@
     text-underline-offset: 3px;
 }
 
-.notice-bar__link:hover {
+.link:hover {
     color: var(--white);
     text-decoration-thickness: 2px;
 }
 
 @media (width <= 900px) {
-    .notice-bar__container {
+    .container {
         padding-right: 4px;
     }
 
-    .notice-bar__item {
+    .item {
         align-items: start;
         column-gap: 8px;
         grid-template-areas: 'text controls' 'link controls';
@@ -103,32 +103,32 @@
         padding-block: 10px;
     }
 
-    .notice-bar__controls {
+    .controls {
         flex-direction: column;
         gap: 0;
     }
 
-    .notice-bar__step--prev {
+    .stepPrev {
         display: none;
     }
 
-    .notice-bar__count {
+    .count {
         font-size: 12px;
         min-width: 0;
         order: 1;
     }
 
-    .notice-bar__text {
+    .text {
         font-size: 14px;
         line-height: 1.45;
         padding-top: 10px;
     }
 
-    .notice-bar__action {
+    .action {
         font-weight: 600;
     }
 
-    .notice-bar__link {
+    .link {
         justify-self: start;
         min-height: 24px;
     }

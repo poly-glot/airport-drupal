@@ -1,3 +1,6 @@
+import waitPanel from '@/components/wait-panel/index.module.css';
+import styles from './index.module.css';
+
 interface WaitChipProps {
     label: string;
     minutes: number;
@@ -6,9 +9,9 @@ interface WaitChipProps {
 
 export default function WaitChip({ label, minutes, tone = 'ok' }: WaitChipProps) {
     return (
-        <div className="wait-panel__item">
-            <dt className="wait-panel__label">{label}</dt>
-            <dd className={`wait-chip wait-chip--${tone}`}>
+        <div className={waitPanel.item}>
+            <dt className={waitPanel.label}>{label}</dt>
+            <dd className={`${styles.root} ${styles[tone]}`}>
                 <svg
                     width="16"
                     height="16"

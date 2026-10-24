@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import SectionHead from '@/components/section-head';
-import '@/components/section-head/index.css';
-import './index.css';
+import styles from './index.module.css';
 
 interface TowerGridProps {
     title: string;
@@ -26,7 +25,7 @@ export default function TowerGrid({
         <section className="band" id={anchor || undefined} aria-labelledby={titleId}>
             <div className="container">
                 <SectionHead title={title} intro={intro} titleId={titleId} linkLabel={linkLabel} linkHref={linkHref} />
-                <div className="towers">{towers}</div>
+                <div className={styles.root}>{towers}</div>
             </div>
         </section>
     );

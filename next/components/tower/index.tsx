@@ -1,5 +1,5 @@
 import Picture from '@/components/picture';
-import './index.css';
+import styles from './index.module.css';
 
 const iconPaths = {
     security: (
@@ -56,7 +56,7 @@ export default function Tower({
     imageHeight,
 }: TowerProps) {
     return (
-        <a className="tower" href={href}>
+        <a className={styles.root} href={href}>
             <Picture
                 src={imageSrc}
                 alt={imageAlt}
@@ -65,12 +65,12 @@ export default function Tower({
                 sizes="(max-width: 900px) calc(50vw - 22px), 265px"
                 loading="lazy"
                 widths="560,840"
-                pictureClass="tower__media"
-                cssClass="tower__img"
+                pictureClass={styles.media}
+                cssClass={styles.img}
             />
-            <div className="tower__top">
+            <div className={styles.top}>
                 <svg
-                    className="tower__icon"
+                    className={styles.icon}
                     width="40"
                     height="40"
                     viewBox="0 0 24 24"
@@ -83,14 +83,14 @@ export default function Tower({
                 >
                     {iconPaths[icon]}
                 </svg>
-                <span className="tower__number" aria-hidden="true">
+                <span className={styles.number} aria-hidden="true">
                     {number}
                 </span>
             </div>
-            <div className="tower__bottom">
-                <h3 className="tower__title">{title}</h3>
-                <p className="tower__body">{body}</p>
-                <span className="tower__cta">
+            <div className={styles.bottom}>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.body}>{body}</p>
+                <span className={styles.cta}>
                     {ctaLabel}
                     <svg
                         className="text-link__icon"

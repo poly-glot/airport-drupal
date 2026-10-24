@@ -1,43 +1,51 @@
+import styles from '../index.module.css';
+
 export default function FlightSearch() {
     return (
-        <form className="search-card on-light" action="/flights" method="get" aria-label="Flight tracking">
-            <div className="search-card__tabs">
-                <span className="search-card__tab search-card__tab--current">Flight tracking</span>
-                <a className="search-card__tab" href="/at-the-airport/lounges">
+        <form className={`${styles.searchCard} on-light`} action="/flights" method="get" aria-label="Flight tracking">
+            <div className={styles.searchCardTabs}>
+                <span className={`${styles.searchCardTab} ${styles.searchCardTabCurrent}`}>Flight tracking</span>
+                <a className={styles.searchCardTab} href="/at-the-airport/lounges">
                     Fast Track
                 </a>
-                <a className="search-card__tab" href="/at-the-airport/lounges">
+                <a className={styles.searchCardTab} href="/at-the-airport/lounges">
                     Lounges
                 </a>
             </div>
-            <fieldset className="fieldset fieldset--inline">
+            <fieldset className={`${styles.fieldset} ${styles.fieldsetInline}`}>
                 <legend className="visually-hidden">Direction</legend>
-                <label className="check">
-                    <input className="check__input" type="radio" name="direction" value="departures" defaultChecked />
+                <label className={styles.check}>
+                    <input
+                        className={styles.checkInput}
+                        type="radio"
+                        name="direction"
+                        value="departures"
+                        defaultChecked
+                    />
                     Departures
                 </label>
-                <label className="check">
-                    <input className="check__input" type="radio" name="direction" value="arrivals" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="radio" name="direction" value="arrivals" />
                     Arrivals
                 </label>
             </fieldset>
-            <div className="field">
-                <label className="field__label" htmlFor="flight-day">
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="flight-day">
                     When
                 </label>
-                <select className="field__input field__input--soft" id="flight-day" name="day">
+                <select className={`${styles.fieldInput} ${styles.fieldInputSoft}`} id="flight-day" name="day">
                     <option value="2026-10-03">Today, 3 October</option>
                     <option value="2026-10-04">Tomorrow, 4 October</option>
                     <option value="2026-10-05">Monday, 5 October</option>
                 </select>
             </div>
-            <div className="field">
-                <label className="field__label" htmlFor="flight-search">
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="flight-search">
                     Flight number, airline or city
                 </label>
-                <div className="field__control">
+                <div className={styles.fieldControl}>
                     <svg
-                        className="field__icon"
+                        className={styles.fieldIcon}
                         width="18"
                         height="18"
                         viewBox="0 0 24 24"
@@ -51,7 +59,7 @@ export default function FlightSearch() {
                         <path d="M20 20l-4-4"></path>
                     </svg>
                     <input
-                        className="field__input field__input--soft field__input--with-icon"
+                        className={`${styles.fieldInput} ${styles.fieldInputSoft} ${styles.fieldInputWithIcon}`}
                         id="flight-search"
                         name="q"
                         type="search"
@@ -59,7 +67,7 @@ export default function FlightSearch() {
                     />
                 </div>
             </div>
-            <button className="button button--lg search-card__submit" type="submit">
+            <button className={`button button--lg ${styles.searchCardSubmit}`} type="submit">
                 <svg
                     width="18"
                     height="18"

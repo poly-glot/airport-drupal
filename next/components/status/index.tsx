@@ -1,5 +1,3 @@
-import './index.css';
-
 interface StatusProps {
     word: string;
     tone?: 'ok' | 'info' | 'neutral' | 'warn' | 'bad';

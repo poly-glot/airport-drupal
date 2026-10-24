@@ -1,8 +1,8 @@
-.page-hero {
+.root {
     background: var(--sky);
 }
 
-.page-hero__inner {
+.inner {
     align-items: center;
     display: grid;
     gap: 48px;
@@ -11,18 +11,18 @@
     padding-top: 40px;
 }
 
-.page-hero--with-art .page-hero__inner {
+.withArt .inner {
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 }
 
-.page-hero__content {
+.content {
     display: flex;
     flex-direction: column;
     gap: 14px;
     max-width: 720px;
 }
 
-.page-hero__eyebrow {
+.eyebrow {
     color: var(--grey-2);
     font-size: 12px;
     font-weight: 700;
@@ -30,7 +30,7 @@
     text-transform: uppercase;
 }
 
-.page-hero__title {
+.title {
     color: var(--brand);
     font-size: 52px;
     letter-spacing: -0.015em;
@@ -38,7 +38,7 @@
     text-wrap: balance;
 }
 
-.page-hero__intro {
+.intro {
     color: var(--ink-muted);
     font-size: 18px;
     line-height: 1.55;
@@ -47,20 +47,20 @@
 }
 
 @media (width <= 900px) {
-    .page-hero__inner,
-    .page-hero--with-art .page-hero__inner {
+    .inner,
+    .withArt .inner {
         gap: 20px;
         grid-template-columns: minmax(0, 1fr);
         padding-bottom: 32px;
         padding-top: 24px;
     }
 
-    .page-hero__title {
+    .title {
         font-size: 36px;
         line-height: 1.08;
     }
 
-    .page-hero__intro {
+    .intro {
         font-size: 16px;
     }
 }

@@ -1,4 +1,4 @@
-import './index.css';
+import styles from './index.module.css';
 
 interface StatProps {
     label: string;
@@ -7,9 +7,9 @@ interface StatProps {
 
 export default function Stat({ label, value }: StatProps) {
     return (
-        <div className="stats__item">
-            <dt className="stats__label">{label}</dt>
-            <dd className="stats__value">{value}</dd>
+        <div className={styles.item}>
+            <dt className={styles.label}>{label}</dt>
+            <dd className={styles.value}>{value}</dd>
         </div>
     );
 }

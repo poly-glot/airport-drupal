@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import SectionHead from '@/components/section-head';
-import '@/components/section-head/index.css';
-import './index.css';
+import styles from './index.module.css';
 
 interface HelpListProps {
     title?: string;
@@ -22,7 +21,7 @@ export default function HelpList({
     titleId = 'help-title',
     items,
 }: HelpListProps) {
-    const list = <ul className="help-list">{items}</ul>;
+    const list = <ul className={styles.root}>{items}</ul>;
 
     if (variant === 'plain') {
         return list;

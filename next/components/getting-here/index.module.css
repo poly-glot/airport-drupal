@@ -1,4 +1,4 @@
-.getting-here {
+.root {
     background: var(--panel);
     display: flex;
     min-height: 680px;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.getting-here__inner {
+.inner {
     align-items: center;
     display: grid;
     gap: 64px;
@@ -16,20 +16,20 @@
     z-index: 1;
 }
 
-.getting-here__copy {
+.copy {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.getting-here__intro {
+.intro {
     color: var(--ink-muted);
     line-height: 1.55;
     max-width: 460px;
     text-wrap: pretty;
 }
 
-.getting-here__note {
+.note {
     align-items: flex-start;
     color: var(--ink-muted);
     display: flex;
@@ -38,33 +38,33 @@
     line-height: 1.5;
 }
 
-.getting-here__note-icon {
+.noteIcon {
     color: var(--brand);
     flex-shrink: 0;
     margin-top: 2px;
 }
 
-.getting-here__note-lead {
+.noteLead {
     color: var(--ink);
     font-weight: 600;
 }
 
 @media (width <= 900px) {
-    .getting-here {
+    .root {
         flex-direction: column;
         min-height: 0;
     }
 
-    .getting-here__inner {
+    .inner {
         display: block;
         padding-block: 32px 24px;
     }
 
-    .getting-here__copy {
+    .copy {
         gap: 14px;
     }
 
-    .getting-here__intro {
+    .intro {
         font-size: 15px;
     }
 }

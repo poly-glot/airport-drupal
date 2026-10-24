@@ -1,4 +1,4 @@
-.table-wrap {
+.tableWrap {
     overflow-x: auto;
 }
 
@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.table__caption {
+.caption {
     font-family: var(--font-serif);
     font-size: 24px;
     font-weight: 600;
@@ -49,7 +49,7 @@
     padding-left: 0;
 }
 
-.table__num {
+.table :global(.table__num) {
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }

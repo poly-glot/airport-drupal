@@ -1,3 +1,5 @@
+import breadcrumb from '@/components/breadcrumb/index.module.css';
+
 export default function BreadcrumbItem({
     label,
     href,
@@ -9,15 +11,15 @@ export default function BreadcrumbItem({
 }) {
     if (current) {
         return (
-            <li className="breadcrumb__item" aria-current="page">
+            <li className={breadcrumb.item} aria-current="page">
                 {label}
             </li>
         );
     }
 
     return (
-        <li className="breadcrumb__item">
-            <a className="breadcrumb__link" href={href ?? ''}>
+        <li className={breadcrumb.item}>
+            <a className={breadcrumb.link} href={href ?? ''}>
                 {label}
             </a>
         </li>

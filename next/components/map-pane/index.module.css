@@ -1,10 +1,10 @@
-.map-pane {
+.root {
     background: var(--map-bg);
     inset: 0 0 0 50%;
     position: absolute;
 }
 
-.map-pane__card {
+.card {
     background: var(--white);
     border-radius: var(--radius-form);
     box-shadow: var(--shadow-map-card);
@@ -18,29 +18,29 @@
     top: 24px;
 }
 
-.map-pane__place {
+.place {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.map-pane__name {
+.name {
     font-size: 15px;
     font-weight: 700;
 }
 
-.map-pane__address {
+.address {
     color: var(--grey-2);
     font-size: 13px;
 }
 
-.map-pane__actions {
+.actions {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.map-pane__credit {
+.credit {
     bottom: 12px;
     color: var(--grey-2);
     font-size: 12px;
@@ -48,7 +48,7 @@
     right: 24px;
 }
 
-.map-pane__credit-link {
+.creditLink {
     align-items: center;
     color: var(--grey-2);
     display: inline-flex;
@@ -62,168 +62,168 @@
     width: 100%;
 }
 
-.map--fill {
+.mapFill {
     height: 100%;
     inset: 0;
     position: absolute;
 }
 
-.map__ground {
+.mapGround {
     fill: var(--map-bg);
 }
 
-.map__river {
+.mapRiver {
     fill: var(--map-river);
 }
 
-.map__green {
+.mapGreen {
     fill: var(--map-green);
 }
 
-.map__block {
+.mapBlock {
     fill: var(--map-block);
 }
 
-.map__runway,
-.map__road {
+.mapRunway,
+.mapRoad {
     fill: none;
     stroke: var(--map-road);
     stroke-linecap: round;
 }
 
-.map__road-core {
+.mapRoadCore {
     fill: none;
     stroke: var(--sand-mid);
     stroke-linecap: round;
 }
 
-.map__lane {
+.mapLane {
     fill: none;
     stroke: var(--white);
     stroke-linecap: round;
 }
 
-.map__dash {
+.mapDash {
     fill: none;
     stroke: var(--white);
 }
 
-.map__rail {
+.mapRail {
     fill: none;
     stroke: var(--neutral-dot);
 }
 
-.map__terminal {
+.mapTerminal {
     fill: var(--brand);
 }
 
-.map__terminal--alt {
+.mapTerminalAlt {
     fill: var(--navy-2);
 }
 
-.map__link {
+.mapLink {
     stroke: var(--brand);
 }
 
-.map__zone {
+.mapZone {
     fill: var(--white);
     stroke: var(--line-input);
 }
 
-.map__zone--sand {
+.mapZoneSand {
     fill: var(--sand);
     stroke: var(--sand-mid);
 }
 
-.map__gate {
+.mapGate {
     fill: var(--sky);
     stroke: var(--brand);
 }
 
-.map__security {
+.mapSecurity {
     fill: none;
     stroke: var(--sand-ink);
     stroke-linecap: round;
 }
 
-.map__chip {
+.mapChip {
     fill: var(--white);
     stroke: var(--line-input);
 }
 
-.map__chip-title {
+.mapChipTitle {
     fill: var(--brand);
     font-weight: 800;
 }
 
-.map__chip-sub {
+.mapChipSub {
     fill: var(--grey-2);
 }
 
-.map__a45 {
+.mapA45 {
     fill: var(--sand-mid);
 }
 
-.map__a45-text {
+.mapA45Text {
     fill: var(--a45-ink);
     font-weight: 700;
 }
 
-.map__station {
+.mapStation {
     fill: var(--white);
     stroke: var(--brand);
 }
 
-.map__station-label {
+.mapStationLabel {
     fill: var(--brand);
     font-weight: 700;
 }
 
-.map__label {
+.mapLabel {
     fill: var(--grey-2);
 }
 
-.map__label--river {
+.mapLabelRiver {
     fill: var(--map-river-ink);
     font-style: italic;
 }
 
-.map__label--caps {
+.mapLabelCaps {
     font-weight: 600;
 }
 
-.map__block-title {
+.mapBlockTitle {
     fill: var(--white);
     font-weight: 700;
 }
 
-.map__block-sub {
+.mapBlockSub {
     fill: var(--footer-link);
 }
 
-.map__pin {
+.mapPin {
     fill: var(--bad);
 }
 
-.map__pin-dot {
+.mapPinDot {
     fill: var(--white);
 }
 
 @media (width <= 900px) {
-    .map-pane {
+    .root {
         height: 380px;
         left: 0;
         position: relative;
     }
 
-    .map-pane__card {
+    .card {
         left: 16px;
         min-width: 0;
         right: 16px;
         top: 14px;
     }
 
-    .map-pane__credit {
+    .credit {
         right: 16px;
     }
 }

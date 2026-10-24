@@ -3,8 +3,7 @@
 import type { ReactNode } from 'react';
 import { enhanceMenu } from '@/lib/behaviours';
 import { useEnhance } from '@/lib/use-enhance';
-import '@/components/button/index.css';
-import './index.css';
+import styles from './index.module.css';
 
 interface SiteHeaderProps {
     ctaLabel: string;
@@ -19,11 +18,11 @@ export default function SiteHeader({ ctaLabel, ctaHref, basketHref, basketLabel,
     const ref = useEnhance<HTMLElement>(enhanceMenu);
 
     return (
-        <header ref={ref} className="header">
-            <div className="header__inner container">
-                <a className="header__brand" href="/" aria-current={brandCurrent ? 'page' : undefined}>
+        <header ref={ref} className={styles.root}>
+            <div className={`${styles.inner} container`}>
+                <a className={styles.brand} href="/" aria-current={brandCurrent ? 'page' : undefined}>
                     <svg
-                        className="header__logo"
+                        className={styles.logo}
                         width="34"
                         height="34"
                         viewBox="0 0 36 36"
@@ -40,14 +39,14 @@ export default function SiteHeader({ ctaLabel, ctaHref, basketHref, basketLabel,
                         <path d="M18 4v12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"></path>
                         <circle cx="18" cy="18" r="2.5" fill="currentColor"></circle>
                     </svg>
-                    <span className="header__name">Meridian Airport</span>
+                    <span className={styles.name}>Meridian Airport</span>
                     <span className="visually-hidden">{' home'}</span>
                 </a>
-                <nav className="header__nav" id="site-menu" aria-label="Main">
-                    <ul className="header__list">{nav}</ul>
+                <nav className={styles.nav} data-header-nav="" id="site-menu" aria-label="Main">
+                    <ul className={styles.list}>{nav}</ul>
                 </nav>
-                <div className="header__actions">
-                    <span className="header__lang">
+                <div className={styles.actions}>
+                    <span className={styles.lang}>
                         <svg
                             width="18"
                             height="18"
@@ -94,10 +93,15 @@ export default function SiteHeader({ ctaLabel, ctaHref, basketHref, basketLabel,
                             <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
                         </svg>
                     </a>
-                    <a className="button header__cta" href={ctaHref}>
+                    <a className={`button ${styles.cta}`} href={ctaHref}>
                         {ctaLabel}
                     </a>
-                    <a className="icon-button header__menu-toggle" href="#site-menu" aria-label="Open menu">
+                    <a
+                        className={`icon-button ${styles.menuToggle}`}
+                        data-header-menu-toggle=""
+                        href="#site-menu"
+                        aria-label="Open menu"
+                    >
                         <svg
                             width="22"
                             height="22"

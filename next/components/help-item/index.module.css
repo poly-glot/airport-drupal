@@ -1,4 +1,4 @@
-.help-item {
+.root {
     color: var(--ink);
     display: flex;
     flex-direction: column;
@@ -8,31 +8,31 @@
     text-decoration: none;
 }
 
-.help-item:hover {
+.root:hover {
     color: var(--ink);
 }
 
-.help-item:hover .help-item__title {
+.root:hover .title {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-.help-item__head {
+.head {
     align-items: center;
     color: var(--brand);
     display: flex;
     gap: 14px;
 }
 
-.help-item__icon {
+.icon {
     flex-shrink: 0;
 }
 
-.help-item__title {
+.title {
     font-size: 24px;
 }
 
-.help-item__body {
+.body {
     color: var(--ink-muted);
     font-size: 16px;
     line-height: 1.6;
@@ -40,15 +40,15 @@
 }
 
 @media (width <= 900px) {
-    .help-item {
+    .root {
         padding: 22px 0 24px;
     }
 
-    .help-item__title {
+    .title {
         font-size: 20px;
     }
 
-    .help-item__body {
+    .body {
         font-size: 15px;
     }
 }

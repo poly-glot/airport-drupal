@@ -21,11 +21,10 @@ Hero photos must keep white text at 4.5:1: `.venv/bin/python scripts/hero_contra
 
 ## One component, one directory
 
-`next/components/<name>/` holds `component.yml`, `index.tsx` and `index.css` (when it has rules). Full contract in `docs/components.md`.
+`next/components/<name>/` holds `component.yml`, `index.tsx` and `index.module.css` (when it has rules). Full contract in `docs/components.md`.
 
-- Markup keeps the class names catalogued in `docs/design/system.md` and every `aria-*`, `id`, `hidden` and `data-*` the behaviours rely on.
-- A class rendered by one component inside another's markup is styled by importing the owner's stylesheet (`import '@/components/button/index.css';`), never by copying rules.
-- Behaviours live in `next/lib/behaviours.js` and attach with `useEnhance` from `next/lib/use-enhance.ts` on the component root, in a `'use client'` component. Everything works without JavaScript.
+- CSS modules with camelCase local names. Global only: the utilities in `next/styles/` and the `button`, `text-link` and `status` families, because editors write those in rich text. Another component's classes come from importing its module, never from copied rules.
+- Behaviours live in `next/lib/behaviours.js`, find elements through `data-*` hooks, never class names, and attach with `useEnhance` from `next/lib/use-enhance.ts` on the component root, in a `'use client'` component. Everything works without JavaScript.
 - Images go through `components/picture` with the stem convention; files live in `next/public/assets/img/`.
 
 ## Skills and agents

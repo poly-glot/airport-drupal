@@ -1,5 +1,4 @@
-import '@/components/card/index.css';
-import '@/components/map-pane/index.css';
+import card from '@/components/card/index.module.css';
 import TerminalOneMap from './maps/terminal-1';
 import TerminalTwoMap from './maps/terminal-2';
 
@@ -9,5 +8,5 @@ const mapsByTerminal = {
 };
 
 export default function TerminalMap({ terminal }: { terminal: keyof typeof mapsByTerminal }) {
-    return <div className="card">{mapsByTerminal[terminal]}</div>;
+    return <div className={card.root}>{mapsByTerminal[terminal]}</div>;
 }

@@ -1,4 +1,4 @@
-.package {
+.root {
     background: var(--white);
     border: 1px solid var(--brand);
     color: var(--ink);
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.package__badge {
+.badge {
     background: var(--brand);
     color: var(--white);
     font-size: 12px;
@@ -24,7 +24,7 @@
     white-space: nowrap;
 }
 
-.package__tier {
+.tier {
     color: var(--grey-2);
     font-size: 13px;
     font-weight: 700;
@@ -32,14 +32,14 @@
     text-transform: uppercase;
 }
 
-.package__price {
+.price {
     align-items: baseline;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.package__amount {
+.amount {
     font-family: var(--font-display);
     font-size: 40px;
     font-variant-numeric: tabular-nums;
@@ -48,20 +48,20 @@
     line-height: 1;
 }
 
-.package__unit {
+.unit {
     color: var(--grey-2);
     font-size: 15px;
     font-weight: 600;
 }
 
-.package__meta {
+.meta {
     border-top: 1px solid var(--line);
     color: var(--ink-muted);
     font-size: 14px;
     padding-top: 14px;
 }
 
-.package__list {
+.list {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -70,26 +70,26 @@
     padding: 0;
 }
 
-.package__item {
+.item {
     display: flex;
     font-size: 15px;
     gap: 10px;
     line-height: 1.45;
 }
 
-.package__tick {
+.tick {
     color: var(--brand);
     flex-shrink: 0;
     margin-top: 3px;
 }
 
-.package__best {
+.best {
     color: var(--grey-2);
     font-size: 14px;
     line-height: 1.5;
 }
 
-.package__best-label {
+.bestLabel {
     color: var(--grey-2);
     display: block;
     font-size: 12px;
@@ -99,22 +99,22 @@
     text-transform: uppercase;
 }
 
-.package__cta {
+.cta {
     margin-top: auto;
     padding-top: 6px;
 }
 
-.package__note {
+.note {
     color: var(--grey-2);
     font-size: 13px;
 }
 
 @media (width <= 900px) {
-    .package {
+    .root {
         padding: 22px 20px;
     }
 
-    .package__amount {
+    .amount {
         font-size: 32px;
     }
 }

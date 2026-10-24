@@ -4,9 +4,6 @@ import Feedback from './partials/feedback';
 import FlightSearch from './partials/flight-search';
 import LostProperty from './partials/lost-property';
 import Parking from './partials/parking';
-import '@/components/button/index.css';
-import '@/components/card/index.css';
-import './index.css';
 
 interface FormProps {
     kind: 'flight-search' | 'parking' | 'alerts' | 'assistance' | 'feedback' | 'lost-property';

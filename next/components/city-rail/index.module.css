@@ -1,8 +1,8 @@
-.city-rail {
+.root {
     overflow: hidden;
 }
 
-.city-rail__head {
+.head {
     align-items: flex-end;
     display: flex;
     flex-wrap: wrap;
@@ -10,31 +10,31 @@
     justify-content: space-between;
 }
 
-.city-rail__titles {
+.titles {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.city-rail__nav {
+.nav {
     align-items: center;
     display: none;
     gap: 8px;
 }
 
-.city-rail--enhanced .city-rail__nav {
+.root[data-enhanced] .nav {
     display: flex;
 }
 
-.city-rail__count {
+.count {
     color: var(--grey-2);
     font-size: 14px;
     font-variant-numeric: tabular-nums;
     margin-right: 8px;
 }
 
-.city-rail__button {
+.button {
     align-items: center;
     background: var(--white);
     border: 1px solid var(--line-input);
@@ -46,11 +46,11 @@
     width: 44px;
 }
 
-.city-rail__button:hover {
+.button:hover {
     background: var(--panel);
 }
 
-.city-rail__track {
+.track {
     display: flex;
     gap: 24px;
     list-style: none;
@@ -61,42 +61,42 @@
     scroll-snap-type: x mandatory;
 }
 
-.city-rail--enhanced .city-rail__track {
+.root[data-enhanced] .track {
     scrollbar-width: none;
 }
 
-.city-rail--enhanced .city-rail__track::-webkit-scrollbar {
+.root[data-enhanced] .track::-webkit-scrollbar {
     display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .city-rail__track {
+    .track {
         scroll-behavior: smooth;
     }
 }
 
-.city-rail__item {
+.item {
     flex: 0 0 357px;
     scroll-snap-align: start;
 }
 
-.city-rail__progress {
+.progress {
     display: none;
     margin-top: 28px;
 }
 
-.city-rail--enhanced .city-rail__progress {
+.root[data-enhanced] .progress {
     display: block;
 }
 
-.city-rail__bar {
+.bar {
     background: var(--line);
     display: block;
     height: 3px;
     overflow: hidden;
 }
 
-.city-rail__fill {
+.fill {
     background: var(--brand);
     display: block;
     height: 100%;
@@ -106,16 +106,16 @@
 }
 
 @media (width <= 900px) {
-    .city-rail__track {
+    .track {
         gap: 12px;
         margin-top: 20px;
     }
 
-    .city-rail__item {
+    .item {
         flex-basis: 260px;
     }
 
-    .city-rail__progress {
+    .progress {
         margin-top: 20px;
     }
 }

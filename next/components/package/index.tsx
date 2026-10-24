@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
-import '@/components/button/index.css';
-import './index.css';
+import styles from './index.module.css';
 
 interface PackageProps {
     tier: string;
@@ -34,21 +33,21 @@ export default function Package({
     const buttonClassName = ['button', !recommended && 'button--secondary', 'button--block'].filter(Boolean).join(' ');
 
     return (
-        <div className="package">
-            {badge && <p className="package__badge">{badge}</p>}
-            <h3 className="package__tier">{tier}</h3>
-            <p className="package__price">
-                <span className="package__unit">{pricePrefix}</span>
-                <span className="package__amount">{price}</span>
-                <span className="package__unit">{unit}</span>
+        <div className={styles.root}>
+            {badge && <p className={styles.badge}>{badge}</p>}
+            <h3 className={styles.tier}>{tier}</h3>
+            <p className={styles.price}>
+                <span className={styles.unit}>{pricePrefix}</span>
+                <span className={styles.amount}>{price}</span>
+                <span className={styles.unit}>{unit}</span>
             </p>
-            <p className="package__meta">{meta}</p>
-            <ul className="package__list">{features}</ul>
-            <p className="package__best">
-                <span className="package__best-label">{bestLabel}</span>
+            <p className={styles.meta}>{meta}</p>
+            <ul className={styles.list}>{features}</ul>
+            <p className={styles.best}>
+                <span className={styles.bestLabel}>{bestLabel}</span>
                 {note}
             </p>
-            <p className="package__cta">
+            <p className={styles.cta}>
                 <a className={buttonClassName} href={href}>
                     {ctaLabel}
                 </a>

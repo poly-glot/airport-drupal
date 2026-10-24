@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
-import '@/components/section-head/index.css';
-import './index.css';
+import rowLink from '@/components/row-link/index.module.css';
+import sectionHead from '@/components/section-head/index.module.css';
+import styles from './index.module.css';
 
 const notePaths = {
     'step-free': (
@@ -37,18 +38,18 @@ export default function GettingHere({
     map,
 }: GettingHereProps) {
     return (
-        <section className="getting-here" id={anchor || undefined} aria-labelledby={titleId}>
-            <div className="getting-here__inner container">
-                <div className="getting-here__copy">
-                    <h2 className="section-title section-title--md" id={titleId}>
+        <section className={styles.root} id={anchor || undefined} aria-labelledby={titleId}>
+            <div className={`${styles.inner} container`}>
+                <div className={styles.copy}>
+                    <h2 className={`${sectionHead.sectionTitle} ${sectionHead.sectionTitleMd}`} id={titleId}>
                         {title}
                     </h2>
-                    <p className="getting-here__intro">{intro}</p>
-                    <ul className="row-links">{rows}</ul>
+                    <p className={styles.intro}>{intro}</p>
+                    <ul className={rowLink.rowLinks}>{rows}</ul>
                     {note && (
-                        <p className="getting-here__note">
+                        <p className={styles.note}>
                             <svg
-                                className="getting-here__note-icon"
+                                className={styles.noteIcon}
                                 width="20"
                                 height="20"
                                 viewBox="0 0 24 24"
@@ -62,7 +63,7 @@ export default function GettingHere({
                                 {notePaths[noteIcon]}
                             </svg>
                             <span>
-                                {noteLead && <strong className="getting-here__note-lead">{noteLead}</strong>}
+                                {noteLead && <strong className={styles.noteLead}>{noteLead}</strong>}
                                 {noteLead ? ` ${note}` : note}
                             </span>
                         </p>

@@ -3,19 +3,19 @@ const TAB_KEY_OFFSETS = { ArrowLeft: -1, ArrowRight: 1 };
 const wrapIndex = (index, length) => (index + length) % length;
 
 export function enhanceMenu(header) {
-    const toggle = header.querySelector('.header__menu-toggle');
-    const nav = header.querySelector('.header__nav');
+    const toggle = header.querySelector('[data-header-menu-toggle]');
+    const nav = header.querySelector('[data-header-nav]');
 
     if (!toggle || !nav) {
         return;
     }
 
     const setOpen = (open) => {
-        header.classList.toggle('header--open', open);
+        header.toggleAttribute('data-open', open);
         toggle.setAttribute('aria-expanded', String(open));
     };
 
-    header.classList.add('header--enhanced');
+    header.toggleAttribute('data-enhanced', true);
     toggle.setAttribute('role', 'button');
     toggle.setAttribute('aria-controls', nav.id);
     setOpen(false);
@@ -35,7 +35,7 @@ export function enhanceMenu(header) {
     });
 
     document.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape' || !header.classList.contains('header--open')) {
+        if (event.key !== 'Escape' || !header.hasAttribute('data-open')) {
             return;
         }
 
@@ -45,8 +45,8 @@ export function enhanceMenu(header) {
 }
 
 export function enhanceNotices(bar) {
-    const list = bar.querySelector('.notice-bar__list');
-    const items = [...bar.querySelectorAll('.notice-bar__item')];
+    const list = bar.querySelector('[data-notice-bar-list]');
+    const items = [...bar.querySelectorAll('[data-notice-bar-item]')];
 
     if (!list || items.length < 2) {
         return;
@@ -60,12 +60,12 @@ export function enhanceNotices(bar) {
 
     const targetedIndex = items.findIndex((item) => `#${item.id}` === window.location.hash);
 
-    bar.classList.add('notice-bar--enhanced');
+    bar.toggleAttribute('data-enhanced', true);
     list.setAttribute('aria-live', 'polite');
     show(Math.max(targetedIndex, 0));
 
     bar.addEventListener('click', (event) => {
-        const step = event.target.closest('.notice-bar__step');
+        const step = event.target.closest('[data-notice-bar-step]');
 
         if (!step) {
             return;
@@ -80,14 +80,13 @@ export function enhanceNotices(bar) {
         event.preventDefault();
         show(next);
 
-        const direction = step.classList.contains('notice-bar__step--prev') ? 'prev' : 'next';
-        items[next].querySelector(`.notice-bar__step--${direction}`)?.focus();
+        items[next].querySelector(`[data-notice-bar-step="${step.dataset.noticeBarStep}"]`)?.focus();
     });
 }
 
 export function enhanceTabs(root) {
-    const list = root.querySelector('.tabs__list');
-    const tabs = [...root.querySelectorAll('.tabs__tab')];
+    const list = root.querySelector('[data-tabs-list]');
+    const tabs = [...root.querySelectorAll('[data-tabs-tab]')];
     const panels = tabs.map((tab) => root.querySelector(tab.getAttribute('href')));
 
     if (!list || tabs.length === 0 || panels.includes(null)) {
@@ -167,13 +166,13 @@ export function enhanceTabs(root) {
         select(destination, true);
     });
 
-    root.classList.add('tabs--enhanced');
+    root.toggleAttribute('data-tabs-enhanced', true);
     select(0, false);
     selectFromHash();
     window.addEventListener('hashchange', selectFromHash);
 }
 
-const BOARD_SEARCH_CELLS = ['.board__place', '.board__flight', '.board__terminal'];
+const BOARD_SEARCH_CELLS = ['[data-board-place]', '[data-board-flight]', '[data-board-terminal]'];
 
 const normalise = (text) => text.trim().toLowerCase();
 
@@ -182,23 +181,23 @@ function rowSearchText(row) {
 }
 
 export function enhanceBoardSearch(board) {
-    const searches = [...board.querySelectorAll('.board__search')];
+    const searches = [...board.querySelectorAll('[data-board-search]')];
 
     if (searches.length === 0) {
         return;
     }
 
     searches.forEach((search) => {
-        const panel = search.closest('.board__body');
+        const panel = search.closest('[data-board-body]');
         const input = search.querySelector('input');
-        const table = panel?.querySelector('.board__table');
+        const table = panel?.querySelector('[data-board-table]');
         const tbody = table?.querySelector('tbody');
 
         if (!input || !tbody) {
             return;
         }
 
-        const rows = [...tbody.querySelectorAll('.board__row')].map((row) => ({ row, text: rowSearchText(row) }));
+        const rows = [...tbody.querySelectorAll('[data-board-row]')].map((row) => ({ row, text: rowSearchText(row) }));
         const boardName = normalise(table.querySelector('caption')?.textContent ?? 'flight');
         const columnCount = table.querySelectorAll('thead th').length;
 
@@ -235,11 +234,11 @@ export function enhanceBoardSearch(board) {
         });
     });
 
-    board.classList.add('board--enhanced');
+    board.toggleAttribute('data-board-enhanced', true);
 }
 
 export function enhanceStatusTips() {
-    if (!document.querySelector('.board__state[data-tip]')) {
+    if (!document.querySelector('[data-board-state][data-tip]')) {
         return;
     }
 
@@ -248,14 +247,14 @@ export function enhanceStatusTips() {
             return;
         }
 
-        document.querySelectorAll('.board__state[data-tip]').forEach((state) => {
+        document.querySelectorAll('[data-board-state][data-tip]').forEach((state) => {
             if (!state.matches(':hover, :focus')) {
                 return;
             }
 
-            const restore = () => state.classList.remove('board__state--tip-dismissed');
+            const restore = () => state.toggleAttribute('data-tip-dismissed', false);
 
-            state.classList.add('board__state--tip-dismissed');
+            state.toggleAttribute('data-tip-dismissed', true);
             state.addEventListener('mouseleave', restore, { once: true });
             state.addEventListener('blur', restore, { once: true });
         });
@@ -409,7 +408,7 @@ function setFlap(element, text) {
 }
 
 function replayPanel(panel) {
-    panel.querySelectorAll('.board__row').forEach((row, rowIndex) => {
+    panel.querySelectorAll('[data-board-row]').forEach((row, rowIndex) => {
         row.querySelectorAll('[data-flap]').forEach((element) => {
             const cellIndex = element.closest('td').cellIndex;
             flipText(element, {
@@ -421,18 +420,18 @@ function replayPanel(panel) {
 }
 
 function findRow(panel, flight) {
-    return [...panel.querySelectorAll('.board__row')].find(
-        (row) => row.querySelector('.board__flight').dataset.flapText === flight,
+    return [...panel.querySelectorAll('[data-board-row]')].find(
+        (row) => row.querySelector('[data-board-flight]').dataset.flapText === flight,
     );
 }
 
 function applyState(row, stateName) {
     const state = FLAP_STATES[stateName];
-    const remark = row.querySelector('.board__state');
+    const remark = row.querySelector('[data-board-state]');
     const definition = document.getElementById(`status-${stateName}`);
 
-    remark.className = `board__state board__state--${state.tone}`;
-    row.querySelector('.flap-lamp').className = `flap-lamp flap-lamp--${state.tone}`;
+    remark.dataset.tone = state.tone;
+    row.querySelector('[data-flap-lamp]').dataset.tone = state.tone;
 
     if (definition) {
         remark.dataset.tip = definition.textContent;
@@ -443,12 +442,12 @@ function applyState(row, stateName) {
 }
 
 function advanceClock(board) {
-    const clock = board.querySelector('.board__clock-time');
+    const clock = board.querySelector('[data-board-clock-time]');
     const [hours, minutes] = clock.dataset.flapText.split(':').map(Number);
     const time = new Date(2000, 0, 1, hours, minutes + 1).toTimeString().slice(0, 5);
 
     setFlap(clock, time);
-    board.querySelector('.board__updated').textContent = time;
+    board.querySelector('[data-board-updated]').textContent = time;
 }
 
 function applyEvent(board, event) {
@@ -460,7 +459,7 @@ function applyEvent(board, event) {
     }
 
     if (event.gate) {
-        setFlap(row.querySelector('.board__gate'), event.gate);
+        setFlap(row.querySelector('[data-board-gate]'), event.gate);
     }
 
     if (event.state) {
@@ -468,7 +467,7 @@ function applyEvent(board, event) {
     }
 
     if (event.note !== undefined) {
-        row.querySelector('.board__info').textContent = event.note;
+        row.querySelector('[data-board-info]').textContent = event.note;
     }
 
     advanceClock(board);
@@ -479,7 +478,7 @@ function applyEvent(board, event) {
 }
 
 export function enhanceSplitFlap(board) {
-    const panels = [...board.querySelectorAll('.board__panel')];
+    const panels = [...board.querySelectorAll('[data-board-panel]')];
 
     board.querySelectorAll('[data-flap]').forEach(enhanceFlap);
 
@@ -489,7 +488,7 @@ export function enhanceSplitFlap(board) {
 
     panels.forEach((panel) => observer.observe(panel, { attributeFilter: ['hidden'] }));
     panels.filter((panel) => !panel.hidden).forEach(replayPanel);
-    flipText(board.querySelector('.board__clock-time'), { fromBlank: true });
+    flipText(board.querySelector('[data-board-clock-time]'), { fromBlank: true });
 
     boardEvents().then((events) => {
         events.forEach((event, index) => {
@@ -517,11 +516,11 @@ function fullyVisibleRange(track, items) {
 }
 
 export function enhanceCityRail(rail) {
-    const track = rail.querySelector('.city-rail__track');
-    const items = [...rail.querySelectorAll('.city-rail__item')];
-    const count = rail.querySelector('.city-rail__count');
-    const prev = rail.querySelector('.city-rail__button--prev');
-    const next = rail.querySelector('.city-rail__button--next');
+    const track = rail.querySelector('[data-city-rail-track]');
+    const items = [...rail.querySelectorAll('[data-city-rail-item]')];
+    const count = rail.querySelector('[data-city-rail-count]');
+    const prev = rail.querySelector('[data-city-rail-button="prev"]');
+    const next = rail.querySelector('[data-city-rail-button="next"]');
 
     if (!track || items.length < 2 || !count || !prev || !next) {
         return;
@@ -543,7 +542,7 @@ export function enhanceCityRail(rail) {
     track.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
 
-    rail.classList.add('city-rail--enhanced');
+    rail.toggleAttribute('data-enhanced', true);
     update();
 }
 
@@ -563,8 +562,8 @@ const daypartFromHour = (hour) =>
     ) ?? 'night';
 
 export function enhanceHeroSky(hero) {
-    const picture = hero.querySelector('.hero__media');
-    const weatherBlock = hero.querySelector('.hero__weather');
+    const picture = hero.querySelector('[data-hero-media]');
+    const weatherBlock = hero.querySelector('[data-hero-weather]');
     const defaultWeather = hero.dataset.weather;
 
     if (!picture || !weatherBlock || !SKY_WEATHERS[defaultWeather]) {
@@ -588,13 +587,13 @@ export function enhanceHeroSky(hero) {
     });
 
     const icon = daypart === 'night' || daypart === 'evening' ? daypart : 'day';
-    weatherBlock.querySelectorAll('.hero__weather-icon').forEach((svg) => {
-        svg.toggleAttribute('hidden', !svg.classList.contains(`hero__weather-icon--${icon}`));
+    weatherBlock.querySelectorAll('[data-hero-weather-icon]').forEach((svg) => {
+        svg.toggleAttribute('hidden', svg.dataset.heroWeatherIcon !== icon);
     });
 
-    weatherBlock.classList.toggle('hero__weather--dry', weather !== 'rainy');
-    weatherBlock.querySelector('.hero__temp-value').textContent = SKY_WEATHERS[weather].temp;
-    weatherBlock.querySelector('.hero__condition').textContent =
+    weatherBlock.toggleAttribute('data-dry', weather !== 'rainy');
+    weatherBlock.querySelector('[data-hero-temp-value]').textContent = SKY_WEATHERS[weather].temp;
+    weatherBlock.querySelector('[data-hero-condition]').textContent =
         daypart === 'night' ? SKY_WEATHERS[weather].nightLabel : SKY_WEATHERS[weather].label;
 
     const now = new Date();
@@ -602,7 +601,7 @@ export function enhanceHeroSky(hero) {
     const timeText = override
         ? SKY_PREVIEW_TIMES[daypart]
         : new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit' }).format(now);
-    weatherBlock.querySelector('.hero__date').textContent = `${dateText} · ${timeText} local`;
+    weatherBlock.querySelector('[data-hero-date]').textContent = `${dateText} · ${timeText} local`;
 
     hero.dataset.sky = variant;
 }

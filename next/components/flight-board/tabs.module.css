@@ -1,10 +1,10 @@
-.tabs__list {
+.list {
     align-items: flex-end;
     display: flex;
     gap: 6px;
 }
 
-.tabs__tab {
+.tab {
     align-items: center;
     border: 1px solid transparent;
     border-bottom: 0;
@@ -21,46 +21,46 @@
     text-decoration: none;
 }
 
-.tabs__tab:hover {
+.tab:hover {
     color: var(--white);
 }
 
-.tabs__tab[aria-selected='true'],
-.tabs:not(.tabs--enhanced, :has(.tabs__panel:target)) .tabs__tab:first-child,
-.tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(1):target) .tabs__tab:nth-child(1),
-.tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(2):target) .tabs__tab:nth-child(2),
-.tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(3):target) .tabs__tab:nth-child(3),
-.tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(4):target) .tabs__tab:nth-child(4) {
+.tab[aria-selected='true'],
+.root:not([data-tabs-enhanced], :has(.panel:target)) .tab:first-child,
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(1):target) .tab:nth-child(1),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(2):target) .tab:nth-child(2),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(3):target) .tab:nth-child(3),
+.root:not([data-tabs-enhanced]):has(.panel:nth-child(4):target) .tab:nth-child(4) {
     background: var(--board-panel);
     border-color: var(--on-dark-rule);
     color: var(--white);
 }
 
-.tabs__tab-icon {
+.tabIcon {
     flex-shrink: 0;
 }
 
-.tabs__panel {
+.panel {
     display: none;
     scroll-margin-top: 120px;
 }
 
-.tabs:not(.tabs--enhanced) .tabs__panel:target,
-.tabs:not(.tabs--enhanced, :has(.tabs__panel:target)) .tabs__panel:first-child,
-.tabs--enhanced .tabs__panel {
+.root:not([data-tabs-enhanced]) .panel:target,
+.root:not([data-tabs-enhanced], :has(.panel:target)) .panel:first-child,
+.root[data-tabs-enhanced] .panel {
     display: block;
 }
 
-.tabs__panel:focus {
+.panel:focus {
     outline: none;
 }
 
 @media (width <= 900px) {
-    .tabs__list {
+    .list {
         gap: 4px;
     }
 
-    .tabs__tab {
+    .tab {
         font-size: 15px;
         min-height: 50px;
         padding: 0 18px;

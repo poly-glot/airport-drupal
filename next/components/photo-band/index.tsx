@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 import Picture from '@/components/picture';
-import '@/components/section-head/index.css';
-import '@/components/stat/index.css';
-import './index.css';
+import sectionHead from '@/components/section-head/index.module.css';
+import stat from '@/components/stat/index.module.css';
+import styles from './index.module.css';
 
 interface PhotoBandProps {
     title: string;
@@ -41,10 +41,9 @@ export default function PhotoBand({
 }: PhotoBandProps) {
     const isHero = variant === 'hero';
     const Heading = headingLevel;
-    const className = ['photo-band', isHero && 'photo-band--hero', 'on-dark'].filter(Boolean).join(' ');
 
     return (
-        <section className={className} id={anchor || undefined} aria-labelledby={titleId}>
+        <section className={`${styles.root} on-dark`} id={anchor || undefined} aria-labelledby={titleId}>
             <Picture
                 src={imageSrc}
                 alt={imageAlt}
@@ -53,17 +52,20 @@ export default function PhotoBand({
                 sizes="100vw"
                 loading={isHero ? 'eager' : 'lazy'}
                 priority={isHero}
-                pictureClass="photo-band__media"
-                cssClass="photo-band__img"
+                pictureClass={styles.media}
+                cssClass={styles.img}
             />
-            <div className="photo-band__inner container">
-                <div className="photo-band__content">
+            <div className={`${styles.inner} container`}>
+                <div className={styles.content}>
                     {breadcrumb}
-                    <Heading className="section-title section-title--md photo-band__title" id={titleId}>
+                    <Heading
+                        className={`${sectionHead.sectionTitle} ${sectionHead.sectionTitleMd} ${styles.title}`}
+                        id={titleId}
+                    >
                         {title}
                     </Heading>
-                    <p className="photo-band__lede">{intro}</p>
-                    <dl className="stats">{facts}</dl>
+                    <p className={styles.lede}>{intro}</p>
+                    <dl className={stat.root}>{facts}</dl>
                     {linkLabel && linkHref && (
                         <a className="text-link text-link--underline text-link--on-dark" href={linkHref}>
                             {linkLabel}

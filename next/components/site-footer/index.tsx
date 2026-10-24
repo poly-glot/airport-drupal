@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 interface SiteFooterProps {
     enquiries: string;
@@ -27,12 +27,12 @@ export default function SiteFooter({
     legal,
 }: SiteFooterProps) {
     return (
-        <footer className="footer on-dark">
-            <div className="footer__main container">
-                <div className="footer__about">
-                    <p className="footer__brand">
+        <footer className={`${styles.root} on-dark`}>
+            <div className={`${styles.main} container`}>
+                <div className={styles.about}>
+                    <p className={styles.brand}>
                         <svg
-                            className="footer__logo"
+                            className={styles.logo}
                             width="28"
                             height="28"
                             viewBox="0 0 36 36"
@@ -49,19 +49,19 @@ export default function SiteFooter({
                             <path d="M18 4v12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"></path>
                             <circle cx="18" cy="18" r="2.5" fill="currentColor"></circle>
                         </svg>
-                        <span className="footer__name">Meridian Airport</span>
+                        <span className={styles.name}>Meridian Airport</span>
                     </p>
-                    <p className="footer__contact">
+                    <p className={styles.contact}>
                         {`${enquiries} `}
-                        <a className="footer__phone" href={phoneHref}>
+                        <a className={styles.phone} href={phoneHref}>
                             {phone}
                         </a>
                         {enquiriesSuffix}
                     </p>
-                    <ul className="footer__social">
+                    <ul className={styles.social}>
                         <li>
                             <a
-                                className="footer__social-link"
+                                className={styles.socialLink}
                                 href="https://www.instagram.com/"
                                 aria-label="Instagram (external site)"
                             >
@@ -81,7 +81,7 @@ export default function SiteFooter({
                             </a>
                         </li>
                         <li>
-                            <a className="footer__social-link" href="https://x.com/" aria-label="X (external site)">
+                            <a className={styles.socialLink} href="https://x.com/" aria-label="X (external site)">
                                 <svg
                                     width="18"
                                     height="18"
@@ -98,7 +98,7 @@ export default function SiteFooter({
                         </li>
                         <li>
                             <a
-                                className="footer__social-link"
+                                className={styles.socialLink}
                                 href="https://www.youtube.com/"
                                 aria-label="YouTube (external site)"
                             >
@@ -119,7 +119,7 @@ export default function SiteFooter({
                         </li>
                         <li>
                             <a
-                                className="footer__social-link"
+                                className={styles.socialLink}
                                 href="https://www.linkedin.com/"
                                 aria-label="LinkedIn (external site)"
                             >
@@ -139,35 +139,35 @@ export default function SiteFooter({
                         </li>
                     </ul>
                 </div>
-                <nav className="footer__col" aria-labelledby="footer-flights">
-                    <h2 className="footer__heading" id="footer-flights">
+                <nav className={styles.col} aria-labelledby="footer-flights">
+                    <h2 className={styles.heading} id="footer-flights">
                         Flights
                     </h2>
-                    <ul className="footer__links">{colFlights}</ul>
+                    <ul className={styles.links}>{colFlights}</ul>
                 </nav>
-                <nav className="footer__col" aria-labelledby="footer-shop">
-                    <h2 className="footer__heading" id="footer-shop">
+                <nav className={styles.col} aria-labelledby="footer-shop">
+                    <h2 className={styles.heading} id="footer-shop">
                         Shop &amp; relax
                     </h2>
-                    <ul className="footer__links">{colShop}</ul>
+                    <ul className={styles.links}>{colShop}</ul>
                 </nav>
-                <nav className="footer__col" aria-labelledby="footer-plan">
-                    <h2 className="footer__heading" id="footer-plan">
+                <nav className={styles.col} aria-labelledby="footer-plan">
+                    <h2 className={styles.heading} id="footer-plan">
                         Plan
                     </h2>
-                    <ul className="footer__links">{colPlan}</ul>
+                    <ul className={styles.links}>{colPlan}</ul>
                 </nav>
-                <nav className="footer__col" aria-labelledby="footer-company">
-                    <h2 className="footer__heading" id="footer-company">
+                <nav className={styles.col} aria-labelledby="footer-company">
+                    <h2 className={styles.heading} id="footer-company">
                         Company
                     </h2>
-                    <ul className="footer__links">{colCompany}</ul>
+                    <ul className={styles.links}>{colCompany}</ul>
                 </nav>
             </div>
-            <div className="footer__legal">
-                <div className="footer__legal-inner container">
+            <div className={styles.legal}>
+                <div className={`${styles.legalInner} container`}>
                     <p>{legalLine}</p>
-                    <ul className="footer__legal-links">{legal}</ul>
+                    <ul className={styles.legalLinks}>{legal}</ul>
                 </div>
             </div>
         </footer>

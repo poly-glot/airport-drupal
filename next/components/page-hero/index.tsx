@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import Picture from '@/components/picture';
-import './index.css';
+import styles from './index.module.css';
 
 interface PageHeroProps {
     eyebrow?: string;
@@ -29,18 +29,18 @@ export default function PageHero({
     widths,
     breadcrumb,
 }: PageHeroProps) {
-    const className = ['page-hero', variant === 'art' && 'page-hero--with-art'].filter(Boolean).join(' ');
+    const className = [styles.root, variant === 'art' && styles.withArt].filter(Boolean).join(' ');
 
     return (
         <section className={className} aria-labelledby="page-title">
             {breadcrumb}
-            <div className="page-hero__inner container">
-                <div className="page-hero__content">
-                    {eyebrow && <p className="page-hero__eyebrow">{eyebrow}</p>}
-                    <h1 className="page-hero__title" id="page-title">
+            <div className={`${styles.inner} container`}>
+                <div className={styles.content}>
+                    {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
+                    <h1 className={styles.title} id="page-title">
                         {title}
                     </h1>
-                    {intro && <p className="page-hero__intro">{intro}</p>}
+                    {intro && <p className={styles.intro}>{intro}</p>}
                 </div>
                 {imageSrc && (
                     <Picture
@@ -52,7 +52,7 @@ export default function PageHero({
                         sizes={`(max-width: 900px) calc(100vw - 32px), ${sizes}`}
                         loading="eager"
                         priority
-                        cssClass="media"
+                        cssClass={styles.media}
                     />
                 )}
             </div>

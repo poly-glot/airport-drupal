@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import '@/components/section-head/index.css';
+import sectionHead from '@/components/section-head/index.module.css';
 
 interface SectionProps {
     heading?: string;
@@ -33,7 +33,7 @@ export default function Section({
     return (
         <Root className={className} id={anchor || undefined} aria-labelledby={labelledId}>
             {heading && (
-                <Heading className="section-title section-title--sm" id={headingId}>
+                <Heading className={`${sectionHead.sectionTitle} ${sectionHead.sectionTitleSm}`} id={headingId}>
                     {heading}
                 </Heading>
             )}

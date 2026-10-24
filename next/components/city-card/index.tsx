@@ -1,5 +1,6 @@
 import Picture from '@/components/picture';
-import './index.css';
+import cityRail from '@/components/city-rail/index.module.css';
+import styles from './index.module.css';
 
 interface CityCardProps {
     city: string;
@@ -26,7 +27,7 @@ export default function CityCard({
 }: CityCardProps) {
     const isGuide = variant === 'guide';
     const card = (
-        <a className={isGuide ? 'city-card city-card--guide' : 'city-card'} href={href}>
+        <a className={isGuide ? `${styles.root} ${styles.guide}` : styles.root} href={href}>
             <Picture
                 src={imageSrc}
                 alt={imageAlt}
@@ -35,16 +36,22 @@ export default function CityCard({
                 sizes={isGuide ? '(max-width: 900px) calc(100vw - 32px), 357px' : '(max-width: 900px) 260px, 357px'}
                 loading="lazy"
                 widths={isGuide ? '960,1440' : ''}
-                pictureClass="city-card__media"
-                cssClass="city-card__img"
+                pictureClass={styles.media}
+                cssClass={styles.img}
             />
-            <div className="city-card__text">
-                <h3 className="city-card__name">{city}</h3>
-                <p className="city-card__meta">{meta}</p>
-                {body && <p className="city-card__body">{body}</p>}
+            <div className={styles.text}>
+                <h3 className={styles.name}>{city}</h3>
+                <p className={styles.meta}>{meta}</p>
+                {body && <p className={styles.body}>{body}</p>}
             </div>
         </a>
     );
 
-    return isGuide ? card : <li className="city-rail__item">{card}</li>;
+    return isGuide ? (
+        card
+    ) : (
+        <li className={cityRail.item} data-city-rail-item="">
+            {card}
+        </li>
+    );
 }

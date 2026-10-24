@@ -1,3 +1,6 @@
+import hero from '@/components/hero/index.module.css';
+import styles from './index.module.css';
+
 interface HeroSignProps {
     icon: 'shop' | 'parking' | 'fast-track';
     title: string;
@@ -9,7 +12,7 @@ function SignIcon({ icon }: Pick<HeroSignProps, 'icon'>) {
     if (icon === 'parking') {
         return (
             <svg
-                className="sign__icon"
+                className={styles.icon}
                 width="22"
                 height="22"
                 viewBox="0 0 24 24"
@@ -28,7 +31,7 @@ function SignIcon({ icon }: Pick<HeroSignProps, 'icon'>) {
     if (icon === 'fast-track') {
         return (
             <svg
-                className="sign__icon"
+                className={styles.icon}
                 width="22"
                 height="22"
                 viewBox="0 0 24 24"
@@ -47,7 +50,7 @@ function SignIcon({ icon }: Pick<HeroSignProps, 'icon'>) {
 
     return (
         <svg
-            className="sign__icon"
+            className={styles.icon}
             width="22"
             height="22"
             viewBox="0 0 24 24"
@@ -66,12 +69,12 @@ function SignIcon({ icon }: Pick<HeroSignProps, 'icon'>) {
 
 export default function HeroSign({ icon, title, meta, href }: HeroSignProps) {
     return (
-        <li className="hero__signs-item">
-            <a className="sign" href={href}>
+        <li className={hero.signsItem}>
+            <a className={styles.root} href={href}>
                 <SignIcon icon={icon} />
-                <span className="sign__text">
-                    <span className="sign__title">{title}</span>
-                    <span className="sign__sub">{meta}</span>
+                <span className={styles.text}>
+                    <span className={styles.title}>{title}</span>
+                    <span className={styles.sub}>{meta}</span>
                 </span>
             </a>
         </li>

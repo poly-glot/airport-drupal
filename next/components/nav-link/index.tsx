@@ -1,3 +1,5 @@
+import siteHeader from '@/components/site-header/index.module.css';
+
 interface NavLinkProps {
     label: string;
     href: string;
@@ -9,7 +11,7 @@ const ariaCurrentByState = { none: undefined, page: 'page', section: 'true' } as
 export default function NavLink({ label, href, current = 'none' }: NavLinkProps) {
     return (
         <li>
-            <a className="header__link" href={href} aria-current={ariaCurrentByState[current]}>
+            <a className={siteHeader.link} href={href} aria-current={ariaCurrentByState[current]}>
                 {label}
             </a>
         </li>

@@ -15,7 +15,12 @@ function once<T extends Element>(enhancer: Enhancer<T>, element: T) {
     }
 
     seen.add(element);
-    enhancer(element);
+
+    try {
+        enhancer(element);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 export function useEnhance<T extends HTMLElement>(...enhancers: Enhancer<T>[]) {

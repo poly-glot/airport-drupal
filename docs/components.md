@@ -12,12 +12,18 @@ Read with `docs/design/spec.md` (design law) and `docs/design/system.md` (class 
 |---|---|
 | `component.yml` | `name`, `machineName` (same as the directory), `status: true`, `required`, `props.properties`, `slots` |
 | `index.tsx` | default export, a function component; props and slots arrive as React props of the same names |
-| `index.css` | the component's rules, imported by `index.tsx` with `import './index.css';` |
+| `index.module.css` | the component's rules as a CSS module, imported with `import styles from './index.module.css';` |
 | extra modules | only when one component renders several fixed variants: `form/partials/*.tsx`, `terminal-map/maps/*.tsx` |
 
 Global rules live in `next/styles/` (`tokens.css`, `base.css`, `layout.css`, `utilities.css`), imported once by `next/app/globals.css`. Tokens are closed: no new hex, no new custom properties.
 
-A class rendered by one component inside another's markup is styled by importing the owner's stylesheet, never by copying rules: `import '@/components/button/index.css';` in `package`, `form`, `map-pane`, `flight-board` and `site-header`. Another component used as an element is imported as a module: `import Picture from '@/components/picture';`.
+Another component used as an element is imported as a component: `import Picture from '@/components/picture';`. When markup needs another component's classes, import that component's module under its own name and use its local names, never copy rules: `import card from '@/components/card/index.module.css';` then `card.title`.
+
+### Class names
+
+- Module classes are camelCase and local: the block root is `.root`, `block__element` is `.element`, `block--modifier` is `.modifier`, combined as `[styles.root, padded && styles.padded].filter(Boolean).join(' ')`. The DOM carries hashed names, so `docs/design/system.md` describes the design vocabulary, not the class strings in the page.
+- Global classes, written as plain strings: the layout and utility classes in `next/styles/` (`container`, `on-dark`, `on-light`, `band`, `section`, `stack`, `grid`, `split`, `narrow`, `u-tabular`, `visually-hidden`, `skip-link` and their modifiers), and the `button`, `text-link` and `status` families. Editors write those three families inside rich text, so their stylesheets (`components/button/index.css`, `components/status/index.css`) stay global and `next/app/globals.css` loads them.
+- Classes that only exist inside stored rich text or are created by behaviours are styled from the owning module with `:global(...)`: `.table :global(.table__num)` in data-table, `.root :global(.flap__tile)` in flight-board.
 
 ## component.yml
 
@@ -53,7 +59,7 @@ slots:
 
 ## index.tsx
 
-- Markup rules: keep the class names in `docs/design/system.md`, the `aria-*`, `id`, `hidden` and `data-*` attributes, and the element nesting.
+- Markup rules: keep the element nesting, `aria-*`, `id` and `hidden` attributes, and the `data-*` hooks the behaviours read.
 - Adjacent text and expressions render as one string: ``{`${position} of ${total}`}``, not `{position} of {total}`, which React splits into separate text nodes.
 - Spaces between inline elements are written `{' '}`.
 - Formatted text goes on the element that holds it: `<div className="prose" dangerouslySetInnerHTML={{ __html: body }} />`. When formatted text shares its parent with a sibling (callout title, table caption), the sibling is escaped into the same string with `escapeHtml` from `next/lib/escape-html.ts`, so no wrapper element is added.
@@ -62,11 +68,11 @@ slots:
 
 ## Behaviours
 
-`next/lib/behaviours.js` holds the progressive enhancements (`enhanceMenu`, `enhanceNotices`, `enhanceTabs`, `enhanceBoardSearch`, `enhanceSplitFlap`, `enhanceStatusTips`, `enhanceCityRail`, `enhanceHeroSky`). A component with a behaviour starts with `'use client';` and attaches it to its root with `useEnhance` from `next/lib/use-enhance.ts`, which runs each enhancer once per element after mount:
+`next/lib/behaviours.js` holds the progressive enhancements (`enhanceMenu`, `enhanceNotices`, `enhanceTabs`, `enhanceBoardSearch`, `enhanceSplitFlap`, `enhanceStatusTips`, `enhanceCityRail`, `enhanceHeroSky`). Behaviours never read class names: they find elements through `data-*` hooks (`data-notice-bar-item`, `data-board-row`, `data-city-rail-button="next"`) and record state as data attributes (`data-enhanced`, `data-open`, `data-dry`, `data-tone="warn"`), which the module styles as `.root[data-enhanced] .item`. A component with a behaviour starts with `'use client';` and attaches it to its root with `useEnhance` from `next/lib/use-enhance.ts`, which runs each enhancer once per element after mount and logs, rather than throws, if one fails, so a broken enhancement never takes the server-rendered page down:
 
 ```tsx
 const ref = useEnhance<HTMLElement>(enhanceNotices);
-return <section ref={ref} className="notice-bar on-dark" aria-label={label}>…</section>;
+return <section ref={ref} className={`${styles.root} on-dark`} aria-label={label}>…</section>;
 ```
 
 Owners: `site-header` (menu), `notice-bar` (notices), `flight-board` (tabs, search, split-flap, status tips), `city-rail`, `hero` (sky). Every page works without JavaScript; the behaviours only enhance it.

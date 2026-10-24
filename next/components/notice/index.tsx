@@ -1,3 +1,5 @@
+import noticeBar from '@/components/notice-bar/index.module.css';
+
 interface NoticeProps {
     kind: string;
     text: string;
@@ -21,10 +23,11 @@ export default function Notice({
     const next = position < total ? position + 1 : 1;
 
     return (
-        <li className="notice-bar__item" id={`notice-${position}`}>
-            <div className="notice-bar__controls">
+        <li className={noticeBar.item} data-notice-bar-item="" id={`notice-${position}`}>
+            <div className={noticeBar.controls}>
                 <a
-                    className="notice-bar__step notice-bar__step--prev"
+                    className={`${noticeBar.step} ${noticeBar.stepPrev}`}
+                    data-notice-bar-step="prev"
                     href={`#notice-${previous}`}
                     aria-label="Previous notice"
                 >
@@ -42,9 +45,10 @@ export default function Notice({
                         <path d="M15 6l-6 6 6 6"></path>
                     </svg>
                 </a>
-                <span className="notice-bar__count">{`${position} of ${total}`}</span>
+                <span className={noticeBar.count}>{`${position} of ${total}`}</span>
                 <a
-                    className="notice-bar__step notice-bar__step--next"
+                    className={noticeBar.step}
+                    data-notice-bar-step="next"
                     href={`#notice-${next}`}
                     aria-label="Next notice"
                 >
@@ -63,13 +67,13 @@ export default function Notice({
                     </svg>
                 </a>
             </div>
-            <p className="notice-bar__text">
-                <strong className="notice-bar__kind">{kind}</strong>
-                <span className="notice-bar__separator"> · </span>
+            <p className={noticeBar.text}>
+                <strong className={noticeBar.kind}>{kind}</strong>
+                <span className={noticeBar.separator}> · </span>
                 {`${text} `}
-                {action && <span className="notice-bar__action">{action}</span>}
+                {action && <span className={noticeBar.action}>{action}</span>}
             </p>
-            <a className="notice-bar__link" href={linkHref}>
+            <a className={noticeBar.link} href={linkHref}>
                 {linkLabel}
             </a>
         </li>

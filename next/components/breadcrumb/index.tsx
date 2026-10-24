@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 export default function Breadcrumb({ onDark = false, items }: { onDark?: boolean; items?: ReactNode }) {
-    const className = `breadcrumb ${onDark ? 'breadcrumb--on-dark' : 'container'}`;
+    const className = `${styles.root} ${onDark ? styles.onDark : 'container'}`;
 
     return (
         <nav className={className} aria-label="Breadcrumb">
-            <ol className="breadcrumb__list">{items}</ol>
+            <ol className={styles.list}>{items}</ol>
         </nav>
     );
 }

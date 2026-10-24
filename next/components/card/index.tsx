@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 interface CardProps {
     tag?: 'div' | 'section';
@@ -18,13 +18,13 @@ export default function Card({
     padded,
     parts,
 }: CardProps) {
-    const className = padded === false ? 'card' : 'card card--padded';
+    const className = [styles.root, padded !== false && styles.padded].filter(Boolean).join(' ');
     const labelledBy = heading && headingId ? headingId : undefined;
 
     return (
         <Root className={className} aria-labelledby={labelledBy}>
             {heading && (
-                <Title className="card__title" id={headingId}>
+                <Title className={styles.title} id={headingId}>
                     {heading}
                 </Title>
             )}

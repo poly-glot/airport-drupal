@@ -1,4 +1,4 @@
-import './index.css';
+import styles from './index.module.css';
 
 interface SectionHeadProps {
     title: string;
@@ -19,17 +19,17 @@ export default function SectionHead({
 }: SectionHeadProps) {
     const Heading = headingLevel;
     const heading = (
-        <Heading className="section-title" id={titleId}>
+        <Heading className={styles.sectionTitle} id={titleId}>
             {title}
         </Heading>
     );
 
     return (
-        <div className="section-head">
+        <div className={styles.root}>
             {intro ? (
-                <div className="section-head__titles">
+                <div className={styles.titles}>
                     {heading}
-                    <p className="section-head__intro">{intro}</p>
+                    <p className={styles.intro}>{intro}</p>
                 </div>
             ) : (
                 heading

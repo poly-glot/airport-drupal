@@ -4,3 +4,4 @@ node_modules/
 public/
 package-lock.json
 next-env.d.ts
+.impeccable/hook.cache.json

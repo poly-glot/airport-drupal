@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 type RowLinkIcon = 'train' | 'car' | 'bus';
 
@@ -41,9 +41,9 @@ export default function RowLink({
 }) {
     return (
         <li>
-            <a className="row-link" href={href}>
+            <a className={styles.root} href={href}>
                 <svg
-                    className="row-link__icon"
+                    className={styles.icon}
                     width="26"
                     height="26"
                     viewBox="0 0 24 24"
@@ -56,12 +56,12 @@ export default function RowLink({
                 >
                     {icon && icons[icon]}
                 </svg>
-                <span className="row-link__text">
-                    <span className="row-link__title">{title}</span>
-                    <span className="row-link__meta">{meta}</span>
+                <span className={styles.text}>
+                    <span className={styles.title}>{title}</span>
+                    <span className={styles.meta}>{meta}</span>
                 </span>
                 <svg
-                    className="row-link__chevron"
+                    className={styles.chevron}
                     width="16"
                     height="16"
                     viewBox="0 0 24 24"

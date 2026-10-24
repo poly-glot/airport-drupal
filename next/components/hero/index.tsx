@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { enhanceHeroSky } from '@/lib/behaviours';
 import { useEnhance } from '@/lib/use-enhance';
-import './index.css';
+import styles from './index.module.css';
 
 type Weather = 'sunny' | 'cloudy' | 'rainy';
 
@@ -22,15 +22,14 @@ const hiddenIcon = { hidden: true };
 
 export default function Hero({ title, intro, defaultWeather: weather = 'rainy', signs, aside, wait }: HeroProps) {
     const ref = useEnhance<HTMLElement>(enhanceHeroSky);
-    const weatherClassName = weather === 'rainy' ? 'hero__weather' : 'hero__weather hero__weather--dry';
 
     return (
-        <section ref={ref} className="hero on-dark" aria-labelledby="hero-title" data-weather={weather}>
-            <picture className="hero__media">
+        <section ref={ref} className={`${styles.root} on-dark`} aria-labelledby="hero-title" data-weather={weather}>
+            <picture className={styles.media} data-hero-media="">
                 <source type="image/avif" srcSet="/assets/img/home/hero/morning-rainy-1440.avif 1440w" sizes="100vw" />
                 <source type="image/webp" srcSet="/assets/img/home/hero/morning-rainy-1440.webp 1440w" sizes="100vw" />
                 <img
-                    className="hero__img"
+                    className={styles.img}
                     src="/assets/img/home/hero/morning-rainy-1440.jpg"
                     srcSet="/assets/img/home/hero/morning-rainy-1440.jpg 1440w"
                     sizes="100vw"
@@ -42,11 +41,12 @@ export default function Hero({ title, intro, defaultWeather: weather = 'rainy', 
                     decoding="async"
                 />
             </picture>
-            <div className="hero__inner container">
-                <div className="hero__content">
-                    <p className={weatherClassName}>
+            <div className={`${styles.inner} container`}>
+                <div className={styles.content}>
+                    <p className={styles.weather} data-hero-weather="" data-dry={weather === 'rainy' ? undefined : ''}>
                         <svg
-                            className="hero__weather-icon hero__weather-icon--day"
+                            className={styles.weatherIcon}
+                            data-hero-weather-icon="day"
                             width="30"
                             height="30"
                             viewBox="0 0 24 24"
@@ -61,12 +61,13 @@ export default function Hero({ title, intro, defaultWeather: weather = 'rainy', 
                             <path d="M8.5 2v1.4M2.5 8h1.4M4.3 3.8l1 1M12.7 3.8l-1 1"></path>
                             <path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path>
                             <path
-                                className="hero__weather-drops"
+                                className={styles.weatherDrops}
                                 d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"
                             ></path>
                         </svg>
                         <svg
-                            className="hero__weather-icon hero__weather-icon--evening"
+                            className={styles.weatherIcon}
+                            data-hero-weather-icon="evening"
                             {...hiddenIcon}
                             width="30"
                             height="30"
@@ -82,12 +83,13 @@ export default function Hero({ title, intro, defaultWeather: weather = 'rainy', 
                             <path d="M2 9.5h13M8.5 3v1.4M3.8 5.3l1 1M13.2 5.3l-1 1"></path>
                             <path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path>
                             <path
-                                className="hero__weather-drops"
+                                className={styles.weatherDrops}
                                 d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"
                             ></path>
                         </svg>
                         <svg
-                            className="hero__weather-icon hero__weather-icon--night"
+                            className={styles.weatherIcon}
+                            data-hero-weather-icon="night"
                             {...hiddenIcon}
                             width="30"
                             height="30"
@@ -102,27 +104,31 @@ export default function Hero({ title, intro, defaultWeather: weather = 'rainy', 
                             <path d="M10.5 3.5a4.5 4.5 0 0 0 5.6 6 4.6 4.6 0 1 1-5.6-6z"></path>
                             <path d="M9 17.5h8.5a3 3 0 0 0 .4-6 4.5 4.5 0 0 0-8.6-1.3A3.6 3.6 0 0 0 9 17.5z"></path>
                             <path
-                                className="hero__weather-drops"
+                                className={styles.weatherDrops}
                                 d="M11 20l-.7 1.6M14.5 20l-.7 1.6M18 20l-.7 1.6"
                             ></path>
                         </svg>
-                        <span className="hero__weather-text">
-                            <span className="hero__temp">
-                                <span className="hero__temp-value">{temperatureByWeather[weather]}</span>{' '}
-                                <span className="hero__condition">{conditionByWeather[weather]}</span>
+                        <span className={styles.weatherText}>
+                            <span className={styles.temp}>
+                                <span data-hero-temp-value="">{temperatureByWeather[weather]}</span>{' '}
+                                <span className={styles.condition} data-hero-condition="">
+                                    {conditionByWeather[weather]}
+                                </span>
                             </span>
-                            <span className="hero__date">Saturday 3 October · 09:42 local</span>
+                            <span className={styles.date} data-hero-date="">
+                                Saturday 3 October · 09:42 local
+                            </span>
                         </span>
                     </p>
-                    <h1 className="hero__title" id="hero-title">
+                    <h1 className={styles.title} id="hero-title">
                         {title}
                     </h1>
-                    <p className="hero__lede">{intro}</p>
-                    <ul className="hero__signs">{signs}</ul>
+                    <p className={styles.lede}>{intro}</p>
+                    <ul className={styles.signs}>{signs}</ul>
                 </div>
                 {aside}
             </div>
-            <div className="hero__wait container">{wait}</div>
+            <div className={`${styles.wait} container`}>{wait}</div>
         </section>
     );
 }

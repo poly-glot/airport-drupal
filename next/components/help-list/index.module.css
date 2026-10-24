@@ -1,4 +1,4 @@
-.help-list {
+.root {
     border-bottom: 1px solid var(--rule-mid);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
@@ -7,13 +7,13 @@
     padding: 0;
 }
 
-.help-list__item {
+.item {
     border-top: 1px solid var(--rule-mid);
     padding-right: 48px;
 }
 
 @media (width <= 900px) {
-    .help-list__item {
+    .item {
         padding-right: 0;
     }
 }

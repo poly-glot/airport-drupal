@@ -23,7 +23,7 @@ grep -rnE '//|/\*' $T next/lib next/app
 grep -rnP '[\x{1F300}-\x{1FAFF}\x{2600}-\x{27BF}]' $T
 ```
 
-A hex is allowed only in `next/styles/tokens.css` and the eight board palette variables at the top of `next/components/flight-board/index.css`, which the original board stylesheet defined.
+A hex is allowed only in `next/styles/tokens.css` and the eight board palette variables at the top of `next/components/flight-board/index.module.css`, which the original board stylesheet defined.
 
 ## 2. Spec checks
 
@@ -40,9 +40,9 @@ A hex is allowed only in `next/styles/tokens.css` and the eight board palette va
 ## 3. Derivation and structure
 
 - The component's derivation is stated (homepage element or spec rule). "It was in v1" fails.
-- Directory holds `component.yml`, `index.tsx` and `index.css` (plus `partials/` or `maps/` where one component renders fixed variants). Classes match `docs/design/system.md`; `aria-*`, `id`, `hidden` and `data-*` the behaviours rely on are present.
+- Directory holds `component.yml`, `index.tsx` and `index.module.css` (plus `partials/` or `maps/` where one component renders fixed variants). Module classes are camelCase; only the utilities and the button, text-link and status families are global. `aria-*`, `id`, `hidden` and the `data-*` hooks the behaviours read are present.
 - component.yml: camelCase names, every prop has `title` and `examples`; no `array` or `object` props.
-- Rules for another component's classes come from importing its stylesheet, not copies.
+- Another component's classes come from importing its module, not copied rules.
 - No comments in any file, no editorial text in components.
 
 ## 4. Slop tells (docs/design/spec.md)

@@ -1,8 +1,10 @@
+import packageStyles from '@/components/package/index.module.css';
+
 export default function PackageFeature({ text }: { text: string }) {
     return (
-        <li className="package__item">
+        <li className={packageStyles.item}>
             <svg
-                className="package__tick"
+                className={packageStyles.tick}
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"

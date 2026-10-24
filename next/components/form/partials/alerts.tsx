@@ -1,30 +1,33 @@
+import card from '@/components/card/index.module.css';
+import styles from '../index.module.css';
+
 export default function Alerts() {
     return (
         <form
-            className="card card--padded form narrow"
+            className={`${card.root} ${card.padded} ${styles.root} narrow`}
             id="set-up-alerts"
             action="/flights/alerts"
             method="get"
             aria-labelledby="set-up-alerts-title"
         >
-            <div className="card__head">
-                <h2 className="card__title" id="set-up-alerts-title">
+            <div className={card.head}>
+                <h2 className={card.title} id="set-up-alerts-title">
                     Set up alerts
                 </h2>
             </div>
-            <p className="form__note">
+            <p className={styles.note}>
                 This is a demonstration form for a fictional airport. Please do not enter real personal details. Nothing
                 you type is sent anywhere.
             </p>
-            <div className="field">
-                <label className="field__label" htmlFor="flight">
-                    Flight number <span className="field__marker">(required)</span>
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="flight">
+                    Flight number <span className={styles.fieldMarker}>(required)</span>
                 </label>
-                <p className="field__hint" id="flight-hint">
+                <p className={styles.fieldHint} id="flight-hint">
                     For example, MA 204. It is on your booking confirmation.
                 </p>
                 <input
-                    className="field__input"
+                    className={styles.fieldInput}
                     id="flight"
                     name="flight"
                     type="text"
@@ -33,37 +36,37 @@ export default function Alerts() {
                     required
                 />
             </div>
-            <div className="field">
-                <label className="field__label" htmlFor="flight-date">
-                    Date of flight <span className="field__marker">(required)</span>
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="flight-date">
+                    Date of flight <span className={styles.fieldMarker}>(required)</span>
                 </label>
-                <input className="field__input" id="flight-date" name="date" type="date" required />
+                <input className={styles.fieldInput} id="flight-date" name="date" type="date" required />
             </div>
-            <fieldset className="fieldset fieldset--inline" aria-describedby="channel-hint">
-                <legend className="fieldset__legend">
-                    How should we send alerts? <span className="field__marker">(required)</span>
+            <fieldset className={`${styles.fieldset} ${styles.fieldsetInline}`} aria-describedby="channel-hint">
+                <legend className={styles.fieldsetLegend}>
+                    How should we send alerts? <span className={styles.fieldMarker}>(required)</span>
                 </legend>
-                <p className="field__hint" id="channel-hint">
+                <p className={styles.fieldHint} id="channel-hint">
                     Choose one
                 </p>
-                <label className="check">
-                    <input className="check__input" type="radio" name="channel" value="text" required />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="radio" name="channel" value="text" required />
                     Text message
                 </label>
-                <label className="check">
-                    <input className="check__input" type="radio" name="channel" value="whatsapp" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="radio" name="channel" value="whatsapp" />
                     WhatsApp
                 </label>
             </fieldset>
-            <div className="field">
-                <label className="field__label" htmlFor="mobile">
-                    Mobile number <span className="field__marker">(required)</span>
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="mobile">
+                    Mobile number <span className={styles.fieldMarker}>(required)</span>
                 </label>
-                <p className="field__hint" id="mobile-hint">
+                <p className={styles.fieldHint} id="mobile-hint">
                     A UK or international number, starting with 0 or +
                 </p>
                 <input
-                    className="field__input"
+                    className={styles.fieldInput}
                     id="mobile"
                     name="mobile"
                     type="tel"
@@ -72,15 +75,15 @@ export default function Alerts() {
                     required
                 />
             </div>
-            <div className="field">
-                <label className="field__label" htmlFor="email">
-                    Email address <span className="field__marker">(optional)</span>
+            <div className={styles.field}>
+                <label className={styles.fieldLabel} htmlFor="email">
+                    Email address <span className={styles.fieldMarker}>(optional)</span>
                 </label>
-                <p className="field__hint" id="email-hint">
+                <p className={styles.fieldHint} id="email-hint">
                     We send a copy of each alert here too
                 </p>
                 <input
-                    className="field__input"
+                    className={styles.fieldInput}
                     id="email"
                     name="email"
                     type="email"
@@ -88,47 +91,47 @@ export default function Alerts() {
                     aria-describedby="email-hint"
                 />
             </div>
-            <fieldset className="fieldset" aria-describedby="which-hint">
-                <legend className="fieldset__legend">
-                    Which alerts do you want? <span className="field__marker">(required)</span>
+            <fieldset className={styles.fieldset} aria-describedby="which-hint">
+                <legend className={styles.fieldsetLegend}>
+                    Which alerts do you want? <span className={styles.fieldMarker}>(required)</span>
                 </legend>
-                <p className="field__hint" id="which-hint">
+                <p className={styles.fieldHint} id="which-hint">
                     Choose all that apply
                 </p>
-                <label className="check">
-                    <input className="check__input" type="checkbox" name="alert-gate" value="yes" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="checkbox" name="alert-gate" value="yes" />
                     Gate changes
                 </label>
-                <label className="check">
-                    <input className="check__input" type="checkbox" name="alert-delays" value="yes" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="checkbox" name="alert-delays" value="yes" />
                     Delays and cancellations
                 </label>
-                <label className="check">
-                    <input className="check__input" type="checkbox" name="alert-boarding" value="yes" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="checkbox" name="alert-boarding" value="yes" />
                     Boarding calls
                 </label>
-                <label className="check">
-                    <input className="check__input" type="checkbox" name="alert-bags" value="yes" />
+                <label className={styles.check}>
+                    <input className={styles.checkInput} type="checkbox" name="alert-bags" value="yes" />
                     Bags on the belt (arrivals only)
                 </label>
             </fieldset>
-            <div className="field">
-                <label className="check">
+            <div className={styles.field}>
+                <label className={styles.check}>
                     <input
-                        className="check__input"
+                        className={styles.checkInput}
                         type="checkbox"
                         name="consent"
                         value="yes"
                         aria-describedby="consent-hint"
                         required
                     />
-                    I agree to receive alerts about this flight <span className="field__marker">(required)</span>
+                    I agree to receive alerts about this flight <span className={styles.fieldMarker}>(required)</span>
                 </label>
-                <p className="field__hint" id="consent-hint">
+                <p className={styles.fieldHint} id="consent-hint">
                     Alerts stop 2 hours after the flight lands or departs
                 </p>
             </div>
-            <div className="form__actions">
+            <div className={styles.actions}>
                 <button className="button button--lg" type="submit">
                     Sign up for alerts
                 </button>

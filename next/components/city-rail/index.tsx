@@ -3,8 +3,8 @@
 import type { ReactNode } from 'react';
 import { enhanceCityRail } from '@/lib/behaviours';
 import { useEnhance } from '@/lib/use-enhance';
-import '@/components/section-head/index.css';
-import './index.css';
+import sectionHead from '@/components/section-head/index.module.css';
+import styles from './index.module.css';
 
 interface CityRailProps {
     title: string;
@@ -28,12 +28,12 @@ export default function CityRail({
     const ref = useEnhance<HTMLElement>(enhanceCityRail);
 
     return (
-        <section ref={ref} className="band city-rail" id={anchor || undefined} aria-labelledby={titleId}>
-            <div className="city-rail__head container">
-                <div className="city-rail__titles">
-                    <h2 className="section-title section-title--brand" id={titleId}>
+        <section ref={ref} className={`band ${styles.root}`} id={anchor || undefined} aria-labelledby={titleId}>
+            <div className={`${styles.head} container`}>
+                <div className={styles.titles}>
+                    <h2 className={`${sectionHead.sectionTitle} ${sectionHead.sectionTitleBrand}`} id={titleId}>
                         {title}
-                        {subtitle && <span className="section-title__sub">{subtitle}</span>}
+                        {subtitle && <span className={sectionHead.sectionTitleSub}>{subtitle}</span>}
                     </h2>
                     {linkLabel && linkHref && (
                         <a className="text-link text-link--underline" href={linkHref}>
@@ -55,10 +55,13 @@ export default function CityRail({
                         </a>
                     )}
                 </div>
-                <div className="city-rail__nav">
-                    <p className="city-rail__count">1 – 3 / 4</p>
+                <div className={styles.nav}>
+                    <p className={styles.count} data-city-rail-count="">
+                        1 – 3 / 4
+                    </p>
                     <button
-                        className="city-rail__button city-rail__button--prev"
+                        className={styles.button}
+                        data-city-rail-button="prev"
                         type="button"
                         aria-label="Previous destinations"
                         aria-controls="city-rail-track"
@@ -78,7 +81,8 @@ export default function CityRail({
                         </svg>
                     </button>
                     <button
-                        className="city-rail__button city-rail__button--next"
+                        className={styles.button}
+                        data-city-rail-button="next"
                         type="button"
                         aria-label="Next destinations"
                         aria-controls="city-rail-track"
@@ -99,12 +103,12 @@ export default function CityRail({
                     </button>
                 </div>
             </div>
-            <ul className="city-rail__track" id="city-rail-track">
+            <ul className={styles.track} id="city-rail-track" data-city-rail-track="">
                 {cards}
             </ul>
-            <div className="city-rail__progress container" aria-hidden="true">
-                <span className="city-rail__bar">
-                    <span className="city-rail__fill"></span>
+            <div className={`${styles.progress} container`} aria-hidden="true">
+                <span className={styles.bar}>
+                    <span className={styles.fill}></span>
                 </span>
             </div>
         </section>

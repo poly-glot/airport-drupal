@@ -1,4 +1,5 @@
-import './index.css';
+import helpList from '@/components/help-list/index.module.css';
+import styles from './index.module.css';
 
 const iconPaths = {
     assistance: (
@@ -79,11 +80,11 @@ interface HelpItemProps {
 
 export default function HelpItem({ icon, title, body, href }: HelpItemProps) {
     return (
-        <li className="help-list__item">
-            <a className="help-item" href={href}>
-                <div className="help-item__head">
+        <li className={helpList.item}>
+            <a className={styles.root} href={href}>
+                <div className={styles.head}>
                     <svg
-                        className="help-item__icon"
+                        className={styles.icon}
                         width="30"
                         height="30"
                         viewBox="0 0 24 24"
@@ -96,9 +97,9 @@ export default function HelpItem({ icon, title, body, href }: HelpItemProps) {
                     >
                         {iconPaths[icon]}
                     </svg>
-                    <h3 className="help-item__title">{title}</h3>
+                    <h3 className={styles.title}>{title}</h3>
                 </div>
-                <p className="help-item__body">{body}</p>
+                <p className={styles.body}>{body}</p>
             </a>
         </li>
     );

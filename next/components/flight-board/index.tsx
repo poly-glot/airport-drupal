@@ -3,9 +3,9 @@
 import type { ReactNode } from 'react';
 import { enhanceBoardSearch, enhanceSplitFlap, enhanceStatusTips, enhanceTabs } from '@/lib/behaviours';
 import { useEnhance } from '@/lib/use-enhance';
-import '@/components/button/index.css';
-import './index.css';
-import './tabs.css';
+import form from '@/components/form/index.module.css';
+import styles from './index.module.css';
+import tabs from './tabs.module.css';
 
 interface FlightBoardProps {
     title: string;
@@ -56,16 +56,16 @@ function BoardPanel({
     const searchId = `${direction}-search`;
 
     return (
-        <div className="tabs__panel board__panel" id={direction} tabIndex={-1}>
-            <div className="board__body container">
+        <div className={`${tabs.panel} ${styles.panel}`} data-board-panel="" id={direction} tabIndex={-1}>
+            <div className={`${styles.body} container`} data-board-body="">
                 {showSearch && (
-                    <div className="board__search">
+                    <div className={styles.search} data-board-search="">
                         <label className="visually-hidden" htmlFor={searchId}>
                             {searchLabel}
                         </label>
-                        <div className="field__control">
+                        <div className={form.fieldControl}>
                             <svg
-                                className="field__icon board__search-icon"
+                                className={form.fieldIcon}
                                 width="18"
                                 height="18"
                                 viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ function BoardPanel({
                                 <path d="M20 20l-4-4"></path>
                             </svg>
                             <input
-                                className="field__input field__input--with-icon field__input--dark"
+                                className={`${form.fieldInput} ${form.fieldInputWithIcon} ${form.fieldInputDark}`}
                                 id={searchId}
                                 type="search"
                                 placeholder={`Search ${direction} by flight or city`}
@@ -88,8 +88,8 @@ function BoardPanel({
                         </div>
                     </div>
                 )}
-                <section className="board__scroll" aria-label={`${heading} board`} tabIndex={0}>
-                    <table className="board__table">
+                <section className={styles.scroll} aria-label={`${heading} board`} tabIndex={0}>
+                    <table className={styles.table} data-board-table="">
                         <caption className="visually-hidden">{caption}</caption>
                         <thead>
                             <tr>
@@ -105,19 +105,19 @@ function BoardPanel({
                         <tbody>{rows}</tbody>
                     </table>
                 </section>
-                <div className="board__foot">
-                    <ul className="board__legend">
-                        <li className="board__legend-item">
-                            <span className="board__swatch board__swatch--ok"></span>On time / landed
+                <div className={styles.foot}>
+                    <ul className={styles.legend}>
+                        <li className={styles.legendItem}>
+                            <span className={`${styles.swatch} ${styles.swatchOk}`}></span>On time / landed
                         </li>
-                        <li className="board__legend-item">
-                            <span className="board__swatch board__swatch--info"></span>Boarding / gate open
+                        <li className={styles.legendItem}>
+                            <span className={`${styles.swatch} ${styles.swatchInfo}`}></span>Boarding / gate open
                         </li>
-                        <li className="board__legend-item">
-                            <span className="board__swatch board__swatch--warn"></span>Delayed
+                        <li className={styles.legendItem}>
+                            <span className={`${styles.swatch} ${styles.swatchWarn}`}></span>Delayed
                         </li>
-                        <li className="board__legend-item">
-                            <span className="board__swatch board__swatch--bad"></span>Cancelled
+                        <li className={styles.legendItem}>
+                            <span className={`${styles.swatch} ${styles.swatchBad}`}></span>Cancelled
                         </li>
                     </ul>
                     {allLabel && (
@@ -163,36 +163,36 @@ export default function FlightBoard({
     arrivals,
 }: FlightBoardProps) {
     const ref = useEnhance<HTMLElement>(enhanceTabs, enhanceBoardSearch, enhanceSplitFlap, enhanceStatusTipsOnce);
-    const className = overlapped ? 'board board--overlapped tabs on-dark' : 'board tabs on-dark';
+    const className = [styles.root, overlapped && styles.overlapped, tabs.root, 'on-dark'].filter(Boolean).join(' ');
 
     return (
         <section ref={ref} className={className} id="live-flights" aria-labelledby={titleId}>
-            <div className="board__head container">
-                <div className="board__titles">
-                    <h2 className="board__title" id={titleId}>
+            <div className={`${styles.head} container`}>
+                <div className={styles.titles}>
+                    <h2 className={styles.title} id={titleId}>
                         {title}
                     </h2>
-                    <p className="board__meta">
-                        <span className="board__dot"></span>
+                    <p className={styles.meta}>
+                        <span className={styles.dot}></span>
                         <span>
                             {'Updated '}
-                            <span className="board__updated">{clockTime}</span>
+                            <span data-board-updated="">{clockTime}</span>
                             {` · ${meta}`}
                         </span>
                     </p>
                 </div>
-                <p className="board__clock">
-                    <span className="board__clock-time" data-flap="5">
+                <p className={styles.clock}>
+                    <span className={styles.clockTime} data-board-clock-time="" data-flap="5">
                         {clockTime}
                     </span>
-                    <span className="board__clock-label">Local time</span>
+                    <span className={styles.clockLabel}>Local time</span>
                 </p>
             </div>
-            <div className="board__tabbar">
-                <div className="tabs__list container" data-tabs-label="Flight board">
-                    <a className="tabs__tab" href="#departures">
+            <div className={styles.tabbar}>
+                <div className={`${tabs.list} container`} data-tabs-list="" data-tabs-label="Flight board">
+                    <a className={tabs.tab} data-tabs-tab="" href="#departures">
                         <svg
-                            className="tabs__tab-icon"
+                            className={tabs.tabIcon}
                             width="22"
                             height="22"
                             viewBox="0 0 24 24"
@@ -207,9 +207,9 @@ export default function FlightBoard({
                         </svg>
                         Departures
                     </a>
-                    <a className="tabs__tab" href="#arrivals">
+                    <a className={tabs.tab} data-tabs-tab="" href="#arrivals">
                         <svg
-                            className="tabs__tab-icon"
+                            className={tabs.tabIcon}
                             width="22"
                             height="22"
                             viewBox="0 0 24 24"

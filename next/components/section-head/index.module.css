@@ -1,28 +1,28 @@
-.section-title {
+.sectionTitle {
     font-size: 48px;
     line-height: 1.05;
 }
 
-.section-title--brand {
+.sectionTitleBrand {
     color: var(--brand);
 }
 
-.section-title--md {
+.sectionTitleMd {
     font-size: 44px;
     line-height: 1.08;
 }
 
-.section-title--sm {
+.sectionTitleSm {
     font-size: 32px;
     line-height: 1.1;
 }
 
-.section-title__sub {
+.sectionTitleSub {
     color: var(--accent-blue);
     display: block;
 }
 
-.section-head {
+.root {
     align-items: flex-end;
     display: flex;
     flex-wrap: wrap;
@@ -31,36 +31,36 @@
     margin-bottom: 40px;
 }
 
-.section-head__titles {
+.titles {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.section-head__intro {
+.intro {
     color: var(--ink-muted);
     font-size: 17px;
 }
 
 @media (width <= 900px) {
-    .section-title {
+    .sectionTitle {
         font-size: 32px;
         line-height: 1.1;
     }
 
-    .section-title--md {
+    .sectionTitleMd {
         font-size: 30px;
     }
 
-    .section-title--sm {
+    .sectionTitleSm {
         font-size: 26px;
     }
 
-    .section-head {
+    .root {
         margin-bottom: 20px;
     }
 
-    .section-head__intro {
+    .intro {
         font-size: 15px;
     }
 }

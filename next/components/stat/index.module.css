@@ -1,4 +1,4 @@
-.stats {
+.root {
     border-top: 1px solid var(--on-dark-rule);
     display: grid;
     gap: 24px;
@@ -7,20 +7,20 @@
     padding-top: 20px;
 }
 
-.stats__item {
+.item {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.stats__label {
+.label {
     color: var(--board-muted);
     font-size: 12px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
-.stats__value {
+.value {
     font-family: var(--font-display);
     font-size: 24px;
     font-variant-numeric: tabular-nums;
@@ -28,11 +28,11 @@
 }
 
 @media (width <= 900px) {
-    .stats {
+    .root {
         gap: 12px;
     }
 
-    .stats__value {
+    .value {
         font-size: 20px;
     }
 }

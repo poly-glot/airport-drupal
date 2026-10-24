@@ -1,10 +1,10 @@
-import '@/components/card/index.css';
-import '@/components/section-head/index.css';
+import card from '@/components/card/index.module.css';
+import sectionHead from '@/components/section-head/index.module.css';
 
 const classesBySize = {
-    default: 'section-title',
-    sm: 'section-title section-title--sm',
-    card: 'card__title',
+    default: sectionHead.sectionTitle,
+    sm: `${sectionHead.sectionTitle} ${sectionHead.sectionTitleSm}`,
+    card: card.title,
 };
 
 interface HeadingProps {

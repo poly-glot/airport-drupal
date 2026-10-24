@@ -1,5 +1,3 @@
-import './index.css';
-
 interface ButtonProps {
     label: string;
     href?: string;

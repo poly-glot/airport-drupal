@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 export default function Accordion({ items }: { items?: ReactNode }) {
-    return <div className="accordion">{items}</div>;
+    return <div className={styles.root}>{items}</div>;
 }
