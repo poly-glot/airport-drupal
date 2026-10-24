@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+
+  logger.channel.meridian_revalidate:
+    parent: logger.channel_base
+    arguments: ['meridian_revalidate']
+
+  Drupal\meridian_revalidate\FrontendRevalidator: ~

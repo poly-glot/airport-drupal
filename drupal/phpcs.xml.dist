@@ -4,6 +4,7 @@
     <arg name="colors"/>
     <arg value="sp"/>
     <file>scripts</file>
+    <file>web/modules/custom</file>
     <file>docker/health.php</file>
     <file>web/sites/default/settings.cloudrun.php</file>
     <file>web/sites/default/settings.meridian.php</file>

@@ -6,6 +6,7 @@ import { unstable_cache } from 'next/cache';
 import { draftMode } from 'next/headers';
 import { notFound, permanentRedirect, redirect } from 'next/navigation';
 import { cache } from 'react';
+import { PUBLISHED_PAGE_SAFETY_SECONDS, PUBLISHED_PAGES_TAG } from '../../lib/page-cache';
 import { pageRegions } from '../../lib/page-regions';
 
 export const dynamic = 'force-dynamic';
@@ -14,12 +15,10 @@ interface CatchAllPageProps {
     params: Promise<{ slug?: string[] }>;
 }
 
-const PUBLISHED_PAGE_SECONDS = 60;
-
 const getPublishedPage = unstable_cache(
     (path: string) => fetchPublishedPage(path, { baseUrl: process.env.CANVAS_SITE_URL ?? '' }),
     ['canvas-published-page'],
-    { revalidate: PUBLISHED_PAGE_SECONDS },
+    { revalidate: PUBLISHED_PAGE_SAFETY_SECONDS, tags: [PUBLISHED_PAGES_TAG] },
 );
 
 const getPage = cache(async (path: string) =>

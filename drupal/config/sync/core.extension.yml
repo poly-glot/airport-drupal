@@ -19,6 +19,7 @@ module:
   link: 0
   media: 0
   media_library: 0
+  meridian_revalidate: 0
   metatag: 0
   mysql: 0
   node: 0
