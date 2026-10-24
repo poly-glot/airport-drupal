@@ -26,7 +26,7 @@
 }
 
 .tabs__tab[aria-selected='true'],
-.tabs:not(.tabs--enhanced):not(:has(.tabs__panel:target)) .tabs__tab:first-child,
+.tabs:not(.tabs--enhanced, :has(.tabs__panel:target)) .tabs__tab:first-child,
 .tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(1):target) .tabs__tab:nth-child(1),
 .tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(2):target) .tabs__tab:nth-child(2),
 .tabs:not(.tabs--enhanced):has(.tabs__panel:nth-child(3):target) .tabs__tab:nth-child(3),
@@ -46,7 +46,7 @@
 }
 
 .tabs:not(.tabs--enhanced) .tabs__panel:target,
-.tabs:not(.tabs--enhanced):not(:has(.tabs__panel:target)) .tabs__panel:first-child,
+.tabs:not(.tabs--enhanced, :has(.tabs__panel:target)) .tabs__panel:first-child,
 .tabs--enhanced .tabs__panel {
     display: block;
 }

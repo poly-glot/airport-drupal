@@ -16,32 +16,27 @@
     --chip-warn-fg: #8a4a00;
     --font-body: 'Public Sans', 'Segoe UI', system-ui, sans-serif;
     --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
-    --font-serif: 'Source Serif 4', Georgia, serif;
-    --footer-divider: rgba(255, 255, 255, 0.15);
+    --font-serif: 'Source Serif 4', georgia, serif;
+    --footer-divider: rgb(255 255 255 / 15%);
     --footer-link: #c9cfda;
-    --gradient-card: linear-gradient(180deg, rgba(6, 12, 26, 0) 45%, rgba(6, 12, 26, 0.85) 100%);
-    --gradient-hero: linear-gradient(
-        90deg,
-        rgba(10, 21, 41, 0.88) 0%,
-        rgba(10, 21, 41, 0.62) 45%,
-        rgba(10, 21, 41, 0.3) 100%
-    );
+    --gradient-card: linear-gradient(180deg, rgb(6 12 26 / 0%) 45%, rgb(6 12 26 / 85%) 100%);
+    --gradient-hero: linear-gradient(90deg, rgb(10 21 41 / 88%) 0%, rgb(10 21 41 / 62%) 45%, rgb(10 21 41 / 30%) 100%);
     --gradient-hero-narrow: linear-gradient(
         180deg,
-        rgba(10, 21, 41, 0.66) 0%,
-        rgba(10, 21, 41, 0.78) 55%,
-        rgba(10, 21, 41, 0.92) 100%
+        rgb(10 21 41 / 66%) 0%,
+        rgb(10 21 41 / 78%) 55%,
+        rgb(10 21 41 / 92%) 100%
     );
     --gradient-parking: linear-gradient(
         90deg,
-        rgba(6, 12, 26, 0.94) 0%,
-        rgba(6, 12, 26, 0.88) 40%,
-        rgba(6, 12, 26, 0.62) 70%,
-        rgba(6, 12, 26, 0.45) 100%
+        rgb(6 12 26 / 94%) 0%,
+        rgb(6 12 26 / 88%) 40%,
+        rgb(6 12 26 / 62%) 70%,
+        rgb(6 12 26 / 45%) 100%
     );
-    --gradient-parking-narrow: linear-gradient(180deg, rgba(6, 12, 26, 0.92) 0%, rgba(6, 12, 26, 0.78) 100%);
-    --gradient-tower: linear-gradient(180deg, rgba(20, 33, 61, 0.62) 0%, rgba(20, 33, 61, 0.9) 70%);
-    --gradient-tower-hover: linear-gradient(180deg, rgba(20, 33, 61, 0.5) 0%, rgba(20, 33, 61, 0.9) 70%);
+    --gradient-parking-narrow: linear-gradient(180deg, rgb(6 12 26 / 92%) 0%, rgb(6 12 26 / 78%) 100%);
+    --gradient-tower: linear-gradient(180deg, rgb(20 33 61 / 62%) 0%, rgb(20 33 61 / 90%) 70%);
+    --gradient-tower-hover: linear-gradient(180deg, rgb(20 33 61 / 50%) 0%, rgb(20 33 61 / 90%) 70%);
     --grey-2: #4b5362;
     --gutter: 40px;
     --icon-grey: #6b7280;
@@ -60,14 +55,14 @@
     --notice: #8a1c1c;
     --ok: #2e7d32;
     --ok-dark: #7fd48f;
-    --on-dark-field: rgba(11, 21, 41, 0.6);
-    --on-dark-ghost: rgba(255, 255, 255, 0.45);
-    --on-dark-hover: rgba(255, 255, 255, 0.05);
+    --on-dark-field: rgb(11 21 41 / 60%);
+    --on-dark-ghost: rgb(255 255 255 / 45%);
+    --on-dark-hover: rgb(255 255 255 / 5%);
     --on-dark-meta: #dce3ef;
-    --on-dark-row: rgba(255, 255, 255, 0.12);
-    --on-dark-rule: rgba(255, 255, 255, 0.3);
-    --on-dark-rule-strong: rgba(255, 255, 255, 0.35);
-    --on-dark-sign: rgba(255, 255, 255, 0.4);
+    --on-dark-row: rgb(255 255 255 / 12%);
+    --on-dark-rule: rgb(255 255 255 / 30%);
+    --on-dark-rule-strong: rgb(255 255 255 / 35%);
+    --on-dark-sign: rgb(255 255 255 / 40%);
     --on-dark-sub: #e3e9f4;
     --panel: #f4f7fb;
     --photo-fallback: #0f1b33;
@@ -80,17 +75,17 @@
     --sand: #f6eedc;
     --sand-ink: #6e5420;
     --sand-mid: #f2ddb2;
-    --shadow-card: 0 1px 2px rgba(20, 33, 61, 0.04), 0 8px 24px rgba(20, 33, 61, 0.06);
-    --shadow-hero-card: 0 2px 6px rgba(5, 14, 40, 0.18), 0 24px 60px rgba(5, 14, 40, 0.35);
-    --shadow-map-card: 0 1px 2px rgba(20, 33, 61, 0.08), 0 8px 24px rgba(20, 33, 61, 0.12);
-    --shadow-wait: 0 2px 6px rgba(5, 14, 40, 0.1), 0 16px 40px rgba(5, 14, 40, 0.18);
+    --shadow-card: 0 1px 2px rgb(20 33 61 / 4%), 0 8px 24px rgb(20 33 61 / 6%);
+    --shadow-hero-card: 0 2px 6px rgb(5 14 40 / 18%), 0 24px 60px rgb(5 14 40 / 35%);
+    --shadow-map-card: 0 1px 2px rgb(20 33 61 / 8%), 0 8px 24px rgb(20 33 61 / 12%);
+    --shadow-wait: 0 2px 6px rgb(5 14 40 / 10%), 0 16px 40px rgb(5 14 40 / 18%);
     --sky: #e8f0fa;
     --tower-hover: #1c2e58;
     --warn: #b45309;
     --warn-dark: #f2b544;
     --warn-ink: #8a4a00;
-    --white: #ffffff;
-    --white-wash: rgba(255, 255, 255, 0.12);
+    --white: #fff;
+    --white-wash: rgb(255 255 255 / 12%);
 }
 
 @media (width <= 900px) {

@@ -1,10 +1,7 @@
 .map-pane {
     background: var(--map-bg);
-    bottom: 0;
-    left: 50%;
+    inset: 0 0 0 50%;
     position: absolute;
-    right: 0;
-    top: 0;
 }
 
 .map-pane__card {

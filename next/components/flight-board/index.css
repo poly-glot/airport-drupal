@@ -4,9 +4,10 @@
     --board-panel: #0b0b0b;
     --board-text-2: #dadada;
     --flap-bottom: linear-gradient(180deg, #252525 0%, #151515 100%);
-    --flap-split: rgba(0, 0, 0, 0.85);
+    --flap-split: rgb(0 0 0 / 85%);
     --flap-top: linear-gradient(180deg, #3d3d3d 0%, #2b2b2b 100%);
-    --on-dark-field: rgba(255, 255, 255, 0.04);
+    --on-dark-field: rgb(255 255 255 / 4%);
+
     background: var(--board);
     color: var(--white);
 }
@@ -79,7 +80,7 @@
 }
 
 .board__panel {
-    background: linear-gradient(180deg, var(--board-panel) 0%, #000000 520px);
+    background: linear-gradient(180deg, var(--board-panel) 0%, #000 520px);
 }
 
 .board__body {
@@ -324,7 +325,7 @@
 
 .flap {
     display: inline-flex;
-    font-family: 'Oswald', var(--font-display);
+    font-family: Oswald, var(--font-display);
     font-size: 22px;
     font-weight: 500;
     gap: 3px;
@@ -336,8 +337,8 @@
 .flap__tile {
     border-radius: 3px;
     box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.05),
-        0 2px 3px rgba(0, 0, 0, 0.55);
+        0 1px 0 rgb(255 255 255 / 5%),
+        0 2px 3px rgb(0 0 0 / 55%);
     height: 1.4em;
     perspective: 240px;
     position: relative;
@@ -402,10 +403,11 @@
 .flap-lamp {
     --lamp-colour: #474747;
     --lamp-glow: transparent;
-    background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.55), transparent 45%), var(--lamp-colour);
+
+    background: radial-gradient(circle at 35% 30%, rgb(255 255 255 / 55%), transparent 45%), var(--lamp-colour);
     border-radius: 50%;
     box-shadow:
-        0 0 0 2px rgba(0, 0, 0, 0.45),
+        0 0 0 2px rgb(0 0 0 / 45%),
         0 0 10px var(--lamp-glow);
     display: inline-block;
     height: 11px;
@@ -416,22 +418,22 @@
 
 .flap-lamp--ok {
     --lamp-colour: var(--ok-dark);
-    --lamp-glow: rgba(127, 212, 143, 0.6);
+    --lamp-glow: rgb(127 212 143 / 60%);
 }
 
 .flap-lamp--info {
     --lamp-colour: var(--white);
-    --lamp-glow: rgba(255, 255, 255, 0.55);
+    --lamp-glow: rgb(255 255 255 / 55%);
 }
 
 .flap-lamp--warn {
     --lamp-colour: var(--warn-dark);
-    --lamp-glow: rgba(242, 181, 68, 0.6);
+    --lamp-glow: rgb(242 181 68 / 60%);
 }
 
 .flap-lamp--bad {
     --lamp-colour: var(--bad-dark);
-    --lamp-glow: rgba(255, 123, 114, 0.6);
+    --lamp-glow: rgb(255 123 114 / 60%);
 }
 
 @media (width <= 900px) {

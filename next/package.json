@@ -12,9 +12,10 @@
         "workbench": "canvas-workbench",
         "lint": "eslint .",
         "type-check": "tsc --noEmit",
-        "check": "npm run lint && npm run format:check && npm run type-check",
+        "check": "npm run lint && npm run lint:css && npm run format:check && npm run type-check",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "lint:css": "stylelint \"**/*.css\""
     },
     "dependencies": {
         "@drupal-canvas/headless": "^0.11.0",
@@ -31,9 +32,11 @@
         "sharp": "^0.35.3"
     },
     "devDependencies": {
+        "@axe-core/playwright": "^4.14.0",
         "@drupal-canvas/cli": "^0.26.2",
         "@drupal-canvas/eslint-config": "^0.10.1",
         "@drupal-canvas/workbench": "^0.13.2",
+        "@playwright/test": "^1.64.1",
         "@types/node": "^22.10.2",
         "@types/react": "^19.2.0",
         "@types/react-dom": "^19.2.0",
@@ -41,6 +44,9 @@
         "eslint-config-next": "^16.2.12",
         "eslint-config-prettier": "^10.1.8",
         "prettier": "^3.9.10",
+        "stylelint": "^17.16.0",
+        "stylelint-config-standard": "^40.0.0",
+        "stylelint-order": "^8.1.2",
         "typescript": "^5.9.3"
     },
     "allowScripts": {
